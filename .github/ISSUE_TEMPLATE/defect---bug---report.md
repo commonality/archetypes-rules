@@ -1,10 +1,9 @@
 ---
 name: Defect ("bug") report
 about: Create a report to help us improve.
-title: 'defect: '
-labels: ''
-assignees: ''
-
+title: "defect: "
+labels: ""
+assignees: ""
 ---
 
 # <img align="bottom" alt="bug" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bug.svg" height="50" width="50"> Defect Report
@@ -14,15 +13,12 @@ assignees: ''
 > ⌦ Describe what you _wanted_ to accomplish, in what role/capacity, and why
 > it's important to you.
 
-As a {role}, <br>
-I must/need/want/should {do something} <br>
-in order to {achieve value}.
+As a {role}, <br> I must/need/want/should {do something} <br> in order to
+{achieve value}.
 
 ## 2. Describe the defect (aka "bug")
 
 > ⌦ Please give a clear and concise description of the problem.
-
-
 
 ## 3. Acceptance criteria
 
@@ -33,7 +29,7 @@ in order to {achieve value}.
 _When working properly, I expect that:_
 
 - [ ] 1. Job Applicants receive a confirmation email after they submit their
-      resumes.
+     resumes.
 - [ ] 2. An Applicant's resume information isn't lost when errors occur.
 - [ ] 3. criterion-three}
 - [ ] 4. {criterion-four}

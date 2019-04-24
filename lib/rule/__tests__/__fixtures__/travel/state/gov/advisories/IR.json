@@ -1,0 +1,46 @@
+{
+  "elements": [
+    {
+      "name": "country:IR",
+      "type": "archetypes.rule.ObjectVariable",
+      "value": {
+        "description": null,
+        "effectiveDates": {
+          "validFrom": {
+            "name": "travel-advisory-effective-as-of",
+            "type": "archetypes.rules.DateVariable",
+            "value": "2019-04-09T05:00:00.000Z"
+          },
+          "validTo": {
+            "name": "travel-advisory-effective-until",
+            "type": "archetypes.rules.DateVariable",
+            "value": "NULL_DATE_VARIABLE"
+          }
+        },
+        "identifier": "IR",
+        "name": "Iran (Islamic Republic of)",
+        "type": "archetypes.rules.ObjectVariable"
+      }
+    },
+    {
+      "name": "destination",
+      "type": "archetypes.rule.ObjectVariable",
+      "value": "NULL_OBJECT_VARIABLE"
+    },
+    {
+      "name": "EQUAL_TO",
+      "type": "archetypes.rule.Operator"
+    },
+    {
+      "name": "is-travel-allowed",
+      "type": "archetypes.rule.Proposition",
+      "value": false
+    },
+    {
+      "name": "AND",
+      "type": "archetypes.rule.Operator"
+    }
+  ],
+  "name": "IR-travel-advisory",
+  "type": "archetypes.rules.Rule"
+}

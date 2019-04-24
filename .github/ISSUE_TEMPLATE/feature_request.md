@@ -1,10 +1,9 @@
 ---
 name: Feature request
 about: Suggest a feature or enhancement
-title: 'feat: '
-labels: ''
-assignees: ''
-
+title: "feat: "
+labels: ""
+assignees: ""
 ---
 
 # <img align="bottom" alt="briefcase" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/briefcase.svg" height="50" width="50"> Feature Request
@@ -14,9 +13,8 @@ assignees: ''
 > ⌦ Describe what you want to accomplish, in what role/capacity, and why it's
 > important to you.
 
-As a {role},
-I want/need/must {do something}
-In order to {accomplish something valuable}.
+As a {role}, I want/need/must {do something} In order to {accomplish something
+valuable}.
 
 ## 2. Acceptance criteria
 
