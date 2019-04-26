@@ -21,12 +21,10 @@ node_js:
   - '11'
   - '10'
   - '8'
-  - '6'
 
 os:
   - linux
   - osx
-  - windows
 
 git:
   depth: 1
@@ -71,8 +69,7 @@ after_script:
   # 5.1. Share code coverage with
   #      - Codacy,
   #      - Coveralls,
-  - cat ./coverage/lcov.info | codacy-coverage
-  - cat ./coverage/lcov.info | coveralls
+  - npm run ci:coverage
 
   #      - and CodeClimate
   - $TRAVIS_BUILD_DIR/cc-test-reporter after-build --exit-code
@@ -101,5 +98,5 @@ jobs:
           # 7.8.2. Publish a GitHub release with notes and CHANGELOG
           # 7.8.3. Publish on NPM (including README)
           # 7.9.  Any gate fails? Roll back and abort all release steps.
-          - npx semantic-release
 
+          - npx semantic-release

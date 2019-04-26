@@ -21,6 +21,16 @@
       }
     }
   },
-  "overrides": {},
+  "overrides": {
+    "travel-override": {
+      "authorizedBy": [],
+      "override": true,
+      "raisedBy": null,
+      "ruleName": "travel-override",
+      "type": "archetypes.rules.RuleOverride",
+      "when": "2019-04-26T03:14:39.110Z",
+      "why": null
+    }
+  },
   "type": "archetypes.rules.RuleContext"
 }
