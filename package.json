@@ -129,6 +129,12 @@
     "jest-junit": "^6.3.0",
     "lint-staged": "^8.1.5",
     "prettier": "1.17.0",
+    "recursive-readdir": "2.2.2",
+    "rollup": "1.10.1",
+    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-json": "4.0.0",
+    "rollup-plugin-node-resolve": "4.2.3",
+    "rollup-plugin-terser": "4.0.4",
     "semantic-release": "15.13.3"
   },
   "engines": {
@@ -301,7 +307,33 @@
       "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
       "@semantic-release/npm",
-      "@semantic-release/github",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "package.json",
+              "label": "Product manifest"
+            },
+            {
+              "path": "CHANGELOG.md",
+              "label": "All product changes up-to and including this distribution"
+            },
+            {
+              "path": "LICENSE",
+              "label": "License for distribution"
+            },
+            {
+              "path": "README.md",
+              "label": "Installation and usage instructions for distribution"
+            },
+            {
+              "path": "dist/*.js",
+              "label": "Public API module and its private dependencies"
+            }
+          ]
+        }
+      ],
       "@semantic-release/git"
     ],
     "prepare": [
@@ -326,6 +358,7 @@
   },
   "repository": "git@github.com:commonality/archetypes-rules.git",
   "scripts": {
+    "bundle": "rollup -c ./rollup.config.js --environment INCLUDE_DEPS,BUILD:production",
     "ci:coverage": "npm run ci:coverage:codacy && npm run ci:coverage:coveralls",
     "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -335,6 +368,7 @@
     "lint:json:fix": "prettier --write **/*.json",
     "lint:md:fix": "prettier --parser \"markdown\" --prose-wrap \"always\" --write \"**/*.md\"",
     "postci:test": "npm run ci:coverage",
+    "postversion": "npm run bundle",
     "pretest": "npm run lint:js:fix",
     "security:audit:dependencies": "npm audit",
     "semantic-release": "semantic-release",
