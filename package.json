@@ -105,6 +105,7 @@
     "codacy-coverage": "3.4.0",
     "commitizen": "3.1.1",
     "commitplease": "^3.2.0",
+    "coveralls": "3.0.3",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.2.0",
     "eslint-config-standard": "^12.0.0",
