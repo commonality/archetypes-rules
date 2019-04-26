@@ -1,20 +1,23 @@
 # archetypes-rules
 
-![banner](docs/assets/img/logo.png)
+![banner](docs/img/logos/logo.png)
 
-[![build status](https://secure.travis-ci.org/gregswindle/archetypes-rules.png)](http://travis-ci.org/gregswindle/archetypes-rules)
-[![Coverage Status](https://coveralls.io/repos/github/gregswindle/archetypes-rules/badge.png?branch=master)](https://coveralls.io/github/gregswindle/archetypes-rules?branch=master)
-[![Code Climate](https://codeclimate.com/github/gregswindle/archetypes-rules/badges/gpa.svg)](https://codeclimate.com/github/gregswindle/archetypes-rules)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/b6e496204f604f0e9955ca169fc8a1d7)](https://www.codacy.com/app/commonality/archetypes-rules)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![The MIT License][license-image]][license-url]
+[![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url]
+[![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
+[![Dependency Status][daviddm-image]][daviddm-url]<br>
+[![MacOS and Ubuntu build statuses][travis-image]][travis-url]
+[![Windows build status][appveyor-image]][appveyor-url]
+[![Coveralls test coverage][coveralls-image]][coveralls-url]
+[![Codacy code quality][codacy-image]][codacy-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
 > managed.
 
 `archetypes-rules` models Boolean logic. Instead of writing conditionals like
-<samp>if / else if / else</samp>, you can instead create Rules that describe
-Facts, and then evaluate RuleContexts against them.
+<samp>if / else if / else</samp>, you can instead create Rules that describe and
+evaluate Facts (aka, RuleContexts).
 
 ## Table of Contents
 
@@ -68,11 +71,17 @@ facts conform to the defined `Rule`.
 [Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 See the examples below for details.
 
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
+
 ## 2. Installation
 
 ```sh
 npm install archetypes-rules
 ```
+
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
 
 ## 3. Usage
 
@@ -200,37 +209,97 @@ fact
 // ), value = true
 ```
 
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
+
 ## 4. Maintainers
 
 [@gregswindle](https://github.com/gregswindle)
 
-> ![Information for Maintainers][octicon-info] The
+> ![Information for Maintainers][octicon-book] The
 > [Maintainer Guide](./docs/maintainer-guide/README.md) describes how we develop
 > and release **archetype-rules** (and has useful information for Maintainers
 > and Trusted Committers).
 
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
+
 ## 5. Contributions
 
-We gratefully accept Pull Requests! Here's what you need to know to get started.
+[![GitHub Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
+[![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
+[![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
+[![Greenkeeper badge](https://badges.greenkeeper.io/commonality/archetypes-rules.svg?style=flat-square)](https://greenkeeper.io/)
 
-> ![Before submitting a Pull Request, please read][octicon-heart] Before
-> submitting a Pull Request, please read our:
->
-> - [Code of Conduct](CODE_OF_CONDUCT.md)
-> - [Contributing Aggreement](CONTRIBUTING.md)
-> - [Developer Guide](docs/developer-guide#README.md)
-> - [Maintainer/Trusted Committer Guide](docs/maintainer-guide#readme)
-> - [Architecture Decision Records](docs/adr#readme)
+![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you
+need to know to get started.
+
+Before submitting a Pull Request, please read our:
+
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Contributing Aggreement](CONTRIBUTING.md)
+- [Developer Guide](docs/developer-guide#README.md)
+- [Maintainer/Trusted Committer Guide](docs/maintainer-guide#readme)
+- [Architecture Decision Records](docs/adr#readme)
+
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
 
 ## 6. License
 
 [MIT](LICENSE) © 2019 Greg Swindle
 
+> [![Open Source Licenses][octicon-law] View the latest **detailed legal
+> NOTICE** report
+> ![This link will take you to another Web site][octicon-link-external]][fossa-legal-notice-url].
+
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)
+
+<small>[![Back to Table of contents][octicon-triangle-up]
+[toc]][toc-anchor]</small>
+
 <!-- ⛔️ Do not remove this line or anything under it. ⛔️  -->
 
 <!-- Link and image refs -->
 
+[appveyor-image]:
+  https://img.shields.io/appveyor/ci/commonality/archetypes-rules.svg?style=flat-square&logo=appveyor&label=windows%20build
+[appveyor-url]: https://ci.appveyor.com/project/commonality/archetypes-rules
 [archetypes-rules-overview]: ./docs/assets/archetypes.rules-overview.png
+[codacy-coverage-image]: https://img.shields.
+[codacy-image]:
+  https://api.codacy.com/project/badge/Grade/bc3fdfbea2d84079b5d785b6de0886ab
+[codacy-url]:
+  https://www.codacy.com/app/commonality/archetypes-rules?utm_source=github.com&utm_medium=referral&utm_content=commonality/archetypes-rules&utm_campaign=Badge_Grade
+[coveralls-image]:
+  https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/github/commonality/archetypes-rules
+[daviddm-image]:
+  https://david-dm.org/commonality/archetypes-rules.svg?theme=shields.io&style=flat-square
+[daviddm-url]: https://david-dm.org/commonality/archetypes-rules
+[fossa-image]:
+  https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield
+[fossa-legal-notice-url]:
+  https://app.fossa.com/attribution/5895d784-6a99-4c46-961c-6aecd9414623
+[fossa-url]:
+  https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield
+[license-image]:
+  https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[license-url]: http://opensource.org/licenses/MIT
+[npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/archetypes-rules
+[toc-anchor]: #table-of-contents
+[travis-image]:
+  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&style=flat-square&label=macOS%20%7C%20ubuntu%20builds&logo=travis
+[travis-url]: https://travis-ci.com/commonality/archetypes-rules
+[vulnerabilities-image]:
+  https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?style=flat-square&targetFile=package.json
+[vulnerabilities-url]:
+  https://snyk.io/test/github/commonality/archetypes-rules?targetFile=package.json
+
+daviddm-dev-image]:
+https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&style=flat-square
+io/codacy/coverage/c6edb2d74fca44279c24b1c4a35b8ad9.svg?style=flat-square
 
 <!-- Octicon img references  -->
 

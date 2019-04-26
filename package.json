@@ -33,6 +33,7 @@
   ],
   "dependencies": {
     "enum-nom-nommer": "1.0.0",
+    "fs-extra": "7.0.1",
     "lodash.camelcase": "4.3.0",
     "lodash.conformsto": "4.15.0",
     "lodash.endswith": "4.2.1",
@@ -96,7 +97,7 @@
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/commit-analyzer": "^6.1.0",
     "@semantic-release/git": "^7.0.8",
-    "@semantic-release/gitlab": "^3.1.2",
+    "@semantic-release/github": "5.2.10",
     "@semantic-release/npm": "5.1.7",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "all-contributors-cli": "6.2.0",
@@ -129,7 +130,7 @@
     "semantic-release": "15.13.12"
   },
   "engines": {
-    "npm": ">= 6.0.0"
+    "npm": ">= 8.0.0"
   },
   "files": [
     "lib",

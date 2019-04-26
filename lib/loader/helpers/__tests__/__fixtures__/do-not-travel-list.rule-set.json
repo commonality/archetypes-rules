@@ -1,0 +1,128 @@
+{
+  "name": "do-not-travel-list-exceptions",
+  "rules": {
+    "travel/state/gov/advisories": {
+      "name": "travel/state/gov/advisories",
+      "elements": [
+        {
+          "name": "is-traveller-us-gov-official",
+          "type": "archetypes.rules.Proposition",
+          "value": false
+        },
+        {
+          "name": "level-4/do-not-travel-list",
+          "type": "archetypes.rules.ArrayVariable",
+          "value": [
+            {
+              "name": "Afghanistan",
+              "identifier": "AF",
+              "description": "Do not travel to Afghanistan due to crime, terrorism, civil unrest, kidnapping, and armed conflict."
+            },
+            {
+              "name": "Central African Republic",
+              "identifier": "CF",
+              "description": "Do not travel to Central African Republic (CAR) due to crime, civil unrest, and kidnapping."
+            },
+            {
+              "name": "Haiti",
+              "identifier": "HT",
+              "description": "Do not travel to Haiti due to crime, civil unrest, and kidnapping."
+            },
+            {
+              "name": "Iran (Islamic Republic of)",
+              "identifier": "IR",
+              "description": "Do not travel to Iran due to the risk of kidnapping, arrest, detention of U.S. citizens."
+            },
+            {
+              "name": "Iraq",
+              "identifier": "IQ",
+              "description": "Do not travel to Iraq due to terrorism, kidnapping, and armed conflict."
+            },
+            {
+              "name": "Libya",
+              "identifier": "LY",
+              "description": "Do not travel to Libya due to crime, terrorism, civil unrest, kidnapping, and armed conflict."
+            },
+            {
+              "name": "Mali",
+              "identifier": "ML",
+              "description": "Do not travel to Mali due to crime, terrorism, and kidnapping."
+            },
+            {
+              "name": "Korea (Democratic People's Republic of)",
+              "identifier": "KP",
+              "description": "Do not travel to North Korea due to the serious risk of arrest and long-term detention of U.S. nationals."
+            },
+            {
+              "name": "Somalia",
+              "identifier": "SO",
+              "description": "Do not travel to Somalia due to crime, terrorism, kidnapping and piracy."
+            },
+            {
+              "name": "South Sudan",
+              "identifier": "SS",
+              "description": "Do not travel to South Sudan due to crime, kidnapping, and armed conflict."
+            },
+            {
+              "name": "Sudan",
+              "identifier": "SD",
+              "description": null
+            },
+            {
+              "name": "Syrian Arab Republic",
+              "identifier": "SY",
+              "description": "Do not travel to Syria due to terrorism, civil unrest, kidnapping, and armed conflict."
+            },
+            {
+              "name": "Venezuela (Bolivarian Republic of)",
+              "identifier": "VE",
+              "description": "Do not travel to Venezuela due to crime, civil unrest, poor health infrastructure, kidnapping, and arbitrary arrest and detention of U.S. citizens."
+            },
+            {
+              "name": "Yemen",
+              "identifier": "YE",
+              "description": "Do not travel to Yemen due to terrorism, civil unrest, health risks, kidnapping, and armed conflict."
+            }
+          ]
+        },
+        {
+          "name": "destination-country",
+          "type": "archetypes.rules.ObjectVariable",
+          "value": "NULL_OBJECT_VARIABLE"
+        },
+        {
+          "name": "INCLUDES_ANY",
+          "type": "archetypes.rules.Operator"
+        },
+        {
+          "name": "AND",
+          "type": "archetypes.rules.Operator"
+        }
+      ],
+      "type": "archetypes.rules.Rule"
+    },
+    "humanitarian-ngo": {
+      "name": "humanitarian-ngo",
+      "type": "archetypes.rules.Rule",
+      "elements": [
+        {
+          "name": "is-member-of-recognized-ngo",
+          "type": "archetypes.rules.Proposition",
+          "value": true
+        }
+      ]
+    }
+  },
+  "ruleOverrides": {
+    "travel/state/gov/advisories": {
+      "authorizedBy": [],
+      "override": true,
+      "raisedBy": null,
+      "ruleName": "travel-override",
+      "type": "archetypes.rules.RuleOverride",
+      "when": "2019-04-26T03:14:39.110Z",
+      "why": null
+    }
+  },
+  "type": "archetypes.rules.RuleSet"
+}

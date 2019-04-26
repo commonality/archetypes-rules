@@ -1,0 +1,24 @@
+environment:
+  GH_TOKEN:
+    secure: 1nsZPoMsZopgW0XtFNZdjuzxWvw8EcheaCS6H3B8zYM1ihueWRMc1hdUdeHyg9TM
+  GITHUB_ACCESS_TOKEN:
+    secure: 1nsZPoMsZopgW0XtFNZdjuzxWvw8EcheaCS6H3B8zYM1ihueWRMc1hdUdeHyg9TM
+  matrix:
+    - nodejs_version: '11'
+    - nodejs_version: '10'
+    - nodejs_version: '8'
+    - nodejs_version: '6'
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm i npm@latest -g
+  - npm install
+matrix:
+  fast_finish: true
+build: off
+shallow_clone: true
+clone_depth: 1
+test_script:
+  - node --version
+  - npm --version
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - npm test

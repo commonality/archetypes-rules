@@ -1,0 +1,25 @@
+{
+  "name": "travel/state/gov/advisories",
+  "elements": [
+    {
+      "name": "is-traveller-us-gov-official",
+      "type": "archetypes.rules.Proposition",
+      "value": false
+    },
+    {
+      "name": "level-4/do-not-travel-list",
+      "type": "archetypes.rules.ArrayVariable",
+      "value": "NULL_ARRAY_VARIABLE"
+    },
+    {
+      "name": "destination-country",
+      "type": "archetypes.rules.ObjectVariable",
+      "value": {
+        "name": "Korea (Democratic People's Republic of)",
+        "identifier": "KP",
+        "description": "Do not travel to North Korea due to the serious risk of arrest and long-term detention of U.S. nationals."
+      }
+    }
+  ],
+  "type": "archetypes.rules.RuleContext"
+}

@@ -2,7 +2,6 @@
   "env": {
     "browser": false,
     "commonjs": true,
-    "es6": true,
     "jasmine": true,
     "jest": true,
     "node": true
@@ -34,7 +33,6 @@
       "impliedStrict": true,
       "jsx": false
     },
-    "ecmaVersion": 2019,
     "loc": true,
     "range": true,
     "sourceType": "module",
@@ -337,6 +335,7 @@
     "node/no-unsupported-features/es-syntax": [
       "error",
       {
+        "version": ">= 8.0.0",
         "ignores": ["defaultParameters", "destructuring"]
       }
     ],
