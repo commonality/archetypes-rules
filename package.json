@@ -135,7 +135,7 @@
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "4.2.3",
     "rollup-plugin-terser": "4.0.4",
-    "semantic-release": "15.13.3"
+    "semantic-release": "15.13.12"
   },
   "engines": {
     "npm": ">= 8.0.0"
@@ -370,7 +370,7 @@
     "postci:test": "npm run ci:coverage",
     "postversion": "npm run bundle",
     "pretest": "npm run lint:js:fix",
-    "security:audit:dependencies": "npm audit",
+    "security:audit:dependencies": "npm audit --dry-run",
     "semantic-release": "semantic-release",
     "test": "jest --coverage --verbose"
   }

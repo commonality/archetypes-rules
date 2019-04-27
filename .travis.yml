@@ -34,6 +34,7 @@ before_install:
 
   # 2.1. Set up dependency manager (node package manager "npm")
   - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
+
   # 2.2. FOSS license-compliance evaluator (fossa-cli for Provided Builds)
   #      Grant execution permission
   #      @see https://docs.fossa.com/docs/provided-builds
