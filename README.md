@@ -263,8 +263,8 @@ Before submitting a Pull Request, please read our:
 <!-- Link and image refs -->
 
 [appveyor-image]:
-  https://img.shields.io/appveyor/ci/commonality/archetypes-rules.svg?style=flat-square&logo=appveyor&label=windows%20build
-[appveyor-url]: https://ci.appveyor.com/project/commonality/archetypes-rules
+  https://img.shields.io/appveyor/ci/gregswindle/archetypes-rules.svg?style=flat-square&logo=appveyor&label=windows%20build
+[appveyor-url]: https://ci.appveyor.com/project/gregswindle/archetypes-rules
 [archetypes-rules-overview]: ./docs/assets/archetypes.rules-overview.png
 [codacy-coverage-image]: https://img.shields.
 [codacy-image]:
