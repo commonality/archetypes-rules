@@ -93,7 +93,7 @@ The workflow will be:
 
 [fake-images-pl-github-url]:
   https://github.com/Rydgel/Fake-images-please
-  "View the source code on GitHub."
+  'View the source code on GitHub.'
 [icon-checklist]:
   https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/svg/checklist.svg
 [icon-clippy]:

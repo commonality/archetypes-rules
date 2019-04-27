@@ -61,7 +61,7 @@ Node.js CLI client.
   https://docs.npmjs.com/about-packages-and-modules#about-packages
 [npmjs-public-registry-doc]:
   https://docs.npmjs.com/about-the-public-npm-registry
-[semver-spec]: https://semver.org "Semantic Versioning 2.0.0 specification"
+[semver-spec]: https://semver.org 'Semantic Versioning 2.0.0 specification'
 [gl-push-rules-doc]: https://docs.gitlab.com/ee/push_rules/push_rules.html
 [gl-push-rules-api-docs]:
   https://docs.gitlab.com/ee/api/projects.html#push-rules-starter

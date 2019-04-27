@@ -1,9 +1,9 @@
 ---
 name: Defect ("bug") report
 about: Create a report to help us improve.
-title: "defect: "
-labels: ""
-assignees: ""
+title: 'defect: '
+labels: ''
+assignees: ''
 ---
 
 # <img align="bottom" alt="bug" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bug.svg" height="50" width="50"> Defect Report

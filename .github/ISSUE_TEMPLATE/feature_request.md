@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest a feature or enhancement
-title: "feat: "
-labels: ""
-assignees: ""
+title: 'feat: '
+labels: ''
+assignees: ''
 ---
 
 # <img align="bottom" alt="briefcase" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/briefcase.svg" height="50" width="50"> Feature Request

@@ -269,7 +269,7 @@ release is appropriate.
   https://docs.npmjs.com/about-packages-and-modules#about-packages
 [npmjs-public-registry-doc]:
   https://docs.npmjs.com/about-the-public-npm-registry
-[semver-spec]: https://semver.org "Semantic Versioning 2.0.0 specification"
+[semver-spec]: https://semver.org 'Semantic Versioning 2.0.0 specification'
 [octicon-alert]:
   https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/alert.svg
 [octicon-arrow-down]:

@@ -1,9 +1,9 @@
 ---
 name: Refactoring proposal
 about: Suggest a way to improve the design or our source code.
-title: "refactoring: "
-labels: ""
-assignees: ""
+title: 'refactoring: '
+labels: ''
+assignees: ''
 ---
 
 # <img align="bottom" alt="code" height="50" width="50" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/code.svg"> Refactoring proposal

@@ -1,9 +1,9 @@
 ---
 name: Metrics proposal(s)
 about: Propose metrics that answer questions intended to track goals.
-title: "metric: "
-labels: ""
-assignees: ""
+title: 'metric: '
+labels: ''
+assignees: ''
 ---
 
 # <img align="bottom" alt="graph" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/graph.svg" height="50" width="50"> Metric Proposals

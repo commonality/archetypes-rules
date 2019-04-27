@@ -82,7 +82,7 @@ open source (and, by extension, InnerSource) projects.
 > project health.** 21% of people who experienced or witnessed a negative
 > behavior said they stopped contributing to a project because of it, and 8%
 > started working in private channels more often.
-> <sup>[\[2\]](#ref-open-source-survey "View reference.")</sup>
+> <sup>[\[2\]](#ref-open-source-survey 'View reference.')</sup>
 
 <p>&nbsp;</p>
 

@@ -107,30 +107,30 @@ npm install archetypes-rules
 
 ## 3. Usage
 
-### 3.1. Example 1: Is this customer eligible for a discount?
+### 3.1. Example 1: Is this customer eligible for a discount
 
 Suppose we have a very simple rule that checks whether a customer is eligible
 for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-const { Rule, RuleContext } = require("archetypes-rules");
+const { Rule, RuleContext } = require('archetypes-rules')
 
 // Create the rule
-const rule = new Rule("eligibleForDiscount");
+const rule = new Rule('eligibleForDiscount')
 
 // Add a Proposition, i.e., a statement that has a value of true or false
-rule.addProposition("customerIsGoldCardHolder", true);
+rule.addProposition('customerIsGoldCardHolder', true)
 
 // Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext("eligibleForDiscountContext");
+const ruleContext = RuleContext('eligibleForDiscountContext')
 
 // Provide the truth statement as to whether the actual customer
 // has a Gold Card
-ruleContext.addProposition("customerIsGoldCardHolder", true);
+ruleContext.addProposition('customerIsGoldCardHolder', true)
 
 // Evaluate
-const result = rule.evaluate(ruleContext);
+const result = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
 
@@ -144,31 +144,31 @@ Say you provide a discount to a group of six or more people:
 
 ```javascript
 // Create the rule
-const rule = Rule("eligible-for-group-discount");
+const rule = Rule('eligible-for-group-discount')
 
 // Declare a "placeholder" variable for the actual number of people
 // (This value will be retrieved from the RuleContext)
-rule.addVariable("actual-num-people", null);
+rule.addVariable('actual-num-people', null)
 
 // Declare the minimum number of people required for discount
-rule.addVariable("min-num-people", 6);
+rule.addVariable('min-num-people', 6)
 
 // Compare the two, i.e.,
 // actual-num-people >= min-num-people
-rule.addOperator(Operator.GREATER_THAN_OR_EQUAL_TO);
+rule.addOperator(Operator.GREATER_THAN_OR_EQUAL_TO)
 
 // Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext("eligible-for-group-discount-fact");
+const ruleContext = RuleContext('eligible-for-group-discount-fact')
 
 // How many people are there?
-ruleContext.addVariable("actual-num-people", 5);
+ruleContext.addVariable('actual-num-people', 5)
 
 // Declare the "placeholder" minimun number of people required for discount
 // (This value will be retrieved from the Rule)
-ruleContext.addVariable("min-num-people", "NULL_NUMBER_VARIABLE");
+ruleContext.addVariable('min-num-people', 'NULL_NUMBER_VARIABLE')
 
 // Evaluate
-const result = rule.evaluate(ruleContext);
+const result = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
 
@@ -191,33 +191,33 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-const { Rule, RuleContext, RuleElement } = require("archetypes-rules");
+const { Rule, RuleContext, RuleElement } = require('archetypes-rules')
 
 // Create the rule
-const rule = Rule("eligible-for-upgrade");
+const rule = Rule('eligible-for-upgrade')
 
 // Populate the rule using method chaining
 rule
-  .addProposition("passenger-is-economy", true)
-  .addProposition("passenger-is-gold-card-holder", true)
-  .addProposition("passenger-is-silver-card-holder", true)
-  .addOperator("OR")
-  .addOperator("AND")
-  .addVariable("passenger-carry-on-baggage-weight", "NULL_NUMBER_VARIABLE")
-  .addVariable("passenger-carry-on-baggage-allowance", 15.0)
-  .addOperator("LESS_THAN_OR_EQUAL_TO")
-  .addOperator("AND");
+  .addProposition('passenger-is-economy', true)
+  .addProposition('passenger-is-gold-card-holder', true)
+  .addProposition('passenger-is-silver-card-holder', true)
+  .addOperator('OR')
+  .addOperator('AND')
+  .addVariable('passenger-carry-on-baggage-weight', 'NULL_NUMBER_VARIABLE')
+  .addVariable('passenger-carry-on-baggage-allowance', 15.0)
+  .addOperator('LESS_THAN_OR_EQUAL_TO')
+  .addOperator('AND')
 
 // Create the RuleContext
-const fact = RuleContext("eligibleForUpgradeFact");
+const fact = RuleContext('eligibleForUpgradeFact')
 
 // Load it with the facts about the passenger
 fact
-  .addProposition("passengerIsEconomy", true)
-  .addProposition("passengerIsGoldCardHolder", true)
-  .addProposition("passengerIsSilverCardHolder", false)
-  .addVariable("passenger-carry-on-baggage-weight", 10.0)
-  .addVariable("passenger-carry-on-baggage-allowance", "NULL_NUMBER_VARIABLE");
+  .addProposition('passengerIsEconomy', true)
+  .addProposition('passengerIsGoldCardHolder', true)
+  .addProposition('passengerIsSilverCardHolder', false)
+  .addVariable('passenger-carry-on-baggage-weight', 10.0)
+  .addVariable('passenger-carry-on-baggage-allowance', 'NULL_NUMBER_VARIABLE')
 
 // Log the resulting Proposition
 
