@@ -73,8 +73,8 @@ after_script:
   - npm run ci:coverage
 
   #      - and CodeClimate
-  - $TRAVIS_BUILD_DIR/cc-test-reporter after-build --exit-code
-    $TRAVIS_TEST_RESULT || exit 0
+  # - $TRAVIS_BUILD_DIR/cc-test-reporter after-build --exit-code
+  #   $TRAVIS_TEST_RESULT || exit 0
 
 jobs:
   include:
