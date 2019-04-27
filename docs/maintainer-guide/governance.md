@@ -72,7 +72,6 @@ There are many ways in which people can contribute, including:
 | Represents | Links to | Comment |
 | ---------- | -------- | ------- |
 
-
 | Answering Questions (in Issues, Stack Overflow, Gitter, Slack, etc.) | Bug
 reports |
 `https://github.com/${ownerName}/${repoName}/issues?q=author%3A${username}` \|
@@ -116,33 +115,33 @@ must abide by the project's [Contribution Guidelines](contributing).
 
 Maintainers:
 
-- Are expected to work on public branches of the source repository and submit
-  Pull Requests from that branch to the master branch.
+-   Are expected to work on public branches of the source repository and submit
+    Pull Requests from that branch to the master branch.
 
-- Are expected to delete their public branches when they are no longer
-  necessary.
+-   Are expected to delete their public branches when they are no longer
+    necessary.
 
-- Must submit Pull Requests for all changes.
+-   Must submit Pull Requests for all changes.
 
-- Have their work reviewed by PMC members before acceptance into the repository.
+-   Have their work reviewed by PMC members before acceptance into the repository.
 
-- May label and close issues (see [Issue management](issues.md))
+-   May label and close issues (see [Issue management](issues.md))
 
-- May merge some Pull Requests (see [Managing Pull Requests](merge-requests.md))
+-   May merge some Pull Requests (see [Managing Pull Requests](merge-requests.md))
 
 To become a Maintainer:
 
-- One must have shown a willingness and ability to participate in the project as
-  a team player. Typically, a potential Maintainer will need to show that they
-  have an understanding of and alignment with the project, its objectives, and
-  its strategy.
+-   One must have shown a willingness and ability to participate in the project as
+    a team player. Typically, a potential Maintainer will need to show that they
+    have an understanding of and alignment with the project, its objectives, and
+    its strategy.
 
-- Maintainers are expected to be respectful of every community member and to
-  work collaboratively in the spirit of inclusion.
+-   Maintainers are expected to be respectful of every community member and to
+    work collaboratively in the spirit of inclusion.
 
-- Have submitted a minimum of 10 qualifying Pull Requests. What's a qualifying
-  Pull Request? One that carries significant technical weight and requires
-  little effort to accept because it's well documented and tested.
+-   Have submitted a minimum of 10 qualifying Pull Requests. What's a qualifying
+    Pull Request? One that carries significant technical weight and requires
+    little effort to accept because it's well documented and tested.
 
 New Maintainers can be nominated by any existing Maintainer. Once they have been
 nominated, there will be a vote by the PMC members.
@@ -161,18 +160,18 @@ be nominated to become a PMC member, described below.
 
 1.  Add the GitHub user to the "**archetypes-rules** Team" team
 
-2.  Send welcome email with link to the Maintainer guide
+1.  Send welcome email with link to the Maintainer guide
 
-3.  Add the Maintainer's email to the **archetypes-rules** team mailing list
+1.  Add the Maintainer's email to the **archetypes-rules** team mailing list
 
-4.  Add the Maintainer to the README
+1.  Add the Maintainer to the README
 
-5.  Invite to team chatroom
+1.  Invite to team chatroom
 
-6.  Publisize congratulatory messages to the new committer on internal
+1.  Publisize congratulatory messages to the new committer on internal
     **archetypes-rules** media, e.g., CrowdAround and Stack Overflow
 
-7.  Notify Human Resources/Performance Management about the community's
+1.  Notify Human Resources/Performance Management about the community's
     promotion
 
 ### Product Management Committe (PMC)
@@ -182,13 +181,13 @@ Committe (PMC) which is responsible for high-level guidance of the project.
 
 The PMC has final authority over this project including:
 
-- Technical direction
+-   Technical direction
 
-- Project governance and process (including this policy)
+-   Project governance and process (including this policy)
 
-- Contribution policy
+-   Contribution policy
 
-- Repository hosting
+-   Repository hosting
 
 PMC seats are not time-limited. There is no fixed size of the PMC. The PMC
 should be of such a size as to ensure adequate coverage of important areas of
@@ -217,23 +216,23 @@ PMC meetings.
 
 PMC members fulfill all requirements of Maintainers, and also:
 
-- May merge external Pull Requests for accepted issues upon reviewing and
-  approving the changes.
+-   May merge external Pull Requests for accepted issues upon reviewing and
+    approving the changes.
 
-- May merge their own Pull Requests once they have collected the feedback they
-  deem necessary. (No Pull Request should be merged without at least one
-  Maintainer or PMC member comment stating they've looked at the code.)
+-   May merge their own Pull Requests once they have collected the feedback they
+    deem necessary. (No Pull Request should be merged without at least one
+    Maintainer or PMC member comment stating they've looked at the code.)
 
 To become a PMC member, the Maintainer must:
 
-- Work in a helpful and collaborative way with the community.
+-   Work in a helpful and collaborative way with the community.
 
-- Have given good feedback on others' submissions and displayed an overall
-  understanding of the code quality standards for the project.
+-   Have given good feedback on others' submissions and displayed an overall
+    understanding of the code quality standards for the project.
 
-- Commit to being a part of the community for the long-term.
+-   Commit to being a part of the community for the long-term.
 
-- Have submitted a minimum of 50 qualifying Pull Requests.
+-   Have submitted a minimum of 50 qualifying Pull Requests.
 
 A Maintainer is invited to become a PMC member by existing PMC members. A
 nomination will result in discussion and then a decision by the PMC.
@@ -242,22 +241,22 @@ nomination will result in discussion and then a decision by the PMC.
 
 1.  Add the Maintainer to the "**archetypes-rules** PMC" team
 
-2.  Set the GitHub user to be have the "Owner" role for the archetypes-rules
+1.  Set the GitHub user to be have the "Owner" role for the archetypes-rules
     organization
 
-3.  Send welcome email with link to Maintainer guide
+1.  Send welcome email with link to Maintainer guide
 
-4.  Add the PMC member to the README
+1.  Add the PMC member to the README
 
-5.  Invite to the **archetypes-rules** PMC chatroom
+1.  Invite to the **archetypes-rules** PMC chatroom
 
-6.  Make the PMC member an admin on the **archetypes-rules** team mailing list
+1.  Make the PMC member an admin on the **archetypes-rules** team mailing list
 
-7.  Add the PMC member to the recurring PMC meeting event on Google Calendar
+1.  Add the PMC member to the recurring PMC meeting event on Google Calendar
 
-8.  Add the PMC member as an admin to **archetypes-rules** media channels
+1.  Add the PMC member as an admin to **archetypes-rules** media channels
 
-9.  Publish congratulatory remarks to the new PMC member on archetypes-rules
+1.  Publish congratulatory remarks to the new PMC member on archetypes-rules
     media channels
 
 #### PMC Meetings
@@ -305,7 +304,7 @@ closing vote or a vote to table the issue to the next meeting. The call for a
 vote must be approved by a majority of the PMC or else the discussion will
 continue. Simple majority wins.
 
----
+* * *
 
 This work is a derivative of
 [YUI Contributor Model](https://github.com/yui/yui3/wiki/Contributor-Model) and
@@ -315,7 +314,7 @@ the
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 2.0 UK: England & Wales License](https://creativecommons.org/licenses/by-sa/2.0/uk/).
 
----
+* * *
 
 <h4 align="center">
   Previous: <a href="/docs/maintainer-guide/releases.md"><img align="bottom" alt="chevron-left" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-left.svg">3. Release management</a>

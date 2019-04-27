@@ -5,7 +5,7 @@
 > Read _[The Twelve-Factor App: Store config in the environment
 > ![Read Factor 3, "Config"][octicon-link-external]][2]_ for details.
 
----
+* * *
 
 <details><summary>Click here for detailed <samp>.env</samp> variable initialization instructions.</summary><p>
 
@@ -242,4 +242,4 @@ SONAR_DATA_LOSS_SIGNATURES_TOKEN=<private-access-token>
 
 </pre></details>
 
----
+* * *

@@ -54,20 +54,20 @@ We will create and publish a checklist of conditions, that, when completed,
 allows engineers to classify a component as "reusable." This checklist will
 include, but not necessarilly be limited to:
 
-- Testing requirements (e.g., acceptable unit test coverage thresholds)
-- Recommended tools and frameworks (e.g., boilerplate repositories by
-  programming language)
-- Documentation such as Installation and Usage instructions
+-   Testing requirements (e.g., acceptable unit test coverage thresholds)
+-   Recommended tools and frameworks (e.g., boilerplate repositories by
+    programming language)
+-   Documentation such as Installation and Usage instructions
 
 Our cloud/service-based delivery workflow will be:
 
 1.  Create a reusable module as _standalone_ software.
 1.  Expose the standalone module to different clients using the MVC design
     pattern, e.g.,
-    - `ModuleNameRestController` would invoke the standalone software to expose
-      `ModuleName` as a Web service
-    - `ModuleNameCliController` would invoke the standalone software to expose
-      `ModuleName` to Terminal clients
+    -   `ModuleNameRestController` would invoke the standalone software to expose
+        `ModuleName` as a Web service
+    -   `ModuleNameCliController` would invoke the standalone software to expose
+        `ModuleName` to Terminal clients
 
 ## Consequences
 
@@ -78,19 +78,19 @@ Issues.
 
 ## References
 
-[^1]:
+[^1]\:
 
   Baldwin, C., & Clark, K. (2006). The Architecture of Participation: Does Code
   Architecture Mitigate Free Riding in the Open Source Development Model?
   Management Science, 52(7), 1116-1127. Retrieved from
   <http://www.jstor.org/stable/20110584>
 
-[^2]:
+[^2]\:
 
   _Modular programming_. (2019). _En.wikipedia.org_. Retrieved 12 March 2019,
   from <https://en.wikipedia.org/wiki/Modular_programming>
 
-[^3]:
+[^3]\:
 
   Mak, S. (2017). _Modules vs. microservices. O'Reilly Media_. Retrieved 12
   March 2019, from <https://www.oreilly.com/ideas/modules-vs-microservices>
@@ -98,11 +98,15 @@ Issues.
 <!-- Do not remove this line or anything under it. -->
 
 [adr-0002]: docs/adr/adr-0002-architecture-decision-record-modular-design.md
+
 [adr-accepted-badge]: https://flat.badgen.net/badge/ADR/accepted/44AD8E
+
 [adr-proposed-badge]: https://flat.badgen.net/badge/ADR/proposed/AC900D
+
 [adr-rejected-badge]: https://flat.badgen.net/badge/ADR/rejected/D9534F
+
 [adr-deprecated-badge]: https://flat.badgen.net/badge/ADR/deprecated/7F8C8D
-[octicon-calendar]:
-  https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
-[octicon-quote]:
-  https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/quote.svg
+
+[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
+
+[octicon-quote]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/quote.svg

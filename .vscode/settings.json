@@ -1,0 +1,9 @@
+{
+  "remark.format": {
+    "plugins": [],
+    "rules": {
+      "commonmark": true,
+      "listItemIndent ": "tab"
+    }
+  }
+}

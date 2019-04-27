@@ -12,23 +12,23 @@
 The **archetypes-rules** team has several explicit goals that make the practice
 and discipline of architecture very important:
 
-- We want to think deeply about all our architectural decisions, exploring all
-  alternatives and making a careful, considered, well-researched choice.
+-   We want to think deeply about all our architectural decisions, exploring all
+    alternatives and making a careful, considered, well-researched choice.
 
-- We want to be as transparent as possible in our decision-making process.
+-   We want to be as transparent as possible in our decision-making process.
 
-- We don't want decisions to be made unilaterally in a vacuum. Specifically,
-  should **archetypes-rules** ever fall under the purview of a Technical
-  Steering Committee (TSC), we would want to give our TSC colleagues the
-  opportunity to review every major decision.
+-   We don't want decisions to be made unilaterally in a vacuum. Specifically,
+    should **archetypes-rules** ever fall under the purview of a Technical
+    Steering Committee (TSC), we would want to give our TSC colleagues the
+    opportunity to review every major decision.
 
-- Despite being a geographically and temporally distributed team, we want our
-  contributors to have a strong shared understanding of the technical rationale
-  behind decisions.
+-   Despite being a geographically and temporally distributed team, we want our
+    contributors to have a strong shared understanding of the technical rationale
+    behind decisions.
 
-- We want to be able to revisit prior decisions to determine fairly whether they
-  still make sense, and if the motivating circumstances or conditions have
-  changed.
+-   We want to be able to revisit prior decisions to determine fairly whether they
+    still make sense, and if the motivating circumstances or conditions have
+    changed.
 
 ## Decision
 
@@ -85,7 +85,7 @@ end
     label "adr: accepted" or "adr: rejected" to the original issue.
 
 1.  The Maintainer or Trusted Committer will also update the **"Status"**
-    section of the ADR with the badge that reflects the ADR's state.[^2] (The
+    section of the ADR with the badge that reflects the ADR's state.[^2] \(The
     Style Guide for Images has
     ["how-to" instructions for badges](https://gitlab.com/archetypes-rules/signatures/wikis/Style-Guides/Images).)
 
@@ -121,13 +121,13 @@ end
 
 ## References
 
-[^1]:
+[^1]\:
 
   Swindle, G. (2019) _Architecture Decisions · Wiki ·
   archetypes-rules/signatures · GitLab_. Retrieved March 08, 2019, from
   <https://gitlab.com/archetypes-rules/signatures/wikis/Governance/Architecture-Decisions>
 
-[^2]:
+[^2]\:
 
   Swindle, G. (2019) _Images · Wiki · archetypes-rules/signatures · GitLab_.
   Retrieved March 08, 2019, from
@@ -137,15 +137,17 @@ end
 
 [adr-0001]: docs/adr/adr-0001-architecture-decision-record-use-adrs.md
 
-[adr-issue-board]:
-https://gitlab.com/archetypes-rules/signatures/boards/980468?&label_name[]=type%3A%20adr
+[adr-issue-board]\:
+<https://gitlab.com/archetypes-rules/signatures/boards/980468?&label_name[]=type%3A%20adr>
 
 [adr-accepted-badge]: https://flat.badgen.net/badge/ADR/accepted/44AD8E
+
 [adr-proposed-badge]: https://flat.badgen.net/badge/ADR/proposed/AC900D
+
 [adr-rejected-badge]: https://flat.badgen.net/badge/ADR/rejected/D9534F
+
 [adr-deprecated-badge]: https://flat.badgen.net/badge/ADR/deprecated/7F8C8D
 
 <!-- Octicon image definition list -->
 
-[octicon-calendar]:
-  https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
+[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
