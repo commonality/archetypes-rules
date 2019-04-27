@@ -59,12 +59,12 @@ before_script:
   - ./.github/ci/qa/code-climate-init.sh
 
   # 4.3. Initialize CodeClimate Code Coverage reporter
-  - $TRAVIS_BUILD_DIR/cc-test-reporter before-build || exit 0
+  # - $TRAVIS_BUILD_DIR/cc-test-reporter before-build || exit 0
 
 script:
   # 5.   Test!
   - npm test
-  - npm run security:audit:dependencies
+  # - npm run security:audit:dependencies
 
 after_script:
   # 5.1. Share code coverage with
