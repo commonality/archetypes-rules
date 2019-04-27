@@ -220,7 +220,7 @@ signatures/
 ├── .gitlab-ci.yml
 ├── .npmrc
 ├── CHANGELOG.md
-├── CODE_OF_CONDUCT.md
+├── code-of-conduct.md
 ├── CONTRIBUTING.md
 ├── archetypes-rules-1.0.4.tgz
 ├── files_blacklist.yml

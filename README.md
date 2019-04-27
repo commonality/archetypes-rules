@@ -258,7 +258,7 @@ need to know to get started.
 
 Before submitting a Pull Request, please read our:
 
-- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Code of Conduct](code-of-conduct.md)
 - [Contributing Aggreement](CONTRIBUTING.md)
 - [Developer Guide](docs/developer-guide#README.md)
 - [Maintainer/Trusted Committer Guide](docs/maintainer-guide#readme)

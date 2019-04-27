@@ -761,7 +761,7 @@ Fowler, M. (2019) _Refactoring_. Retrieved February 13, 2019, from
 [20]: #7-testing
 [21]: #8-troubleshooting
 [22]: #9-references
-[23]: CODE_OF_CONDUCT.md
+[23]: code-of-conduct.md
 
 [24]:
 https://github.com/commonality/archetypes-rules/issues/new?issue[assignee_id]=&issue[milestone_id=&issuable_template=Defect
