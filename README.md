@@ -26,7 +26,11 @@ evaluate Facts (aka, RuleContexts).
 - [1. Overview](#1-overview)
   - [1.1. `Rules`](#11-rules)
   - [1.2. `RuleElements`](#12-ruleelements)
-  - [1.3. `RuleContexts` (aka "facts") and `Rules`](#13-rulecontexts-aka-facts-and-rules)
+    - [1.2.1. `Propositions`](#121-propositions)
+    - [1.2.2. `Variables`](#122-variables)
+    - [1.2.3. `Operators`](#123-operators)
+  - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
+  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
   - [3.1. Example 1: Is this customer eligible for a discount?](#31-example-1-is-this-customer-eligible-for-a-discount)
@@ -48,24 +52,42 @@ _Figure 1: Class diagram for the `archetypes.rules` namespace._
 
 ### 1.1. `Rules`
 
-Rules are explicit constraints that govern actions.
+Rules are explicit constraints that govern actions. Rules evaluate Facts, or
+RuleContexts.
+
+Rules are defined with⏤and stored as⏤JSON.
 
 ### 1.2. `RuleElements`
 
-Rules are defined and stored as JSON. They consist of three types of
-`RuleElements`:
+Rules contain one or more RuleElements. There are three types of `RuleElements`:
+`Propositions`, `Operators`, and `Variables`.
 
-- **Propositions**: statements that are either, `true`, `false`, or `null`
-  (unknown)
-- **Variables**: symbols that represent the value of something
-- **Operators**: Boolean and quantifier operators
+#### 1.2.1. `Propositions`
 
-### 1.3. `RuleContexts` (aka "facts") and `Rules`
+**Propositions** are statements that are either, `true`, `false`, or `null`
+(unknown).
+[_Learn more..._](https://github.com/commonality/archetypes-rules/wiki/Propositions)
 
-`RuleContexts` are facts, stored in text files, databases, etc., that provide
-the informational context for the execution of `Rules`. `Rules` evaluate
-`RuleContexts`, returning a `Proposition` that tells us whether a given set of
-facts conform to the defined `Rule`.
+#### 1.2.2. `Variables`
+
+**Variables** are symbols that represent the value of something.
+[_Learn more..._](https://github.com/commonality/archetypes-rules/wiki/Variables)
+
+#### 1.2.3. `Operators`
+
+**Operators**: Boolean and quantifier operators.
+
+### 1.3. `RuleContexts` (aka "facts")
+
+`RuleContexts` are facts, stored as JSON in files, databases, etc.
+
+### 1.4. `Rules` evaluate `RuleContexts`/`Facts`
+
+`Rules` evaluate `RuleContexts`. During evaluation, we determine whether a
+`RuleContext`/`Fact` complies with a `Rule`.
+
+returning a `Proposition` that tells us whether a given set of facts conform to
+the defined `Rule`.
 
 `RuleElements` are evaluated using
 [Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation).

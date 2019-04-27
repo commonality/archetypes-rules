@@ -152,3 +152,8 @@ bower_components/
 build/
 dist/
 .yo-rc.json
+
+# JSDoc
+
+/out/
+lib/variable/helpers/evaluate-quantity.js
