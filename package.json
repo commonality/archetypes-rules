@@ -32,6 +32,7 @@
     }
   ],
   "dependencies": {
+    "@sindresorhus/is": "0.15.0",
     "enum-nom-nommer": "1.0.0",
     "fs-extra": "7.0.1",
     "lodash.camelcase": "4.3.0",
@@ -41,7 +42,6 @@
     "lodash.get": "4.4.2",
     "lodash.gt": "3.9.2",
     "lodash.gte": "3.9.2",
-    "lodash.has": "4.5.2",
     "lodash.hasin": "4.5.2",
     "lodash.includes": "4.3.0",
     "lodash.inrange": "3.3.6",
@@ -91,6 +91,7 @@
     "lodash.startswith": "4.2.1",
     "lodash.toarray": "4.4.0",
     "lodash.unset": "4.5.2",
+    "lodash.upperfirst": "4.3.1",
     "ow": "0.12.0",
     "parse-numeric": "1.0.2"
   },
