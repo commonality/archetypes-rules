@@ -28,7 +28,7 @@ const rollupConfig = {
   input: 'lib/index.js',
   output: {
     compact: true,
-    file: 'dist/index.js',
+    file: pkg.main,
     format: 'cjs',
     interop: false
   },
