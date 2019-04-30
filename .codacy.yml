@@ -1,0 +1,9 @@
+exclude_paths:
+  - '.github/**'
+  - '.vscode/**'
+  - '**/__fixtures__/**'
+  - '**/__mocks__/**'
+  - '**/__tests__/**'
+  - 'coverage/**'
+  - 'dist/**'
+  - 'docs/**'
