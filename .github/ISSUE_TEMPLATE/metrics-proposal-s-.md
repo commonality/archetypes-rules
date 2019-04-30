@@ -4,7 +4,6 @@ about: Propose metrics that answer questions intended to track goals.
 title: 'metric: '
 labels: ''
 assignees: ''
-
 ---
 
 # <img align="bottom" alt="graph" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/graph.svg" height="50" width="50"> Metric Proposals
@@ -14,10 +13,8 @@ assignees: ''
 > ![mortar-board][octicon-mortar-board] Describe what you want to accomplish, in
 > what role/capacity, and why it's important to you.
 
-As a {role},
-I need to [check goal status, improve processes, inspire behavioral
-change],
-In order to track and achieve our {goals}.
+As a {role}, I need to [check goal status, improve processes, inspire behavioral
+change], In order to track and achieve our {goals}.
 
 ### 1.1. Goal
 

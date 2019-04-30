@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Muli:100,400,700|Oswald:300|Inconsolata,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+</head>
+
+<body>
+    <div id="stickyNavbarOverlay"></div>
+    <div class="top-navbar">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    
+                    
+                        <h1 class="navbar-item">Documentation</h1>
+                    
+                    <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3" id="sidebarNav">
+                <div class="sidebar">
+                    <nav>
+                        <h2><a href="index.html">Home</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ActivityRule.html">ActivityRule</a></li><li><a href="ArrayVariable.html">ArrayVariable</a></li><li><a href="Rule.html">Rule</a></li><li><a href="RuleContext.html">RuleContext</a></li><li><a href="RuleOverride.html">RuleOverride</a></li><li><a href="Variable.html">Variable</a></li></ul><h3>Global</h3><ul><li><a href="global.html#factory">factory</a></li></ul></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="column is-9-desktop">
+                <div class="content" id="main-content-wrapper">
+                    <header class="page-title">
+                        <p>Title</p>
+                        <h1>Home</h1>
+                    </header>
+                    
+                    
+
+
+
+    
+
+
+    <h3>archetypes-rules 0.0.0</h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>archetypes-rules</h1><p><img src="docs/img/logos/logo.png" alt="banner"></p>
+<p><a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="The MIT License"></a>
+<a href="https://npmjs.org/package/archetypes-rules"><img src="https://img.shields.io/npm/v/archetypes-rules.svg?style=flat-square" alt="NPM version"></a> <a href="https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield"><img src="https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield" alt="FOSSA Status"></a>
+<a href="https://snyk.io/test/github/commonality/archetypes-rules?targetFile=package.json"><img src="https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?style=flat-square&amp;targetFile=package.json" alt="Known Vulnerabilities"></a><br>
+<a href="https://david-dm.org/commonality/archetypes-rules"><img src="https://david-dm.org/commonality/archetypes-rules.svg?theme=shields.io&amp;style=flat-square" alt="Dependency Status"></a><br>
+<a href="https://travis-ci.com/commonality/archetypes-rules"><img src="https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&amp;style=flat-square&amp;label=macOS%20%7C%20ubuntu%20builds&amp;logo=travis" alt="MacOS and Ubuntu build statuses"></a>
+<a href="https://ci.appveyor.com/project/gregswindle/archetypes-rules"><img src="https://img.shields.io/appveyor/ci/gregswindle/archetypes-rules.svg?style=flat-square&amp;logo=appveyor&amp;label=windows%20build" alt="Windows build status"></a>
+<a href="https://coveralls.io/github/commonality/archetypes-rules"><img src="https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg?style=flat-square" alt="Coveralls test coverage"></a>
+<a href="https://www.codacy.com/app/commonality/archetypes-rules?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=commonality/archetypes-rules&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/bc3fdfbea2d84079b5d785b6de0886ab" alt="Codacy code quality"></a></p>
+<blockquote>
+<p>Move conditional logic out of source code and database triggers and into a
+reusable package, where explicit rules can be independently defined and
+managed.</p>
+</blockquote>
+<p><code>archetypes-rules</code> models Boolean logic. Instead of writing conditionals like
+<samp>if / else if / else</samp>, you can instead create Rules that describe and
+evaluate Facts (aka, RuleContexts).</p>
+<h2>Table of Contents</h2><!-- toc -->
+<ul>
+<li><a href="#1-overview">1. Overview</a><ul>
+<li><a href="#11-rules">1.1. <code>Rules</code></a></li>
+<li><a href="#12-ruleelements">1.2. <code>RuleElements</code></a><ul>
+<li><a href="#121-propositions">1.2.1. <code>Propositions</code></a></li>
+<li><a href="#122-variables">1.2.2. <code>Variables</code></a></li>
+<li><a href="#123-operators">1.2.3. <code>Operators</code></a></li>
+</ul>
+</li>
+<li><a href="#13-rulecontexts-aka-facts">1.3. <code>RuleContexts</code> (aka &quot;facts&quot;)</a></li>
+<li><a href="#14-rules-evaluate-rulecontextsfacts">1.4. <code>Rules</code> evaluate <code>RuleContexts</code>/<code>Facts</code></a></li>
+</ul>
+</li>
+<li><a href="#2-installation">2. Installation</a></li>
+<li><a href="#3-usage">3. Usage</a><ul>
+<li><a href="#31-example-1-is-this-customer-eligible-for-a-discount">3.1. Example 1: Is this customer eligible for a discount?</a></li>
+<li><a href="#32-example-2-group-discount-for-six-or-more-people">3.2. Example 2: Group discount for six or more people</a></li>
+<li><a href="#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade">3.3. Example 3: Is an airline passenger eligible for an upgrade?</a></li>
+</ul>
+</li>
+<li><a href="#4-maintainers">4. Maintainers</a></li>
+<li><a href="#5-contributions">5. Contributions</a></li>
+<li><a href="#6-license">6. License</a></li>
+</ul>
+<!-- tocstop -->
+<!-- tocend -->
+<h2>1. Overview</h2><p><em>Figure 1: Class diagram for the <code>archetypes.rules</code> namespace.</em></p>
+<p><img src="./docs/assets/archetypes.rules-overview.png" alt="Figure 1: Class diagram for the archetypes.rules namespace"></p>
+<h3>1.1. <code>Rules</code></h3><p>Rules are explicit constraints that govern actions. Rules evaluate Facts, or
+RuleContexts.</p>
+<p>Rules are defined with⏤and stored as⏤JSON.</p>
+<h3>1.2. <code>RuleElements</code></h3><p>Rules contain one or more RuleElements. There are three types of <code>RuleElements</code>:
+<code>Propositions</code>, <code>Operators</code>, and <code>Variables</code>.</p>
+<h4>1.2.1. <code>Propositions</code></h4><p><strong>Propositions</strong> are statements that are either, <code>true</code>, <code>false</code>, or <code>null</code>
+(unknown).
+<a href="https://github.com/commonality/archetypes-rules/wiki/Propositions"><em>Learn more...</em></a></p>
+<h4>1.2.2. <code>Variables</code></h4><p><strong>Variables</strong> are symbols that represent the value of something.
+<a href="https://github.com/commonality/archetypes-rules/wiki/Variables"><em>Learn more...</em></a></p>
+<h4>1.2.3. <code>Operators</code></h4><p><strong>Operators</strong>: Boolean and quantifier operators.</p>
+<h3>1.3. <code>RuleContexts</code> (aka &quot;facts&quot;)</h3><p><code>RuleContexts</code> are facts, stored as JSON in files, databases, etc.</p>
+<h3>1.4. <code>Rules</code> evaluate <code>RuleContexts</code>/<code>Facts</code></h3><p><code>Rules</code> evaluate <code>RuleContexts</code>. During evaluation, we determine whether a
+<code>RuleContext</code>/<code>Fact</code> complies with a <code>Rule</code>.</p>
+<p>returning a <code>Proposition</code> that tells us whether a given set of facts conform to
+the defined <code>Rule</code>.</p>
+<p><code>RuleElements</code> are evaluated using
+<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish Notation (RPN)</a>.
+See the examples below for details.</p>
+<p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<h2>2. Installation</h2><pre class="prettyprint source lang-sh"><code>npm install archetypes-rules</code></pre><p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<h2>3. Usage</h2><h3>3.1. Example 1: Is this customer eligible for a discount</h3><p>Suppose we have a very simple rule that checks whether a customer is eligible
+for a discount. In order to be eligible, the customer simply needs to be a Gold
+Card holder.</p>
+<pre class="prettyprint source lang-javascript"><code>const { Rule, RuleContext } = require('archetypes-rules')
+
+// Create the rule
+const rule = new Rule('eligibleForDiscount')
+
+// Add a Proposition, i.e., a statement that has a value of true or false
+rule.addProposition('customerIsGoldCardHolder', true)
+
+// Create a RuleContext, i.e., a &quot;Fact&quot;
+const ruleContext = RuleContext('eligibleForDiscountContext')
+
+// Provide the truth statement as to whether the actual customer
+// has a Gold Card
+ruleContext.addProposition('customerIsGoldCardHolder', true)
+
+// Evaluate
+const result = rule.evaluate(ruleContext)
+
+// Log the resulting Proposition
+
+// Outputs
+// Proposition statement = customerIsGoldCardHolder, value = true</code></pre><h3>3.2. Example 2: Group discount for six or more people</h3><p>Say you provide a discount to a group of six or more people:</p>
+<pre class="prettyprint source lang-javascript"><code>// Create the rule
+const rule = Rule('eligible-for-group-discount')
+
+// Declare a &quot;placeholder&quot; variable for the actual number of people
+// (This value will be retrieved from the RuleContext)
+rule.addVariable('actual-num-people', null)
+
+// Declare the minimum number of people required for discount
+rule.addVariable('min-num-people', 6)
+
+// Compare the two, i.e.,
+// actual-num-people >= min-num-people
+rule.addOperator(Operator.GREATER_THAN_OR_EQUAL_TO)
+
+// Create a RuleContext, i.e., a &quot;Fact&quot;
+const ruleContext = RuleContext('eligible-for-group-discount-fact')
+
+// How many people are there?
+ruleContext.addVariable('actual-num-people', 5)
+
+// Declare the &quot;placeholder&quot; minimun number of people required for discount
+// (This value will be retrieved from the Rule)
+ruleContext.addVariable('min-num-people', 'NULL_NUMBER_VARIABLE')
+
+// Evaluate
+const result = rule.evaluate(ruleContext)
+
+// Log the resulting Proposition
+
+// OUTPUT:
+// Proposition statement =
+// (actualNumPeople >= minNumPeople), value = false</code></pre><h3>3.3. Example 3: Is an airline passenger eligible for an upgrade?</h3><p>In this example, we’re determining whether a given airline passenger is eligible
+to have their coach seat upgraded to a first-class seat. In order to be
+eligible, a passenger must:</p>
+<ul>
+<li>Be in economy class now and either<ul>
+<li>Hold a Gold member card or</li>
+<li>Hold a Silver member card and</li>
+</ul>
+</li>
+<li>Their carry-on luggage must be less than or equal to 15.0 pounds.</li>
+</ul>
+<p>In order to determine this, we must compare a passenger’s facts with our rule.</p>
+<pre class="prettyprint source lang-javascript"><code>const { Rule, RuleContext, RuleElement } = require('archetypes-rules')
+
+// Create the rule
+const rule = Rule('eligible-for-upgrade')
+
+// Populate the rule using method chaining
+rule
+  .addProposition('passenger-is-economy', true)
+  .addProposition('passenger-is-gold-card-holder', true)
+  .addProposition('passenger-is-silver-card-holder', true)
+  .addOperator('OR')
+  .addOperator('AND')
+  .addVariable('passenger-carry-on-baggage-weight', 'NULL_NUMBER_VARIABLE')
+  .addVariable('passenger-carry-on-baggage-allowance', 15.0)
+  .addOperator('LESS_THAN_OR_EQUAL_TO')
+  .addOperator('AND')
+
+// Create the RuleContext
+const fact = RuleContext('eligibleForUpgradeFact')
+
+// Load it with the facts about the passenger
+fact
+  .addProposition('passengerIsEconomy', true)
+  .addProposition('passengerIsGoldCardHolder', true)
+  .addProposition('passengerIsSilverCardHolder', false)
+  .addVariable('passenger-carry-on-baggage-weight', 10.0)
+  .addVariable('passenger-carry-on-baggage-allowance', 'NULL_NUMBER_VARIABLE')
+
+// Log the resulting Proposition
+
+// =>
+// Proposition statement = (
+//  (passengerIsEconomy AND
+//    (passengerIsGoldCardHolder OR passengerIsSilverCardHolder)
+//  ) AND (
+//    passenger-carry-on-baggage-weight &lt;= passenger-carry-on-baggage-allowance
+//  )
+// ), value = true</code></pre><p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<h2>4. Maintainers</h2><p><a href="https://github.com/gregswindle">@gregswindle</a></p>
+<blockquote>
+<p><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/book.svg" alt="Information for Maintainers"> The
+<a href="./docs/maintainer-guide/README.md">Maintainer Guide</a> describes how we develop
+and release <strong>archetype-rules</strong> (and has useful information for Maintainers
+and Trusted Committers).</p>
+</blockquote>
+<p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<h2>5. Contributions</h2><p><a href="https://github.com/commonality/archetypes-rules/graphs/contributors"><img src="https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social" alt="GitHub Contributors"></a>
+<a href="https://github.com/commonality/archetypes-rules"><img src="https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social" alt="GitHub"></a>
+<a href="https://github.com/commonality/archetypes-rules/network"><img src="https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social" alt="GitHub"></a>
+<a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/commonality/archetypes-rules.svg?style=flat-square" alt="Greenkeeper badge"></a></p>
+<p><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/heart.svg" alt="Gratitude"> We gratefully accept Pull Requests. Here's what you
+need to know to get started.</p>
+<p>Before submitting a Pull Request, please read our:</p>
+<ul>
+<li><a href="code-of-conduct.md">Code of Conduct</a></li>
+<li><a href="CONTRIBUTING.md">Contributing Aggreement</a></li>
+<li><a href="docs/developer-guide#README.md">Developer Guide</a></li>
+<li><a href="docs/maintainer-guide#readme">Maintainer/Trusted Committer Guide</a></li>
+<li><a href="docs/adr#readme">Architecture Decision Records</a></li>
+</ul>
+<p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<h2>6. License</h2><p><a href="LICENSE">MIT</a> © 2019 Greg Swindle</p>
+<blockquote>
+<p><a href="https://app.fossa.com/attribution/5895d784-6a99-4c46-961c-6aecd9414623"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/law.svg" alt="Open Source Licenses"> View the latest <strong>detailed legal
+NOTICE</strong> report
+<img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/link-external.svg" alt="This link will take you to another Web site"></a>.</p>
+</blockquote>
+<p><a href="https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large"><img src="https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large" alt="FOSSA Status"></a></p>
+<p><small><a href="#table-of-contents"><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg" alt="Back to Table of contents">
+[toc]</a></small></p>
+<!-- ⛔️ Do not remove this line or anything under it. ⛔️  -->
+<!-- Link and image refs -->
+<p>daviddm-dev-image]:
+https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&amp;style=flat-square
+io/codacy/coverage/c6edb2d74fca44279c24b1c4a35b8ad9.svg?style=flat-square</p>
+<!-- Octicon img references  --></article>
+    </section>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Apr 30 2019 12:51:40 GMT-0500 (Central Daylight Time)</p>
+        <p class="sidebar-created-by">
+            <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+            <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers</a>
+        </p>
+    </div>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/app.min.js"></script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

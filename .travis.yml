@@ -1,0 +1,103 @@
+# Travis-CI
+# The complete job lifecycle
+# @see https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle
+#  1. OPTIONAL Install apt addons
+#  2. OPTIONAL Install cache components
+#  3. before_install
+#  4. install
+#  5. before_script
+#  6. script
+#  7. OPTIONAL before_cache (for cleaning up cache)
+#  8. after_success or after_failure
+#  9. OPTIONAL before_deploy
+# 10. OPTIONAL deploy
+# 11. OPTIONAL after_deploy
+# 12. after_script
+
+
+language: node_js
+node_js:
+  - '12'
+  - '11'
+  - '10'
+  - '8'
+
+os:
+  - linux
+  - osx
+
+git:
+  depth: 1
+
+before_install:
+  # 2. Before installation (before_install) steps:
+
+  # 2.1. Set up dependency manager (node package manager "npm")
+  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest'
+
+  # 2.2. FOSS license-compliance evaluator (fossa-cli for Provided Builds)
+  #      Grant execution permission
+  #      @see https://docs.fossa.com/docs/provided-builds
+  - chmod +x ./.github/ci/legal/fossa-init.sh
+
+  # 2.3. CodeClimate source code quality assessor
+  #    Grant execution permission
+  - chmod +x ./.github/ci/qa/code-climate-init.sh
+
+install:
+  # 3. Installation step (install):
+  - npm i
+
+before_script:
+  # 4.   Before running unit tests...
+  # 4.1. Initialize FOSSA for OSS license compliance evaluation
+  - ./.github/ci/legal/fossa-init.sh
+
+  # 4.2. Initialize CodeClimate for quality assurance code review
+  #      automatically sent as comments during a Merge Request
+  #      to master.
+  - ./.github/ci/qa/code-climate-init.sh
+
+  # 4.3. Initialize CodeClimate Code Coverage reporter
+  # - $TRAVIS_BUILD_DIR/cc-test-reporter before-build || exit 0
+
+script:
+  # 5.   Test!
+  - npm test
+  # - npm run security:audit:dependencies
+
+after_script:
+  # 5.1. Share code coverage with
+  #      - Codacy,
+  #      - Coveralls,
+  - npm run ci:coverage
+
+  #      - and CodeClimate
+  # - $TRAVIS_BUILD_DIR/cc-test-reporter after-build --exit-code
+  #   $TRAVIS_TEST_RESULT || exit 0
+
+jobs:
+  include:
+    - stage: release
+      name: 'Publish to NPM (public registry)'
+      # 7. Deploy from the lastest Node.js Long-Term Support
+      #    (LTS) build.
+      node_js: lts/*
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          # 7.1. Bump semantic version by commit message headers' "type"
+          # 7.2. Generate GitHub Release Notes
+          # 7.3. Append change list to the CHANGELOG.md
+          # 7.4. Bump package.json#version
+          # 7.5. Stage and commit all of the above
+          # 7.6. Push to Git remote origin master
+          # 7.7. Trigger all CI quality gates on master
+          # 7.8. All gates pass (steps 1-6)? Bump semver and
+          # 7.8.1. Squash and merge into origin/master
+          # 7.8.2. Publish a GitHub release with notes and CHANGELOG
+          # 7.8.3. Publish on NPM (including README)
+          # 7.9.  Any gate fails? Roll back and abort all release steps.
+
+          - npx semantic-release

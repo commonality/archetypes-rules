@@ -1,0 +1,377 @@
+{
+  "name": "archetypes-rules",
+  "description": "Move conditional logic out of source code and database triggers and into a reusable package, where explicit rules can be independently defined and managed.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Greg Swindle",
+    "email": "greg@swindle.net",
+    "url": "https://github.com/commonality"
+  },
+  "bugs": "https://github.com/commonality/archetypes-rules/issues",
+  "commitplease": {
+    "style": "angular",
+    "types": [
+      "build",
+      "chore",
+      "ci",
+      "docs",
+      "feat",
+      "fix",
+      "perf",
+      "refactor",
+      "revert",
+      "style",
+      "test"
+    ],
+    "scope": "\\S+.*"
+  },
+  "contributors": [
+    {
+      "name": "Greg Swindle",
+      "url": "https://github.com/gregswindle"
+    }
+  ],
+  "dependencies": {
+    "@sindresorhus/is": "0.15.0",
+    "enum-nom-nommer": "1.0.0",
+    "fs-extra": "7.0.1",
+    "lodash.camelcase": "4.3.0",
+    "lodash.conformsto": "4.15.0",
+    "lodash.endswith": "4.2.1",
+    "lodash.eq": "4.0.0",
+    "lodash.get": "4.4.2",
+    "lodash.gt": "3.9.2",
+    "lodash.gte": "3.9.2",
+    "lodash.hasin": "4.5.2",
+    "lodash.includes": "4.3.0",
+    "lodash.inrange": "3.3.6",
+    "lodash.intersection": "4.4.0",
+    "lodash.invoke": "4.5.2",
+    "lodash.isarguments": "3.1.0",
+    "lodash.isarraybuffer": "4.4.1",
+    "lodash.isarraylike": "4.2.0",
+    "lodash.isarraylikeobject": "4.2.0",
+    "lodash.isboolean": "3.0.3",
+    "lodash.isbuffer": "4.3.4",
+    "lodash.isdate": "4.0.1",
+    "lodash.iselement": "4.1.1",
+    "lodash.isempty": "4.4.0",
+    "lodash.isequal": "4.5.0",
+    "lodash.isequalwith": "4.4.0",
+    "lodash.iserror": "3.1.1",
+    "lodash.isfinite": "3.3.2",
+    "lodash.isfunction": "3.0.9",
+    "lodash.isinteger": "4.0.4",
+    "lodash.islength": "4.0.1",
+    "lodash.ismap": "4.4.2",
+    "lodash.ismatch": "4.4.0",
+    "lodash.ismatchwith": "4.4.0",
+    "lodash.isnan": "3.0.2",
+    "lodash.isnative": "4.0.1",
+    "lodash.isnil": "4.0.0",
+    "lodash.isnull": "3.0.0",
+    "lodash.isnumber": "3.0.3",
+    "lodash.isobject": "3.0.2",
+    "lodash.isobjectlike": "4.0.0",
+    "lodash.isplainobject": "4.0.6",
+    "lodash.isregexp": "4.0.1",
+    "lodash.issafeinteger": "4.0.4",
+    "lodash.isset": "4.4.2",
+    "lodash.isstring": "4.0.1",
+    "lodash.issymbol": "4.0.1",
+    "lodash.istypedarray": "4.0.1",
+    "lodash.isundefined": "3.0.1",
+    "lodash.isweakmap": "4.4.1",
+    "lodash.isweakset": "4.3.0",
+    "lodash.kebabcase": "4.1.1",
+    "lodash.lt": "3.9.2",
+    "lodash.lte": "3.9.2",
+    "lodash.mixin": "4.3.0",
+    "lodash.set": "4.3.2",
+    "lodash.startswith": "4.2.1",
+    "lodash.toarray": "4.4.0",
+    "lodash.unset": "4.5.2",
+    "lodash.upperfirst": "4.3.1",
+    "ow": "0.12.0",
+    "parse-numeric": "1.0.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/github": "5.2.10",
+    "@semantic-release/npm": "5.1.7",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "all-contributors-cli": "6.3.1",
+    "better-docs": "1.1.6",
+    "codacy-coverage": "3.4.0",
+    "commitizen": "3.1.1",
+    "commitplease": "^3.2.0",
+    "coveralls": "3.0.3",
+    "dictionary-en-us": "^2.0.0",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "4.2.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-xo": "^0.26.0",
+    "eslint-find-rules": "3.3.1",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-json": "1.4.0",
+    "eslint-plugin-no-unsafe-innerhtml": "^1.0.16",
+    "eslint-plugin-no-unsanitized": "^3.0.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-scanjs-rules": "^0.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "0.3.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-unicorn": "8.0.2",
+    "eslint-plugin-xss": "^0.1.9",
+    "husky": "2.1.0",
+    "jest": "24.7.1",
+    "jest-junit": "^6.3.0",
+    "jsdoc": "3.5.5",
+    "jsdoc-mermaid": "1.0.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "1.17.0",
+    "recursive-readdir": "2.2.2",
+    "remark": "^10.0.1",
+    "remark-frontmatter": "^1.3.1",
+    "remark-lint": "^6.0.4",
+    "remark-preset-lint-consistent": "^2.0.2",
+    "remark-preset-lint-markdown-style-guide": "^2.1.2",
+    "remark-preset-lint-recommended": "^3.0.2",
+    "remark-retext": "^3.1.2",
+    "retext-english": "^3.0.2",
+    "retext-repeated-words": "^1.2.2",
+    "retext-sentence-spacing": "^2.1.0",
+    "retext-spell": "^2.4.0",
+    "retext-syntax-urls": "^1.0.1",
+    "retext-usage": "^0.5.0",
+    "rollup": "1.10.1",
+    "rollup-plugin-commonjs": "9.3.4",
+    "rollup-plugin-json": "4.0.0",
+    "rollup-plugin-node-resolve": "4.2.3",
+    "rollup-plugin-terser": "4.0.4",
+    "semantic-release": "15.13.12",
+    "unified": "^7.1.0"
+  },
+  "engines": {
+    "npm": ">= 8.0.0"
+  },
+  "files": [
+    "lib",
+    "!**/__tests__/**"
+  ],
+  "greenkeeper": {
+    "commitMessages": {
+      "initialBadge": "docs(status): add greenkeeper badge",
+      "initialDependencies": "build(dependencies): update dependencies",
+      "initialBranches": "chore(permissions): allow greenkeeper branch access",
+      "dependencyUpdate": "chore(dependency): update ${dependency} to v${version}",
+      "devDependencyUpdate": "chore(dependency): update ${dependency} to v${version}",
+      "dependencyPin": "fix(dependency): pin ${dependency} to ${oldVersion}",
+      "devDependencyPin": "fix(dependency): pin ${dependency} to ${oldVersion}"
+    },
+    "prTitles": {
+      "initialPR": "ci(drift): enable Greenkeeper",
+      "initialPrBadge": "ci(drift): enable Greenkeeper",
+      "initialPrBadgeOnly": "ci(drift): add greenkeeper badge",
+      "initialSubgroupPR": "ci(drift): update dependencies for ${group}",
+      "basicPR": "ci(drift): update ${dependency} to latest",
+      "groupPR": "ci(drift): update ${dependency} in group ${group} to latest"
+    }
+  },
+  "homepage": "https://github.com/gregswindle/enum-nom-nommer#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "automock": false,
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/.github/",
+      "<rootDir>/.github/",
+      "<rootDir>/docs/",
+      "<rootDir>/lib/*/__tests__/__fixtures__/",
+      "<rootDir>/lib/cli/signature-ctrl/__tests__/__fixtures__/",
+      "<rootDir>/lib/*/__tests__/__mocks__/",
+      "<rootDir>/node_modules",
+      "<rootDir>/lib/rule.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "lib"
+    ],
+    "testPathIgnorePatterns": [
+      "/.github/rc/",
+      "__fixtures__/",
+      "__mocks__/",
+      "/docs/",
+      "/node_modules/",
+      "/lib/rule.js"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
+    "watchman": false
+  },
+  "keywords": [
+    "convert",
+    "enum-nom-nommer",
+    "number",
+    "parse",
+    "parse-number",
+    "string"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:js:fix",
+      "npm run docs:api",
+      "git add"
+    ],
+    "*.json": [
+      "npm run lint:json:fix",
+      "git add"
+    ]
+  },
+  "main": "dist/archetypes-rules.js",
+  "readme": "https://github.com/commonality/archtypes-rules/README.md",
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "build",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "ci",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "style",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "package.json",
+              "label": "Product manifest"
+            },
+            {
+              "path": "CHANGELOG.md",
+              "label": "All product changes up-to and including this distribution"
+            },
+            {
+              "path": "LICENSE",
+              "label": "License for distribution"
+            },
+            {
+              "path": "README.md",
+              "label": "Installation and usage instructions for distribution"
+            },
+            {
+              "path": "dist/*.js",
+              "label": "Public API module and its private dependencies"
+            }
+          ]
+        }
+      ],
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog",
+        "changelogTitle": "# Changelog"
+      },
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): ${nextRelease.gitTag}"
+        }
+      ]
+    ],
+    "publish": [
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ],
+    "success": false,
+    "fail": false
+  },
+  "repository": "git@github.com:commonality/archetypes-rules.git",
+  "scripts": {
+    "bundle": "rollup -c ./rollup.config.js --environment INCLUDE_DEPS,BUILD:production",
+    "ci:coverage": "npm run ci:coverage:codacy && npm run ci:coverage:coveralls",
+    "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
+    "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
+    "ci:test": "npm test",
+    "docs:api": "node_modules/.bin/jsdoc ./lib/ -r -R ./README.md -P package.json -t ./node_modules/better-docs/ -d ./docs/api/",
+    "lint:js": "eslint .",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:json:fix": "prettier --write **/*.json",
+    "postci:test": "npm run ci:coverage",
+    "postversion": "npm run bundle",
+    "pretest": "npm run lint:js:fix",
+    "security:audit:dependencies": "npm audit --dry-run",
+    "semantic-release": "semantic-release",
+    "test": "jest --coverage --verbose"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "humanitarian-ngo",
+  "type": "archetypes.rules.Rule",
+  "elements": [
+    {
+      "name": "is-member-of-recognized-ngo",
+      "type": "archetypes.rules.Proposition",
+      "value": true
+    }
+  ]
+}

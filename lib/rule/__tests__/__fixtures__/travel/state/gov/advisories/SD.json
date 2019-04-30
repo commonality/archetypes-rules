@@ -1,0 +1,46 @@
+{
+  "elements": [
+    {
+      "name": "country:SD",
+      "type": "archetypes.rules.ObjectVariable",
+      "value": {
+        "description": "Do not travel to Sudan due to crime, terrorism, civil unrest, kidnapping, and armed conflict.",
+        "effectiveDates": {
+          "validFrom": {
+            "name": "travel-advisory-effective-as-of",
+            "type": "archetypes.rules.DateVariable",
+            "value": "2019-04-09T05:00:00.000Z"
+          },
+          "validTo": {
+            "name": "travel-advisory-effective-until",
+            "type": "archetypes.rules.DateVariable",
+            "value": "NULL_DATE_VARIABLE"
+          }
+        },
+        "identifier": "SD",
+        "name": "Sudan",
+        "type": "archetypes.rules.ObjectVariable"
+      }
+    },
+    {
+      "name": "destination",
+      "type": "archetypes.rules.ObjectVariable",
+      "value": "NULL_OBJECT_VARIABLE"
+    },
+    {
+      "name": "EQUAL_TO",
+      "type": "archetypes.rules.Operator"
+    },
+    {
+      "name": "is-travel-allowed",
+      "type": "archetypes.rules.Proposition",
+      "value": false
+    },
+    {
+      "name": "AND",
+      "type": "archetypes.rules.Operator"
+    }
+  ],
+  "name": "SD-travel-advisory",
+  "type": "archetypes.rules.Rule"
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "name": "good first issue",
+    "color": "7057ff",
+    "description": "Good for newcomers."
+  },
+  {
+    "name": "greenkeeper",
+    "color": "00c775",
+    "description": "Automated dependency updater agent."
+  },
+  {
+    "name": "help wanted",
+    "color": "008672",
+    "description": "Contributions welcome or extra attention needed."
+  },
+  {
+    "name": "priority: critical",
+    "color": "e11d21",
+    "description": "Impacts human safety or livelihood."
+  },
+  {
+    "name": "priority: high",
+    "color": "d93f0b",
+    "description": "Affects consumer retention or product reputation."
+  },
+  {
+    "name": "priority: low",
+    "color": "c2e0c6",
+    "description": "Implement when there are no higher priority issues."
+  },
+  {
+    "name": "priority: medium",
+    "color": "fbca04",
+    "description": "Will add consumer value when released."
+  },
+  {
+    "name": "status: abandoned",
+    "color": "000000",
+    "description": "The community has tacitly relinquished this issue."
+  },
+  {
+    "name": "status: accepted",
+    "color": "0e8a16",
+    "description": "The proposal has community consensus."
+  },
+  {
+    "name": "status: available",
+    "color": "bfe5bf",
+    "description": "Voluntary contributions welcome ♥!"
+  },
+  {
+    "name": "status: blocked",
+    "color": "e11d21",
+    "description": "Work cannot continue until another issue is resolved."
+  },
+  {
+    "name": "status: invalid",
+    "color": "a32f22",
+    "description": "This issue either contains inaccurate information, inapplicable requests, or inappropriate content."
+  },
+  {
+    "name": "status: on hold",
+    "color": "a32f22",
+    "description": "Work on this has been postponed."
+  },
+  {
+    "name": "status: pending",
+    "color": "fef2c0",
+    "description": "Waiting for a commitment to be fulfilled."
+  },
+  {
+    "name": "status: rejected",
+    "color": "000000",
+    "description": "This will not be worked on."
+  },
+  {
+    "name": "status: review needed",
+    "color": "fbca04",
+    "description": "Needs community inspection or approval."
+  },
+  {
+    "name": "status: revision needed",
+    "color": "e11d21",
+    "description": "Needs more detail before it can be considered."
+  },
+  {
+    "name": "status: triage pending",
+    "color": "d4c5f9",
+    "description": "This issue needs a priority assignment."
+  },
+  {
+    "name": "type: breaking change",
+    "color": "b60205",
+    "description": "Modifications affect or replace the public API. ⇧ Bumps the MAJOR semver."
+  },
+  {
+    "name": "type: build",
+    "color": "bfd4f2",
+    "description": "Changes to product build."
+  },
+  {
+    "name": "type: chore",
+    "color": "bfd4f2",
+    "description": "Changes that don't modify source or test files."
+  },
+  {
+    "name": "type: ci",
+    "color": "bfd4f2",
+    "description": "Continuous integration config file or script changes (e.g., travis, circle, cypress)."
+  },
+  {
+    "name": "type: defect",
+    "color": "e99695",
+    "description": "A report of potentially faulty or defective product behavior."
+  },
+  {
+    "name": "type: dependency",
+    "color": "006b75",
+    "description": "Update or pin a third-party library. ⇧ Bump the PATCH semver."
+  },
+  {
+    "name": "type: docs",
+    "color": "bfd4f2",
+    "description": "Add, edit, or delete instructional material."
+  },
+  {
+    "name": "type: feature",
+    "color": "0052cc",
+    "description": "Valuable new or enhanced functionality. ⇧ Bumps the MINOR semver."
+  },
+  {
+    "name": "type: feedback",
+    "color": "fef2c0",
+    "description": "Answers to questions or voluntary comments/suggestions."
+  },
+  {
+    "name": "type: fix",
+    "color": "0052cc",
+    "description": "Defect repairs.  ⇧ Bumps the PATCH semver."
+  },
+  {
+    "name": "type: performance",
+    "color": "bfd4f2",
+    "description": "Changes intended to reduce latency."
+  },
+  {
+    "name": "type: question",
+    "color": "fef2c0",
+    "description": "Further information is requested."
+  },
+  {
+    "name": "type: refactor",
+    "color": "bfd4f2",
+    "description": "Restructuring source code without changing its external behavior."
+  },
+  {
+    "name": "type: revert",
+    "color": "0052cc",
+    "description": "Go back to specific tag or SHA1 commit."
+  },
+  {
+    "name": "type: style",
+    "color": "bfd4f2",
+    "description": "Changes that do not affect the meaning of the code (whitespace, formatting, etc.)."
+  },
+  {
+    "name": "type: test",
+    "color": "bfd4f2",
+    "description": "Adding, correcting, or improving tests (coverage)."
+  }
+]
