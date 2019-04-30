@@ -2,7 +2,7 @@
   "elements": [
     {
       "name": "country:VE",
-      "type": "archetypes.rule.ObjectVariable",
+      "type": "archetypes.rules.ObjectVariable",
       "value": {
         "description": "Do not travel to Venezuela due to crime, civil unrest, poor health infrastructure, kidnapping, and arbitrary arrest and detention of U.S. citizens.",
         "effectiveDates": {
@@ -24,21 +24,21 @@
     },
     {
       "name": "destination",
-      "type": "archetypes.rule.ObjectVariable",
+      "type": "archetypes.rules.ObjectVariable",
       "value": "NULL_OBJECT_VARIABLE"
     },
     {
       "name": "EQUAL_TO",
-      "type": "archetypes.rule.Operator"
+      "type": "archetypes.rules.Operator"
     },
     {
       "name": "is-travel-allowed",
-      "type": "archetypes.rule.Proposition",
+      "type": "archetypes.rules.Proposition",
       "value": false
     },
     {
       "name": "AND",
-      "type": "archetypes.rule.Operator"
+      "type": "archetypes.rules.Operator"
     }
   ],
   "name": "VE-travel-advisory",

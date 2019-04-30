@@ -103,6 +103,7 @@
     "@semantic-release/npm": "5.1.7",
     "@semantic-release/release-notes-generator": "^7.1.4",
     "all-contributors-cli": "6.3.1",
+    "better-docs": "1.1.6",
     "codacy-coverage": "3.4.0",
     "commitizen": "3.1.1",
     "commitplease": "^3.2.0",
@@ -129,6 +130,8 @@
     "husky": "2.1.0",
     "jest": "24.7.1",
     "jest-junit": "^6.3.0",
+    "jsdoc": "3.5.5",
+    "jsdoc-mermaid": "1.0.0",
     "lint-staged": "^8.1.5",
     "prettier": "1.17.0",
     "recursive-readdir": "2.2.2",
@@ -236,6 +239,7 @@
   "lint-staged": {
     "*.js": [
       "npm run lint:js:fix",
+      "npm run docs:api",
       "git add"
     ],
     "*.json": [
@@ -359,6 +363,7 @@
     "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
     "ci:test": "npm test",
+    "docs:api": "node_modules/.bin/jsdoc ./lib/ -r -R ./README.md -P package.json -t ./node_modules/better-docs/ -d ./docs/api/",
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:json:fix": "prettier --write **/*.json",

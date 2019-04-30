@@ -2,7 +2,7 @@
   "elements": [
     {
       "name": "country:AF",
-      "type": "archetypes.rule.ObjectVariable",
+      "type": "archetypes.rules.ObjectVariable",
       "value": {
         "description": null,
         "effectiveDates": {
@@ -24,21 +24,21 @@
     },
     {
       "name": "destination",
-      "type": "archetypes.rule.ObjectVariable",
+      "type": "archetypes.rules.ObjectVariable",
       "value": "NULL_OBJECT_VARIABLE"
     },
     {
       "name": "EQUAL_TO",
-      "type": "archetypes.rule.Operator"
+      "type": "archetypes.rules.Operator"
     },
     {
       "name": "is-travel-allowed",
-      "type": "archetypes.rule.Proposition",
+      "type": "archetypes.rules.Proposition",
       "value": false
     },
     {
       "name": "AND",
-      "type": "archetypes.rule.Operator"
+      "type": "archetypes.rules.Operator"
     }
   ],
   "name": "AF-travel-advisory",

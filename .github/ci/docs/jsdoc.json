@@ -1,0 +1,39 @@
+{
+  "tags": {
+    "allowUnknownTags": ["category"]
+  },
+  "source": {
+    "include": ["./lib"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs|coverage|dist|*.test.js$)"
+  },
+  "plugins": [
+    "plugins/markdown",
+    "jsdoc-mermaid",
+    "node_modules/better-docs/category"
+  ],
+  "opts": {
+    "encoding": "utf8",
+    "destination": "docs/api/",
+    "readme": "README.md",
+    "recurse": true,
+    "verbose": true,
+    "tutorials": "./docs/tutorials",
+    "template": "better-docs"
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "better-docs": {
+      "name": "archetypes-rules API Documentation",
+      "logo": "docs/img/logos/logo.png",
+      "trackingCode": null,
+      "navigation": [
+        {
+          "label": "Github",
+          "href": "https://github.com/commonality/archetypes-rules"
+        }
+      ]
+    }
+  }
+}
