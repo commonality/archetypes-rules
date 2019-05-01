@@ -63,14 +63,14 @@ before_script:
 
 script:
   # 5.   Test!
-  - npm test
+  - npm ci:test
   # - npm run security:audit:dependencies
 
 after_script:
   # 5.1. Share code coverage with
   #      - Codacy,
   #      - Coveralls,
-  - npm run ci:coverage
+  - npm run qa:review:sonar
 
   #      - and CodeClimate
   # - $TRAVIS_BUILD_DIR/cc-test-reporter after-build --exit-code

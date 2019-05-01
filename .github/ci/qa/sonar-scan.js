@@ -34,7 +34,7 @@ const token =
 
 const options = {
   'sonar.eslint.reportPaths': 'eslint-report.json',
-  'sonar.javascript.exclusions': 'coverage/**,**/__tests__/**/*',
+  'sonar.javascript.exclusions': 'coverage/**,**/__tests__/**/*,lib/env-config.js',
   'sonar.javascript.lcov.reportPaths': 'coverage/lcov.info',
   'sonar.links.ci': 'https://travis-ci.com/commonality/archetypes-rules',
   'sonar.links.homepage':
@@ -54,13 +54,13 @@ const options = {
   'sonar.tests': 'lib'
 }
 
-// if (process.env.CI_MERGE_REQUEST_ID) {
-//   Object.assign(options, {
-//     'sonar.pullrequest.base': 'master',
-//     'sonar.pullrequest.branch': sonarAnalysisParams.SONAR_BRANCH_NAME,
-//     'sonar.pullrequest.key': process.env.CI_MERGE_REQUEST_IID
-//   })
-// }
+if (process.env.TRAVIS_PULL_REQUEST) {
+  Object.assign(options, {
+    'sonar.pullrequest.base': 'master',
+    'sonar.pullrequest.branch': sonarAnalysisParams.SONAR_BRANCH_NAME,
+    'sonar.pullrequest.key': process.env.TRAVIS_PULL_REQUEST
+  })
+}
 
 // Run the scanner
 sonarqubeScanner(
