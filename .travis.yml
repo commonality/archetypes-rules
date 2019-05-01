@@ -63,7 +63,7 @@ before_script:
 
 script:
   # 5.   Test!
-  - npm ci:test
+  - npm run ci:test
   # - npm run security:audit:dependencies
 
 after_script:
