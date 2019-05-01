@@ -87,7 +87,7 @@ end
 1.  The Maintainer or Trusted Committer will also update the **"Status"**
     section of the ADR with the badge that reflects the ADR's state.[^2] \(The
     Style Guide for Images has
-    ["how-to" instructions for badges](https://gitlab.com/archetypes-rules/signatures/wikis/Style-Guides/Images).)
+    ["how-to" instructions for badges](https://github.com/archetypes-rules/signatures/wikis/Style-Guides/Images).)
 
 1.  Only after an ADR is accepted should implementing code be committed to the
     `master` branch of a relevant application, library, or module.
@@ -121,24 +121,19 @@ end
 
 ## References
 
-[^1]\:
-
-  Swindle, G. (2019) _Architecture Decisions · Wiki ·
+[^1]: Swindle, G. (2019) _Architecture Decisions · Wiki ·
   archetypes-rules/signatures · GitLab_. Retrieved March 08, 2019, from
-  <https://gitlab.com/archetypes-rules/signatures/wikis/Governance/Architecture-Decisions>
+  <https://github.com/archetypes-rules/signatures/wikis/Governance/Architecture-Decisions>
 
-[^2]\:
-
-  Swindle, G. (2019) _Images · Wiki · archetypes-rules/signatures · GitLab_.
+[^2] Swindle, G. (2019) _Images · Wiki · archetypes-rules/signatures · GitLab_.
   Retrieved March 08, 2019, from
-  <https://gitlab.com/archetypes-rules/signatures/wikis/Style-Guides/Images>
+  <https://github.com/archetypes-rules/signatures/wikis/Style-Guides/Images>
 
 <!-- Do not remove this line or anything under it. -->
 
 [adr-0001]: docs/adr/adr-0001-architecture-decision-record-use-adrs.md
 
-[adr-issue-board]\:
-<https://gitlab.com/archetypes-rules/signatures/boards/980468?&label_name[]=type%3A%20adr>
+[adr-issue-board]: https://github.com/archetypes-rules/signatures/boards/980468?&label_name[]=type%3A%20adr
 
 [adr-accepted-badge]: https://flat.badgen.net/badge/ADR/accepted/44AD8E
 

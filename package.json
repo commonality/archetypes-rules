@@ -33,6 +33,8 @@
   ],
   "dependencies": {
     "@sindresorhus/is": "0.15.0",
+    "debug": "4.1.1",
+    "dotenv-extended": "2.4.0",
     "enum-nom-nommer": "1.0.0",
     "fs-extra": "7.0.1",
     "lodash.camelcase": "4.3.0",
@@ -90,6 +92,7 @@
     "lodash.set": "4.3.2",
     "lodash.startswith": "4.2.1",
     "lodash.toarray": "4.4.0",
+    "lodash.topairs": "4.3.0",
     "lodash.unset": "4.5.2",
     "lodash.upperfirst": "4.3.1",
     "ow": "0.12.0",
@@ -127,9 +130,11 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "8.0.2",
     "eslint-plugin-xss": "^0.1.9",
+    "git-repo-info": "2.1.0",
     "husky": "2.1.0",
     "jest": "24.7.1",
     "jest-junit": "^6.3.0",
+    "jest-sonar-reporter": "2.0.0",
     "jsdoc": "3.5.5",
     "jsdoc-mermaid": "1.0.0",
     "lint-staged": "^8.1.5",
@@ -154,6 +159,7 @@
     "rollup-plugin-node-resolve": "4.2.3",
     "rollup-plugin-terser": "4.0.4",
     "semantic-release": "15.13.12",
+    "sonarqube-scanner": "2.4.0",
     "unified": "^7.1.0"
   },
   "engines": {
@@ -182,7 +188,7 @@
       "groupPR": "ci(drift): update ${dependency} in group ${group} to latest"
     }
   },
-  "homepage": "https://github.com/gregswindle/enum-nom-nommer#readme",
+  "homepage": "https://github.com/commonality/enum-nom-nommer#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -226,6 +232,9 @@
       "jest-junit"
     ],
     "watchman": false
+  },
+  "jestSonar": {
+    "reportFile": "sonar-test-report.xml"
   },
   "keywords": [
     "convert",
@@ -362,7 +371,7 @@
     "ci:coverage": "npm run ci:coverage:codacy && npm run ci:coverage:coveralls",
     "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
-    "ci:test": "npm test",
+    "ci:test": "npm run start && npm run lint:js && jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter",
     "docs:api": "node_modules/.bin/jsdoc ./lib/ -r -R ./README.md -P package.json -t ./node_modules/better-docs/ -d ./docs/api/",
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
@@ -370,8 +379,10 @@
     "postci:test": "npm run ci:coverage",
     "postversion": "npm run bundle",
     "pretest": "npm run lint:js:fix",
+    "qa:review:sonar": "node -r ./.github/ci/qa/sonar-scan.js",
     "security:audit:dependencies": "npm audit --dry-run",
     "semantic-release": "semantic-release",
+    "start": "node -r dotenv-extended ./lib/env-config.js",
     "test": "jest --coverage --verbose"
   }
 }

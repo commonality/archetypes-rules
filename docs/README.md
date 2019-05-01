@@ -1,6 +1,10 @@
-# Architecture, Developer, and Maintainer Guides
+# **archetypes-rules** Documentation
 
-## 1. [Architecture Decisions](./adr/README.md)
+## 1. [API][api-url]
+
+View the [public API for **archetypes-rules**][api-url].
+
+## 2. [Architecture Decisions](./adr/README.md)
 
 We allow _anyone_ to propose and vote on significant
 <dfn id="def-architecture-decision" title="An architecture decision (AD) is a software design choice that addresses a significant requirement.">Architecture
@@ -10,12 +14,14 @@ Decision Record</dfn>s
 (<abbr title="An architecture decision record (ADR) is a document that captures an important architectural decision made along with its context and consequences.">ADR</abbr>s)
 for the benefit of future team members as well as for external oversight.
 
-## 2. [Developer Guide](./developer-guide/README.md)
+## 3. [Developer Guide](./developer-guide/README.md)
 
 Interested in doing product development? Awesome! Read the developer guide to
 begin.
 
-## 3. [Maintainer Guide](maintainer-guide/README.md)
+## 4. [Maintainer Guide](maintainer-guide/README.md)
 
 How to maintain **archetypes-rules** product development and delivery with
 voluntary contributions.
+
+[api-url]: ./api/archetypes-rules/1.0.0/index.html

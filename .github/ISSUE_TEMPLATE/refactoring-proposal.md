@@ -49,43 +49,43 @@ assignees: ''
 <!-- SonarCloud badge refs -->
 
 [sonar-alert-status-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=alert_status&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=alert_status&template=FLAT
 [sonar-alert-status-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-bugs-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=bugs&template=FLAT
-[sonar-bugs-url]: https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=bugs&template=FLAT
+[sonar-bugs-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-code-smells-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=code_smells&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=code_smells&template=FLAT
 [sonar-code-smells-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-coverage-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=coverage&template=FLAT
-[sonar-coverage-url]: https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=coverage&template=FLAT
+[sonar-coverage-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-duplicated-lines-density-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=duplicated_lines_density&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=duplicated_lines_density&template=FLAT
 [sonar-duplicated-lines-density-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-ncloc-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=ncloc&template=FLAT
-[sonar-ncloc-url]: https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=ncloc&template=FLAT
+[sonar-ncloc-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-reliability-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=reliability_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=reliability_rating&template=FLAT
 [sonar-reliability-rating-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-security-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=security_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=security_rating&template=FLAT
 [sonar-security-rating-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-sqale-index-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=sqale_index&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_index&template=FLAT
 [sonar-sqale-index-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-sqale-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=sqale_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_rating&template=FLAT
 [sonar-sqale-rating-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
 [sonar-vulnerabilities-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=archetypes-rules-gitlab&metric=vulnerabilities&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=vulnerabilities&template=FLAT
 [sonar-vulnerabilities-url]:
-  https://sonarcloud.io/dashboard?id=archetypes-rules-gitlab
+  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules

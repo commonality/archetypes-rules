@@ -81,7 +81,7 @@ _Why:_
 
 ### How to format, lint, and test your changes
 
-Open a Terminal, go to the root directory for **data-loss-signatures**, and run:
+Open a Terminal, go to the root directory for **archetypes-rules**, and run:
 
 ```bash
 $ npm test

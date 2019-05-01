@@ -163,3 +163,7 @@ lib/variable/helpers/evaluate-quantity.js
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Sonar
+.scannerwork/
+sonar-test-report.xml
