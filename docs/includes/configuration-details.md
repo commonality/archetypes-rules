@@ -160,7 +160,7 @@ NPM_PACKAGE_VERSION=
 # Gitlab variable defaults
 #
 
-GITLAB_ENDPOINT=https://gitlab.com/api/v4
+GITLAB_ENDPOINT=https://github.com/api/v4
 GITLAB_JSON_OUTPUT=true
 GITLAB_PROJECT_ID=10416318
 GITLAB_REF=master

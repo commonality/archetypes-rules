@@ -55,9 +55,9 @@ Node.js CLI client.
 
 [semver-spec]: https://semver.org "Semantic Versioning 2.0.0 specification"
 
-[gl-push-rules-doc]: https://docs.gitlab.com/ee/push_rules/push_rules.html
+[gl-push-rules-doc]: https://docs.github.com/ee/push_rules/push_rules.html
 
-[gl-push-rules-api-docs]: https://docs.gitlab.com/ee/api/projects.html#push-rules-starter
+[gl-push-rules-api-docs]: https://docs.github.com/ee/api/projects.html#push-rules-starter
 
 [octicon-alert]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/alert.svg
 

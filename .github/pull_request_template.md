@@ -81,7 +81,7 @@ _Why:_
 
 ### How to format, lint, and test your changes
 
-Open a Terminal, go to the root directory for **data-loss-signatures**, and run:
+Open a Terminal, go to the root directory for **archetypes-rules**, and run:
 
 ```bash
 $ npm test
@@ -92,6 +92,11 @@ $ npm test
 >
 > ![alert][octicon-alert] **_All_ tasks _must_ be completed** and **verified**
 > before a PR may be merged into <samp>master</samp>, however.
+
+### How to test a release
+
+The [Pre-release test instructions](https://github.com/commonality/archetypes-rules/wiki/Pre-release-test-instructions) include step-by-step guidelines for bundling, packing, and testing this module as it would be released on NPM.
+
 
 ---
 
@@ -157,9 +162,9 @@ $ npm test
 
 [standardjs-logo]: https://cdn.rawgit.com/feross/standard/master/badge.svg
 [standardjs-url]: https://github.com/feross/standard
-[eslint-logo]: docs/img/logos/logo-eslint.png
+[eslint-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/master/docs/img/logos/logo-eslint.png
 [eslint-url]: https://eslint.org/docs/user-guide/getting-started
-[jest-logo]: docs/img/logo-jest.png
+[jest-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/master/docs/img/logos/logo-jest.png
 [jest-url]: https://facebook.github.io/jest/docs/en/getting-started.html
 
 <!-- ⛔️ Octicon img references ⛔️  -->

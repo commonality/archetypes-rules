@@ -77,7 +77,7 @@ declare
 > [![runkit-logo][runkit-img]][runkit-url]
 
 We
-[link to interactive RunKit Notebooks ![link-external][octicon-link-external]](https://runkit.com/gregswindle/5acc09bde794d70011a136e5)
+[link to interactive RunKit Notebooks ![link-external][octicon-link-external]](https://runkit.com/commonality/5acc09bde794d70011a136e5)
 as soon as our Node.js-based products are available on NPM, so you can try
 before you rely.
 
@@ -191,13 +191,13 @@ before you rely.
 
 [runkit-img]: https://github.com/commonality/readme-inspector/wiki/img-runkit-logo.png
 
-[runkit-url]: https://runkit.com/gregswindle/5acc09bde794d70011a136e5
+[runkit-url]: https://runkit.com/commonality/5acc09bde794d70011a136e5
 
 <!-- 🔗 ci services 🔗 -->
 
-[appveyor-image]: https://img.shields.io/appveyor/ci/gregswindle/readme-inspector.svg?style=flat-square&logo=appveyor&label=windows%20build
+[appveyor-image]: https://img.shields.io/appveyor/ci/commonality/readme-inspector.svg?style=flat-square&logo=appveyor&label=windows%20build
 
-[appveyor-url]: https://ci.appveyor.com/project/gregswindle/readme-inspector
+[appveyor-url]: https://ci.appveyor.com/project/commonality/readme-inspector
 
 [codacy-coverage-image]: https://img.shields.io/codacy/coverage/21f517a2d5bf4304895f40c5cbb596c4.svg?style=flat-square
 
@@ -261,11 +261,11 @@ before you rely.
 
 [standardjs-url]: https://github.com/feross/standard
 
-[eslint-logo]: https://gitlab.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-eslint.png
+[eslint-logo]: https://github.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-eslint.png
 
 [eslint-url]: https://eslint.org/docs/user-guide/getting-started
 
-[jest-logo]: https://gitlab.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-jest.png
+[jest-logo]: https://github.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-jest.png
 
 [jest-url]: https://facebook.github.io/jest/docs/en/getting-started.html
 

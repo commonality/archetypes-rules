@@ -52,7 +52,7 @@ configure the following products on your development machine:
     > **archetypes-rules** is hosted on GitLab and uses Git for source control.
     > In order to obtain the source code, you must first install Git on your
     > system. Instructions for installing and setting up Git can be found at
-    > <https://help.gitlab.com/articles/set-up-git>.
+    > <https://help.github.com/articles/set-up-git>.
 
 1.  [Node.js ![link-external][octicon-link-external]](http://nodejs.org),
     (version specified in the engines field of
@@ -75,10 +75,10 @@ configure the following products on your development machine:
 
 Fork and clone the **archetypes-rules** repository:
 
-1.  [**Sign in**](https://gitlab.com/login) to Gitlab.
-1.  [**Fork**](https://docs.gitlab.com/ee/gitlab-basics/fork-project.html#how-to-fork-a-project)
+1.  [**Sign in**](https://github.com/login) to Gitlab.
+1.  [**Fork**](https://docs.github.com/ee/gitlab-basics/fork-project.html#how-to-fork-a-project)
     the
-    [main **archetypes-rules** repository](https://gitlab.com/archetypes-rules/signatures/forks/new)
+    [main **archetypes-rules** repository](https://github.com/archetypes-rules/signatures/forks/new)
     (aka, "`origin`").
 1.  **Clone _your_ fork** of the **archetypes-rules** repository and define an
     `upstream` remote pointing back to the **archetypes-rules** repository that
@@ -86,14 +86,14 @@ Fork and clone the **archetypes-rules** repository:
 
     > ```shell
     > # Clone your GitLab repository:
-    > git clone git@gitlab.com:<your-account>/archetypes-rules.git
+    > git clone git@github.com:<your-account>/archetypes-rules.git
     >
     > # Go to the repo root directory:
     > cd archetypes-rules
     >
     > # Add the main GitLab repository as an upstream remote
     > # to your repository:
-    > git remote add upstream https://gitlab.com/archetypes-rules/signatures.git
+    > git remote add upstream https://github.com/archetypes-rules/signatures.git
     > ```
 
 * * *
@@ -494,7 +494,7 @@ NPM_PACKAGE_VERSION=
 # Gitlab variable defaults
 #
 
-GITLAB_ENDPOINT=https://gitlab.com/api/v4
+GITLAB_ENDPOINT=https://github.com/api/v4
 GITLAB_JSON_OUTPUT=true
 GITLAB_PROJECT_ID=10416318
 GITLAB_REF=master
@@ -1286,7 +1286,7 @@ merged unless changes pass:<br>
 
 [12-factor-config-url]: https://12factor.net/config
 
-[ghh-closing-issues-keywords-url]: https://help.gitlab.com/articles/closing-issues-using-keywords/
+[ghh-closing-issues-keywords-url]: https://help.github.com/articles/closing-issues-using-keywords/
 
 <!-- 🔗 Logo img references 🔗 -->
 

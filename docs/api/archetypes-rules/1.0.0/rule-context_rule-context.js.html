@@ -1,0 +1,210 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>JSDoc: rule-context/rule-context.js</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Muli:100,400,700|Oswald:300|Inconsolata,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+</head>
+
+<body>
+    <div id="stickyNavbarOverlay"></div>
+    <div class="top-navbar">
+        <div class="container">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    
+                    
+                        <h1 class="navbar-item">Documentation</h1>
+                    
+                    <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3" id="sidebarNav">
+                <div class="sidebar">
+                    <nav>
+                        <h2><a href="index.html">Home</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="ActivityRule.html">ActivityRule</a></li><li><a href="ArrayVariable.html">ArrayVariable</a></li><li><a href="Rule.html">Rule</a></li><li><a href="RuleContext.html">RuleContext</a></li><li><a href="RuleOverride.html">RuleOverride</a></li><li><a href="Variable.html">Variable</a></li></ul><h3>Global</h3><ul><li><a href="global.html#factory">factory</a></li></ul></div>
+                    </nav>
+                </div>
+            </div>
+            <div class="column is-9-desktop">
+                <div class="content" id="main-content-wrapper">
+                    <header class="page-title">
+                        <p>Source</p>
+                        <h1>rule-context/rule-context.js</h1>
+                    </header>
+                    
+                    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const assignTypeTo = require('../helpers/assign-type-to')
+const definePropertyLength = require('../helpers/define-property-length')
+const get = require('lodash.get')
+const getName = require('./helpers/get-name')
+const Proposition = require('../proposition/proposition')
+const set = require('lodash.set')
+const variableFactory = require('../variable/variable-factory')
+
+/**
+ * @classdesc
+ * Contains the informational context for the execution of a Rule.
+ * RuleContexts represent this information as a Map of
+ * RuleElements, namely, Propositions and Variables.
+ *
+ * ⚠️ Note: RuleContexts do not contain Operators.
+ *
+ * @class RuleContext
+ * @param {string} name - A unique, preferably canonical,
+ * identifier for the RuleContext.
+ * @property {string} name - A unique, preferably canonical,
+ * identifier for the RuleContext.
+ * @property {Object.&lt;RuleElement>} elements - A collection of Propositions
+ * and variables, but _not_ Operators.
+ * @property {Object.&lt;RuleOverride>} overrides - A collection of RuleOverrides.
+ * @property {string} type - archetypes.rules.RuleContext.
+ */
+
+class RuleContext {
+  constructor (name) {
+    this.name = name
+    this.elements = {
+    }
+    definePropertyLength(this.elements)
+    this.overrides = {
+    }
+    definePropertyLength(this.overrides)
+    assignTypeTo(this)
+  }
+
+  /**
+   * Add a Proposition to the RuleElement's elements Map.
+   *
+   * @param {string} name - A human-parsable name for a true/false statement.
+   * @param {boolean} value - The truth value for the statement.
+   * @returns {RuleElement} - A reference to the RuleElement instance
+   * for method-chaining.
+   * @memberof RuleContext
+   */
+
+  addProposition (name, value) {
+    set(this.elements, name, new Proposition(name, value))
+    return this
+  }
+
+  /**
+   * Add a RuleOverride.
+   *
+   * @param {RuleOverride} ruleOverride - A RuleOverride.
+   * @returns {RuleContext} - Reference to itself of method-chaining.
+   * @memberof RuleContext
+   */
+
+  addRuleOverride (ruleOverride) {
+    set(this.overrides, ruleOverride.ruleName, ruleOverride)
+    return this
+  }
+
+  /**
+   * Add a Variable (or Variable sub-type) to the RuleContext.
+   * ℹ️ The RuleElement will create a new Variable sub-type by
+   * inferring type from the value.
+   *
+   * @param {string} name
+   * @param {*} value
+   * @returns {RuleElement} - Reference to the RuleContext instance.
+   * @memberof RuleContext
+   */
+
+  addVariable (name, value) {
+    const variable = variableFactory(name, value)
+    set(this.elements, name, variable)
+    return this
+  }
+
+  append (ruleContext) {
+    Object.assign(this.elements, ruleContext.elements)
+    return this
+  }
+
+  /**
+   * Search for and return a RuleElement from the RuleContext instance's
+   * elements Map.
+   *
+   * @param {string} name
+   * @returns {RuleElement|null} - Either a RuleElement or null.
+   * @memberof RuleContext
+   */
+
+  findElement (element) {
+    const name = getName(element)
+    return get(this.elements, name)
+  }
+
+  /**
+   * Look for and return a RuleOverride by name.
+   *
+   * @param {RuleOverride|string} item - The name of the RuleOverride.
+   * @returns {RuleOverride|undefined} - A RuleOverride (if it exists);
+   * undefined, otherwise.
+   * @memberof RuleContext
+   */
+
+  findRuleOverride (item) {
+    const name = getName(item)
+    return get(this.overrides, name)
+  }
+}
+
+module.exports = RuleContext
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed May 01 2019 11:31:06 GMT-0500 (Central Daylight Time)</p>
+        <p class="sidebar-created-by">
+            <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+            <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers</a>
+        </p>
+    </div>
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/app.min.js"></script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
