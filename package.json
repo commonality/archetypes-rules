@@ -1,7 +1,7 @@
 {
   "name": "archetypes-rules",
   "description": "Move conditional logic out of source code and database triggers and into a reusable package, where explicit rules can be independently defined and managed.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Greg Swindle",
     "email": "greg@swindle.net",
@@ -83,7 +83,7 @@
     "eslint-plugin-sonarjs": "0.3.0",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-unicorn": "8.0.2",
-    "eslint-plugin-xss": "^0.1.9",    
+    "eslint-plugin-xss": "^0.1.9",
     "git-repo-info": "2.1.0",
     "husky": "2.2.0",
     "jest": "24.7.1",
