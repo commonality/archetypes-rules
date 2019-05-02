@@ -319,9 +319,7 @@ Before submitting a Pull Request, please read our:
 [vulnerabilities-url]:
   https://snyk.io/test/github/commonality/archetypes-rules?targetFile=package.json
 
-daviddm-dev-image]:
-https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&style=flat-square
-io/codacy/coverage/c6edb2d74fca44279c24b1c4a35b8ad9.svg?style=flat-square
+[daviddm-dev-image]: https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&style=flat-square
 
 <!-- Octicon img references  -->
 
