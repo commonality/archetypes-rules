@@ -853,9 +853,9 @@
       }
     },
     "@sindresorhus/is": {
-      "version": "0.15.0",
-      "resolved": "https://registry.npmjs.org/@sindresorhus/is/-/is-0.15.0.tgz",
-      "integrity": "sha512-lu8BpxjAtRCAo5ifytTpCPCj99LF7o/2Myn+NXyNCBqvPYn7Pjd76AMmUB5l7XF1U6t0hcWrlEM5ESufW7wAeA=="
+      "version": "0.16.0",
+      "resolved": "https://registry.npmjs.org/@sindresorhus/is/-/is-0.16.0.tgz",
+      "integrity": "sha512-QjJQRRsPoIBbvI0IFiY1NehCRgyw7BNobGVO9FSuMoX7OocwUMbsjXYFneoYT8XJbiXAEJvPvrj9eEb4ZMa84A=="
     },
     "@types/babel__core": {
       "version": "7.1.1",
