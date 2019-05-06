@@ -75,7 +75,7 @@
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.16",
     "eslint-plugin-no-unsanitized": "^3.0.2",
-    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-scanjs-rules": "^0.2.1",
