@@ -89,7 +89,7 @@
     "jest": "24.8.0",
     "jest-junit": "^6.4.0",
     "jest-sonar-reporter": "2.0.0",
-    "jsdoc": "3.5.5",
+    "jsdoc": "3.6.1",
     "jsdoc-mermaid": "1.0.0",
     "lint-staged": "^8.1.6",
     "prettier": "1.17.0",
