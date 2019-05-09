@@ -1075,14 +1075,15 @@
       "dev": true
     },
     "all-contributors-cli": {
-      "version": "6.3.1",
-      "resolved": "https://registry.npmjs.org/all-contributors-cli/-/all-contributors-cli-6.3.1.tgz",
-      "integrity": "sha512-v0M4HqSMPyoaBZptqd91GUkjUN7IaOBhBLkGVEbuNF/j+PIMN6hnTlI/8rj6P/Ofc6Y4qNtmjktqPmwqajk6DA==",
+      "version": "6.4.0",
+      "resolved": "https://registry.npmjs.org/all-contributors-cli/-/all-contributors-cli-6.4.0.tgz",
+      "integrity": "sha512-VyRqp7GnINHrcJ37y+gT554xoKzjTQy7P/rEXXDEEjWsIcrEjqW7/zI9KhzfG/sTKr5aDFo7qvXg/UiMhTYgIA==",
       "dev": true,
       "requires": {
         "@babel/runtime": "^7.2.0",
         "async": "^2.0.0-rc.1",
         "chalk": "^2.3.0",
+        "didyoumean": "^1.2.1",
         "inquirer": "^6.2.1",
         "lodash": "^4.11.2",
         "pify": "^4.0.1",
@@ -2970,6 +2971,12 @@
       "version": "2.1.1",
       "resolved": "https://registry.npmjs.org/dictionary-en-us/-/dictionary-en-us-2.1.1.tgz",
       "integrity": "sha512-3182Q3ede8TEm6FthZ2u8FppaayB+D43wy5cnOSweZwg9vSmmUCjCA3zxmMpZLw0nIAILGLR0j+06o2l9aaCzA=="
+    },
+    "didyoumean": {
+      "version": "1.2.1",
+      "resolved": "https://registry.npmjs.org/didyoumean/-/didyoumean-1.2.1.tgz",
+      "integrity": "sha1-6S7f2tplN9SE1zwBcv0eugxJdv8=",
+      "dev": true
     },
     "diff": {
       "version": "3.5.0",
