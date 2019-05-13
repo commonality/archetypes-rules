@@ -32,7 +32,7 @@
     }
   ],
   "dependencies": {
-    "@sindresorhus/is": "0.16.0",
+    "@sindresorhus/is": "0.17.0",
     "debug": "4.1.1",
     "dotenv-extended": "2.4.0",
     "enum-nom-nommer": "1.0.0",
