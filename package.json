@@ -110,7 +110,7 @@
     "rollup": "1.11.3",
     "rollup-plugin-commonjs": "9.3.4",
     "rollup-plugin-json": "4.0.0",
-    "rollup-plugin-node-resolve": "4.2.3",
+    "rollup-plugin-node-resolve": "4.2.4",
     "rollup-plugin-terser": "4.0.4",
     "semantic-release": "15.13.12",
     "sonarqube-scanner": "2.4.0",
