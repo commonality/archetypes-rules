@@ -13630,9 +13630,9 @@
       "dev": true
     },
     "ow": {
-      "version": "0.12.0",
-      "resolved": "https://registry.npmjs.org/ow/-/ow-0.12.0.tgz",
-      "integrity": "sha512-GWAoq5RiK3HpMbwvM/aszyYYm7UvZzNfx5QPDbCXd52lROiDVBn6x6M06DhsL/Y8BTl42djQAPWhu6adaWwZyQ=="
+      "version": "0.13.0",
+      "resolved": "https://registry.npmjs.org/ow/-/ow-0.13.0.tgz",
+      "integrity": "sha512-2npeB8+3F+Dr+Xzfm4zlOuzCQfIXyutaOHVPBBNMeu6JeffROkKyLVVw6bLJUF+GtD0ZBWnpTa+POLilaxDtTw=="
     },
     "p-cancelable": {
       "version": "0.4.1",
