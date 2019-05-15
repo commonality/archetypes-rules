@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.0.14](https://github.com/commonality/archetypes-rules/compare/v1.0.13...v1.0.14) (2019-05-15)
+
 ## [1.0.13](https://github.com/commonality/archetypes-rules/compare/v1.0.12...v1.0.13) (2019-05-14)
 
 ## [1.0.12](https://github.com/commonality/archetypes-rules/compare/v1.0.11...v1.0.12) (2019-05-14)
