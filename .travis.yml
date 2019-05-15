@@ -100,4 +100,4 @@ jobs:
           # 7.8.3. Publish on NPM (including README)
           # 7.9.  Any gate fails? Roll back and abort all release steps.
 
-          - npx semantic-release
+          - npx semantic-release --no-ci
