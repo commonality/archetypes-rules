@@ -67,7 +67,7 @@
     "coveralls": "3.0.3",
     "dictionary-en-us": "^2.1.1",
     "eslint": "5.16.0",
-    "eslint-config-prettier": "4.2.0",
+    "eslint-config-prettier": "4.3.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-xo": "^0.26.0",
     "eslint-find-rules": "3.3.1",
