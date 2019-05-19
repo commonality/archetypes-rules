@@ -91,7 +91,7 @@
     "jest-sonar-reporter": "2.0.0",
     "jsdoc": "3.6.2",
     "jsdoc-mermaid": "1.0.0",
-    "lint-staged": "^8.1.6",
+    "lint-staged": "^8.1.7",
     "prettier": "1.17.1",
     "recursive-readdir": "2.2.2",
     "remark": "^10.0.1",
