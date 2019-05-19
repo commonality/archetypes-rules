@@ -1,7 +1,7 @@
 {
   "name": "archetypes-rules",
   "description": "Move conditional logic out of source code and database triggers and into a reusable package, where explicit rules can be independently defined and managed.",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "author": {
     "name": "Greg Swindle",
     "email": "greg@swindle.net",
