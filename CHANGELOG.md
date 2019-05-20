@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/commonality/archetypes-rules/compare/v1.0.20...v1.1.0) (2019-05-20)
+
+
+### Features
+
+* **variable:** extend string-variable ([3e51767](https://github.com/commonality/archetypes-rules/commit/3e51767)), closes [#33](https://github.com/commonality/archetypes-rules/issues/33)
+
 ## [1.0.20](https://github.com/commonality/archetypes-rules/compare/v1.0.19...v1.0.20) (2019-05-19)
 
 ## Build
