@@ -321,6 +321,14 @@ Before submitting a Pull Request, please read our:
 
 [daviddm-dev-image]: https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&style=flat-square
 
+[bundlephobia-min-download-image]: https://flat.badgen.net/bundlephobia/min/archetypes-rules
+
+[install-size-image]: https://flat.badgen.net/packagephobia/install/archetypes-rules
+
+[publish-size-image]: https://flat.badgen.net/packagephobia/publish/archetypes-rules
+
+[downloads-per-month-image]: https://flat.badgen.net/npm/dm/archetypes-rules
+
 <!-- Octicon img references  -->
 
 [octicon-alert]:
