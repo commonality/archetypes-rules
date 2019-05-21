@@ -1,6 +1,5 @@
 /* eslint-disable node/no-unpublished-require */
-// require('./lib/env-config')
-
+require('./lib/env-config')
 const commonjs = require('rollup-plugin-commonjs')
 const json = require('rollup-plugin-json')
 const pkg = require('./package.json')
@@ -10,14 +9,16 @@ const { terser } = require('rollup-plugin-terser')
 
 const dependencies = Object.keys(pkg.dependencies)
 
-const devDependencies = Object.keys(pkg.devDependencies)
-  .map((dev) => `node_modules/${dev}/**`)
+const devDependencies = Object.keys(pkg.devDependencies).map(
+  (dev) => `node_modules/${dev}/**`
+)
 
 const includeFilesThatAreNotTests = (async () => {
   let files = null
   try {
-    files = await recursiveReaddir('./lib')
-      .filter((filePath) => !filePath.includes('__tests__'))
+    files = await recursiveReaddir('./lib').filter(
+      (filePath) => !filePath.includes('__tests__')
+    )
   } catch (err) {
     files = []
   }
@@ -26,12 +27,14 @@ const includeFilesThatAreNotTests = (async () => {
 
 const rollupConfig = {
   input: 'lib/index.js',
-  output: {
-    compact: true,
-    file: pkg.main,
-    format: 'cjs',
-    interop: false
-  },
+  output: [
+    {
+      compact: true,
+      file: pkg.main,
+      format: 'cjs',
+      interop: false
+    }
+  ],
   plugins: [
     json({
       compact: true,
@@ -40,6 +43,7 @@ const rollupConfig = {
       preferConst: true
     }),
     resolve({
+      mainFields: ['module', 'main'],
       only: includeFilesThatAreNotTests
     }),
     commonjs({
