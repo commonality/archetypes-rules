@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/commonality/archetypes-rules/compare/v1.1.0...v1.1.1) (2019-05-21)
+
+
+### Bug Fixes
+
+* **dist:** import module error ([c22a8ef](https://github.com/commonality/archetypes-rules/commit/c22a8ef)), closes [#38](https://github.com/commonality/archetypes-rules/issues/38) [#38](https://github.com/commonality/archetypes-rules/issues/38) [#38](https://github.com/commonality/archetypes-rules/issues/38) [#35](https://github.com/commonality/archetypes-rules/issues/35) [#36](https://github.com/commonality/archetypes-rules/issues/36) [#37](https://github.com/commonality/archetypes-rules/issues/37) [#39](https://github.com/commonality/archetypes-rules/issues/39)
+
 # [1.1.0](https://github.com/commonality/archetypes-rules/compare/v1.0.20...v1.1.0) (2019-05-20)
 
 
