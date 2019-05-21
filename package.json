@@ -49,7 +49,7 @@
     "lodash.toarray": "4.4.0",
     "lodash.topairs": "4.3.0",
     "lodash.upperfirst": "4.3.1",
-    "ow": "0.13.1",
+    "ow": "0.13.2",
     "parse-numeric": "1.0.2"
   },
   "devDependencies": {
@@ -59,7 +59,7 @@
     "@semantic-release/github": "5.2.10",
     "@semantic-release/npm": "5.1.7",
     "@semantic-release/release-notes-generator": "^7.1.4",
-    "all-contributors-cli": "6.4.0",
+    "all-contributors-cli": "6.5.0",
     "better-docs": "1.1.6",
     "codacy-coverage": "3.4.0",
     "commitizen": "3.1.1",
@@ -107,8 +107,8 @@
     "retext-spell": "^2.4.0",
     "retext-syntax-urls": "^1.0.1",
     "retext-usage": "^0.5.0",
-    "rollup": "1.12.1",
-    "rollup-plugin-commonjs": "9.3.4",
+    "rollup": "1.12.3",
+    "rollup-plugin-commonjs": "10.0.0",
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.0.0",
     "rollup-plugin-terser": "4.0.4",
@@ -120,8 +120,7 @@
     "npm": ">= 8.0.0"
   },
   "files": [
-    "lib",
-    "!**/__tests__/**"
+    "dist"
   ],
   "greenkeeper": {
     "commitMessages": {
@@ -333,6 +332,7 @@
   "repository": "git@github.com:commonality/archetypes-rules.git",
   "scripts": {
     "bundle": "rollup -c ./rollup.config.js --environment INCLUDE_DEPS,BUILD:production",
+    "bundle:clean": "rm -rf ./dist/ && rm -f *.tgz",
     "ci:coverage": "npm run ci:coverage:codacy && npm run ci:coverage:coveralls",
     "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
@@ -342,8 +342,10 @@
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:json:fix": "prettier --write **/*.json",
+    "postbundle": "npm pack",
     "postci:test": "npm run ci:coverage",
     "postversion": "npm run bundle",
+    "prebundle": "npm run bundle:clean",
     "pretest": "npm run lint:js:fix",
     "qa:review:sonar": "node -r ./.github/ci/qa/sonar-scan.js",
     "security:audit:dependencies": "npm audit --dry-run",
