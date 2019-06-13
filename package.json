@@ -103,7 +103,7 @@
     "remark-retext": "^3.1.2",
     "retext-english": "^3.0.2",
     "retext-repeated-words": "^1.2.2",
-    "retext-sentence-spacing": "^2.1.0",
+    "retext-sentence-spacing": "^3.0.0",
     "retext-spell": "^2.4.0",
     "retext-syntax-urls": "^1.0.1",
     "retext-usage": "^0.5.0",
