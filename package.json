@@ -82,7 +82,7 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "0.4.0",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "8.0.2",
+    "eslint-plugin-unicorn": "9.1.0",
     "eslint-plugin-xss": "^0.1.9",
     "git-repo-info": "2.1.0",
     "husky": "2.3.0",
