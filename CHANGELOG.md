@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0](https://github.com/commonality/archetypes-rules/compare/v1.1.3...v1.2.0) (2019-06-19)
+
+
+### Features
+
+* **operator:** pass factory and constructor options ([d46ff3a](https://github.com/commonality/archetypes-rules/commit/d46ff3a)), closes [#76](https://github.com/commonality/archetypes-rules/issues/76)
+
 ## [1.1.3](https://github.com/commonality/archetypes-rules/compare/v1.1.2...v1.1.3) (2019-06-14)
 
 ## [1.1.2](https://github.com/commonality/archetypes-rules/compare/v1.1.1...v1.1.2) (2019-06-02)
