@@ -112,7 +112,7 @@
     "rollup-plugin-json": "4.0.0",
     "rollup-plugin-node-resolve": "5.0.0",
     "rollup-plugin-terser": "5.0.0",
-    "semantic-release": "15.13.12",
+    "semantic-release": "15.13.17",
     "sonarqube-scanner": "2.4.1",
     "unified": "^7.1.0"
   },
