@@ -2,45 +2,45 @@
   "elements": [
     {
       "name": "country:LY",
-      "type": "archetypes.rules.ObjectVariable",
+      "type": "@archetypes/rules/ObjectVariable",
       "value": {
         "description": null,
         "effectiveDates": {
           "validFrom": {
             "name": "travel-advisory-effective-as-of",
-            "type": "archetypes.rules.DateVariable",
+            "type": "@archetypes/rules/DateVariable",
             "value": "2019-04-09T05:00:00.000Z"
           },
           "validTo": {
             "name": "travel-advisory-effective-until",
-            "type": "archetypes.rules.DateVariable",
+            "type": "@archetypes/rules/DateVariable",
             "value": "NULL_DATE_VARIABLE"
           }
         },
         "identifier": "LY",
         "name": "Libya",
-        "type": "archetypes.rules.ObjectVariable"
+        "type": "@archetypes/rules/ObjectVariable"
       }
     },
     {
       "name": "destination",
-      "type": "archetypes.rules.ObjectVariable",
+      "type": "@archetypes/rules/ObjectVariable",
       "value": "NULL_OBJECT_VARIABLE"
     },
     {
       "name": "EQUAL_TO",
-      "type": "archetypes.rules.Operator"
+      "type": "@archetypes/rules/Operator"
     },
     {
       "name": "is-travel-allowed",
-      "type": "archetypes.rules.Proposition",
+      "type": "@archetypes/rules/Proposition",
       "value": false
     },
     {
       "name": "AND",
-      "type": "archetypes.rules.Operator"
+      "type": "@archetypes/rules/Operator"
     }
   ],
   "name": "LY-travel-advisory",
-  "type": "archetypes.rules.Rule"
+  "type": "@archetypes/rules/Rule"
 }

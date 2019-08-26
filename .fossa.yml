@@ -5,7 +5,7 @@ version: 2
 cli:
   server: https://app.fossa.com
   fetcher: custom
-  project: https://github.com/commonality/archetypes-rules.git
+  project: https://github.com/commonality/@archetypes/rules.git
 analyze:
   modules:
   - name: .

@@ -2,11 +2,11 @@
 
 # Governance
 
-**archetypes-rules** is an open source project that depends on contributions
+**@archetypes/rules** is an open source project that depends on contributions
 from the community. Anyone may contribute to the project at any time by
 submitting code, participating in discussions, making suggestions, or any other
 contribution they see fit. This document describes how various types of
-contributors work within the **archetypes-rules** project.
+contributors work within the **@archetypes/rules** project.
 
 ## Roles and Responsibilities
 
@@ -158,25 +158,25 @@ be nominated to become a PMC member, described below.
 
 #### Process for Adding Committers
 
-1.  Add the GitHub user to the "**archetypes-rules** Team" team
+1.  Add the GitHub user to the "**@archetypes/rules** Team" team
 
 1.  Send welcome email with link to the Maintainer guide
 
-1.  Add the Maintainer's email to the **archetypes-rules** team mailing list
+1.  Add the Maintainer's email to the **@archetypes/rules** team mailing list
 
 1.  Add the Maintainer to the README
 
 1.  Invite to team chatroom
 
 1.  Publisize congratulatory messages to the new committer on internal
-    **archetypes-rules** media, e.g., CrowdAround and Stack Overflow
+    **@archetypes/rules** media, e.g., CrowdAround and Stack Overflow
 
 1.  Notify Human Resources/Performance Management about the community's
     promotion
 
 ### Product Management Committe (PMC)
 
-The **archetypes-rules** project is jointly governed by a Product Management
+The **@archetypes/rules** project is jointly governed by a Product Management
 Committe (PMC) which is responsible for high-level guidance of the project.
 
 The PMC has final authority over this project including:
@@ -239,24 +239,24 @@ nomination will result in discussion and then a decision by the PMC.
 
 #### Process for Adding PMC Members
 
-1.  Add the Maintainer to the "**archetypes-rules** PMC" team
+1.  Add the Maintainer to the "**@archetypes/rules** PMC" team
 
-1.  Set the GitHub user to be have the "Owner" role for the archetypes-rules
+1.  Set the GitHub user to be have the "Owner" role for the @archetypes/rules
     organization
 
 1.  Send welcome email with link to Maintainer guide
 
 1.  Add the PMC member to the README
 
-1.  Invite to the **archetypes-rules** PMC chatroom
+1.  Invite to the **@archetypes/rules** PMC chatroom
 
-1.  Make the PMC member an admin on the **archetypes-rules** team mailing list
+1.  Make the PMC member an admin on the **@archetypes/rules** team mailing list
 
 1.  Add the PMC member to the recurring PMC meeting event on Google Calendar
 
-1.  Add the PMC member as an admin to **archetypes-rules** media channels
+1.  Add the PMC member as an admin to **@archetypes/rules** media channels
 
-1.  Publish congratulatory remarks to the new PMC member on archetypes-rules
+1.  Publish congratulatory remarks to the new PMC member on @archetypes/rules
     media channels
 
 #### PMC Meetings
@@ -317,7 +317,7 @@ This work is licensed under a
 * * *
 
 <h4 align="center">
-  Previous: <a href="/docs/maintainer-guide/releases.md"><img align="bottom" alt="chevron-left" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-left.svg">3. Release management</a>
+  Previous: <a href="/docs/maintainer-guide/releases.md"><img align="bottom" alt="chevron-left" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/chevron-left.svg">3. Release management</a>
   |
-  <a href="/docs/maintainer-guide/#readme"><img align="bottom" alt="arrow-up" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-up.svg">Back to Maintainer Guide</a>
+  <a href="/docs/maintainer-guide/#readme"><img align="bottom" alt="arrow-up" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-up.svg">Back to Maintainer Guide</a>
 </h4>

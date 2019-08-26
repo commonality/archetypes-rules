@@ -26,6 +26,7 @@ const includeFilesThatAreNotTests = (async () => {
 })()
 
 const rollupConfig = {
+  external: dependencies,
   input: 'lib/index.js',
   output: [
     {
@@ -36,6 +37,9 @@ const rollupConfig = {
     }
   ],
   plugins: [
+    commonjs({
+      exclude: devDependencies
+    }),
     json({
       compact: true,
       exclude: devDependencies,
@@ -46,12 +50,8 @@ const rollupConfig = {
       mainFields: ['module', 'main'],
       only: includeFilesThatAreNotTests
     }),
-    commonjs({
-      exclude: devDependencies
-    }),
     terser()
-  ],
-  external: dependencies
+  ]
 }
 
 module.exports = rollupConfig

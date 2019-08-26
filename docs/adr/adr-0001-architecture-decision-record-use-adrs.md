@@ -9,7 +9,7 @@
 
 ## Context
 
-The **archetypes-rules** team has several explicit goals that make the practice
+The **@archetypes/rules** team has several explicit goals that make the practice
 and discipline of architecture very important:
 
 -   We want to think deeply about all our architectural decisions, exploring all
@@ -18,7 +18,7 @@ and discipline of architecture very important:
 -   We want to be as transparent as possible in our decision-making process.
 
 -   We don't want decisions to be made unilaterally in a vacuum. Specifically,
-    should **archetypes-rules** ever fall under the purview of a Technical
+    should **@archetypes/rules** ever fall under the purview of a Technical
     Steering Committee (TSC), we would want to give our TSC colleagues the
     opportunity to review every major decision.
 
@@ -32,7 +32,7 @@ and discipline of architecture very important:
 
 ## Decision
 
-We will document every architecture-level decision for **archetypes-rules** and
+We will document every architecture-level decision for **@archetypes/rules** and
 its core modules with an Architecture Decision Record. These are a well
 structured, relatively lightweight way to capture architectural proposals. They
 can serve as an artifact for discussion, and remain as an enduring record of the
@@ -87,7 +87,7 @@ end
 1.  The Maintainer or Trusted Committer will also update the **"Status"**
     section of the ADR with the badge that reflects the ADR's state.[^2] \(The
     Style Guide for Images has
-    ["how-to" instructions for badges](https://github.com/archetypes-rules/signatures/wikis/Style-Guides/Images).)
+    ["how-to" instructions for badges](https://github.com/@archetypes/rules/signatures/wikis/Style-Guides/Images).)
 
 1.  Only after an ADR is accepted should implementing code be committed to the
     `master` branch of a relevant application, library, or module.
@@ -106,7 +106,7 @@ end
 
 1.  Contributors must write an ADR and submit it for review before selecting an
     approach to any architectural decision; that is, any decision that affects
-    the way **archetypes-rules** or an **archetypes-rules** application is put
+    the way **@archetypes/rules** or an **@archetypes/rules** application is put
     together at a high level.
 
 1.  We will have a concrete artifact around which to focus discussion, before
@@ -122,18 +122,18 @@ end
 ## References
 
 [^1]: Swindle, G. (2019) _Architecture Decisions · Wiki ·
-  archetypes-rules/signatures · GitLab_. Retrieved March 08, 2019, from
-  <https://github.com/archetypes-rules/signatures/wikis/Governance/Architecture-Decisions>
+  @archetypes/rules/signatures · GitLab_. Retrieved March 08, 2019, from
+  <https://github.com/@archetypes/rules/signatures/wikis/Governance/Architecture-Decisions>
 
-[^2] Swindle, G. (2019) _Images · Wiki · archetypes-rules/signatures · GitLab_.
+[^2] Swindle, G. (2019) _Images · Wiki · @archetypes/rules/signatures · GitLab_.
   Retrieved March 08, 2019, from
-  <https://github.com/archetypes-rules/signatures/wikis/Style-Guides/Images>
+  <https://github.com/@archetypes/rules/signatures/wikis/Style-Guides/Images>
 
 <!-- Do not remove this line or anything under it. -->
 
 [adr-0001]: docs/adr/adr-0001-architecture-decision-record-use-adrs.md
 
-[adr-issue-board]: https://github.com/archetypes-rules/signatures/boards/980468?&label_name[]=type%3A%20adr
+[adr-issue-board]: https://github.com/@archetypes/rules/signatures/boards/980468?&label_name[]=type%3A%20adr
 
 [adr-accepted-badge]: https://flat.badgen.net/badge/ADR/accepted/44AD8E
 
@@ -145,4 +145,4 @@ end
 
 <!-- Octicon image definition list -->
 
-[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
+[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/calendar.svg

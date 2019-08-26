@@ -12,7 +12,7 @@
     },
     {
       "name": "level-4/do-not-travel-list",
-      "type": "archetypes.rules.ArrayVariable",
+      "type": "@archetypes/rules/ArrayVariable",
       "value": [
         {
           "name": "Afghanistan",
@@ -88,17 +88,17 @@
     },
     {
       "name": "destination-country",
-      "type": "archetypes.rules.ObjectVariable",
+      "type": "@archetypes/rules/ObjectVariable",
       "value": "NULL_OBJECT_VARIABLE"
     },
     {
       "name": "INCLUDES_ANY",
-      "type": "archetypes.rules.Operator"
+      "type": "@archetypes/rules/Operator"
     },
     {
       "name": "AND",
-      "type": "archetypes.rules.Operator"
+      "type": "@archetypes/rules/Operator"
     }
   ],
-  "type": "archetypes.rules.Rule"
+  "type": "@archetypes/rules/Rule"
 }

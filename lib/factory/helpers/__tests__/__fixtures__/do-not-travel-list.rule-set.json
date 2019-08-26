@@ -6,12 +6,12 @@
       "elements": [
         {
           "name": "is-traveller-us-gov-official",
-          "type": "archetypes.rules.Proposition",
+          "type": "@archetypes/rules/Proposition",
           "value": false
         },
         {
           "name": "level-4/do-not-travel-list",
-          "type": "archetypes.rules.ArrayVariable",
+          "type": "@archetypes/rules/ArrayVariable",
           "value": [
             {
               "name": "Afghanistan",
@@ -87,27 +87,27 @@
         },
         {
           "name": "destination-country",
-          "type": "archetypes.rules.ObjectVariable",
+          "type": "@archetypes/rules/ObjectVariable",
           "value": "NULL_OBJECT_VARIABLE"
         },
         {
           "name": "INCLUDES_ANY",
-          "type": "archetypes.rules.Operator"
+          "type": "@archetypes/rules/Operator"
         },
         {
           "name": "AND",
-          "type": "archetypes.rules.Operator"
+          "type": "@archetypes/rules/Operator"
         }
       ],
-      "type": "archetypes.rules.Rule"
+      "type": "@archetypes/rules/Rule"
     },
     "humanitarian-ngo": {
       "name": "humanitarian-ngo",
-      "type": "archetypes.rules.Rule",
+      "type": "@archetypes/rules/Rule",
       "elements": [
         {
           "name": "is-member-of-recognized-ngo",
-          "type": "archetypes.rules.Proposition",
+          "type": "@archetypes/rules/Proposition",
           "value": true
         }
       ]
@@ -119,10 +119,10 @@
       "override": true,
       "raisedBy": null,
       "ruleName": "travel-override",
-      "type": "archetypes.rules.RuleOverride",
+      "type": "@archetypes/rules/RuleOverride",
       "when": "2019-04-26T03:14:39.110Z",
       "why": null
     }
   },
-  "type": "archetypes.rules.RuleSet"
+  "type": "@archetypes/rules/RuleSet"
 }

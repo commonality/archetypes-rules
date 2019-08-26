@@ -9,7 +9,7 @@
 
 ## Context
 
-The **archetypes-rules** group creates security-based software solutions for the
+The **@archetypes/rules** group creates security-based software solutions for the
 **benefit** of anyone in **the world**. We have two broad goals:
 
 1.  **Reusability.** Different software packages, written by different
@@ -107,6 +107,6 @@ Issues.
 
 [adr-deprecated-badge]: https://flat.badgen.net/badge/ADR/deprecated/7F8C8D
 
-[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
+[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/calendar.svg
 
-[octicon-quote]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/quote.svg
+[octicon-quote]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/quote.svg
