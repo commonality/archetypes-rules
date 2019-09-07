@@ -1,5 +1,5 @@
 {
-  "name": "archetypes-rules",
+  "name": "@archetypes/rules",
   "description": "Move conditional logic out of source code and database triggers and into a reusable package, where explicit rules can be independently defined and managed.",
   "version": "1.2.0",
   "author": {
@@ -7,7 +7,7 @@
     "email": "greg@swindle.net",
     "url": "https://github.com/commonality"
   },
-  "bugs": "https://github.com/commonality/archetypes-rules/issues",
+  "bugs": "https://github.com/commonality/@archetypes/rules/issues",
   "commitplease": {
     "style": "angular",
     "types": [
@@ -32,16 +32,13 @@
     }
   ],
   "dependencies": {
-    "@sindresorhus/is": "0.17.1",
+    "@sindresorhus/is": "1.0.0",
     "debug": "4.1.1",
     "dotenv-extended": "2.4.0",
     "enum-nom-nommer": "1.0.0",
-    "fs-extra": "8.0.1",
+    "fs-extra": "8.1.0",
     "lodash.camelcase": "4.3.0",
     "lodash.get": "4.4.2",
-    "lodash.hasin": "4.5.2",
-    "lodash.includes": "4.3.0",
-    "lodash.intersection": "4.4.0",
     "lodash.invoke": "4.5.2",
     "lodash.isequal": "4.5.0",
     "lodash.kebabcase": "4.1.1",
@@ -49,72 +46,53 @@
     "lodash.toarray": "4.4.0",
     "lodash.topairs": "4.3.0",
     "lodash.upperfirst": "4.3.1",
-    "ow": "0.13.2",
-    "parse-numeric": "1.0.2"
+    "ow": "0.13.2"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^3.0.2",
-    "@semantic-release/commit-analyzer": "^6.1.0",
-    "@semantic-release/git": "^7.0.8",
-    "@semantic-release/github": "5.2.10",
-    "@semantic-release/npm": "5.1.7",
-    "@semantic-release/release-notes-generator": "^7.1.4",
-    "all-contributors-cli": "6.6.1",
-    "better-docs": "1.1.6",
+    "@semantic-release/changelog": "3.0.4",
+    "@semantic-release/commit-analyzer": "6.3.0",
+    "@semantic-release/git": "7.0.16",
+    "@semantic-release/github": "5.4.3",
+    "@semantic-release/npm": "5.1.15",
+    "@semantic-release/release-notes-generator": "7.3.0",
+    "all-contributors-cli": "6.9.0",
     "codacy-coverage": "3.4.0",
-    "commitizen": "3.1.1",
+    "commitizen": "4.0.3",
     "commitplease": "^3.2.0",
-    "coveralls": "3.0.3",
-    "dictionary-en-us": "^2.1.1",
-    "eslint": "5.16.0",
-    "eslint-config-prettier": "4.3.0",
-    "eslint-config-standard": "^12.0.0",
+    "coveralls": "3.0.6",
+    "eslint": "6.3.0",
+    "eslint-config-prettier": "6.2.0",
+    "eslint-config-standard": "14.1.0",
     "eslint-config-xo": "^0.26.0",
-    "eslint-find-rules": "3.3.1",
-    "eslint-plugin-import": "2.17.3",
+    "eslint-find-rules": "3.4.0",
+    "eslint-plugin-import": "2.18.2",
     "eslint-plugin-json": "1.4.0",
     "eslint-plugin-no-unsafe-innerhtml": "^1.0.16",
     "eslint-plugin-no-unsanitized": "^3.0.2",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-node": "10.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-promise": "4.1.1",
+    "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-scanjs-rules": "^0.2.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-sonarjs": "0.4.0",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-unicorn": "8.0.2",
+    "eslint-plugin-standard": "4.0.1",
+    "eslint-plugin-unicorn": "10.0.0",
     "eslint-plugin-xss": "^0.1.9",
     "git-repo-info": "2.1.0",
-    "husky": "2.3.0",
-    "jest": "24.8.0",
-    "jest-junit": "^6.4.0",
+    "husky": "3.0.5",
+    "jest": "24.9.0",
+    "jest-junit": "8.0.0",
     "jest-sonar-reporter": "2.0.0",
-    "jsdoc": "3.6.2",
-    "jsdoc-mermaid": "1.0.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "1.17.1",
+    "lint-staged": "9.2.5",
+    "prettier": "1.18.2",
     "recursive-readdir": "2.2.2",
-    "remark": "^10.0.1",
-    "remark-frontmatter": "^1.3.1",
-    "remark-lint": "^6.0.4",
-    "remark-preset-lint-consistent": "^2.0.2",
-    "remark-preset-lint-markdown-style-guide": "^2.1.2",
-    "remark-preset-lint-recommended": "^3.0.2",
-    "remark-retext": "^3.1.2",
-    "retext-english": "^3.0.2",
-    "retext-repeated-words": "^1.2.2",
-    "retext-sentence-spacing": "^2.1.0",
-    "retext-spell": "^2.4.0",
-    "retext-syntax-urls": "^1.0.1",
-    "retext-usage": "^0.5.0",
-    "rollup": "1.12.3",
-    "rollup-plugin-commonjs": "10.0.0",
+    "rollup": "1.20.3",
+    "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-json": "4.0.0",
-    "rollup-plugin-node-resolve": "5.0.0",
-    "rollup-plugin-terser": "5.0.0",
-    "semantic-release": "15.13.18",
-    "sonarqube-scanner": "2.4.1",
-    "unified": "^7.1.0"
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "5.1.1",
+    "semantic-release": "15.13.24",
+    "sonarqube-scanner": "2.5.0"
   },
   "engines": {
     "npm": ">= 8.0.0"
@@ -212,7 +190,6 @@
   "lint-staged": {
     "*.js": [
       "npm run lint:js:fix",
-      "npm run docs:api",
       "git add"
     ],
     "*.json": [
@@ -220,7 +197,7 @@
       "git add"
     ]
   },
-  "main": "dist/archetypes-rules.js",
+  "main": "dist/@archetypes/rules.js",
   "readme": "https://github.com/commonality/archtypes-rules/README.md",
   "release": {
     "verifyConditions": [
@@ -329,7 +306,7 @@
     "success": false,
     "fail": false
   },
-  "repository": "git@github.com:commonality/archetypes-rules.git",
+  "repository": "git@github.com:commonality/@archetypes/rules.git",
   "scripts": {
     "bundle": "rollup -c ./rollup.config.js --environment INCLUDE_DEPS,BUILD:production",
     "bundle:clean": "rm -rf ./dist/ && rm -f *.tgz",
@@ -337,8 +314,8 @@
     "ci:coverage:codacy": "cat ./coverage/lcov.info | codacy-coverage",
     "ci:coverage:coveralls": "cat ./coverage/lcov.info | coveralls",
     "ci:lint:js": "eslint --config .eslintrc.json . --fix -f json -o eslint-report.json",
-    "ci:test": "npm run start && npm run ci:lint:js && jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter",
-    "docs:api": "node_modules/.bin/jsdoc ./lib/ -r -R ./README.md -P package.json -t ./node_modules/better-docs/ -d ./docs/api/",
+    "ci:test": "npm run env:init && npm run ci:lint:js && jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter",
+    "env:init": "node -r dotenv-extended ./lib/env-config.js",
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:json:fix": "prettier --write **/*.json",
@@ -350,7 +327,6 @@
     "qa:review:sonar": "node -r ./.github/ci/qa/sonar-scan.js",
     "security:audit:dependencies": "npm audit --dry-run",
     "semantic-release": "semantic-release",
-    "start": "node -r dotenv-extended ./lib/env-config.js",
     "test": "jest --coverage --verbose"
   }
 }

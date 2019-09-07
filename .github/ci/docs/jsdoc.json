@@ -25,13 +25,13 @@
     "cleverLinks": false,
     "monospaceLinks": false,
     "better-docs": {
-      "name": "archetypes-rules API Documentation",
+      "name": "@archetypes/rules API Documentation",
       "logo": "docs/img/logos/logo.png",
       "trackingCode": null,
       "navigation": [
         {
           "label": "Github",
-          "href": "https://github.com/commonality/archetypes-rules"
+          "href": "https://github.com/commonality/@archetypes/rules"
         }
       ]
     }

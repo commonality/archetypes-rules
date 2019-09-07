@@ -1,4 +1,4 @@
-> ![info][octicon-info] **archetypes-rules** stores configuration details in the
+> ![info][octicon-info] **@archetypes/rules** stores configuration details in the
 > environment— separate from code—with the [`dotenv-extended` >
 > ![Go to its README on GitHub][octicon-link-external]][1] module.
 >
@@ -153,7 +153,7 @@ file.
 # Product manifest (package.json) variables
 #
 
-NPM_PACKAGE_NAME=archetypes-rules
+NPM_PACKAGE_NAME=@archetypes/rules
 NPM_PACKAGE_VERSION=
 
 #
@@ -176,7 +176,7 @@ K8S_SECRET_GITLAB_TOKEN=
 
 # name attribute of <testsuites>
 # @default "jest tests"
-JEST_SUITE_NAME=archetypes-rules tests
+JEST_SUITE_NAME=@archetypes/rules tests
 
 # File path to save the output.
 # @default "./junit.xml"
@@ -217,9 +217,9 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 # SonarCloud static code analysis
 SONAR_BRANCH_TARGET=master
 SONAR_HOST_URL=https://sonarcloud.io
-SONAR_ORGANIZATION=archetypes-rules
+SONAR_ORGANIZATION=@archetypes/rules
 SONAR_PROJECT_KEY=signatures
-SONAR_PROJECT_NAME=archetypes-rules
+SONAR_PROJECT_NAME=@archetypes/rules
 SONAR_PROJECT_VERSION=$SONAR_PROJECT_VERSION
 SONAR_TOKEN=
 K8S_SECRET_SONAR_TOKEN=
@@ -227,7 +227,7 @@ K8S_SECRET_SONAR_TOKEN=
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<h4><img align="bottom" alt="file" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file.svg"> <samp>.env</samp></h4>
+<h4><img align="bottom" alt="file" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file.svg"> <samp>.env</samp></h4>
 
 The environment-specific file (not committed to source control). This file will
 have sensitive information such as usernames, passwords, api keys, etc. These

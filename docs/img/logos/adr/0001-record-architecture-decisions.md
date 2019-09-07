@@ -31,7 +31,7 @@ We need to record the architectural decisions made on this project, since:
 
 ## Decision
 
-We will document every architecture-level decision for **archetypes-rules** and
+We will document every architecture-level decision for **@archetypes/rules** and
 its core modules with an [Architecture Decision Record][nygard-article-url].
 These are a well structured, relatively lightweight way to capture architectural
 proposals. They can serve as an artifact for discussion, and remain as an

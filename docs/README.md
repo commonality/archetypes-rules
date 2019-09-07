@@ -1,8 +1,8 @@
-# **archetypes-rules** Documentation
+# **@archetypes/rules** Documentation
 
 ## 1. [API][api-url]
 
-View the [public API for **archetypes-rules**][api-url].
+View the [public API for **@archetypes/rules**][api-url].
 
 ## 2. [Architecture Decisions](./adr/README.md)
 
@@ -21,7 +21,7 @@ begin.
 
 ## 4. [Maintainer Guide](maintainer-guide/README.md)
 
-How to maintain **archetypes-rules** product development and delivery with
+How to maintain **@archetypes/rules** product development and delivery with
 voluntary contributions.
 
-[api-url]: ./api/archetypes-rules/1.0.0/index.html
+[api-url]: ./api/@archetypes/rules/1.0.0/index.html

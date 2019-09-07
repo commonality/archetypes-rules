@@ -1,9 +1,9 @@
 # Developer Guide
 
-> <img align="bottom" alt="code" height="50" width="50" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/code.svg">
-> This guide is for those who want to contribute code to **archetypes-rules**.
+> <img align="bottom" alt="code" height="50" width="50" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/code.svg">
+> This guide is for those who want to contribute code to **@archetypes/rules**.
 > This guide describes how to set up your development environment so that you
-> can build and test **archetypes-rules**.
+> can build and test **@archetypes/rules**.
 
 ## Table of Contents
 
@@ -26,30 +26,30 @@
 
 ## 1. Recommended skills
 
-In order to work with **archetypes-rules** as a developer, we recommend you feel
+In order to work with **@archetypes/rules** as a developer, we recommend you feel
 comfortable with:
 
 | Skill                                                | Reason                                                                                                     |
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| ![code][octicon-code] JavaScript                     | **archetypes-rules** is written in JavaScript (CommonJS)                                                   |
+| ![code][octicon-code] JavaScript                     | **@archetypes/rules** is written in JavaScript (CommonJS)                                                   |
 | ![markdown][octicon-markdown] Documentation          | Docs build community and enable asyncronous collaboration                                                  |
 | ![package][octicon-package] NPM                      | We use the npm dependency manager and publish to the npm public registry                                   |
-| ![platform][octicon-server] Node.js                  | **archetypes-rules** runs on Node.js                                                                       |
-| ![terminal][octicon-terminal] Command-line-interface | We use the CLI to build, test, and publish **archetypes-rules**                                            |
+| ![platform][octicon-server] Node.js                  | **@archetypes/rules** runs on Node.js                                                                       |
+| ![terminal][octicon-terminal] Command-line-interface | We use the CLI to build, test, and publish **@archetypes/rules**                                            |
 | ![tests][octicon-beaker] Unit testing                | Unit tests are a form of executable documentation that make collaboration, fixes, and refactoring possible |
 
 If that sounds like you, then continue reading to get started.
 
 ## 2. Development software
 
-Before you can build and test **archetypes-rules**, you must install and
+Before you can build and test **@archetypes/rules**, you must install and
 configure the following products on your development machine:
 
 1.  [Git ![link-external][octicon-link-external]](http://git-scm.com)
 
     _Why:_
 
-    > **archetypes-rules** is hosted on GitLab and uses Git for source control.
+    > **@archetypes/rules** is hosted on GitLab and uses Git for source control.
     > In order to obtain the source code, you must first install Git on your
     > system. Instructions for installing and setting up Git can be found at
     > <https://help.github.com/articles/set-up-git>.
@@ -60,7 +60,7 @@ configure the following products on your development machine:
 
     _Why:_
 
-    > **archetypes-rules** uses Node.js modules to generate tables of contents,
+    > **@archetypes/rules** uses Node.js modules to generate tables of contents,
     > version, and publish documentation.
 
 1.  **NPM** (which installs with Node.js) or
@@ -68,39 +68,39 @@ configure the following products on your development machine:
 
     _Why:_
 
-    > NPM and Yarn install and update `archetypes-rules's` third-party
+    > NPM and Yarn install and update `@archetypes/rules's` third-party
     > dependencies.
 
 ## 3. Getting the source code
 
-Fork and clone the **archetypes-rules** repository:
+Fork and clone the **@archetypes/rules** repository:
 
 1.  [**Sign in**](https://github.com/login) to Gitlab.
 1.  [**Fork**](https://docs.github.com/ee/gitlab-basics/fork-project.html#how-to-fork-a-project)
     the
-    [main **archetypes-rules** repository](https://github.com/archetypes-rules/signatures/forks/new)
+    [main **@archetypes/rules** repository](https://github.com/@archetypes/rules/signatures/forks/new)
     (aka, "`origin`").
-1.  **Clone _your_ fork** of the **archetypes-rules** repository and define an
-    `upstream` remote pointing back to the **archetypes-rules** repository that
+1.  **Clone _your_ fork** of the **@archetypes/rules** repository and define an
+    `upstream` remote pointing back to the **@archetypes/rules** repository that
     you forked in the first place.
 
     > ```shell
     > # Clone your GitLab repository:
-    > git clone git@github.com:<your-account>/archetypes-rules.git
+    > git clone git@github.com:<your-account>/@archetypes/rules.git
     >
     > # Go to the repo root directory:
-    > cd archetypes-rules
+    > cd @archetypes/rules
     >
     > # Add the main GitLab repository as an upstream remote
     > # to your repository:
-    > git remote add upstream https://github.com/archetypes-rules/signatures.git
+    > git remote add upstream https://github.com/@archetypes/rules/signatures.git
     > ```
 
 * * *
 
 <details>
 
-<summary><strong><img alt="directory structure" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-directory.svg" height="30" width="30" valign="middle"> Toggle project directory structure view...</strong></summary>
+<summary><strong><img alt="directory structure" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-directory.svg" height="30" width="30" valign="middle"> Toggle project directory structure view...</strong></summary>
 
 <!-- AUTO-GENERATED-CONTENT:START (DIRTREE:dir=../../) -->
 
@@ -136,7 +136,7 @@ Fork and clone the **archetypes-rules** repository:
     ├─┬ contributing/
     │ └── STYLE_GUIDES.md
     ├─┬ dist/
-    │ └── archetypes-rules.js
+    │ └── @archetypes/rules.js
     ├─┬ docs/
     │ ├─┬ .ci/
     │ │ ├── eslint-rules
@@ -180,7 +180,7 @@ Fork and clone the **archetypes-rules** repository:
     │ │ │ └── signatures.json
     │ │ ├─┬ __mocks__/
     │ │ │ └── is-main.js
-    │ │ ├── archetypes-rules.test.js
+    │ │ ├── @archetypes/rules.test.js
     │ │ └── env-config.test.js
     │ ├─┬ gitlab/
     │ │ └─┬ prohibited-file-names/
@@ -221,7 +221,7 @@ Fork and clone the **archetypes-rules** repository:
     ├── CHANGELOG.md
     ├── code-of-conduct.md
     ├── CONTRIBUTING.md
-    ├── archetypes-rules-1.0.4.tgz
+    ├── @archetypes/rules-1.0.4.tgz
     ├── files_blacklist.yml
     ├── jest.config.js
     ├── LICENSE
@@ -242,7 +242,7 @@ Fork and clone the **archetypes-rules** repository:
 ## 4. Installing dependencies
 
 Next, install the JavaScript modules needed to build and test
-**archetypes-rules**:
+**@archetypes/rules**:
 
 ```shell
 # Install all project dependencies (package.json)
@@ -251,7 +251,7 @@ npm install
 
 * * *
 
-<details><summary><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/package.svg" height="30" width="30" valign="bottom"> <strong>View current dependencies for archetypes-rules...</strong></summary>
+<details><summary><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/package.svg" height="30" width="30" valign="bottom"> <strong>View current dependencies for @archetypes/rules...</strong></summary>
 
 <!-- AUTO-GENERATED-CONTENT:START (DEPENDENCYTABLE) -->
 
@@ -330,7 +330,7 @@ npm install
 
 ## 5. Configuration
 
-> ![info][octicon-info] **archetypes-rules** stores configuration details in the
+> ![info][octicon-info] **@archetypes/rules** stores configuration details in the
 > environment— separate from code—with the [`dotenv-extended` >
 > ![Go to its README on GitHub][octicon-link-external]][dotenv-extended-readme]
 > module.
@@ -487,7 +487,7 @@ file.
 # Product manifest (package.json) variables
 #
 
-NPM_PACKAGE_NAME=archetypes-rules
+NPM_PACKAGE_NAME=@archetypes/rules
 NPM_PACKAGE_VERSION=
 
 #
@@ -510,7 +510,7 @@ K8S_SECRET_GITLAB_TOKEN=
 
 # name attribute of <testsuites>
 # @default "jest tests"
-JEST_SUITE_NAME=archetypes-rules tests
+JEST_SUITE_NAME=@archetypes/rules tests
 
 # File path to save the output.
 # @default "./junit.xml"
@@ -551,9 +551,9 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 # SonarCloud static code analysis
 SONAR_BRANCH_TARGET=master
 SONAR_HOST_URL=https://sonarcloud.io
-SONAR_ORGANIZATION=archetypes-rules
+SONAR_ORGANIZATION=@archetypes/rules
 SONAR_PROJECT_KEY=signatures
-SONAR_PROJECT_NAME=archetypes-rules
+SONAR_PROJECT_NAME=@archetypes/rules
 SONAR_PROJECT_VERSION=$SONAR_PROJECT_VERSION
 SONAR_TOKEN=
 K8S_SECRET_SONAR_TOKEN=
@@ -561,7 +561,7 @@ K8S_SECRET_SONAR_TOKEN=
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
-<h4><img align="bottom" alt="file" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file.svg"> <samp>.env</samp></h4>
+<h4><img align="bottom" alt="file" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file.svg"> <samp>.env</samp></h4>
 
 The environment-specific file (not committed to source control). This file will
 have sensitive information such as usernames, passwords, api keys, etc. These
@@ -580,7 +580,7 @@ SONAR_DATA_LOSS_SIGNATURES_TOKEN=<private-access-token>
 
 ## 6. Testing
 
-> [![Jest BDD][jest-logo] **archetypes-rules** uses Jest for Behavior-Driven
+> [![Jest BDD][jest-logo] **@archetypes/rules** uses Jest for Behavior-Driven
 > Development (BDD) and unit tests
 > ![link-external][octicon-link-external]][jest-url].
 >
@@ -593,7 +593,7 @@ To run tests:
 
 ```shell
 $ npm test
-# => Run all archetypes-rules tests on node
+# => Run all @archetypes/rules tests on node
 ```
 
 ### 6.2. Troubleshooting
@@ -622,7 +622,7 @@ You can troubleshoot issues in two ways:
 
 ## 7. Source code style guidelines
 
-![verified][octicon-verified] **archetypes-rules** uses
+![verified][octicon-verified] **@archetypes/rules** uses
 
 1.  [ESLint ![link-external][octicon-link-external]](http://clang.llvm.org/docs/ClangFormat.html)
     to evaluate and format source code;
@@ -655,7 +655,7 @@ npm run lint:md
 
 * * *
 
-<details><summary><strong><img alt="code style rules" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/checklist.svg" valign="bottom"> View the ESLint rules we enforce...</strong></summary>
+<details><summary><strong><img alt="code style rules" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/checklist.svg" valign="bottom"> View the ESLint rules we enforce...</strong></summary>
 
 <!-- AUTO-GENERATED-CONTENT:START (CODE:src=../.ci/eslint-rules&syntax=markdown) -->
 
@@ -1184,7 +1184,7 @@ https://eslint.org/docs/rules/yoda
 
 > [![Travis CI logo][travis-ci-logo]][travis-ci-url]
 >
-> **archetypes-rules** uses [Travis CI
+> **@archetypes/rules** uses [Travis CI
 > ![Gitlab documentation][octicon-link-external]][travis-ci-url] for continuous
 > integration and delivery.
 
@@ -1193,7 +1193,7 @@ services.
 
 * * *
 
-<details><summary><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/terminal.svg" height="30" width="30" valign="bottom"> <strong>View all available npm-scripts...</strong></summary>
+<details><summary><img src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/terminal.svg" height="30" width="30" valign="bottom"> <strong>View all available npm-scripts...</strong></summary>
 
 _To execute any of the following scripts, open a Terminal and run:_
 
@@ -1261,7 +1261,7 @@ npm run lint:js
 1.  Travis CI will fail if any of the test suites fails, or a linting rule is
     violated.
 
-<img valign="bottom" alt="alert" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/alert.svg">
+<img valign="bottom" alt="alert" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/alert.svg">
 CI will fail and the Pull Requests cannot be
 merged unless changes pass:<br>
 <br>
@@ -1316,344 +1316,344 @@ merged unless changes pass:<br>
 
 <!-- 🔗  Octicon img references 🔗   -->
 
-[octicon-alert]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/alert.svg
+[octicon-alert]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/alert.svg
 
-[octicon-arrow-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-down.svg
+[octicon-arrow-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-down.svg
 
-[octicon-arrow-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-left.svg
+[octicon-arrow-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-left.svg
 
-[octicon-arrow-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-right.svg
+[octicon-arrow-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-right.svg
 
-[octicon-arrow-small-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-small-down.svg
+[octicon-arrow-small-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-small-down.svg
 
-[octicon-arrow-small-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-small-left.svg
+[octicon-arrow-small-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-small-left.svg
 
-[octicon-arrow-small-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-small-right.svg
+[octicon-arrow-small-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-small-right.svg
 
-[octicon-arrow-small-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-small-up.svg
+[octicon-arrow-small-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-small-up.svg
 
-[octicon-arrow-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/arrow-up.svg
+[octicon-arrow-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/arrow-up.svg
 
-[octicon-beaker]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/beaker.svg
+[octicon-beaker]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/beaker.svg
 
-[octicon-bell]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bell.svg
+[octicon-bell]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/bell.svg
 
-[octicon-bold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bold.svg
+[octicon-bold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/bold.svg
 
-[octicon-book]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/book.svg
+[octicon-book]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/book.svg
 
-[octicon-bookmark]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bookmark.svg
+[octicon-bookmark]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/bookmark.svg
 
-[octicon-briefcase]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/briefcase.svg
+[octicon-briefcase]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/briefcase.svg
 
-[octicon-broadcast]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/broadcast.svg
+[octicon-broadcast]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/broadcast.svg
 
-[octicon-browser]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/browser.svg
+[octicon-browser]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/browser.svg
 
-[octicon-bug]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/bug.svg
+[octicon-bug]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/bug.svg
 
-[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/calendar.svg
+[octicon-calendar]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/calendar.svg
 
-[octicon-check]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/check.svg
+[octicon-check]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/check.svg
 
-[octicon-checklist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/checklist.svg
+[octicon-checklist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/checklist.svg
 
-[octicon-chevron-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-down.svg
+[octicon-chevron-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/chevron-down.svg
 
-[octicon-chevron-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-left.svg
+[octicon-chevron-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/chevron-left.svg
 
-[octicon-chevron-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-right.svg
+[octicon-chevron-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/chevron-right.svg
 
-[octicon-chevron-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/chevron-up.svg
+[octicon-chevron-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/chevron-up.svg
 
-[octicon-circle-slash]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/circle-slash.svg
+[octicon-circle-slash]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/circle-slash.svg
 
-[octicon-circuit-board]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/circuit-board.svg
+[octicon-circuit-board]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/circuit-board.svg
 
-[octicon-clippy]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/clippy.svg
+[octicon-clippy]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/clippy.svg
 
-[octicon-clock]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/clock.svg
+[octicon-clock]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/clock.svg
 
-[octicon-cloud-download]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/cloud-download.svg
+[octicon-cloud-download]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/cloud-download.svg
 
-[octicon-cloud-upload]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/cloud-upload.svg
+[octicon-cloud-upload]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/cloud-upload.svg
 
-[octicon-code]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/code.svg
+[octicon-code]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/code.svg
 
-[octicon-comment-discussion]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/comment-discussion.svg
+[octicon-comment-discussion]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/comment-discussion.svg
 
-[octicon-comment]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/comment.svg
+[octicon-comment]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/comment.svg
 
-[octicon-credit-card]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/credit-card.svg
+[octicon-credit-card]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/credit-card.svg
 
-[octicon-dash]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/dash.svg
+[octicon-dash]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/dash.svg
 
-[octicon-dashboard]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/dashboard.svg
+[octicon-dashboard]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/dashboard.svg
 
-[octicon-database]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/database.svg
+[octicon-database]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/database.svg
 
-[octicon-desktop-download]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/desktop-download.svg
+[octicon-desktop-download]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/desktop-download.svg
 
-[octicon-device-camera-video]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/device-camera-video.svg
+[octicon-device-camera-video]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/device-camera-video.svg
 
-[octicon-device-camera]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/device-camera.svg
+[octicon-device-camera]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/device-camera.svg
 
-[octicon-device-desktop]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/device-desktop.svg
+[octicon-device-desktop]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/device-desktop.svg
 
-[octicon-device-mobile]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/device-mobile.svg
+[octicon-device-mobile]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/device-mobile.svg
 
-[octicon-diff-added]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff-added.svg
+[octicon-diff-added]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff-added.svg
 
-[octicon-diff-ignored]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff-ignored.svg
+[octicon-diff-ignored]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff-ignored.svg
 
-[octicon-diff-modified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff-modified.svg
+[octicon-diff-modified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff-modified.svg
 
-[octicon-diff-removed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff-removed.svg
+[octicon-diff-removed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff-removed.svg
 
-[octicon-diff-renamed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff-renamed.svg
+[octicon-diff-renamed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff-renamed.svg
 
-[octicon-diff]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/diff.svg
+[octicon-diff]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/diff.svg
 
-[octicon-ellipses]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/ellipses.svg
+[octicon-ellipses]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/ellipses.svg
 
-[octicon-ellipsis]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/ellipsis.svg
+[octicon-ellipsis]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/ellipsis.svg
 
-[octicon-eye]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/eye.svg
+[octicon-eye]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/eye.svg
 
-[octicon-file-binary]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-binary.svg
+[octicon-file-binary]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-binary.svg
 
-[octicon-file-code]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-code.svg
+[octicon-file-code]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-code.svg
 
-[octicon-file-directory]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-directory.svg
+[octicon-file-directory]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-directory.svg
 
-[octicon-file-media]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-media.svg
+[octicon-file-media]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-media.svg
 
-[octicon-file-pdf]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-pdf.svg
+[octicon-file-pdf]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-pdf.svg
 
-[octicon-file-submodule]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-submodule.svg
+[octicon-file-submodule]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-submodule.svg
 
-[octicon-file-symlink-directory]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-symlink-directory.svg
+[octicon-file-symlink-directory]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-symlink-directory.svg
 
-[octicon-file-symlink-file]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-symlink-file.svg
+[octicon-file-symlink-file]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-symlink-file.svg
 
-[octicon-file-text]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-text.svg
+[octicon-file-text]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-text.svg
 
-[octicon-file-zip]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file-zip.svg
+[octicon-file-zip]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file-zip.svg
 
-[octicon-file]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/file.svg
+[octicon-file]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/file.svg
 
-[octicon-flame]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/flame.svg
+[octicon-flame]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/flame.svg
 
-[octicon-fold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/fold.svg
+[octicon-fold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/fold.svg
 
-[octicon-gear]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/gear.svg
+[octicon-gear]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/gear.svg
 
-[octicon-gift]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/gift.svg
+[octicon-gift]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/gift.svg
 
-[octicon-gist-secret]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/gist-secret.svg
+[octicon-gist-secret]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/gist-secret.svg
 
-[octicon-gist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/gist.svg
+[octicon-gist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/gist.svg
 
-[octicon-git-branch]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-branch.svg
+[octicon-git-branch]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/git-branch.svg
 
-[octicon-git-commit]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-commit.svg
+[octicon-git-commit]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/git-commit.svg
 
-[octicon-git-compare]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-compare.svg
+[octicon-git-compare]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/git-compare.svg
 
-[octicon-git-merge]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-merge.svg
+[octicon-git-merge]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/git-merge.svg
 
-[octicon-git-pull-request]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-pull-request.svg
+[octicon-git-pull-request]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/git-pull-request.svg
 
-[octicon-globe]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/globe.svg
+[octicon-globe]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/globe.svg
 
-[octicon-grabber]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/grabber.svg
+[octicon-grabber]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/grabber.svg
 
-[octicon-graph]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/graph.svg
+[octicon-graph]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/graph.svg
 
-[octicon-heart]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/heart.svg
+[octicon-heart]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/heart.svg
 
-[octicon-history]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/history.svg
+[octicon-history]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/history.svg
 
-[octicon-home]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/home.svg
+[octicon-home]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/home.svg
 
-[octicon-horizontal-rule]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/horizontal-rule.svg
+[octicon-horizontal-rule]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/horizontal-rule.svg
 
-[octicon-hubot]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/hubot.svg
+[octicon-hubot]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/hubot.svg
 
-[octicon-inbox]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/inbox.svg
+[octicon-inbox]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/inbox.svg
 
-[octicon-info]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/info.svg
+[octicon-info]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/info.svg
 
-[octicon-issue-closed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/issue-closed.svg
+[octicon-issue-closed]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/issue-closed.svg
 
-[octicon-issue-opened]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/issue-opened.svg
+[octicon-issue-opened]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/issue-opened.svg
 
-[octicon-issue-reopened]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/issue-reopened.svg
+[octicon-issue-reopened]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/issue-reopened.svg
 
-[octicon-italic]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/italic.svg
+[octicon-italic]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/italic.svg
 
-[octicon-jersey]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/jersey.svg
+[octicon-jersey]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/jersey.svg
 
-[octicon-key]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/key.svg
+[octicon-key]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/key.svg
 
-[octicon-keyboard]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/keyboard.svg
+[octicon-keyboard]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/keyboard.svg
 
-[octicon-law]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/law.svg
+[octicon-law]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/law.svg
 
-[octicon-light-bulb]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/light-bulb.svg
+[octicon-light-bulb]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/light-bulb.svg
 
-[octicon-link-external]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/link-external.svg
+[octicon-link-external]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/link-external.svg
 
-[octicon-link]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/link.svg
+[octicon-link]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/link.svg
 
-[octicon-list-ordered]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/list-ordered.svg
+[octicon-list-ordered]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/list-ordered.svg
 
-[octicon-list-unordered]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/list-unordered.svg
+[octicon-list-unordered]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/list-unordered.svg
 
-[octicon-location]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/location.svg
+[octicon-location]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/location.svg
 
-[octicon-lock]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/lock.svg
+[octicon-lock]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/lock.svg
 
-[octicon-logo-gist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/logo-gist.svg
+[octicon-logo-gist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/logo-gist.svg
 
-[octicon-logo-github]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/logo-github.svg
+[octicon-logo-github]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/logo-github.svg
 
-[octicon-mail-read]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mail-read.svg
+[octicon-mail-read]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mail-read.svg
 
-[octicon-mail-reply]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mail-reply.svg
+[octicon-mail-reply]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mail-reply.svg
 
-[octicon-mail]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mail.svg
+[octicon-mail]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mail.svg
 
-[octicon-mark-github]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mark-github.svg
+[octicon-mark-github]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mark-github.svg
 
-[octicon-markdown]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/markdown.svg
+[octicon-markdown]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/markdown.svg
 
-[octicon-megaphone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/megaphone.svg
+[octicon-megaphone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/megaphone.svg
 
-[octicon-mention]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mention.svg
+[octicon-mention]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mention.svg
 
-[octicon-milestone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/milestone.svg
+[octicon-milestone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/milestone.svg
 
-[octicon-mirror]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mirror.svg
+[octicon-mirror]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mirror.svg
 
-[octicon-mortar-board]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mortar-board.svg
+[octicon-mortar-board]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mortar-board.svg
 
-[octicon-mute]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/mute.svg
+[octicon-mute]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/mute.svg
 
-[octicon-no-newline]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/no-newline.svg
+[octicon-no-newline]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/no-newline.svg
 
-[octicon-octoface]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/octoface.svg
+[octicon-octoface]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/octoface.svg
 
-[octicon-organization]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/organization.svg
+[octicon-organization]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/organization.svg
 
-[octicon-package]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/package.svg
+[octicon-package]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/package.svg
 
-[octicon-paintcan]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/paintcan.svg
+[octicon-paintcan]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/paintcan.svg
 
-[octicon-pencil]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/pencil.svg
+[octicon-pencil]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/pencil.svg
 
-[octicon-person]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/person.svg
+[octicon-person]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/person.svg
 
-[octicon-pin]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/pin.svg
+[octicon-pin]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/pin.svg
 
-[octicon-plug]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/plug.svg
+[octicon-plug]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/plug.svg
 
-[octicon-plus-small]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/plus-small.svg
+[octicon-plus-small]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/plus-small.svg
 
-[octicon-plus]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/plus.svg
+[octicon-plus]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/plus.svg
 
-[octicon-primitive-dot]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/primitive-dot.svg
+[octicon-primitive-dot]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/primitive-dot.svg
 
-[octicon-primitive-square]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/primitive-square.svg
+[octicon-primitive-square]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/primitive-square.svg
 
-[octicon-pulse]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/pulse.svg
+[octicon-pulse]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/pulse.svg
 
-[octicon-question]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/question.svg
+[octicon-question]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/question.svg
 
-[octicon-quote]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/quote.svg
+[octicon-quote]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/quote.svg
 
-[octicon-radio-tower]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/radio-tower.svg
+[octicon-radio-tower]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/radio-tower.svg
 
-[octicon-reply]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/reply.svg
+[octicon-reply]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/reply.svg
 
-[octicon-repo-clone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo-clone.svg
+[octicon-repo-clone]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo-clone.svg
 
-[octicon-repo-force-push]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo-force-push.svg
+[octicon-repo-force-push]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo-force-push.svg
 
-[octicon-repo-forked]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo-forked.svg
+[octicon-repo-forked]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo-forked.svg
 
-[octicon-repo-pull]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo-pull.svg
+[octicon-repo-pull]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo-pull.svg
 
-[octicon-repo-push]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo-push.svg
+[octicon-repo-push]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo-push.svg
 
-[octicon-repo]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/repo.svg
+[octicon-repo]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/repo.svg
 
-[octicon-rocket]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/rocket.svg
+[octicon-rocket]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/rocket.svg
 
-[octicon-rss]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/rss.svg
+[octicon-rss]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/rss.svg
 
-[octicon-ruby]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/ruby.svg
+[octicon-ruby]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/ruby.svg
 
-[octicon-search]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/search.svg
+[octicon-search]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/search.svg
 
-[octicon-server]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/server.svg
+[octicon-server]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/server.svg
 
-[octicon-settings]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/settings.svg
+[octicon-settings]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/settings.svg
 
-[octicon-shield]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/shield.svg
+[octicon-shield]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/shield.svg
 
-[octicon-sign-in]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/sign-in.svg
+[octicon-sign-in]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/sign-in.svg
 
-[octicon-sign-out]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/sign-out.svg
+[octicon-sign-out]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/sign-out.svg
 
-[octicon-smiley]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/smiley.svg
+[octicon-smiley]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/smiley.svg
 
-[octicon-squirrel]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/squirrel.svg
+[octicon-squirrel]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/squirrel.svg
 
-[octicon-star]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/star.svg
+[octicon-star]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/star.svg
 
-[octicon-stop]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/stop.svg
+[octicon-stop]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/stop.svg
 
-[octicon-sync]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/sync.svg
+[octicon-sync]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/sync.svg
 
-[octicon-tag]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/tag.svg
+[octicon-tag]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/tag.svg
 
-[octicon-tasklist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/tasklist.svg
+[octicon-tasklist]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/tasklist.svg
 
-[octicon-telescope]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/telescope.svg
+[octicon-telescope]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/telescope.svg
 
-[octicon-terminal]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/terminal.svg
+[octicon-terminal]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/terminal.svg
 
-[octicon-text-size]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/text-size.svg
+[octicon-text-size]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/text-size.svg
 
-[octicon-three-bars]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/three-bars.svg
+[octicon-three-bars]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/three-bars.svg
 
-[octicon-thumbsdown]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/thumbsdown.svg
+[octicon-thumbsdown]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/thumbsdown.svg
 
-[octicon-thumbsup]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/thumbsup.svg
+[octicon-thumbsup]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/thumbsup.svg
 
-[octicon-tools]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/tools.svg
+[octicon-tools]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/tools.svg
 
-[octicon-trashcan]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/trashcan.svg
+[octicon-trashcan]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/trashcan.svg
 
-[octicon-triangle-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-down.svg
+[octicon-triangle-down]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/triangle-down.svg
 
-[octicon-triangle-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-left.svg
+[octicon-triangle-left]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/triangle-left.svg
 
-[octicon-triangle-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-right.svg
+[octicon-triangle-right]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/triangle-right.svg
 
-[octicon-triangle-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/triangle-up.svg
+[octicon-triangle-up]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/triangle-up.svg
 
-[octicon-unfold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/unfold.svg
+[octicon-unfold]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/unfold.svg
 
-[octicon-unmute]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/unmute.svg
+[octicon-unmute]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/unmute.svg
 
-[octicon-unverified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/unverified.svg
+[octicon-unverified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/unverified.svg
 
-[octicon-verified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/verified.svg
+[octicon-verified]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/verified.svg
 
-[octicon-versions]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/versions.svg
+[octicon-versions]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/versions.svg
 
-[octicon-watch]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/watch.svg
+[octicon-watch]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/watch.svg
 
-[octicon-x]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/x.svg
+[octicon-x]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/x.svg

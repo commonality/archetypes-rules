@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 ---
 
-# <img align="bottom" alt="code" height="50" width="50" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/code.svg"> Refactoring proposal
+# <img align="bottom" alt="code" height="50" width="50" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/code.svg"> Refactoring proposal
 
 ## 1. Design summary / code smell(s)
 
@@ -49,43 +49,43 @@ assignees: ''
 <!-- SonarCloud badge refs -->
 
 [sonar-alert-status-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=alert_status&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=alert_status&template=FLAT
 [sonar-alert-status-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-bugs-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=bugs&template=FLAT
-[sonar-bugs-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=bugs&template=FLAT
+[sonar-bugs-url]: https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-code-smells-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=code_smells&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=code_smells&template=FLAT
 [sonar-code-smells-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-coverage-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=coverage&template=FLAT
-[sonar-coverage-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=coverage&template=FLAT
+[sonar-coverage-url]: https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-duplicated-lines-density-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=duplicated_lines_density&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=duplicated_lines_density&template=FLAT
 [sonar-duplicated-lines-density-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-ncloc-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=ncloc&template=FLAT
-[sonar-ncloc-url]: https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=ncloc&template=FLAT
+[sonar-ncloc-url]: https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-reliability-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=reliability_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=reliability_rating&template=FLAT
 [sonar-reliability-rating-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-security-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=security_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=security_rating&template=FLAT
 [sonar-security-rating-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-sqale-index-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_index&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=sqale_index&template=FLAT
 [sonar-sqale-index-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-sqale-rating-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_rating&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=sqale_rating&template=FLAT
 [sonar-sqale-rating-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
 [sonar-vulnerabilities-badge]:
-  https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=vulnerabilities&template=FLAT
+  https://sonarcloud.io/api/project_badges/measure?project=commonality_@archetypes/rules&metric=vulnerabilities&template=FLAT
 [sonar-vulnerabilities-url]:
-  https://sonarcloud.io/dashboard?id=commonality_archetypes-rules
+  https://sonarcloud.io/dashboard?id=commonality_@archetypes/rules
