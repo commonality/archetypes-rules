@@ -34,7 +34,7 @@
   "dependencies": {
     "@sindresorhus/is": "0.17.1",
     "debug": "4.1.1",
-    "dotenv-extended": "2.4.0",
+    "dotenv-extended": "2.7.1",
     "enum-nom-nommer": "1.0.0",
     "fs-extra": "8.0.1",
     "lodash.camelcase": "4.3.0",
