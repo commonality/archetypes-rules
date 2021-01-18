@@ -62,7 +62,7 @@
     "all-contributors-cli": "6.6.1",
     "better-docs": "1.1.6",
     "codacy-coverage": "3.4.0",
-    "commitizen": "3.1.1",
+    "commitizen": "4.2.3",
     "commitplease": "^3.2.0",
     "coveralls": "3.0.9",
     "dictionary-en-us": "^2.1.1",
