@@ -58,7 +58,7 @@
     "@semantic-release/git": "^7.0.18",
     "@semantic-release/github": "5.2.10",
     "@semantic-release/npm": "5.1.7",
-    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@semantic-release/release-notes-generator": "^9.0.2",
     "all-contributors-cli": "6.6.1",
     "better-docs": "1.1.6",
     "codacy-coverage": "3.4.0",
