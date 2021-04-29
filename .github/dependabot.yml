@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - gregswindle
+  labels:
+  - "type: dependency"
+  versioning-strategy: increase
+  ignore:
+  - dependency-name: eslint-plugin-sonarjs
+    versions:
+    - 0.5.0
+    - 0.6.0
+  - dependency-name: "@semantic-release/release-notes-generator"
+    versions:
+    - 9.0.1
