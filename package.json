@@ -36,7 +36,7 @@
     "debug": "4.1.1",
     "dotenv-extended": "2.4.0",
     "enum-nom-nommer": "1.0.0",
-    "fs-extra": "8.0.1",
+    "fs-extra": "^9.0.0",
     "lodash.camelcase": "4.3.0",
     "lodash.get": "4.4.2",
     "lodash.hasin": "4.5.2",
