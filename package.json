@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/commonality/archetypes-rules/issues",
   "commitplease": {
-    "nohook": true,
+    "nohook": false,
     "style": "angular",
     "types": [
       "build",
