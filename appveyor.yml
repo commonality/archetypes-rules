@@ -5,6 +5,7 @@ environment:
   GITHUB_ACCESS_TOKEN:
     secure: 1nsZPoMsZopgW0XtFNZdjuzxWvw8EcheaCS6H3B8zYM1ihueWRMc1hdUdeHyg9TM
   matrix:
+    - nodejs_version: '26'
     - nodejs_version: '24'
     - nodejs_version: '22'
     - nodejs_version: '20'
