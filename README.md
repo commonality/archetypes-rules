@@ -1,11 +1,11 @@
-# archetypes-rules
+<h1>archetypes-rules</h1>
 
 ![banner](docs/img/logos/logo.png)
 
 [![The MIT License][license-image]][license-url]
-[![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url]
+[![NPM version][npm-image]][npm-url]
+[![FOSSA Status][fossa-image]][fossa-url]
 [![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![Dependency Status][daviddm-image]][daviddm-url]<br>
 [![MacOS and Ubuntu build statuses][travis-image]][travis-url]
 [![Windows build status][appveyor-image]][appveyor-url]
 [![Coveralls test coverage][coveralls-image]][coveralls-url]
@@ -19,7 +19,7 @@
 <samp>if / else if / else</samp>, you can instead create Rules that describe and
 evaluate Facts (aka, RuleContexts).
 
-## Table of Contents
+<h2>Table of Contents</h2>
 
 <!-- toc -->
 
@@ -33,7 +33,7 @@ evaluate Facts (aka, RuleContexts).
   - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a discount?](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
   - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
   - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
@@ -48,7 +48,8 @@ evaluate Facts (aka, RuleContexts).
 
 _Figure 1: Class diagram for the `archetypes.rules` namespace._
 
-![Figure 1: Class diagram for the archetypes.rules namespace][archetypes-rules-overview]
+![Figure 1: Class diagram for the archetypes.rules
+namespace][archetypes-rules-overview]
 
 ### 1.1. `Rules`
 
@@ -65,13 +66,13 @@ Rules contain one or more RuleElements. There are three types of `RuleElements`:
 #### 1.2.1. `Propositions`
 
 **Propositions** are statements that are either, `true`, `false`, or `null`
-(unknown).
-[_Learn more..._](https://github.com/commonality/archetypes-rules/wiki/Propositions)
+(unknown). [_Learn
+more..._](https://github.com/commonality/archetypes-rules/wiki/Propositions)
 
 #### 1.2.2. `Variables`
 
-**Variables** are symbols that represent the value of something.
-[_Learn more..._](https://github.com/commonality/archetypes-rules/wiki/Variables)
+**Variables** are symbols that represent the value of something. [_Learn
+more..._](https://github.com/commonality/archetypes-rules/wiki/Variables)
 
 #### 1.2.3. `Operators`
 
@@ -89,9 +90,9 @@ Rules contain one or more RuleElements. There are three types of `RuleElements`:
 returning a `Proposition` that tells us whether a given set of facts conform to
 the defined `Rule`.
 
-`RuleElements` are evaluated using
-[Reverse Polish Notation (RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation).
-See the examples below for details.
+`RuleElements` are evaluated using [Reverse Polish Notation
+(RPN)](https://en.wikipedia.org/wiki/Reverse_Polish_notation). See the examples
+below for details.
 
 <small>[![Back to Table of contents][octicon-triangle-up]
 [toc]][toc-anchor]</small>
@@ -238,20 +239,22 @@ fact
 
 [@gregswindle](https://github.com/gregswindle)
 
-> ![Information for Maintainers][octicon-book] The
-> [Maintainer Guide](./docs/maintainer-guide/README.md) describes how we develop
-> and release **archetype-rules** (and has useful information for Maintainers
-> and Trusted Committers).
+> ![Information for Maintainers][octicon-book] The [Maintainer
+> Guide](./docs/maintainer-guide/README.md) describes how we develop and release
+> **archetype-rules** (and has useful information for Maintainers and Trusted
+> Committers).
 
 <small>[![Back to Table of contents][octicon-triangle-up]
 [toc]][toc-anchor]</small>
 
 ## 5. Contributions
 
-[![GitHub Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
+[![GitHub
+Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
 [![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
 [![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
-[![Greenkeeper badge](https://badges.greenkeeper.io/commonality/archetypes-rules.svg?style=flat-square)](https://greenkeeper.io/)
+[![Greenkeeper
+badge](https://badges.greenkeeper.io/commonality/archetypes-rules.svg)](https://greenkeeper.io/)
 
 ![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you
 need to know to get started.
@@ -272,10 +275,11 @@ Before submitting a Pull Request, please read our:
 [MIT](LICENSE) © 2019 Greg Swindle
 
 > [![Open Source Licenses][octicon-law] View the latest **detailed legal
-> NOTICE** report
-> ![This link will take you to another Web site][octicon-link-external]][fossa-legal-notice-url].
+> NOTICE** report ![This link will take you to another Web
+> site][octicon-link-external]][fossa-legal-notice-url].
 
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)
+[![FOSSA
+Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)
 
 <small>[![Back to Table of contents][octicon-triangle-up]
 [toc]][toc-anchor]</small>
@@ -285,19 +289,19 @@ Before submitting a Pull Request, please read our:
 <!-- Link and image refs -->
 
 [appveyor-image]:
-  https://img.shields.io/appveyor/ci/gregswindle/archetypes-rules.svg?style=flat-square&logo=appveyor&label=windows%20build
+  https://img.shields.io/appveyor/ci/gregswindle/archetypes-rules.svg?&logo=appveyor&label=windows%20build
 [appveyor-url]: https://ci.appveyor.com/project/gregswindle/archetypes-rules
 [archetypes-rules-overview]: ./docs/assets/archetypes.rules-overview.png
 [codacy-coverage-image]: https://img.shields.
 [codacy-image]:
-  https://api.codacy.com/project/badge/Grade/bc3fdfbea2d84079b5d785b6de0886ab
+  https://app.codacy.com/project/badge/Grade/28d1bcd9d85a4c27acb6b9ba5fc8481a
 [codacy-url]:
-  https://www.codacy.com/app/commonality/archetypes-rules?utm_source=github.com&utm_medium=referral&utm_content=commonality/archetypes-rules&utm_campaign=Badge_Grade
+  https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [coveralls-image]:
-  https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg?style=flat-square
+  https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg
 [coveralls-url]: https://coveralls.io/github/commonality/archetypes-rules
 [daviddm-image]:
-  https://david-dm.org/commonality/archetypes-rules.svg?theme=shields.io&style=flat-square
+  https://david-dm.org/commonality/archetypes-rules.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/commonality/archetypes-rules
 [fossa-image]:
   https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield
@@ -306,26 +310,30 @@ Before submitting a Pull Request, please read our:
 [fossa-url]:
   https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield
 [license-image]:
-  https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+  https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: http://opensource.org/licenses/MIT
-[npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg
 [npm-url]: https://npmjs.org/package/archetypes-rules
 [toc-anchor]: #table-of-contents
 [travis-image]:
-  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&style=flat-square&label=macOS%20%7C%20ubuntu%20builds&logo=travis
+  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&label=macOS%20%7C%20ubuntu%20builds&logo=travis
 [travis-url]: https://travis-ci.com/commonality/archetypes-rules
 [vulnerabilities-image]:
-  https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?style=flat-square&targetFile=package.json
+  https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?&targetFile=package.json
 [vulnerabilities-url]:
   https://snyk.io/test/github/commonality/archetypes-rules?targetFile=package.json
 
-[daviddm-dev-image]: https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io&style=flat-square
+[daviddm-dev-image]:
+    https://david-dm.org/commonality/archetypes-rules/dev-status.svg?theme=shields.io
 
-[bundlephobia-min-download-image]: https://flat.badgen.net/bundlephobia/min/archetypes-rules
+[bundlephobia-min-download-image]:
+    https://flat.badgen.net/bundlephobia/min/archetypes-rules
 
-[install-size-image]: https://flat.badgen.net/packagephobia/install/archetypes-rules
+[install-size-image]:
+    https://flat.badgen.net/packagephobia/install/archetypes-rules
 
-[publish-size-image]: https://flat.badgen.net/packagephobia/publish/archetypes-rules
+[publish-size-image]:
+    https://flat.badgen.net/packagephobia/publish/archetypes-rules
 
 [downloads-per-month-image]: https://flat.badgen.net/npm/dm/archetypes-rules
 
