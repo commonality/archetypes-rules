@@ -38,8 +38,11 @@
   "javascript": {
     "formatter": {
       "arrowParentheses": "asNeeded",
+      "attributePosition": "multiline",
       "bracketSpacing": true,
       "delimiterSpacing": false,
+      "indentStyle": "space",
+      "indentWidth": 2,
       "quoteProperties": "asNeeded",
       "quoteStyle": "single",
       "semicolons": "asNeeded",
