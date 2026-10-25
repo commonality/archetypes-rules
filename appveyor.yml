@@ -1,3 +1,4 @@
+image: Visual Studio 2026
 environment:
   GH_TOKEN:
     secure: 1nsZPoMsZopgW0XtFNZdjuzxWvw8EcheaCS6H3B8zYM1ihueWRMc1hdUdeHyg9TM
