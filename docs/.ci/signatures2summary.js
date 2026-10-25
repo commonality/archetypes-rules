@@ -1,4 +1,4 @@
-const signatures = require('../../signatures.json')
+import signatures from '../../signatures.json' with { type: 'json' }
 
 const toSummary = ({caption, description, part}) => {
   const FIRST = 0
@@ -31,4 +31,4 @@ const signatures2summary = () =>
 
 process.stdout.write(toTable(signatures))
 
-module.exports = signatures2summary
+export default signatures2summary
