@@ -7,3 +7,4 @@ exclude_paths:
   - 'coverage/**'
   - 'dist/**'
   - 'docs/**'
+  - 'package-lock.json'
