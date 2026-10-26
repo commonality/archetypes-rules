@@ -277,12 +277,12 @@ Before submitting a Pull Request, please read our:
 
 [MIT](LICENSE) © 2019 Greg Swindle
 
->>> [!NOTE]
-
-[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE**
-report ![This link will take you to another Web
-site][octicon-link-external]][fossa-legal-notice-url].
->>>
+> [!NOTE]
+>
+> [![Open Source Licenses][octicon-law] View the latest **detailed legal
+> NOTICE** report ![This link will take you to another Web
+> site][octicon-link-external]][fossa-legal-notice-url].
+>
 
 [![FOSSA
 Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)

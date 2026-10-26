@@ -173,14 +173,14 @@ there is disagreement among TSC members or objections from one or more
 Collaborators, `semver-major` Pull Requests may be put on the TSC meeting
 agenda.
 
->>> [!TIP] Helpful resources
-
-- How to respectfully and usefully review code, part
-    [one](https://mtlynch.io/human-code-reviews-1/) and
-    [two](https://mtlynch.io/human-code-reviews-2/)
-- [How to write a positive code
-  review](https://css-tricks.com/code-review-etiquette/)
->>>
+> [!TIP] Helpful resources
+>
+> - How to respectfully and usefully review code, part
+>     [one](https://mtlynch.io/human-code-reviews-1/) and
+>     [two](https://mtlynch.io/human-code-reviews-2/)
+> - [How to write a positive code
+>   review](https://css-tricks.com/code-review-etiquette/)
+>
 
 ### 2.3. Waiting for Approvals
 
@@ -223,33 +223,34 @@ faith to be unrelated to the changes in the Pull Request. Otherwise, reasonable
 steps must be taken to confirm that the changes are not resulting in an
 unreliable test.
 
->>> [!TIP] Useful CI Jobs
-
-- [`node-test-pull-request`](https://ci.nodejs.org/job/node-test-pull-request/)
-    is the standard CI run we do to check Pull Requests. It triggers
-    `node-test-commit`, which runs the `build-ci` and `test-ci` targets on all
-    supported platforms.
-
-- [`node-test-pull-request-lite`](https://ci.nodejs.org/job/node-test-pull-request-lite/)
-    only runs the linter job, as well as the tests on LinuxONE, which is very
-    fast. This is useful for changes that only affect comments or documentation.
-
-- [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/) uses
-    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install
-    && npm test` on a large selection of common modules. This is useful to check
-    whether a change will cause breakage in the ecosystem. To test Node.js ABI
-    changes you can run
-    [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
-
-- [`node-stress-single-test`](https://ci.nodejs.org/job/node-stress-single-test/)
-    is designed to allow one to run a group of tests over and over on a specific
-    platform to confirm that the test is reliable.
-
-- [`node-test-commit-v8-linux`](https://ci.nodejs.org/job/node-test-commit-v8-linux/)
-    is designed to allow validation of changes to the copy of V8 in the Node.js
-    tree by running the standard V8 tests. It should be run whenever the level
-    of V8 within Node.js is updated or new patches are floated on V8.
->>>
+> [!TIP] Useful CI Jobs
+>
+> - [`node-test-pull-request`](https://ci.nodejs.org/job/node-test-pull-request/)
+>    is the standard CI run we do to check Pull Requests. It triggers
+>    `node-test-commit`, which runs the `build-ci` and `test-ci` targets on all
+>    supported platforms.
+>
+> - [`node-test-pull-request-lite`](https://ci.nodejs.org/job/node-test-pull-request-lite/)
+>    only runs the linter job, as well as the tests on LinuxONE, which is very
+>    fast. This is useful for changes that only affect comments or
+>    documentation.
+>
+> - [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/) uses
+>    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install
+>    && npm test` on a large selection of common modules. This is useful to
+>    check whether a change will cause breakage in the ecosystem. To test
+>    Node.js ABI changes you can run
+>    [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
+>
+> - [`node-stress-single-test`](https://ci.nodejs.org/job/node-stress-single-test/)
+>    is designed to allow one to run a group of tests over and over on a
+>    specific platform to confirm that the test is reliable.
+>
+> - [`node-test-commit-v8-linux`](https://ci.nodejs.org/job/node-test-commit-v8-linux/)
+>    is designed to allow validation of changes to the copy of V8 in the Node.js
+>    tree by running the standard V8 tests. It should be run whenever the level
+>    of V8 within Node.js is updated or new patches are floated on V8.
+>
 
 ### 2.5. Internal vs. Public API
 
@@ -395,13 +396,13 @@ often be based on many complex factors that are not easily codified. It is also
 possible that the breaking commit can be labeled retroactively as a semver-major
 change that will not be backported to Current or LTS branches.
 
->>> [!NOTE] Reverting commits
-
-Commits are reverted with `git revert <HASH>`, or `git revert <FROM>..<TO>` for
-multiple commits. Commit metadata and the reason for the revert should be
-appended. Commit message rules about line length and subsystem can be ignored. A
-Pull Request should be raised and approved like any other change.
->>>
+> [!NOTE] Reverting commits
+>
+> Commits are reverted with `git revert <HASH>`, or `git revert <FROM>..<TO>`
+> for multiple commits. Commit metadata and the reason for the revert should be
+> appended. Commit message rules about line length and subsystem can be ignored.
+> A Pull Request should be raised and approved like any other change.
+>
 
 ### 2.7. Introducing New Modules
 
@@ -664,11 +665,11 @@ Save the file and close the editor. You'll be asked to enter a new commit
 message for that commit. This is a good moment to fix incorrect commit logs,
 ensure that they are properly formatted, and add `Reviewed-By` lines.
 
->>> [!IMPORTANT]
-
-The commit message text must conform to the [commit message
-guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
->>>
+> [!IMPORTANT]
+>
+> The commit message text must conform to the [commit message
+> guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
+>
 
 <a name="metadata"></a>
 
