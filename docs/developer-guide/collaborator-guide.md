@@ -10,12 +10,9 @@
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (TOC:excludeText=Table of Contents) -->
 
 - [1. Issues and Pull Requests](#1-issues-and-pull-requests)
-  - [1.1. Issue management and Pull
-    Requests](#11-issue-management-and-pull-requests)
-  - [1.2. Welcoming First-Time
-    Contributors](#12-welcoming-first-time-contributors)
-  - [1.3. Closing Issues and Pull
-    Requests](#13-closing-issues-and-pull-requests)
+  - [1.1. Issue management and Pull Requests](#11-issue-management-and-pull-requests)
+  - [1.2. Welcoming First-Time Contributors](#12-welcoming-first-time-contributors)
+  - [1.3. Closing Issues and Pull Requests](#13-closing-issues-and-pull-requests)
   - [1.4. Author-ready Pull Requests](#14-author-ready-pull-requests)
   - [1.5. Handling your own Pull Requests](#15-handling-your-own-pull-requests)
 - [2. Accepting Modifications](#2-accepting-modifications)
@@ -25,12 +22,9 @@
   - [2.4. Testing and CI](#24-testing-and-ci)
   - [2.5. Internal vs. Public API](#25-internal-vs-public-api)
   - [2.6. Breaking Changes](#26-breaking-changes)
-    - [2.6.1. Breaking Changes and
-      Deprecations](#261-breaking-changes-and-deprecations)
-    - [2.6.2. Breaking Changes to Internal
-      Elements](#262-breaking-changes-to-internal-elements)
-    - [2.6.3. When Breaking Changes Actually Break
-      Things](#263-when-breaking-changes-actually-break-things)
+    - [2.6.1. Breaking Changes and Deprecations](#261-breaking-changes-and-deprecations)
+    - [2.6.2. Breaking Changes to Internal Elements](#262-breaking-changes-to-internal-elements)
+    - [2.6.3. When Breaking Changes Actually Break Things](#263-when-breaking-changes-actually-break-things)
   - [2.7. Introducing New Modules](#27-introducing-new-modules)
   - [2.8. Deprecations](#28-deprecations)
   - [2.9. Involving the TSC](#29-involving-the-tsc)
@@ -42,8 +36,7 @@
   - [3.5. Long Term Support](#35-long-term-support)
     - [3.5.1. What is LTS?](#351-what-is-lts)
     - [3.5.2. How does LTS work?](#352-how-does-lts-work)
-    - [3.5.3. Landing semver-minor commits in
-      LTS](#353-landing-semver-minor-commits-in-lts)
+    - [3.5.3. Landing semver-minor commits in LTS](#353-landing-semver-minor-commits-in-lts)
     - [3.5.4. How are LTS Branches Managed?](#354-how-are-lts-branches-managed)
     - [3.5.5. How can I help?](#355-how-can-i-help)
     - [3.5.6. How is an LTS release cut?](#356-how-is-an-lts-release-cut)
@@ -173,14 +166,14 @@ there is disagreement among TSC members or objections from one or more
 Collaborators, `semver-major` Pull Requests may be put on the TSC meeting
 agenda.
 
->>> [!TIP] Helpful resources
-
-- How to respectfully and usefully review code, part
-    [one](https://mtlynch.io/human-code-reviews-1/) and
-    [two](https://mtlynch.io/human-code-reviews-2/)
-- [How to write a positive code
-  review](https://css-tricks.com/code-review-etiquette/)
->>>
+> [!TIP]
+>
+> - How to respectfully and usefully review code, part
+>     [one](https://mtlynch.io/human-code-reviews-1/) and
+>     [two](https://mtlynch.io/human-code-reviews-2/)
+> - [How to write a positive code
+>   review](https://css-tricks.com/code-review-etiquette/)
+>
 
 ### 2.3. Waiting for Approvals
 
@@ -223,33 +216,35 @@ faith to be unrelated to the changes in the Pull Request. Otherwise, reasonable
 steps must be taken to confirm that the changes are not resulting in an
 unreliable test.
 
->>> [!TIP] Useful CI Jobs
-
-- [`node-test-pull-request`](https://ci.nodejs.org/job/node-test-pull-request/)
-    is the standard CI run we do to check Pull Requests. It triggers
-    `node-test-commit`, which runs the `build-ci` and `test-ci` targets on all
-    supported platforms.
-
-- [`node-test-pull-request-lite`](https://ci.nodejs.org/job/node-test-pull-request-lite/)
-    only runs the linter job, as well as the tests on LinuxONE, which is very
-    fast. This is useful for changes that only affect comments or documentation.
-
-- [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/) uses
-    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install
-    && npm test` on a large selection of common modules. This is useful to check
-    whether a change will cause breakage in the ecosystem. To test Node.js ABI
-    changes you can run
-    [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
-
-- [`node-stress-single-test`](https://ci.nodejs.org/job/node-stress-single-test/)
-    is designed to allow one to run a group of tests over and over on a specific
-    platform to confirm that the test is reliable.
-
-- [`node-test-commit-v8-linux`](https://ci.nodejs.org/job/node-test-commit-v8-linux/)
-    is designed to allow validation of changes to the copy of V8 in the Node.js
-    tree by running the standard V8 tests. It should be run whenever the level
-    of V8 within Node.js is updated or new patches are floated on V8.
->>>
+> [!TIP]
+>
+> Useful CI Jobs
+>
+> - [`node-test-pull-request`](https://ci.nodejs.org/job/node-test-pull-request/)
+>    is the standard CI run we do to check Pull Requests. It triggers
+>    `node-test-commit`, which runs the `build-ci` and `test-ci` targets on all
+>    supported platforms.
+>
+> - [`node-test-pull-request-lite`](https://ci.nodejs.org/job/node-test-pull-request-lite/)
+>    only runs the linter job, as well as the tests on LinuxONE, which is very
+>    fast. This is useful for changes that only affect comments or
+>    documentation.
+>
+> - [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/) uses
+>    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install
+>    && npm test` on a large selection of common modules. This is useful to
+>    check whether a change will cause breakage in the ecosystem. To test
+>    Node.js ABI changes you can run
+>    [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
+>
+> - [`node-stress-single-test`](https://ci.nodejs.org/job/node-stress-single-test/)
+>    is designed to allow one to run a group of tests over and over on a
+>    specific platform to confirm that the test is reliable.
+>
+> - [`node-test-commit-v8-linux`](https://ci.nodejs.org/job/node-test-commit-v8-linux/)
+>    is designed to allow validation of changes to the copy of V8 in the Node.js
+>    tree by running the standard V8 tests. It should be run whenever the level
+>    of V8 within Node.js is updated or new patches are floated on V8.
 
 ### 2.5. Internal vs. Public API
 
@@ -395,13 +390,15 @@ often be based on many complex factors that are not easily codified. It is also
 possible that the breaking commit can be labeled retroactively as a semver-major
 change that will not be backported to Current or LTS branches.
 
->>> [!NOTE] Reverting commits
-
-Commits are reverted with `git revert <HASH>`, or `git revert <FROM>..<TO>` for
-multiple commits. Commit metadata and the reason for the revert should be
-appended. Commit message rules about line length and subsystem can be ignored. A
-Pull Request should be raised and approved like any other change.
->>>
+> [!NOTE]
+>
+> Reverting commits
+>
+> Commits are reverted with `git revert <HASH>`, or `git revert <FROM>..<TO>`
+> for multiple commits. Commit metadata and the reason for the revert should be
+> appended. Commit message rules about line length and subsystem can be ignored.
+> A Pull Request should be raised and approved like any other change.
+>
 
 ### 2.7. Introducing New Modules
 
@@ -664,12 +661,6 @@ Save the file and close the editor. You'll be asked to enter a new commit
 message for that commit. This is a good moment to fix incorrect commit logs,
 ensure that they are properly formatted, and add `Reviewed-By` lines.
 
->>> [!IMPORTANT]
-
-The commit message text must conform to the [commit message
-guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
->>>
-
 <a name="metadata"></a>
 
 Modify the original commit message to include additional metadata regarding the
@@ -679,12 +670,12 @@ generate the metadata for you.)
 1. Required: A `PR-URL:` line that references the _full_ GitHub URL of the
      original Pull Request being merged so it's easy to trace a commit back to
      the conversation that led up to that change.
-1. Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
+2. Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
      for an issue, and/or the hash and commit message if the commit fixes a bug
      in a previous commit. Multiple `Fixes:` lines may be added if appropriate.
-1. Optional: One or more `Refs:` lines referencing a URL for any relevant
+3. Optional: One or more `Refs:` lines referencing a URL for any relevant
      background.
-1. Required: A `Reviewed-By: Name <email>` line for yourself and any other
+4. Required: A `Reviewed-By: Name <email>` line for yourself and any other
      Collaborators who have reviewed the change.
 
 - Useful for @mentions / contact list if something goes wrong in the PR.

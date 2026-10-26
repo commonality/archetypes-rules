@@ -1,15 +1,14 @@
 <h1>archetypes-rules</h1>
 <div align="center">
 
-![banner](docs/img/logos/logo.png)
+![banner](https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/img/logos/logo.png)
 
 </div>
 
 [![The MIT License][license-image]][license-url] [![NPM
 version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Windows build
-status][appveyor-image]][appveyor-url] [![Coveralls test
+[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Coveralls test
 coverage][coveralls-image]][coveralls-url] [![Codacy code
 quality][codacy-image]][codacy-url]
 
@@ -244,6 +243,8 @@ fact
 
 [@gregswindle](https://github.com/gregswindle)
 
+> [!NOTE]
+>
 > ![Information for Maintainers][octicon-book] The [Maintainer
 > Guide](./docs/maintainer-guide/README.md) describes how we develop and release
 > **archetype-rules** (and has useful information for Maintainers and Trusted
@@ -275,14 +276,11 @@ Before submitting a Pull Request, please read our:
 
 ## 6. License
 
-[MIT](LICENSE) © 2019 Greg Swindle
+[MIT](LICENSE) © 2019–2026 Greg Swindle
 
->>> [!NOTE]
-
-[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE**
-report ![This link will take you to another Web
-site][octicon-link-external]][fossa-legal-notice-url].
->>>
+> [!NOTE] [![Open Source Licenses][octicon-law] View the latest **detailed legal
+> NOTICE** report ![This link will take you to another Web
+> site][octicon-link-external]][fossa-legal-notice-url].
 
 [![FOSSA
 Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)
@@ -293,10 +291,9 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
 
 <!-- Link and image refs -->
 
-[appveyor-image]:
-  https://img.shields.io/appveyor/ci/gregswindle/archetypes-rules.svg?&logo=appveyor&label=windows%20build
-[appveyor-url]: https://ci.appveyor.com/project/gregswindle/archetypes-rules
-[archetypes-rules-overview]: ./docs/assets/archetypes.rules-overview.png
+[archetypes-rules-overview]:
+    https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.png
+    'Class diagram for archetypes.rules'
 [codacy-image]:
   https://app.codacy.com/project/badge/Grade/28d1bcd9d85a4c27acb6b9ba5fc8481a
 [codacy-url]:

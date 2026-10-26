@@ -465,3 +465,5 @@ Fowler, M. (2019) _Refactoring_. Retrieved February 13, 2019, from
 
 [auto-issue-close-docs]:
     https://docs.github.com/ee/user/project/issues/automatic_issue_closing.html
+
+[standardjs-url]: https://standardjs.com/ 'JavaScript Standard Style'
