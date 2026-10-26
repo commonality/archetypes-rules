@@ -1,49 +1,53 @@
-# Collaborator Guide
+<h1>Collaborator Guide</h1>
 
 > This guide mostly plagerizes the [Node.js Collaborator
 > Guide](https://github.com/nodejs/node/blob/master/COLLABORATOR_GUIDE.md).
 
-## Table of Contents
+<a name="toc"></a>
+
+<h2>Table of Contents</h2>
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:START (TOC:excludeText=Table of Contents) -->
 
-- [Collaborator Guide](#collaborator-guide)
-  - [Table of Contents](#table-of-contents)
-  - [Issues and Pull Requests](#issues-and-pull-requests)
-    - [Issue management and Pull Requests](#issue-management-and-pull-requests)
-    - [Welcoming First-Time Contributors](#welcoming-first-time-contributors)
-    - [Closing Issues and Pull Requests](#closing-issues-and-pull-requests)
-    - [Author-ready Pull Requests](#author-ready-pull-requests)
-    - [Handling your own Pull Requests](#handling-your-own-pull-requests)
-  - [Accepting Modifications](#accepting-modifications)
-    - [Code Reviews](#code-reviews)
-    - [Consensus Seeking](#consensus-seeking)
-      - [Helpful resources](#helpful-resources)
-    - [Waiting for Approvals](#waiting-for-approvals)
-    - [Testing and CI](#testing-and-ci)
-      - [Useful CI Jobs](#useful-ci-jobs)
-    - [Internal vs. Public API](#internal-vs-public-api)
-    - [Breaking Changes](#breaking-changes)
-      - [Breaking Changes and Deprecations](#breaking-changes-and-deprecations)
-      - [Breaking Changes to Internal Elements](#breaking-changes-to-internal-elements)
-      - [When Breaking Changes Actually Break Things](#when-breaking-changes-actually-break-things)
-        - [Reverting commits](#reverting-commits)
-    - [Introducing New Modules](#introducing-new-modules)
-    - [Deprecations](#deprecations)
-    - [Involving the TSC](#involving-the-tsc)
-  - [Landing Pull Requests](#landing-pull-requests)
-    - [Using `git-node`](#using-git-node)
-    - [Technical HOWTO](#technical-howto)
-    - [Troubleshooting](#troubleshooting)
-    - [I Just Made a Mistake](#i-just-made-a-mistake)
-    - [Long Term Support](#long-term-support)
-      - [What is LTS?](#what-is-lts)
-      - [How does LTS work?](#how-does-lts-work)
-      - [Landing semver-minor commits in LTS](#landing-semver-minor-commits-in-lts)
-      - [How are LTS Branches Managed?](#how-are-lts-branches-managed)
-      - [How can I help?](#how-can-i-help)
-      - [How is an LTS release cut?](#how-is-an-lts-release-cut)
-  - [Who to CC in the issue tracker](#who-to-cc-in-the-issue-tracker)
+- [1. Issues and Pull Requests](#1-issues-and-pull-requests)
+  - [1.1. Issue management and Pull
+    Requests](#11-issue-management-and-pull-requests)
+  - [1.2. Welcoming First-Time
+    Contributors](#12-welcoming-first-time-contributors)
+  - [1.3. Closing Issues and Pull
+    Requests](#13-closing-issues-and-pull-requests)
+  - [1.4. Author-ready Pull Requests](#14-author-ready-pull-requests)
+  - [1.5. Handling your own Pull Requests](#15-handling-your-own-pull-requests)
+- [2. Accepting Modifications](#2-accepting-modifications)
+  - [2.1. Code Reviews](#21-code-reviews)
+  - [2.2. Consensus Seeking](#22-consensus-seeking)
+  - [2.3. Waiting for Approvals](#23-waiting-for-approvals)
+  - [2.4. Testing and CI](#24-testing-and-ci)
+  - [2.5. Internal vs. Public API](#25-internal-vs-public-api)
+  - [2.6. Breaking Changes](#26-breaking-changes)
+    - [2.6.1. Breaking Changes and
+      Deprecations](#261-breaking-changes-and-deprecations)
+    - [2.6.2. Breaking Changes to Internal
+      Elements](#262-breaking-changes-to-internal-elements)
+    - [2.6.3. When Breaking Changes Actually Break
+      Things](#263-when-breaking-changes-actually-break-things)
+  - [2.7. Introducing New Modules](#27-introducing-new-modules)
+  - [2.8. Deprecations](#28-deprecations)
+  - [2.9. Involving the TSC](#29-involving-the-tsc)
+- [3. Landing Pull Requests](#3-landing-pull-requests)
+  - [3.1. Using `git-node`](#31-using-git-node)
+  - [3.2. Technical HOWTO](#32-technical-howto)
+  - [3.3. Troubleshooting](#33-troubleshooting)
+  - [3.4. I Just Made a Mistake](#34-i-just-made-a-mistake)
+  - [3.5. Long Term Support](#35-long-term-support)
+    - [3.5.1. What is LTS?](#351-what-is-lts)
+    - [3.5.2. How does LTS work?](#352-how-does-lts-work)
+    - [3.5.3. Landing semver-minor commits in
+      LTS](#353-landing-semver-minor-commits-in-lts)
+    - [3.5.4. How are LTS Branches Managed?](#354-how-are-lts-branches-managed)
+    - [3.5.5. How can I help?](#355-how-can-i-help)
+    - [3.5.6. How is an LTS release cut?](#356-how-is-an-lts-release-cut)
+- [4. Who to CC in the issue tracker](#4-who-to-cc-in-the-issue-tracker)
 
 <!-- ⛔️ AUTO-GENERATED-CONTENT:END -->
 
@@ -54,9 +58,9 @@ Collaborators should be familiar with the guidelines for new contributors in
 [CONTRIBUTING.md](./CONTRIBUTING.md) and also understand the project governance
 model as outlined in [GOVERNANCE.md](./GOVERNANCE.md).
 
-## Issues and Pull Requests
+## 1. Issues and Pull Requests
 
-### Issue management and Pull Requests
+### 1.1. Issue management and Pull Requests
 
 Collaborators should take full responsibility for Issue management and pull
 requests they feel qualified to handle. Make sure this is done while being
@@ -65,7 +69,7 @@ of the [TSC][]. They may also notify other qualified parties for more input on
 an issue or a Pull Request. See [Who to CC in the issue
 tracker](#who-to-cc-in-the-issue-tracker).
 
-### Welcoming First-Time Contributors
+### 1.2. Welcoming First-Time Contributors
 
 Courtesy should always be shown to individuals submitting issues and pull
 requests to the Node.js project. Be welcoming to first-time contributors,
@@ -77,7 +81,7 @@ Request author, and ask if they have configured their git username and email to
 their liking as per [this guide][git-username]. This is to make sure they would
 be promoted to "contributor" once their Pull Request gets landed.
 
-### Closing Issues and Pull Requests
+### 1.3. Closing Issues and Pull Requests
 
 Collaborators may close any issue or Pull Request they believe is not relevant
 for the future of the Node.js project. Where this is unclear, the issue should
@@ -86,7 +90,7 @@ does not yield input from Node.js Collaborators or additional evidence that the
 issue has relevance, the issue may be closed. Remember that issues can always be
 re-opened if necessary.
 
-### Author-ready Pull Requests
+### 1.4. Author-ready Pull Requests
 
 A Pull Request that is still awaiting the minimum review time is considered
 `author-ready` as soon as the CI has been started, it has at least one approval,
@@ -94,7 +98,7 @@ and it has no outstanding review comments. Please always make sure to add the
 appropriate `author-ready` label to the PR in that case and remove it again as
 soon as that condition is not met anymore.
 
-### Handling your own Pull Requests
+### 1.5. Handling your own Pull Requests
 
 If you as a Collaborator open a Pull Request, it is recommended to start a CI
 right after (see [testing and CI](#testing-and-ci) for further information on
@@ -108,7 +112,7 @@ equally. If it is still awaiting the [minimum time to
 land](#waiting-for-approvals), please add the `author-ready` label to it so it
 is obvious that the PR can land as soon as the time ends.
 
-## Accepting Modifications
+## 2. Accepting Modifications
 
 All modifications to the Node.js code and documentation should be performed via
 GitHub Pull Requests, including modifications by Collaborators and TSC members.
@@ -117,7 +121,7 @@ landed into the codebase. There may be exception to the latter (the changed code
 can not be tested with a CI or similar). If that is the case, please leave a
 comment that explains why the PR does not require a CI run.
 
-### Code Reviews
+### 2.1. Code Reviews
 
 All Pull Requests must be reviewed and accepted by a Collaborator with
 sufficient expertise who is able to take full responsibility for the change. In
@@ -142,7 +146,7 @@ open longer than the minimum waiting time without any open comments, please do
 not (only) add another approval. Instead go ahead and land the PR after checking
 the CI outcome.
 
-### Consensus Seeking
+### 2.2. Consensus Seeking
 
 If there is no disagreement amongst Collaborators, a Pull Request should be
 landed given appropriate review, a green CI, and the minimum [waiting
@@ -169,15 +173,16 @@ there is disagreement among TSC members or objections from one or more
 Collaborators, `semver-major` Pull Requests may be put on the TSC meeting
 agenda.
 
-#### Helpful resources
+>>> [!TIP] Helpful resources
 
 - How to respectfully and usefully review code, part
     [one](https://mtlynch.io/human-code-reviews-1/) and
     [two](https://mtlynch.io/human-code-reviews-2/)
 - [How to write a positive code
   review](https://css-tricks.com/code-review-etiquette/)
+>>>
 
-### Waiting for Approvals
+### 2.3. Waiting for Approvals
 
 Before landing Pull Requests, sufficient time should be left for input from
 other Collaborators. In general, leave at least 48 hours during the week and 72
@@ -185,19 +190,19 @@ hours over weekends to account for international time differences and work
 schedules. However, certain types of Pull Requests can be fast-tracked and may
 be landed after a shorter delay. For example:
 
-- Focused changes that affect only documentation and/or the test suite:
-  - `code-and-learn` tasks typically fall into this category.
-  - `good-first-issue` Pull Requests may also be suitable.
-- Changes that fix regressions:
-  - Regressions that break the workflow (red CI or broken compilation).
-  - Regressions that happen right before a release, or reported soon after.
+1. Focused changes that affect only documentation and/or the test suite:
+   1. `code-and-learn` tasks typically fall into this category.
+   1. `good-first-issue` Pull Requests may also be suitable.
+1. Changes that fix regressions:
+   1. Regressions that break the workflow (red CI or broken compilation).
+   1. Regressions that happen right before a release, or reported soon after.
 
 When a Pull Request is deemed suitable to be fast-tracked, label it with
 `fast-track`. The Pull Request can be landed once 2 or more Collaborators
 approve both the Pull Request and the fast-tracking request, and the necessary
 CI testing is done.
 
-### Testing and CI
+### 2.4. Testing and CI
 
 All bugfixes require a test case which demonstrates the defect. The test should
 _fail_ before the change, and _pass_ after the change.
@@ -218,7 +223,7 @@ faith to be unrelated to the changes in the Pull Request. Otherwise, reasonable
 steps must be taken to confirm that the changes are not resulting in an
 unreliable test.
 
-#### Useful CI Jobs
+>>> [!TIP] Useful CI Jobs
 
 - [`node-test-pull-request`](https://ci.nodejs.org/job/node-test-pull-request/)
     is the standard CI run we do to check Pull Requests. It triggers
@@ -244,8 +249,9 @@ unreliable test.
     is designed to allow validation of changes to the copy of V8 in the Node.js
     tree by running the standard V8 tests. It should be run whenever the level
     of V8 within Node.js is updated or new patches are floated on V8.
+>>>
 
-### Internal vs. Public API
+### 2.5. Internal vs. Public API
 
 Due to the nature of the JavaScript language, it can often be difficult to
 establish a clear distinction between which parts of the Node.js implementation
@@ -260,18 +266,18 @@ of the Node.js implementation.
 The following general rules should be followed to determine which aspects of the
 Node.js API are internal:
 
-- All functionality exposed via `process.binding(...)` is internal.
-- All functionality implemented in `src/internal/**/*.js` is internal unless it
+1. All functionality exposed via `process.binding(...)` is internal.
+1. All functionality implemented in `src/internal/**/*.js` is internal unless it
     is re-exported by code in `src/*.js` or documented as part of the Node.js
     Public API.
-- Any object property or method whose key is a non-exported `Symbol` is an
+1. Any object property or method whose key is a non-exported `Symbol` is an
     internal property.
-- Any object property or method whose key begins with the underscore `_` prefix
+1. Any object property or method whose key begins with the underscore `_` prefix
     is internal unless it is documented as part of the Node.js Public API.
-- Any object, property, method, argument, behavior, or event not documented in
+1. Any object, property, method, argument, behavior, or event not documented in
     the Node.js documentation is internal.
-- Any native C/C++ APIs/ABIs exported by the Node.js `*.h` header files that are
-    hidden behind the `NODE_WANT_INTERNALS` flag are internal.
+1. Any native C/C++ APIs/ABIs exported by the Node.js `*.h` header files that
+    are hidden behind the `NODE_WANT_INTERNALS` flag are internal.
 
 Exceptions can be made if use or behavior of a given internal API can be
 demonstrated to be sufficiently relied upon by the Node.js ecosystem such that
@@ -295,26 +301,26 @@ See [Breaking Changes to Internal
 Elements](#breaking-changes-to-internal-elements) on how to handle those types
 of changes.
 
-### Breaking Changes
+### 2.6. Breaking Changes
 
 Backwards-incompatible changes may land on the master branch at any time after
 sufficient review by Collaborators and approval of at least two TSC members.
 
 Examples of breaking changes include:
 
-- removal or redefinition of existing API arguments
-- changing return values
-- removing or modifying existing properties on an options argument
-- adding or removing errors
-- altering expected timing of an event
-- changing the side effects of using a particular API
+1. removal or redefinition of existing API arguments
+1. changing return values
+1. removing or modifying existing properties on an options argument
+1. adding or removing errors
+1. altering expected timing of an event
+1. changing the side effects of using a particular API
 
 Purely additive changes (e.g. adding new events to `EventEmitter`
 implementations, adding new arguments to a method in a way that allows existing
 code to continue working without modification, or adding new properties to an
 options argument) are semver-minor changes.
 
-#### Breaking Changes and Deprecations
+#### 2.6.1. Breaking Changes and Deprecations
 
 With a few exceptions outlined below, when backward-incompatible changes to a
 _Public_ API are necessary, the existing API _must_ be deprecated _first_ and
@@ -325,9 +331,9 @@ backward-incompatible way) without a deprecation.
 
 Exceptions to this rule may be made in the following cases:
 
-- Adding or removing errors thrown or reported by a Public API;
-- Changing error messages for errors without error code;
-- Altering the timing and non-internal side effects of the Public API.
+1. Adding or removing errors thrown or reported by a Public API;
+1. Changing error messages for errors without error code;
+1. Altering the timing and non-internal side effects of the Public API.
 
 Such changes _must_ be handled as semver-major changes but MAY be landed without
 a [Deprecation cycle](#deprecation-cycle).
@@ -344,7 +350,7 @@ consider and approve additional exceptions to this rule.
 
 For more information, see [Deprecations](#deprecations).
 
-#### Breaking Changes to Internal Elements
+#### 2.6.2. Breaking Changes to Internal Elements
 
 Breaking changes to internal elements are permitted in semver-patch or
 semver-minor commits but Collaborators should take significant care when making
@@ -361,7 +367,7 @@ such that any changes may break user code, then serious consideration should be
 given to providing an alternative Public API for that functionality before any
 breaking changes are made.
 
-#### When Breaking Changes Actually Break Things
+#### 2.6.3. When Breaking Changes Actually Break Things
 
 Because breaking (semver-major) changes are permitted to land on the master
 branch at any time, at least some subset of the user ecosystem may be adversely
@@ -372,12 +378,13 @@ guarantees.
 
 Specifically:
 
-- Breaking changes should _never_ land in Current or LTS except when:
-  - Resolving critical security issues.
-  - Fixing a critical bug (e.g. fixing a memory leak) requires a breaking
-        change.
-  - There is TSC consensus that the change is required.
-- If a breaking commit does accidentally land in a Current or LTS branch, an
+1. Breaking changes should _never_ land in Current or LTS except when:
+
+- Resolving critical security issues.
+- Fixing a critical bug (e.g. fixing a memory leak) requires a breaking change.
+- There is TSC consensus that the change is required.
+
+1. If a breaking commit does accidentally land in a Current or LTS branch, an
     attempt to fix the issue will be made before the next release; If no fix is
     provided then the commit will be reverted.
 
@@ -388,14 +395,15 @@ often be based on many complex factors that are not easily codified. It is also
 possible that the breaking commit can be labeled retroactively as a semver-major
 change that will not be backported to Current or LTS branches.
 
-##### Reverting commits
+>>> [!NOTE] Reverting commits
 
 Commits are reverted with `git revert <HASH>`, or `git revert <FROM>..<TO>` for
 multiple commits. Commit metadata and the reason for the revert should be
 appended. Commit message rules about line length and subsystem can be ignored. A
 Pull Request should be raised and approved like any other change.
+>>>
 
-### Introducing New Modules
+### 2.7. Introducing New Modules
 
 Semver-minor commits that introduce new core modules should be treated with
 extra care.
@@ -410,9 +418,9 @@ introduces the new core module.
 
 Pull Requests introducing new core modules:
 
-- Must be left open for at least one week for review.
-- Must be labeled using the `tsc-review` label.
-- Must have signoff from at least two TSC members.
+1. Must be left open for at least one week for review.
+1. Must be labeled using the `tsc-review` label.
+1. Must have signoff from at least two TSC members.
 
 New core modules must be landed with a [Stability Index][] of Experimental, and
 must remain Experimental until a semver-major release.
@@ -421,14 +429,14 @@ For new modules that involve significant effort, non-trivial additions to
 Node.js or significant new capabilities, an [Enhancement Proposal][] is
 recommended but not required.
 
-### Deprecations
+### 2.8. Deprecations
 
 **Deprecation** refers to the identification of Public APIs that should no
 longer be used.
 
 Node.js uses three Deprecation levels:
 
-- _Documentation-Only Deprecation_ refers to elements of the Public API that
+1. _Documentation-Only Deprecation_ refers to elements of the Public API that
     should be avoided by developers and that might be staged for a runtime
     deprecation in a future Node.js major release. An explicit notice indicating
     the deprecation status is added to the API documentation but no functional
@@ -438,27 +446,28 @@ Node.js uses three Deprecation levels:
     [`--pending-deprecation`][] flag or the `NODE_PENDING_DEPRECATION=1`
     environment variable is set.
 
-- _Runtime Deprecation_ refers to the use of process warnings emitted at runtime
-    the first time that a deprecated API is used. A command-line switch can be
-    used to escalate such warnings into runtime errors that will cause the
-    Node.js process to exit. As with Documentation-Only Deprecation, the
+1. _Runtime Deprecation_ refers to the use of process warnings emitted at
+    runtime the first time that a deprecated API is used. A command-line switch
+    can be used to escalate such warnings into runtime errors that will cause
+    the Node.js process to exit. As with Documentation-Only Deprecation, the
     documentation for the API must be updated to clearly indicate the deprecated
     status.
 
-- _End-of-life_ refers to APIs that have gone through Runtime Deprecation and
+1. _End-of-life_ refers to APIs that have gone through Runtime Deprecation and
     are no longer subject to the semantic versioning rules used by the project.
     Backward-incompatible changes including complete removal of such APIs may
     occur at any time.
 
-Documentation-Only Deprecations may be handled as semver-minor or semver-major
-changes. Such deprecations have no impact on the successful operation of running
-code and therefore should not be viewed as breaking changes.
+**Documentation-Only Deprecations** may be handled as semver-minor or
+semver-major changes. Such deprecations have no impact on the successful
+operation of running code and therefore should not be viewed as breaking
+changes.
 
-Runtime Deprecations and End-of-life APIs (internal or public) must be handled
-as semver-major changes unless there is TSC consensus to land the deprecation as
-a semver-minor.
+**Runtime Deprecations and End-of-life APIs** (internal or public) must be
+handled as semver-major changes unless there is TSC consensus to land the
+deprecation as a semver-minor.
 
-All Documentation-Only and Runtime deprecations will be assigned a unique
+**All Documentation-Only and Runtime** deprecations will be assigned a unique
 identifier that can be used to persistently refer to the deprecation in
 documentation, emitted process warnings, or errors thrown. Documentation for
 these identifiers will be included in the Node.js API documentation and will be
@@ -482,27 +491,28 @@ request adding the deprecation lands on the master branch). All deprecations
 included in a Node.js release should be listed prominently in the "Notable
 Changes" section of the release notes.
 
-### Involving the TSC
+### 2.9. Involving the TSC
 
 Collaborators may opt to elevate Pull Requests or issues to the [TSC][] for
 discussion by assigning the `tsc-review` label or @-mentioning the `@nodejs/tsc`
 GitHub team. This should be done where a Pull Request:
 
-- is labeled `semver-major`, or
-- has a significant impact on the codebase, or
-- is inherently controversial, or
-- has failed to reach consensus amongst the Collaborators who are actively
+1. is labeled `semver-major`, or
+1. has a significant impact on the codebase, or
+1. is inherently controversial, or
+1. has failed to reach consensus amongst the Collaborators who are actively
     participating in the discussion.
 
 The TSC should serve as the final arbiter where required.
 
-## Landing Pull Requests
+## 3. Landing Pull Requests
 
 1. Never use GitHub's green ["Pull Pull Request"][] button. Reasons for not
     using the web interface button:
-    - The merge method will add an unnecessary merge commit.
-    - The squash & merge method can add metadata (the PR #) to the commit title.
-    - If more than one author has contributed to the PR, keep the most recent
+    1. The merge method will add an unnecessary merge commit.
+    1. The squash & merge method can add metadata (the PR #) to the commit
+       title.
+    1. If more than one author has contributed to the PR, keep the most recent
         author when squashing.
 1. Make sure the CI is done and the result is green. If the CI is not green,
     check for flaky tests and infrastructure failures. Please check if those
@@ -525,7 +535,7 @@ are correct before merging.
 All commits should be self-contained, meaning every commit should pass all
 tests. This makes it much easier when bisecting to find a breaking change.
 
-### Using `git-node`
+### 3.1. Using `git-node`
 
 In most cases, using [the `git-node` command][git-node] of [`node-core-utils`][]
 should be enough to help you land a Pull Request. If you discover a problem when
@@ -534,7 +544,7 @@ tracker][node-core-utils-issues].
 
 Quick example:
 
-```text
+```bash
 npm install -g node-core-utils
 git node land $PRID
 ```
@@ -545,39 +555,39 @@ in the console so the tool can create the GitHub access token for you. If you do
 not want to do that, follow [the `node-core-utils`
 guide][node-core-utils-credentials] to set up your credentials manually.
 
-### Technical HOWTO
+### 3.2. Technical HOWTO
 
 Clear any `am`/`rebase` that may already be underway:
 
-```text
+```bash
 git am --abort
 git rebase --abort
 ```
 
 Checkout proper target branch:
 
-```text
+```bash
 git checkout master
 ```
 
 Update the tree (assumes your repo is set up as detailed in
 [CONTRIBUTING.md](./doc/guides/contributing/merge-requests.md#step-1-fork)):
 
-```text
+```bash
 git fetch upstream
 git merge --ff-only upstream/master
 ```
 
 Apply external patches:
 
-```text
+```bash
 curl -L https://github.com/nodejs/node/pull/xxx.patch | git am --whitespace=fix
 ```
 
 If the merge fails even though recent CI runs were successful, then a 3-way
 merge may be required. In this case try:
 
-```text
+```bash
 git am --abort
 curl -L https://github.com/nodejs/node/pull/xxx.patch | git am -3 --whitespace=fix
 ```
@@ -589,25 +599,25 @@ has landed since the CI run and you will have to ask the author to rebase.
 
 Check and re-review the changes:
 
-```text
+```bash
 git diff upstream/master
 ```
 
 Check the number of commits and commit messages:
 
-```text
+```bash
 git log upstream/master...master
 ```
 
 Squash commits and add metadata:
 
-```text
+```bash
 git rebase -i upstream/master
 ```
 
 This will open a screen like this (in the default shell editor):
 
-```text
+```bash
 pick 6928fc1 crypto: add feature A
 pick 8120c4c add test for feature A
 pick 51759dc crypto: feature B
@@ -634,7 +644,7 @@ pick 7d6f433 test for feature B
 
 Replace a couple of `pick`s with `fixup` to squash them into a previous commit:
 
-```text
+```bash
 pick 6928fc1 crypto: add feature A
 fixup 8120c4c add test for feature A
 pick 51759dc crypto: feature B
@@ -643,7 +653,7 @@ fixup 7d6f433 test for feature B
 
 Replace `pick` with `reword` to change the commit message:
 
-```text
+```bash
 reword 6928fc1 crypto: add feature A
 fixup 8120c4c add test for feature A
 reword 51759dc crypto: feature B
@@ -654,28 +664,31 @@ Save the file and close the editor. You'll be asked to enter a new commit
 message for that commit. This is a good moment to fix incorrect commit logs,
 ensure that they are properly formatted, and add `Reviewed-By` lines.
 
-- The commit message text must conform to the [commit message
-    guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
+>>> [!IMPORTANT]
+
+The commit message text must conform to the [commit message
+guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
+>>>
 
 <a name="metadata"></a>
 
-- Modify the original commit message to include additional metadata regarding
-    the change process. (The [`git node metadata`][git-node-metadata] command
-    can generate the metadata for you.)
+Modify the original commit message to include additional metadata regarding the
+change process. (The [`git node metadata`][git-node-metadata] command can
+generate the metadata for you.)
 
-  - Required: A `PR-URL:` line that references the _full_ GitHub URL of the
-        original Pull Request being merged so it's easy to trace a commit back
-        to the conversation that led up to that change.
-  - Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
-        for an issue, and/or the hash and commit message if the commit fixes a
-        bug in a previous commit. Multiple `Fixes:` lines may be added if
-        appropriate.
-  - Optional: One or more `Refs:` lines referencing a URL for any relevant
-        background.
-  - Required: A `Reviewed-By: Name <email>` line for yourself and any other
-        Collaborators who have reviewed the change.
-    - Useful for @mentions / contact list if something goes wrong in the PR.
-    - Protects against the assumption that GitHub will be around forever.
+1. Required: A `PR-URL:` line that references the _full_ GitHub URL of the
+     original Pull Request being merged so it's easy to trace a commit back to
+     the conversation that led up to that change.
+1. Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
+     for an issue, and/or the hash and commit message if the commit fixes a bug
+     in a previous commit. Multiple `Fixes:` lines may be added if appropriate.
+1. Optional: One or more `Refs:` lines referencing a URL for any relevant
+     background.
+1. Required: A `Reviewed-By: Name <email>` line for yourself and any other
+     Collaborators who have reviewed the change.
+
+- Useful for @mentions / contact list if something goes wrong in the PR.
+- Protects against the assumption that GitHub will be around forever.
 
 Run tests (`make -j4 test` or `vcbuild test`). Even though there was a
 successful continuous integration run, other changes may have landed on master
@@ -684,7 +697,7 @@ since then, so running the tests one last time locally is a good practice.
 Validate that the commit message is properly formatted using
 [core-validate-commit](https://github.com/evanlucas/core-validate-commit).
 
-```text
+```bash
 git rev-list upstream/master...HEAD | xargs core-validate-commit
 ```
 
@@ -697,7 +710,7 @@ Pull Requests that weren't merged.
 
 Time to push it:
 
-```text
+```bash
 git push upstream master
 ```
 
@@ -705,7 +718,7 @@ Close the Pull Request with a "Landed in `<commit hash>`" comment. If your Pull
 Request shows the purple merged status then you should still add the "Landed in
 <commit hash>..<commit hash>" comment if you added multiple commits.
 
-### Troubleshooting
+### 3.3. Troubleshooting
 
 Sometimes, when running `git push upstream master`, you may get an error message
 like this:
@@ -732,24 +745,25 @@ make -j4 test
 git push upstream master
 ```
 
-### I Just Made a Mistake
+### 3.4. I Just Made a Mistake
 
-- Ping a TSC member.
-- `#node-dev` on freenode
-- With `git`, there's a way to override remote trees by force pushing (`git push
-    -f`). This should generally be seen as forbidden (since you're rewriting
-    history on a repository other people are working against) but is allowed for
-    simpler slip-ups such as typos in commit messages. However, you are only
-    allowed to force push to any Node.js branch within 10 minutes from your
-    original push. If someone else pushes to the branch or the 10 minute period
-    passes, consider the commit final.
-  - Use `--force-with-lease` to minimize the chance of overwriting someone
-        else's change.
-  - Post to `#node-dev` (IRC) if you force push.
+1. Ping a TSC member.
+1. `#node-dev` on freenode
+1. With `git`, there's a way to override remote trees by force pushing (`git
+    push -f`). This should generally be seen as forbidden (since you're
+    rewriting history on a repository other people are working against) but is
+    allowed for simpler slip-ups such as typos in commit messages. However, you
+    are only allowed to force push to any Node.js branch within 10 minutes from
+    your original push. If someone else pushes to the branch or the 10 minute
+    period passes, consider the commit final.
 
-### Long Term Support
+- Use `--force-with-lease` to minimize the chance of overwriting someone else's
+        change.
+- Post to `#node-dev` (IRC) if you force push.
 
-#### What is LTS?
+### 3.5. Long Term Support
+
+#### 3.5.1. What is LTS?
 
 Long Term Support (often referred to as _LTS_) guarantees application developers
 a 30-month support cycle with specific versions of Node.js.
@@ -757,7 +771,7 @@ a 30-month support cycle with specific versions of Node.js.
 You can find more information [in the full release
 plan](https://github.com/nodejs/Release#release-plan).
 
-#### How does LTS work?
+#### 3.5.2. How does LTS work?
 
 Once a Current branch enters LTS, changes in that branch are limited to bug
 fixes, security updates, possible npm updates, documentation updates, and
@@ -770,7 +784,7 @@ required for security-related fixes.
 Once a Current branch moves into Maintenance mode, only **critical** bugs,
 **critical** security fixes, and documentation updates will be permitted.
 
-#### Landing semver-minor commits in LTS
+#### 3.5.3. Landing semver-minor commits in LTS
 
 The default policy is to not land semver-minor or higher commits in any LTS
 branch. However, the LTS WG or TSC can evaluate any individual semver-minor
@@ -785,7 +799,7 @@ branch should attach the `lts-agenda` label to the Pull Request. The LTS WG will
 discuss the issue and, if necessary, will escalate the issue up to the TSC for
 further discussion.
 
-#### How are LTS Branches Managed?
+#### 3.5.4. How are LTS Branches Managed?
 
 There are multiple LTS branches, e.g. `v8.x` and `v6.x`. Each of these is paired
 with a staging branch: `v8.x-staging` and `v6.x-staging`.
@@ -800,7 +814,7 @@ were landed in staging.
 Any Collaborator may land commits into a staging branch, but only the release
 team should land commits into the LTS branch while preparing a new LTS release.
 
-#### How can I help?
+#### 3.5.5. How can I help?
 
 When you send your Pull Request, please include information about whether your
 change is breaking. If you think your patch can be backported, please include
@@ -809,13 +823,13 @@ on backporting, please see the [backporting guide][].
 
 Several LTS related issue and PR labels have been provided:
 
-- `lts-watch-v6.x` - tells the LTS WG that the issue/PR needs to be considered
+1. `lts-watch-v6.x` - tells the LTS WG that the issue/PR needs to be considered
     for landing in the `v6.x-staging` branch.
-- `lts-watch-v4.x` - tells the LTS WG that the issue/PR needs to be considered
+1. `lts-watch-v4.x` - tells the LTS WG that the issue/PR needs to be considered
     for landing in the `v4.x-staging` branch.
-- `land-on-v6.x` - tells the release team that the commit should be landed in a
+1. `land-on-v6.x` - tells the release team that the commit should be landed in a
     future v6.x release
-- `land-on-v4.x` - tells the release team that the commit should be landed in a
+1. `land-on-v4.x` - tells the release team that the commit should be landed in a
     future v4.x release
 
 Any Collaborator can attach these labels to any PR/issue. As commits are landed
@@ -825,14 +839,14 @@ commits are landed in a LTS release, the `land-on-` label will be removed.
 Collaborators are encouraged to help the LTS WG by attaching the appropriate
 `lts-watch-` label to any PR that may impact an LTS release.
 
-#### How is an LTS release cut?
+#### 3.5.6. How is an LTS release cut?
 
 When the LTS working group determines that a new LTS release is required,
 selected commits will be picked from the staging branch to be included in the
 release. This process of making a release will be a collaboration between the
 LTS working group and the Release team.
 
-## Who to CC in the issue tracker
+## 4. Who to CC in the issue tracker
 
 | Subsystem                                                                  | Maintainers                                                          |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -907,7 +921,6 @@ If you cannot find who to cc for a file, `git shortlog -n -s <file>` may help.
 
 [node-core-utils-credentials]:
     https://github.com/nodejs/node-core-utils#setting-up-credentials
-
 
 [flaky tests]:
     https://github.com/nodejs/node/issues?q=is%3Aopen+is%3Aissue+label%3A%22CI+%2F+flaky+test%22
