@@ -167,6 +167,7 @@ Collaborators, `semver-major` Pull Requests may be put on the TSC meeting
 agenda.
 
 > [!TIP]
+>
 > - How to respectfully and usefully review code, part
 >     [one](https://mtlynch.io/human-code-reviews-1/) and
 >     [two](https://mtlynch.io/human-code-reviews-2/)
@@ -660,10 +661,6 @@ Save the file and close the editor. You'll be asked to enter a new commit
 message for that commit. This is a good moment to fix incorrect commit logs,
 ensure that they are properly formatted, and add `Reviewed-By` lines.
 
-> [!IMPORTANT]
-> The commit message text must conform to the [commit message
-> guidelines](./doc/guides/contributing/merge-requests.md#commit-message-guidelines).
-
 <a name="metadata"></a>
 
 Modify the original commit message to include additional metadata regarding the
@@ -673,12 +670,12 @@ generate the metadata for you.)
 1. Required: A `PR-URL:` line that references the _full_ GitHub URL of the
      original Pull Request being merged so it's easy to trace a commit back to
      the conversation that led up to that change.
-1. Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
+2. Optional: A `Fixes: X` line, where _X_ either includes the _full_ GitHub URL
      for an issue, and/or the hash and commit message if the commit fixes a bug
      in a previous commit. Multiple `Fixes:` lines may be added if appropriate.
-1. Optional: One or more `Refs:` lines referencing a URL for any relevant
+3. Optional: One or more `Refs:` lines referencing a URL for any relevant
      background.
-1. Required: A `Reviewed-By: Name <email>` line for yourself and any other
+4. Required: A `Reviewed-By: Name <email>` line for yourself and any other
      Collaborators who have reviewed the change.
 
 - Useful for @mentions / contact list if something goes wrong in the PR.
