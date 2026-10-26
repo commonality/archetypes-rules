@@ -121,7 +121,7 @@
       "groupPR": "ci(drift): update ${dependency} in group ${group} to latest"
     }
   },
-  "homepage": "https://github.com/commonality/enum-nom-nommer#readme",
+  "homepage": "https://github.com/commonality/archetypes-rules#readme",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
