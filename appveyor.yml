@@ -22,4 +22,4 @@ test_script:
   - node --version
   - npm --version
   - cd %APPVEYOR_BUILD_FOLDER%
-  - npx jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter
+  - cmd: npx jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter
