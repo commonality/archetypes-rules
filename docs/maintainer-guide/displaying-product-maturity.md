@@ -100,7 +100,7 @@ before you rely.
 
 > <img align="bottom" alt="git-pull-request" height="30" width="30" src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/git-pull-request.svg">
 > Our
-> [`PULL_REQUEST_TEMPLATE.md`](https://github.com/commonality/readme-inspector/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+> [`PULL_REQUEST_TEMPLATE.md`](https://github.com/commonality/readme-inspector/blob/main/.github/PULL_REQUEST_TEMPLATE.md)
 > provides SonarCloud badges to help engineers quickly assess any major code
 > smells or technical debt.
 
@@ -205,7 +205,7 @@ before you rely.
 
 [codacy-url]: https://www.codacy.com/app/greg_7/readme-inspector?utm_source=github.com&utm_medium=referral&utm_content=commonality/readme-inspector&utm_campaign=Badge_Grade
 
-[coveralls-image]: https://img.shields.io/coveralls/github/commonality/readme-inspector/master.svg
+[coveralls-image]: https://img.shields.io/coveralls/github/commonality/readme-inspector/main.svg
 
 [coveralls-url]: https://coveralls.io/r/commonality/readme-inspector
 
@@ -247,7 +247,7 @@ before you rely.
 
 [nsp-url]: https://nodesecurity.io/orgs/commonality/projects/a2aa0184-ae94-4307-8b87-f0e12324368a
 
-[travis-image]: https://img.shields.io/travis/commonality/readme-inspector.svg?branch=master&style=flat-square&label=macOS%20%7C%20ubuntu%20builds&logo=travis
+[travis-image]: https://img.shields.io/travis/commonality/readme-inspector.svg?branch=main&style=flat-square&label=macOS%20%7C%20ubuntu%20builds&logo=travis
 
 [travis-url]: https://travis-ci.org/commonality/readme-inspector
 
@@ -257,15 +257,15 @@ before you rely.
 
 <!-- 🔗 logo references 🔗  -->
 
-[standardjs-logo]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[standardjs-logo]: https://cdn.rawgit.com/feross/standard/main/badge.svg
 
 [standardjs-url]: https://github.com/feross/standard
 
-[eslint-logo]: https://github.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-eslint.png
+[eslint-logo]: https://github.com/archetypes-rules/signatures/raw/main/docs/img/logos/logo-eslint.png
 
 [eslint-url]: https://eslint.org/docs/user-guide/getting-started
 
-[jest-logo]: https://github.com/archetypes-rules/signatures/raw/master/docs/img/logos/logo-jest.png
+[jest-logo]: https://github.com/archetypes-rules/signatures/raw/main/docs/img/logos/logo-jest.png
 
 [jest-url]: https://facebook.github.io/jest/docs/en/getting-started.html
 

@@ -91,7 +91,7 @@ $ npm test
 > be addressed while the PR is open.
 >
 > ![alert][octicon-alert] **_All_ tasks _must_ be completed** and **verified**
-> before a PR may be merged into <samp>master</samp>, however.
+> before a PR may be merged into <samp>main</samp>, however.
 
 ### How to test a release
 
@@ -160,11 +160,11 @@ The [Pre-release test instructions](https://github.com/commonality/archetypes-ru
 
 <!-- ⛔️ Logo img references ⛔️  -->
 
-[standardjs-logo]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[standardjs-logo]: https://cdn.rawgit.com/feross/standard/main/badge.svg
 [standardjs-url]: https://github.com/feross/standard
-[eslint-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/master/docs/img/logos/logo-eslint.png
+[eslint-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-eslint.png
 [eslint-url]: https://eslint.org/docs/user-guide/getting-started
-[jest-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/master/docs/img/logos/logo-jest.png
+[jest-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-jest.png
 [jest-url]: https://facebook.github.io/jest/docs/en/getting-started.html
 
 <!-- ⛔️ Octicon img references ⛔️  -->

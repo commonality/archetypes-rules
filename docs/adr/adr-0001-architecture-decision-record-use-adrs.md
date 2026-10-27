@@ -58,7 +58,7 @@ linkStyle 0 stroke:#FFF,stroke-width:0;
   F --> |"👍 majority 'accepted'"| G("Apply badge 'ADR accepted'")
   F --> |"👎 majority 'rejected'"| H("Apply badge 'ADR rejected'")
   G --> I
-  H --> I("Merge ADR into `master`")
+  H --> I("Merge ADR into `main`")
   I --> J(("stop"))
 end
 ```
@@ -90,9 +90,9 @@ end
     ["how-to" instructions for badges](https://github.com/archetypes-rules/signatures/wikis/Style-Guides/Images).)
 
 1.  Only after an ADR is accepted should implementing code be committed to the
-    `master` branch of a relevant application, library, or module.
+    `main` branch of a relevant application, library, or module.
 
-1.  All ADRs should be merged into the `master` branch, no matter what their
+1.  All ADRs should be merged into the `main` branch, no matter what their
     ultimate status is.
 
 1.  If a decision is revisited and a different conclusion is reached, a new ADR
@@ -114,7 +114,7 @@ end
 
 1.  If we follow the process, decisions will be made deliberately, as a group.
 
-1.  The master branch of our repositories will reflect the high-level consensus
+1.  The main branch of our repositories will reflect the high-level consensus
     of the steering group.
 
 1.  We will have a useful persistent record of why the system is the way it is.

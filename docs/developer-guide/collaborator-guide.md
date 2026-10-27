@@ -1,7 +1,7 @@
 <h1>Collaborator Guide</h1>
 
 > This guide mostly plagerizes the [Node.js Collaborator
-> Guide](https://github.com/nodejs/node/blob/master/COLLABORATOR_GUIDE.md).
+> Guide](https://github.com/nodejs/node/blob/main/COLLABORATOR_GUIDE.md).
 
 <a name="toc"></a>
 
@@ -298,7 +298,7 @@ of changes.
 
 ### 2.6. Breaking Changes
 
-Backwards-incompatible changes may land on the master branch at any time after
+Backwards-incompatible changes may land on the main branch at any time after
 sufficient review by Collaborators and approval of at least two TSC members.
 
 Examples of breaking changes include:
@@ -364,10 +364,10 @@ breaking changes are made.
 
 #### 2.6.3. When Breaking Changes Actually Break Things
 
-Because breaking (semver-major) changes are permitted to land on the master
+Because breaking (semver-major) changes are permitted to land on the main
 branch at any time, at least some subset of the user ecosystem may be adversely
 affected in the short term when attempting to build and use Node.js directly
-from the master branch. This potential instability is why Node.js offers
+from the main branch. This potential instability is why Node.js offers
 distinct Current and LTS release streams that offer explicit stability
 guarantees.
 
@@ -383,7 +383,7 @@ Specifically:
     attempt to fix the issue will be made before the next release; If no fix is
     provided then the commit will be reverted.
 
-When any changes are landed on the master branch and it is determined that the
+When any changes are landed on the main branch and it is determined that the
 changes _do_ break existing code, a decision may be made to revert those changes
 either temporarily or permanently. However, the decision to revert or not can
 often be based on many complex factors that are not easily codified. It is also
@@ -484,7 +484,7 @@ deprecations may remain indefinitely.
 
 A best effort will be made to communicate pending deprecations and associated
 mitigations with the ecosystem as soon as possible (preferably before the pull
-request adding the deprecation lands on the master branch). All deprecations
+request adding the deprecation lands on the main branch). All deprecations
 included in a Node.js release should be listed prominently in the "Notable
 Changes" section of the release notes.
 
@@ -564,7 +564,7 @@ git rebase --abort
 Checkout proper target branch:
 
 ```bash
-git checkout master
+git checkout main
 ```
 
 Update the tree (assumes your repo is set up as detailed in
@@ -572,7 +572,7 @@ Update the tree (assumes your repo is set up as detailed in
 
 ```bash
 git fetch upstream
-git merge --ff-only upstream/master
+git merge --ff-only upstream/main
 ```
 
 Apply external patches:
@@ -597,19 +597,19 @@ has landed since the CI run and you will have to ask the author to rebase.
 Check and re-review the changes:
 
 ```bash
-git diff upstream/master
+git diff upstream/main
 ```
 
 Check the number of commits and commit messages:
 
 ```bash
-git log upstream/master...master
+git log upstream/main...main
 ```
 
 Squash commits and add metadata:
 
 ```bash
-git rebase -i upstream/master
+git rebase -i upstream/main
 ```
 
 This will open a screen like this (in the default shell editor):
@@ -682,19 +682,19 @@ generate the metadata for you.)
 - Protects against the assumption that GitHub will be around forever.
 
 Run tests (`make -j4 test` or `vcbuild test`). Even though there was a
-successful continuous integration run, other changes may have landed on master
+successful continuous integration run, other changes may have landed on main
 since then, so running the tests one last time locally is a good practice.
 
 Validate that the commit message is properly formatted using
 [core-validate-commit](https://github.com/evanlucas/core-validate-commit).
 
 ```bash
-git rev-list upstream/master...HEAD | xargs core-validate-commit
+git rev-list upstream/main...HEAD | xargs core-validate-commit
 ```
 
 Optional: When landing your own commits, force push the amended commit to the
 branch you used to open the Pull Request. If your branch is called `bugfix`,
-then the command would be `git push --force-with-lease origin master:bugfix`.
+then the command would be `git push --force-with-lease origin main:bugfix`.
 When the Pull Request is closed, this will cause the Pull Request to show the
 purple merged status rather than the red closed status that is usually used for
 Pull Requests that weren't merged.
@@ -702,7 +702,7 @@ Pull Requests that weren't merged.
 Time to push it:
 
 ```bash
-git push upstream master
+git push upstream main
 ```
 
 Close the Pull Request with a "Landed in `<commit hash>`" comment. If your Pull
@@ -711,12 +711,12 @@ Request shows the purple merged status then you should still add the "Landed in
 
 ### 3.3. Troubleshooting
 
-Sometimes, when running `git push upstream master`, you may get an error message
+Sometimes, when running `git push upstream main`, you may get an error message
 like this:
 
 ```console
 To https://github.com/nodejs/node
- ! [rejected]              master -> master (fetch first)
+ ! [rejected]              main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/nodejs/node'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
@@ -725,15 +725,15 @@ hint: (e.g. 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-That means a commit has landed since your last rebase against `upstream/master`.
+That means a commit has landed since your last rebase against `upstream/main`.
 To fix this, pull with rebase from upstream and run the tests again (to make
 sure no interactions between your changes and the new changes cause any
 problems), and push again:
 
 ```sh
-git pull upstream master --rebase
+git pull upstream main --rebase
 make -j4 test
-git push upstream master
+git push upstream main
 ```
 
 ### 3.4. I Just Made a Mistake
@@ -795,7 +795,7 @@ further discussion.
 There are multiple LTS branches, e.g. `v8.x` and `v6.x`. Each of these is paired
 with a staging branch: `v8.x-staging` and `v6.x-staging`.
 
-As commits land on the master branch, they are cherry-picked back to each
+As commits land on the main branch, they are cherry-picked back to each
 staging branch as appropriate. If the commit applies only to the LTS branch, the
 PR must be opened against the _staging_ branch. Commits are selectively pulled
 from the staging branch into the LTS branch only when a release is being
@@ -897,10 +897,10 @@ If you cannot find who to cc for a file, `git shortlog -n -s <file>` may help.
 [`--pending-deprecation`]: doc/api/cli.md#--pending-deprecation
 
 [git-node]:
-    https://github.com/nodejs/node-core-utils/blob/master/docs/git-node.md
+    https://github.com/nodejs/node-core-utils/blob/main/docs/git-node.md
 
 [git-node-metadata]:
-    https://github.com/nodejs/node-core-utils/blob/master/docs/git-node.md#git-node-metadata
+    https://github.com/nodejs/node-core-utils/blob/main/docs/git-node.md#git-node-metadata
 
 [git-username]: https://help.github.com/articles/setting-your-username-in-git/
 

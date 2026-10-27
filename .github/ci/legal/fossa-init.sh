@@ -24,7 +24,7 @@ verify_fossa_api_key() {
 
 install_fossa_cli() {
   echo "[fossa-init]: install-fossa-cli: installing the fossa-cli"
-  curl https://raw.githubusercontent.com/fossas/fossa-cli/master/install.sh | bash
+  curl https://raw.githubusercontent.com/fossas/fossa-cli/main/install.sh | bash
 }
 
 run_fossa_analysis() {

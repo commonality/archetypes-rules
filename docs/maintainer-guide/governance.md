@@ -116,7 +116,7 @@ must abide by the project's [Contribution Guidelines](contributing).
 Maintainers:
 
 -   Are expected to work on public branches of the source repository and submit
-    Pull Requests from that branch to the master branch.
+    Pull Requests from that branch to the main branch.
 
 -   Are expected to delete their public branches when they are no longer
     necessary.
@@ -309,7 +309,7 @@ continue. Simple majority wins.
 This work is a derivative of
 [YUI Contributor Model](https://github.com/yui/yui3/wiki/Contributor-Model) and
 the
-[Node.js Project Governance Model](https://github.com/nodejs/node/blob/master/GOVERNANCE.md).
+[Node.js Project Governance Model](https://github.com/nodejs/node/blob/main/GOVERNANCE.md).
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 2.0 UK: England & Wales License](https://creativecommons.org/licenses/by-sa/2.0/uk/).
