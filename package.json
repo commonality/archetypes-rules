@@ -301,7 +301,7 @@
     "ci:outdated": "npm outdated && npm outdated --json --long --parseable > npm-outdated.native.json",
     "ci:lint:js": "npx @biomejs/biome check lib/",
     "ci:sbom": "npx --yes @cyclonedx/cyclonedx-npm --omit=dev --omit=optional --omit=peer --output-format=JSON --output-file=nodejs-package.sbom.json --validate --verbose",
-    "ci:test": "npm run start && npm run ci:lint:js && jest --coverage --ci --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter",
+    "ci:test": "npm run start && npm run ci:lint:js && jest --coverage --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter",
     "docs:api": "node_modules/.bin/jsdoc ./lib/ -r -R ./README.md -P package.json -t ./node_modules/better-docs/ -d ./docs/api/",
     "lint:js": "npx @biomejs/biome ci lib/ --reporter=github > node-lint.github",
     "lint:js:fix": "npx @biomejs/biome lint --write lib/",
