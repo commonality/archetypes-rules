@@ -96,31 +96,12 @@
     "unified": "11.0.5"
   },
   "engines": {
-    "node": ">= 20.*",
+    "node": ">= 24.*",
     "npm": ">= 12.*"
   },
   "files": [
     "dist"
   ],
-  "greenkeeper": {
-    "commitMessages": {
-      "initialBadge": "docs(status): add greenkeeper badge",
-      "initialDependencies": "build(dependencies): update dependencies",
-      "initialBranches": "chore(permissions): allow greenkeeper branch access",
-      "dependencyUpdate": "chore(dependency): update ${dependency} to v${version}",
-      "devDependencyUpdate": "chore(dependency): update ${dependency} to v${version}",
-      "dependencyPin": "fix(dependency): pin ${dependency} to ${oldVersion}",
-      "devDependencyPin": "fix(dependency): pin ${dependency} to ${oldVersion}"
-    },
-    "prTitles": {
-      "initialPR": "ci(drift): enable Greenkeeper",
-      "initialPrBadge": "ci(drift): enable Greenkeeper",
-      "initialPrBadgeOnly": "ci(drift): add greenkeeper badge",
-      "initialSubgroupPR": "ci(drift): update dependencies for ${group}",
-      "basicPR": "ci(drift): update ${dependency} to latest",
-      "groupPR": "ci(drift): update ${dependency} in group ${group} to latest"
-    }
-  },
   "homepage": "https://github.com/commonality/archetypes-rules#readme",
   "husky": {
     "hooks": {

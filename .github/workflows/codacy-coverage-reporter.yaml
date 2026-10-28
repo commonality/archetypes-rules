@@ -6,12 +6,19 @@ jobs:
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
     name: codacy-coverage-reporter
+    env:
+      CODACY_ORGANIZATION_PROVIDER: ${CODACY_ORGANIZATION_PROVIDER}
+      CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
+      CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
+      CODACY_USERNAME: ${CODACY_USERNAME}
     steps:
       - uses: actions/checkout@v2
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
+          api-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          organization-provider: ${{ variables.CODACY_ORGANIZATION_PROVIDER }}
           # or
           # api-token: ${{ secrets.CODACY_API_TOKEN }}
           coverage-reports: ''
