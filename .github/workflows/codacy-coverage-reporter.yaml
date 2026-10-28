@@ -17,4 +17,3 @@ jobs:
           coverage-reports: ''
           # or a comma-separated list for multiple reports
           # coverage-reports: <PATH_TO_REPORT>, <PATH_TO_REPORT>
-        -
