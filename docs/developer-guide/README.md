@@ -308,8 +308,8 @@ npm install
 | [recursive-readdir@2.2.2](https://github.com/jergason/recursive-readdir#readme)                                                                        | Get an array of all files in a directory and subdirectories.                                                                  | 2.2.2       | MIT          | dev        |
 | [remark@^10.0.1](https://remark.js.org)                                                                                                                | Markdown processor powered by plugins                                                                                         | 10.0.1      | MIT          | dev        |
 | [remark-cli@^6.0.1](https://remark.js.org)                                                                                                             | CLI to process markdown with remark using plugins                                                                             | 6.0.1       | MIT          | dev        |
-| [remark-preset-lint-markdown-style-guide@^2.1.2](https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-markdown-style-guide) | remark preset to configure remark-lint with rules that enforce the markdown style guide                                       | 2.1.2       | MIT          | dev        |
-| [remark-preset-lint-recommended@3.0.2](https://github.com/remarkjs/remark-lint/tree/master/packages/remark-preset-lint-recommended)                    | remark preset to configure remark-lint with rules that prevent mistakes or syntaxes that do not work correctly across vendors | 3.0.2       | MIT          | dev        |
+| [remark-preset-lint-markdown-style-guide@^2.1.2](https://github.com/remarkjs/remark-lint/tree/main/packages/remark-preset-lint-markdown-style-guide) | remark preset to configure remark-lint with rules that enforce the markdown style guide                                       | 2.1.2       | MIT          | dev        |
+| [remark-preset-lint-recommended@3.0.2](https://github.com/remarkjs/remark-lint/tree/main/packages/remark-preset-lint-recommended)                    | remark preset to configure remark-lint with rules that prevent mistakes or syntaxes that do not work correctly across vendors | 3.0.2       | MIT          | dev        |
 | [remark-reference-links@4.0.3](https://github.com/remarkjs/remark-reference-links#readme)                                                              | Transform links and images into references and definitions                                                                    | 4.0.3       | MIT          | dev        |
 | [remark-stringify@6.0.4](https://remark.js.org)                                                                                                        | Markdown compiler for remark                                                                                                  | 6.0.4       | MIT          | dev        |
 | [rollup@1.4.1](https://github.com/rollup/rollup)                                                                                                       | Next-generation ES module bundler                                                                                             | 1.4.1       | MIT          | dev        |
@@ -443,7 +443,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 SONAR_BRANCH_NAME=
 
 # The default branch of the repository; it should almost always
-# be "master".
+# be "main".
 
 SONAR_BRANCH_TARGET=
 SONAR_DATA_LOSS_SIGNATURES_TOKEN=
@@ -497,7 +497,7 @@ NPM_PACKAGE_VERSION=
 GITLAB_ENDPOINT=https://github.com/api/v4
 GITLAB_JSON_OUTPUT=true
 GITLAB_PROJECT_ID=10416318
-GITLAB_REF=master
+GITLAB_REF=main
 GITLAB_RESOLVE_BODY_ONLY=true
 GITLAB_RESOURCE=signatures.json
 GITLAB_TOKEN=
@@ -549,7 +549,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 #
 
 # SonarCloud static code analysis
-SONAR_BRANCH_TARGET=master
+SONAR_BRANCH_TARGET=main
 SONAR_HOST_URL=https://sonarcloud.io
 SONAR_ORGANIZATION=archetypes-rules
 SONAR_PROJECT_KEY=signatures
@@ -709,23 +709,23 @@ https://eslint.org/docs/rules/id-blacklist id-length
 https://eslint.org/docs/rules/id-length id-match
 https://eslint.org/docs/rules/id-match implicit-arrow-linebreak
 https://eslint.org/docs/rules/implicit-arrow-linebreak import/default
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/default.md
 import/export
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/export.md
 import/first
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/first.md
 import/named
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/named.md
 import/namespace
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/namespace.md
 import/no-duplicates
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md
 import/no-named-default
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/no-named-default.md
 import/no-unresolved
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
 import/no-webpack-loader-syntax
-https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-webpack-loader-syntax.md
+https://github.com/benmosher/eslint-plugin-import/blob/main/docs/rules/no-webpack-loader-syntax.md
 indent https://eslint.org/docs/rules/indent indent-legacy
 https://eslint.org/docs/rules/indent-legacy init-declarations
 https://eslint.org/docs/rules/init-declarations jsx-quotes
@@ -879,12 +879,12 @@ https://eslint.org/docs/rules/no-unneeded-ternary no-unreachable
 https://eslint.org/docs/rules/no-unreachable no-unsafe-finally
 https://eslint.org/docs/rules/no-unsafe-finally
 no-unsafe-innerhtml/no-unsafe-innerhtml
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 no-unsafe-negation https://eslint.org/docs/rules/no-unsafe-negation
 no-unsanitized/method
-https://github.com/mozilla/eslint-plugin-no-unsanitized/blob/master/docs/rules/method.md
+https://github.com/mozilla/eslint-plugin-no-unsanitized/blob/main/docs/rules/method.md
 no-unsanitized/property
-https://github.com/mozilla/eslint-plugin-no-unsanitized/blob/master/docs/rules/property.md
+https://github.com/mozilla/eslint-plugin-no-unsanitized/blob/main/docs/rules/property.md
 no-unused-expressions https://eslint.org/docs/rules/no-unused-expressions
 no-unused-labels https://eslint.org/docs/rules/no-unused-labels no-unused-vars
 https://eslint.org/docs/rules/no-unused-vars no-use-before-define
@@ -903,29 +903,29 @@ https://eslint.org/docs/rules/no-warning-comments no-whitespace-before-property
 https://eslint.org/docs/rules/no-whitespace-before-property no-with
 https://eslint.org/docs/rules/no-with no-wrap-func
 https://eslint.org/docs/rules/no-wrap-func node/exports-style
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/exports-style.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/exports-style.md
 node/no-deprecated-api
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-deprecated-api.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-deprecated-api.md
 node/no-extraneous-import
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-import.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-extraneous-import.md
 node/no-extraneous-require
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-extraneous-require.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-extraneous-require.md
 node/no-missing-import
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-import.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-missing-import.md
 node/no-missing-require
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-missing-require.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-missing-require.md
 node/no-unpublished-bin
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-bin.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-unpublished-bin.md
 node/no-unpublished-import
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-import.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-unpublished-import.md
 node/no-unpublished-require
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unpublished-require.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-unpublished-require.md
 node/no-unsupported-features/es-syntax
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/no-unsupported-features.md
 node/process-exit-as-throw
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/process-exit-as-throw.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/process-exit-as-throw.md
 node/shebang
-https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/shebang.md
+https://github.com/mysticatea/eslint-plugin-node/blob/main/docs/rules/shebang.md
 nonblock-statement-body-position
 https://eslint.org/docs/rules/nonblock-statement-body-position
 object-curly-newline https://eslint.org/docs/rules/object-curly-newline
@@ -949,7 +949,7 @@ https://eslint.org/docs/rules/prefer-reflect prefer-rest-params
 https://eslint.org/docs/rules/prefer-rest-params prefer-spread
 https://eslint.org/docs/rules/prefer-spread prefer-template
 https://eslint.org/docs/rules/prefer-template promise/param-names
-https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/param-names.md
+https://github.com/xjamundx/eslint-plugin-promise/blob/main/docs/rules/param-names.md
 quote-props https://eslint.org/docs/rules/quote-props quotes
 https://eslint.org/docs/rules/quotes radix https://eslint.org/docs/rules/radix
 require-atomic-updates https://eslint.org/docs/rules/require-atomic-updates
@@ -959,143 +959,143 @@ https://eslint.org/docs/rules/require-unicode-regexp require-yield
 https://eslint.org/docs/rules/require-yield rest-spread-spacing
 https://eslint.org/docs/rules/rest-spread-spacing
 scanjs-rules/accidental_assignment
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_hostname
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_href
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_location
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_onmessage
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_pathname
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_protocol
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_search
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/assign_to_src
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_Function
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_addEventListener
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_addEventListener_deviceproximity
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_addEventListener_message
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_connect
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_eval
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_execScript
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_hide
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_open_remote=true
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_parseFromString
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_setImmediate
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_setInterval
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/call_setTimeout
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/identifier_indexedDB
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/identifier_localStorage
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/identifier_sessionStorage
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/new_Function
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_addIdleObserver
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_createContextualFragment
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_crypto
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_geolocation
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_getUserMedia
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_indexedDB
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_localStorage
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_mgmt
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 scanjs-rules/property_sessionStorage
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-buffer-noassert
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-child-process
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-disable-mustache-escape
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-eval-with-expression
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-new-buffer
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-no-csrf-before-method-override
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-non-literal-fs-filename
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-non-literal-regexp
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-non-literal-require
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-object-injection
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-possible-timing-attacks
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-pseudoRandomBytes
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 security/detect-unsafe-regex
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 semi https://eslint.org/docs/rules/semi semi-spacing
 https://eslint.org/docs/rules/semi-spacing semi-style
 https://eslint.org/docs/rules/semi-style sonarjs/cognitive-complexity
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/max-switch-cases
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-all-duplicated-branches
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-duplicate-string
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-duplicated-branches
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-element-overwrite
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-extra-arguments
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-identical-conditions
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-identical-expressions
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-identical-functions
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-inverted-boolean-check
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-one-iteration-loop
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-redundant-boolean
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-small-switch
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-use-of-empty-return-value
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/no-useless-catch
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/prefer-immediate-return
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/prefer-object-literal
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/prefer-single-boolean-return
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sonarjs/prefer-while
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 sort-imports https://eslint.org/docs/rules/sort-imports sort-keys
 https://eslint.org/docs/rules/sort-keys sort-vars
 https://eslint.org/docs/rules/sort-vars space-after-function-name
@@ -1126,50 +1126,50 @@ https://eslint.org/docs/rules/symbol-description template-curly-spacing
 https://eslint.org/docs/rules/template-curly-spacing template-tag-spacing
 https://eslint.org/docs/rules/template-tag-spacing unicode-bom
 https://eslint.org/docs/rules/unicode-bom unicorn/catch-error-name
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/catch-error-name.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/catch-error-name.md
 unicorn/custom-error-definition
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/custom-error-definition.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/custom-error-definition.md
 unicorn/escape-case
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/escape-case.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/escape-case.md
 unicorn/explicit-length-check
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/explicit-length-check.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/explicit-length-check.md
 unicorn/filename-case
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/filename-case.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/filename-case.md
 unicorn/import-index
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/import-index.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/import-index.md
 unicorn/new-for-builtins
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/new-for-builtins.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/new-for-builtins.md
 unicorn/no-abusive-eslint-disable
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-abusive-eslint-disable.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-abusive-eslint-disable.md
 unicorn/no-array-instanceof
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-array-instanceof.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-array-instanceof.md
 unicorn/no-fn-reference-in-iterator
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-fn-reference-in-iterator.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-fn-reference-in-iterator.md
 unicorn/no-hex-escape
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-hex-escape.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-hex-escape.md
 unicorn/no-new-buffer
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-new-buffer.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-new-buffer.md
 unicorn/no-process-exit
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-process-exit.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-process-exit.md
 unicorn/number-literal-case
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/number-literal-case.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/number-literal-case.md
 unicorn/prefer-starts-ends-with
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-starts-ends-with.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-starts-ends-with.md
 unicorn/prefer-type-error
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-type-error.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-type-error.md
 unicorn/regex-shorthand
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/regex-shorthand.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/regex-shorthand.md
 unicorn/throw-new-error
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/throw-new-error.md
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/throw-new-error.md
 use-isnan https://eslint.org/docs/rules/use-isnan valid-jsdoc
 https://eslint.org/docs/rules/valid-jsdoc valid-typeof
 https://eslint.org/docs/rules/valid-typeof vars-on-top
 https://eslint.org/docs/rules/vars-on-top wrap-iife
 https://eslint.org/docs/rules/wrap-iife wrap-regex
 https://eslint.org/docs/rules/wrap-regex xss/no-location-href-assign
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 xss/no-mixed-html
-https://github.com/jfmengels/eslint-rule-documentation/blob/master/contributing.md
+https://github.com/jfmengels/eslint-rule-documentation/blob/main/contributing.md
 yield-star-spacing https://eslint.org/docs/rules/yield-star-spacing yoda
 https://eslint.org/docs/rules/yoda
 ```
@@ -1276,7 +1276,7 @@ merged unless changes pass:<br>
 
 [vscode-logo]: ../img/logos/vscode.png
 
-[debug-tests-vscode-url]: https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests#debugging-tests-in-vs-code
+[debug-tests-vscode-url]: https://github.com/Microsoft/vscode-recipes/tree/main/debugging-jest-tests#debugging-tests-in-vs-code
 
 [standardjs-img]: https://img.shields.io/badge/code_style-standard-F1DA40.svg?style=flat-sqaure
 
@@ -1290,7 +1290,7 @@ merged unless changes pass:<br>
 
 <!-- 🔗 Logo img references 🔗 -->
 
-[standardjs-logo]: https://cdn.rawgit.com/feross/standard/master/badge.svg
+[standardjs-logo]: https://cdn.rawgit.com/feross/standard/main/badge.svg
 
 [standardjs-url]: https://github.com/standard/standard#readme
 

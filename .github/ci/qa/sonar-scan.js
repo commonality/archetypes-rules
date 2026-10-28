@@ -61,7 +61,7 @@ const options = {
 
 if (process.env.TRAVIS_PULL_REQUEST) {
 	Object.assign(options, {
-		"sonar.pullrequest.base": "master",
+		"sonar.pullrequest.base": "main",
 		"sonar.pullrequest.branch": sonarAnalysisParams.SONAR_BRANCH_NAME,
 		"sonar.pullrequest.key": process.env.TRAVIS_PULL_REQUEST,
 	});

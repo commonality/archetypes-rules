@@ -50,7 +50,7 @@ The workflow will be:
     or "rejected" state.
 
 4.  Only after an ADR is accepted should implementing code be committed to the
-    master branch of the relevant project/module.
+    main branch of the relevant project/module.
 
 5.  If a decision is revisited and a different conclusion is reached, a new ADR
     should be created documenting the context and rationale for the change. The
@@ -71,7 +71,7 @@ The workflow will be:
 
 3.  If we follow the process, decisions will be made deliberately, as a group.
 
-4.  The master branch of our repositories will reflect the high-level consensus
+4.  The main branch of our repositories will reflect the high-level consensus
     of the steering group.
 
 5.  We will have a useful persistent record of why the system is the way it is.

@@ -495,8 +495,13 @@ $RECYCLE.BIN/
 *.lnk
 
 # ---=== Project-specific ===--- #
+*.sbom.json
 junit.xml
 npm-audit*.json
 node-lint.*
 npm-outdated*.json
 sonar-test-report.xml
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+.codacy/

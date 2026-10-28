@@ -312,7 +312,7 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
 [npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg
 [npm-url]: https://npmjs.org/package/archetypes-rules
 [travis-image]:
-  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&label=macOS%20%7C%20ubuntu%20builds&logo=travis
+  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=main&label=macOS%20%7C%20ubuntu%20builds&logo=travis
 [travis-url]: https://travis-ci.com/commonality/archetypes-rules
 [vulnerabilities-image]:
   https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?&targetFile=package.json

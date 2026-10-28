@@ -42,7 +42,7 @@
     <td>People and Teams</td>
     <td>Account or Organization:<br><br><br>Member<br>Outside collaborator</td>
     <td>Groups (collections of Projects)</td>
-    <td>Master</td>
+    <td>main</td>
   </tr>
   <tr>
     <td>ASF Member</td>
