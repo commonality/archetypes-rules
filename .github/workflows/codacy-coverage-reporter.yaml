@@ -20,7 +20,7 @@ jobs:
           npm install -g npm@latest
           npm ci
           npm test
-          if [ -f "coverage/lcov.info" ]; then
+          if [ -f "${PWD}/coverage/lcov.info" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
               --coverage-reports="${PWD}/coverage/lcov.info" \
               --force-coverage-parser=lcov \
