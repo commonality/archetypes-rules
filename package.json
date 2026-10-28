@@ -315,7 +315,7 @@
     "security:audit:dependencies": "npm audit --dry-run",
     "semantic-release": "semantic-release",
     "start": "node -r dotenv-extended ./lib/env-config.js",
-    "test": "jest --coverage --verbose"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --verbose"
   },
   "allowScripts": {
     "unrs-resolver@1.12.2": true,
