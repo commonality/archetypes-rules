@@ -21,7 +21,7 @@ jobs:
           npm ci
           npm test
           if [ -f "coverage/lcov.info" ]; then
-            bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r 'coverage/lcov.info'
+            bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r './coverage/lcov.info'
           else
             echo "Could not find a coverage report."
           fi
