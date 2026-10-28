@@ -22,12 +22,12 @@ jobs:
           npm test
           if [ -f "coverage/lcov.info" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports='lcov.info' \
+              --coverage-reports="${PWD}/coverage/lcov.info" \
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
               --project-name=archetypes-rules \
-              --project-token=${CODACY_PROJECT_TOKEN} \
+              --project-token="${CODACY_PROJECT_TOKEN}" \
               --username=commonality
 
           else
