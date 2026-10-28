@@ -11,7 +11,10 @@ jobs:
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm ci:test
+      - run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r 'coverage/lcov.info'
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
@@ -22,6 +25,3 @@ jobs:
           coverage-reports: 'coverage/lcov.info'
           # or a comma-separated list for multiple reports
           # coverage-reports: <PATH_TO_REPORT>, <PATH_TO_REPORT>
-      - run: npm ci
-      - run: npm ci:test
-      - run: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r 'coverage/lcov.info'
