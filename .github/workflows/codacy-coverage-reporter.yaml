@@ -11,6 +11,8 @@ jobs:
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
     steps:
+      - run: npm ci
+      - run: npm ci:test
       - uses: actions/checkout@v2
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
