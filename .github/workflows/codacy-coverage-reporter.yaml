@@ -11,7 +11,6 @@ jobs:
       CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
-      COMMIT_UUID: ${GITHUB_SHA}
       COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
       COVERAGE_REPORT_PATH: ./coverage/lcov.info
     steps:
@@ -25,14 +24,14 @@ jobs:
           npm ci
           npm test
           cat ${COVERAGE_REPORT_PATH}
-      - uses: codacy/codacy-coverage-reporter-action@v1.3.0
+      - name: Codacy coverage evaluation
+        uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${COVERAGE_REPORT_PATH}
           language: JavaScript
       - name: POST coverage results
         run: |
-          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${COMMIT_UUID}/coverage/JavaScript \
+          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${GITHUB_SHA}/coverage/JavaScript \
             -H 'Content-Type: application/json' \
             -H 'Accept: application/json'
-          bash <(curl -Ls https://coverage.codacy.com/get.sh) final
