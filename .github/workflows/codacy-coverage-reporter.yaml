@@ -1,5 +1,5 @@
 name: "Codacy Coverage Reporter"
-run-name: Code coverage report・Codacy
+run-name: Code coverage reporter・Codacy
 on: ["push"]
 jobs:
   codacy-coverage-reporter:
@@ -18,19 +18,23 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.22.1
-      - name: 'NPM: install & test'
+      - name: 'Install dependencies & test'
         run: |
           npm install -g npm@latest
           npm ci
           npm test
-          cat ${COVERAGE_REPORT_PATH}
-      - name: Codacy coverage evaluation
+          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
+            echo "ⓘ File \"${COVERAGE_REPORT_PATH}\" exists"
+          else
+            echo "⚠︎ Could not find file \"${COVERAGE_REPORT_PATH}\""
+          fi
+      - name: Evaluate coverage reports・Codacy
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${COVERAGE_REPORT_PATH}
           language: JavaScript
-      - name: POST coverage results
+      - name: POST coverage results・Codacy
         run: |
           curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${GITHUB_SHA}/coverage/JavaScript \
             -H 'Content-Type: application/json' \
