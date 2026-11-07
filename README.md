@@ -8,8 +8,9 @@
 [![The MIT License][license-image]][license-url] [![NPM
 version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a)](https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage) [![Codacy code
-quality][codacy-image]][codacy-url]
+[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Codacy
+Badge](https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a)](https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codacy code quality][codacy-image]][codacy-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
@@ -32,12 +33,16 @@ evaluate Facts (aka, RuleContexts).
     - [1.2.2. `Variables`](#122-variables)
     - [1.2.3. `Operators`](#123-operators)
   - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
-  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
+  - [1.4. `Rules` evaluate
+    `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
-  - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
-  - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
+  - [3.1. Example 1: Is this customer eligible for a
+    discount](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.2. Example 2: Group discount for six or more
+    people](#32-example-2-group-discount-for-six-or-more-people)
+  - [3.3. Example 3: Is an airline passenger eligible for an
+    upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
 - [5. Contributions](#5-contributions)
 - [6. License](#6-license)
@@ -293,9 +298,6 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
   https://app.codacy.com/project/badge/Grade/28d1bcd9d85a4c27acb6b9ba5fc8481a
 [codacy-url]:
   https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[coveralls-image]:
-  https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg
-[coveralls-url]: https://coveralls.io/github/commonality/archetypes-rules
 [fossa-image]:
   https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield
 [fossa-legal-notice-url]:
