@@ -1,4 +1,19 @@
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  commitplease: set this to true or false
-  core-js: set this to true or false
+  '@parcel/watcher': true
+  '@parcel/watcher@2.6.0': true
+  commitplease: true
+  commitplease@3.2.0: true
+  core-js: true
+  core-js@2.6.12: true
+minimumReleaseAgeExclude:
+  - '@biomejs/biome@2.6.6'
+  - '@biomejs/cli-android-arm64@2.6.6'
+  - '@biomejs/cli-android-x64@2.6.6'
+  - '@biomejs/cli-darwin-arm64@2.6.6'
+  - '@biomejs/cli-darwin-x64@2.6.6'
+  - '@biomejs/cli-linux-arm64-musl@2.6.6'
+  - '@biomejs/cli-linux-arm64@2.6.6'
+  - '@biomejs/cli-linux-x64-musl@2.6.6'
+  - '@biomejs/cli-linux-x64@2.6.6'
+  - '@biomejs/cli-win32-arm64@2.6.6'
+  - '@biomejs/cli-win32-x64@2.6.6'
