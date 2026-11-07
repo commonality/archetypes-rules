@@ -35,9 +35,12 @@ jobs:
           fi
       - name: Publish unit test results・GitHub
         uses: mikepenz/action-junit-report@v6
-        if: success() || failure() # always run even if the previous step fails
+        if: always() # always run even if the previous step fails
         with:
+          fail_on_failure: true
+          include_passed: true
           include_time_in_summary: true
+          name: junit-test-results
           pr_id: ${{ github.event.pull_request.number }}
           report_paths: './junit.xml'
           require_passed_tests: true
