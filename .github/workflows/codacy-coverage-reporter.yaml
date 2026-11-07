@@ -28,9 +28,9 @@ jobs:
           npm ci
           npm test
           cat ./coverage/lcov.info
-          if [ -f "${{ COVERAGE_REPORT_PATH }}" ]; then
+          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              -r ${{ COVERAGE_REPORT_PATH }}
+              -r ${COVERAGE_REPORT_PATH}
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
