@@ -16,7 +16,7 @@ on:
     paths:
       - 'lib/**/*.js'
       - '!.github/**'
-      - '!**/__tests__/**.[test|spec].js'
+      - '!**.test.js'
       - '!coverage/**'
       - '!dist/**'
       - '!docs/**'
