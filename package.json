@@ -34,11 +34,11 @@
   ],
   "dependencies": {
     "@sindresorhus/is": "8.1.0",
+    "camelcase": "10.0.0",
     "debug": "4.4.3",
     "dotenv-extended": "3.1.0",
     "enum-nom-nommer": "1.0.0",
     "fs-extra": "11.4.1",
-    "lodash.camelcase": "4.3.0",
     "lodash.get": "4.4.2",
     "lodash.hasin": "4.5.2",
     "lodash.includes": "4.3.0",
@@ -48,7 +48,6 @@
     "lodash.kebabcase": "4.1.1",
     "lodash.toarray": "4.4.0",
     "lodash.topairs": "4.3.0",
-    "lodash.upperfirst": "4.3.1",
     "ow": "3.1.1",
     "parse-numeric": "1.0.2"
   },

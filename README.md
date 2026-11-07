@@ -120,7 +120,7 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-const { Rule, RuleContext } = require('archetypes-rules')
+import { Rule, RuleContext } from 'archetypes-rules'
 
 // Create the rule
 const rule = new Rule('eligibleForDiscount')
@@ -197,7 +197,7 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-const { Rule, RuleContext, RuleElement } = require('archetypes-rules')
+import { Rule, RuleContext, RuleElement } from 'archetypes-rules'
 
 // Create the rule
 const rule = Rule('eligible-for-upgrade')

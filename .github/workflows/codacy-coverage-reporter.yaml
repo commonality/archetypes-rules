@@ -1,4 +1,5 @@
-name: Codacy Coverage Reporter
+name: "Codacy Coverage Reporter"
+run-name: Code coverage report・Codacy
 on: ["push"]
 jobs:
   codacy-coverage-reporter:
@@ -16,13 +17,14 @@ jobs:
         with:
           node-version: 24.22.1
       - name: Run codacy-coverage-reporter
+        shell: bash
         run: |
           npm install -g npm@latest
           npm ci
           npm test
-          if [ -f "${PWD}/coverage/lcov.info" ]; then
+          if [ -f "coverage/lcov.info" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports="${PWD}/coverage/lcov.info" \
+              --coverage-reports="coverage/lcov.info" \
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
@@ -33,6 +35,11 @@ jobs:
           else
             echo "Could not find a coverage report."
           fi
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-results
+          path: coverage/lcov.info
 
         # uses: codacy/codacy-coverage-reporter-action@v1.3.0
         # with:
