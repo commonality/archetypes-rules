@@ -33,5 +33,6 @@ jobs:
       - name: POST coverage results
         run: |
           curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${COMMIT_UUID}/coverage/JavaScript \
-          -H 'Content-Type: application/json' \
-          -H 'Accept: application/json'
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json'
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) final
