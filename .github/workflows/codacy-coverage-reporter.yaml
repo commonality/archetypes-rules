@@ -18,6 +18,10 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.22.1
+      - uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage/lcov.info,coverage/cobertura.xml,/tmp/codacy-coverage-*.json
       - name: Run codacy-coverage-reporter
         shell: bash
         run: |
@@ -26,14 +30,14 @@ jobs:
           npm test
           if [ -f "${COVERAGE_REPORT_PATH}" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports="${COVERAGE_REPORT_PATH},${COVERAGE_ARTIFACT_PATH},codacy-coverage-*.json,lcov.info" \
+              --coverage-reports="coverage/lcov.info,coverage/cobertura.xml,/tmp/codacy-coverage-*.json" \
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
               --project-name=archetypes-rules \
-              --project-token="${CODACY_PROJECT_TOKEN}" \
+              --project-token="${{ secrets.CODACY_PROJECT_TOKEN }}" \
               --username=commonality
-
+            bash <(curl -Ls https://coverage.codacy.com/get.sh) final
           else
             echo "Could not find a coverage report."
           fi
