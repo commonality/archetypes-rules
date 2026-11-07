@@ -13,13 +13,16 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    branches: [ "main", "protected" ]
-    paths-ignore:
-      - '.github/**/*'
-      - 'dist/**/*'
-      - 'docs/**/*'
+    paths:
+      - 'lib/**/*.js'
+      - '!.github/**'
+      - '!**/__tests__/**.[test|spec].js'
+      - '!coverage/**'
+      - '!dist/**'
+      - '!docs/**'
   schedule:
     - cron: '19 4 * * 3'
+      timezone: "America/Detroit"
 
 jobs:
   analyze:
@@ -69,6 +72,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
       with:
+        config-file: ./.github/workflows/codeql-config.yml
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
         # If you wish to specify custom queries, you can do so here or in a config file.
@@ -76,7 +80,7 @@ jobs:
         # Prefix the list here with "+" to use these queries and those in the config file.
 
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
-        # queries: security-extended,security-and-quality
+        queries: +security-and-quality
 
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
