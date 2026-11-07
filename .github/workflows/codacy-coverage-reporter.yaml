@@ -11,6 +11,7 @@ jobs:
       CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
+      COVERAGE_REPORT_PATH: /home/runner/work/archetypes-rules/archetypes-rules/coverage/lcov.info
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -22,9 +23,9 @@ jobs:
           npm install -g npm@latest
           npm ci
           npm test
-          if [ -f "coverage/lcov.info" ]; then
+          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports="coverage/lcov.info" \
+              --coverage-reports="${COVERAGE_REPORT_PATH}" \
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
@@ -39,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-results
-          path: coverage/lcov.info
+          path: ${COVERAGE_REPORT_PATH}
 
         # uses: codacy/codacy-coverage-reporter-action@v1.3.0
         # with:
