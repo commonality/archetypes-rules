@@ -503,5 +503,4 @@ npm-outdated*.json
 sonar-test-report.xml
 
 #Ignore vscode AI rules
-.github/instructions/codacy.instructions.md
 .codacy/
