@@ -52,6 +52,10 @@
   "devDependencies": {
     "@biomejs/biome": "2.6.6",
     "@jest/globals": "30.5.2",
+    "@rollup/plugin-commonjs": "29.0.3",
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@rollup/plugin-terser": "1.0.2",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/commit-analyzer": "13.0.1",
     "@semantic-release/git": "11.0.1",
@@ -71,6 +75,8 @@
     "jsdoc": "4.0.5",
     "jsdoc-mermaid": "1.0.0",
     "lint-staged": "17.6.0",
+    "prettier": "3.9.10",
+    "rollup": "4.68.0",
     "semantic-release": "25.0.9",
     "sonarqube-scanner": "5.0.2"
   },
@@ -273,7 +279,7 @@
   },
   "repository": "git@github.com:commonality/archetypes-rules.git",
   "scripts": {
-    "bundle": "npm -v",
+    "bundle": "rollup --config",
     "bundle:clean": "rm -rf ./dist/ && rm -f *.tgz",
     "ci:audit": "npm audit --omit=dev && npm audit --json --long --omit=dev --parseable > npm-audit.native.json",
     "ci:coverage": "npm run ci:coverage:codacy",
@@ -301,6 +307,7 @@
     "unrs-resolver@1.12.2": true,
     "@parcel/watcher@2.6.0": true,
     "commitplease@3.2.0": true,
-    "core-js@2.6.12": true
+    "core-js@2.6.12": true,
+    "fsevents@2.3.3": true
   }
 }
