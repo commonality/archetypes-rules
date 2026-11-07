@@ -9,7 +9,7 @@ permissions:
 jobs:
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
-    name: codacy-coverage-reporter
+    name: Report code coverage・Codacy
     environment: codacy-variables
     env:
       CODACY_ORGANIZATION_PROVIDER: ${CODACY_ORGANIZATION_PROVIDER}
