@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.22.1
-      - name: 'Install dependencies & test'
+      - name: 'Install dependencies, build & test'
         run: |
           npm install -g npm@latest
           npm ci
@@ -33,6 +33,7 @@ jobs:
           else
             echo "⚠︎ Could not find file \"${{ vars.COVERAGE_REPORT_PATH }}\""
           fi
+          npm run bundle
       - name: Publish unit test results・GitHub
         uses: mikepenz/action-junit-report@v6
         if: always() # always run even if the previous step fails
