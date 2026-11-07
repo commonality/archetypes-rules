@@ -12,7 +12,7 @@ jobs:
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
       COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
-      COVERAGE_REPORT_PATH: /home/runner/work/archetypes-rules/archetypes-rules/coverage/lcov.info
+      COVERAGE_REPORT_PATH: ./coverage/lcov.info
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -21,23 +21,23 @@ jobs:
       - uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: coverage/lcov.info,coverage/cobertura.xml,/tmp/codacy-coverage-*.json
       - name: Run codacy-coverage-reporter
         shell: bash
         run: |
           npm install -g npm@latest
           npm ci
           npm test
-          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
+          cat ./coverage/lcov.info
+          if [ -f "${{ COVERAGE_REPORT_PATH }}" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports="coverage/lcov.info,coverage/cobertura.xml,/tmp/codacy-coverage-*.json" \
+              -r ${{ COVERAGE_REPORT_PATH }}
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
               --project-name=archetypes-rules \
               --project-token="${{ secrets.CODACY_PROJECT_TOKEN }}" \
-              --username=commonality
-            bash <(curl -Ls https://coverage.codacy.com/get.sh) final
+              --username=commonality \
+              final
           else
             echo "Could not find a coverage report."
           fi
