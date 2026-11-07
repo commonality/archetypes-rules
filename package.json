@@ -37,7 +37,6 @@
     "camelcase": "10.0.0",
     "debug": "4.4.3",
     "dotenv-extended": "3.1.0",
-    "enum-nom-nommer": "1.0.0",
     "fs-extra": "11.4.1",
     "lodash.get": "4.4.2",
     "lodash.hasin": "4.5.2",
@@ -48,11 +47,10 @@
     "lodash.kebabcase": "4.1.1",
     "lodash.toarray": "4.4.0",
     "lodash.topairs": "4.3.0",
-    "ow": "3.1.1",
-    "parse-numeric": "1.0.2"
+    "ow": "3.1.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.3",
+    "@biomejs/biome": "2.6.6",
     "@jest/globals": "30.5.2",
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/commit-analyzer": "13.0.1",
@@ -60,7 +58,7 @@
     "@semantic-release/github": "12.0.10",
     "@semantic-release/npm": "13.2.0",
     "@semantic-release/release-notes-generator": "14.1.1",
-    "all-contributors-cli": "6.26.1",
+    "all-contributors-cli": "7.0.0",
     "better-docs": "2.7.3",
     "codacy-coverage": "3.4.0",
     "commitizen": "4.3.2",

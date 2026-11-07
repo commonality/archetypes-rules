@@ -11,6 +11,7 @@ jobs:
       CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
+      COMMIT_UUID: ${GITHUB_SHA}
       COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
       COVERAGE_REPORT_PATH: ./coverage/lcov.info
     steps:
@@ -18,29 +19,12 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.22.1
-      - name: Install, CI & test
+      - name: 'NPM: install & test'
         run: |
           npm install -g npm@latest
           npm ci
           npm test
           cat ${COVERAGE_REPORT_PATH}
-
-      # - name: Run codacy-coverage-reporter
-      #   shell: bash
-      #   run: |
-      #     if [ -f "${COVERAGE_REPORT_PATH}" ]; then
-      #       bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-      #         -r ${COVERAGE_REPORT_PATH} \
-      #         --force-coverage-parser=lcov \
-      #         --language=JavaScript \
-      #         --organization-provider=gh \
-      #         --project-name=archetypes-rules \
-      #         --project-token="${{ secrets.CODACY_PROJECT_TOKEN }}" \
-      #         --username=commonality
-      #       bash <(curl -Ls https://coverage.codacy.com/get.sh) final
-      #     else
-      #       echo "Could not find a coverage report."
-      #     fi
       - uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
@@ -48,21 +32,6 @@ jobs:
           language: JavaScript
       - name: POST coverage results
         run: |
-          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/{commitUuid}/coverage/JavaScript \
+          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${COMMIT_UUID}/coverage/JavaScript \
           -H 'Content-Type: application/json' \
           -H 'Accept: application/json'
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: code-coverage-results
-          path: ${COVERAGE_ARTIFACT_PATH}
-
-        # uses: codacy/codacy-coverage-reporter-action@v1.3.0
-        # with:
-        #   language: JavaScript
-        #   project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-        #   # or
-        #   # api-token: ${{ secrets.CODACY_API_TOKEN }}
-        #   coverage-reports: ''
-        #   # or a comma-separated list for multiple reports
-        #   # coverage-reports: <PATH_TO_REPORT>, <PATH_TO_REPORT>
