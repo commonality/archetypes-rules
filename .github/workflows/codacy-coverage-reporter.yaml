@@ -1,6 +1,11 @@
 name: "Codacy Coverage Reporter"
 run-name: Code coverage reporter・Codacy
 on: ["push"]
+
+permissions:
+  checks: write
+  pull-requests: write
+
 jobs:
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
@@ -23,18 +28,24 @@ jobs:
           npm install -g npm@latest
           npm ci
           npm test
-          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
-            echo "ⓘ File \"${COVERAGE_REPORT_PATH}\" exists"
+          if [ -f "${{ vars.COVERAGE_REPORT_PATH }}" ]; then
+            echo "ⓘ File \"${{ vars.COVERAGE_REPORT_PATH }}\" exists"
           else
-            echo "⚠︎ Could not find file \"${COVERAGE_REPORT_PATH}\""
+            echo "⚠︎ Could not find file \"${{ vars.COVERAGE_REPORT_PATH }}\""
           fi
       - name: Evaluate coverage reports・Codacy
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: ${COVERAGE_REPORT_PATH}
+          coverage-reports: ${{ vars.COVERAGE_REPORT_PATH }}
           language: JavaScript
-      - name: POST coverage results・Codacy
+      - name: Publish unit test results・GitHub
+        uses: mikepenz/action-junit-report@v6
+        if: success() || failure() # always run even if the previous step fails
+        with:
+          comment: true
+          report_paths: './junit.xml'
+      - name: Publish coverage results・Codacy
         run: |
           curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${GITHUB_SHA}/coverage/JavaScript \
             -H 'Content-Type: application/json' \
