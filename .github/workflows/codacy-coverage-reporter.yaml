@@ -26,7 +26,7 @@ jobs:
           npm test
           if [ -f "${COVERAGE_REPORT_PATH}" ]; then
             bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              --coverage-reports="${COVERAGE_REPORT_PATH}" \
+              --coverage-reports="${COVERAGE_REPORT_PATH},${COVERAGE_ARTIFACT_PATH},codacy-coverage-*.json,lcov.info" \
               --force-coverage-parser=lcov \
               --language=JavaScript \
               --organization-provider=gh \
