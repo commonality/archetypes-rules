@@ -11,6 +11,7 @@ jobs:
       CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
       CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
       CODACY_USERNAME: ${CODACY_USERNAME}
+      COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
       COVERAGE_REPORT_PATH: /home/runner/work/archetypes-rules/archetypes-rules/coverage/lcov.info
     steps:
       - uses: actions/checkout@v7
@@ -40,7 +41,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage-results
-          path: ${COVERAGE_REPORT_PATH}
+          path: ${COVERAGE_ARTIFACT_PATH}
 
         # uses: codacy/codacy-coverage-reporter-action@v1.3.0
         # with:
