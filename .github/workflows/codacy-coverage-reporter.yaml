@@ -18,29 +18,39 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: 24.22.1
-      - uses: codacy/codacy-coverage-reporter-action@v1
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-      - name: Run codacy-coverage-reporter
-        shell: bash
+      - name: Install, CI & test
         run: |
           npm install -g npm@latest
           npm ci
           npm test
-          cat ./coverage/lcov.info
-          if [ -f "${COVERAGE_REPORT_PATH}" ]; then
-            bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
-              -r ${COVERAGE_REPORT_PATH} \
-              --force-coverage-parser=lcov \
-              --language=JavaScript \
-              --organization-provider=gh \
-              --project-name=archetypes-rules \
-              --project-token="${{ secrets.CODACY_PROJECT_TOKEN }}" \
-              --username=commonality \
-              final
-          else
-            echo "Could not find a coverage report."
-          fi
+          cat ${COVERAGE_REPORT_PATH}
+
+      # - name: Run codacy-coverage-reporter
+      #   shell: bash
+      #   run: |
+      #     if [ -f "${COVERAGE_REPORT_PATH}" ]; then
+      #       bash <(curl -Ls https://coverage.codacy.com/get.sh) report \
+      #         -r ${COVERAGE_REPORT_PATH} \
+      #         --force-coverage-parser=lcov \
+      #         --language=JavaScript \
+      #         --organization-provider=gh \
+      #         --project-name=archetypes-rules \
+      #         --project-token="${{ secrets.CODACY_PROJECT_TOKEN }}" \
+      #         --username=commonality
+      #       bash <(curl -Ls https://coverage.codacy.com/get.sh) final
+      #     else
+      #       echo "Could not find a coverage report."
+      #     fi
+      - uses: codacy/codacy-coverage-reporter-action@v1.3.0
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${COVERAGE_REPORT_PATH}
+          language: JavaScript
+      - name: POST coverage results
+        run: |
+          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/{commitUuid}/coverage/JavaScript \
+          -H 'Content-Type: application/json' \
+          -H 'Accept: application/json'
       - name: Upload test results
         uses: actions/upload-artifact@v4
         with:
