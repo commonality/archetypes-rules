@@ -17,7 +17,7 @@ based on their contributions and expertise.
 _Examples:_
 
 > -   [The Apache Software Foundation ![link-external][octicon-link-external]](https://www.apache.org/foundation/how-it-works.html)
-> -   [Node.js Project Governance ![link-external][octicon-link-external]](https://github.com/nodejs/node/blob/master/GOVERNANCE.md)
+> -   [Node.js Project Governance ![link-external][octicon-link-external]](https://github.com/nodejs/node/blob/main/GOVERNANCE.md)
 
 ## 2. [Benevolent Dictator Governance Model][2]
 

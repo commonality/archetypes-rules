@@ -55,7 +55,7 @@ before_script:
 
   # 4.2. Initialize CodeClimate for quality assurance code review
   #      automatically sent as comments during a Merge Request
-  #      to master.
+  #      to main.
   - ./.github/ci/qa/code-climate-init.sh
 
   # 4.3. Initialize CodeClimate Code Coverage reporter
@@ -92,10 +92,10 @@ jobs:
           # 7.3. Append change list to the CHANGELOG.md
           # 7.4. Bump package.json#version
           # 7.5. Stage and commit all of the above
-          # 7.6. Push to Git remote origin master
-          # 7.7. Trigger all CI quality gates on master
+          # 7.6. Push to Git remote origin main
+          # 7.7. Trigger all CI quality gates on main
           # 7.8. All gates pass (steps 1-6)? Bump semver and
-          # 7.8.1. Squash and merge into origin/master
+          # 7.8.1. Squash and merge into origin/main
           # 7.8.2. Publish a GitHub release with notes and CHANGELOG
           # 7.8.3. Publish on NPM (including README)
           # 7.9.  Any gate fails? Roll back and abort all release steps.

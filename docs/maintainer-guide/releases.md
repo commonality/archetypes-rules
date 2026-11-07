@@ -79,7 +79,7 @@ has no public API, it's not a release candidate!
 ## 1. Continuous deployment with `semantic-release`
 
 **archetypes-rules** uses [`semantic-release`][semantic-release-readme].
-Whenever source code is merged into `master` (after passing all unit tests with
+Whenever source code is merged into `main` (after passing all unit tests with
 code coverage thresholds satisfied), we automatically:
 
 1.  **Bump the semantic version** of **archetypes-rules** (based on conventional
@@ -94,7 +94,7 @@ code coverage thresholds satisfied), we automatically:
 ## 2. Publishing to npm
 
 The semantic-release package will publish a new package whenever changes have
-been successfully merged into `master`.
+been successfully merged into `main`.
 
 ```shell
 npm run semantic-release
@@ -129,7 +129,7 @@ anything. You should see output similar to this:
 [8:00:23 PM] [semantic-release] › ✔  Loaded plugin "generateNotes" from "@semantic-release/release-notes-generator"
 [8:00:23 PM] [semantic-release] › ✔  Loaded plugin "publish" from "@semantic-release/gitlab"
 [8:00:23 PM] [semantic-release] › ✔  Loaded plugin "publish" from "@semantic-release/npm"
-[8:00:23 PM] [semantic-release] › ℹ  This test run was triggered on the branch 1-api-signatures, while semantic-release is configured to only publish from master, therefore a new version won’t be published.
+[8:00:23 PM] [semantic-release] › ℹ  This test run was triggered on the branch 1-api-signatures, while semantic-release is configured to only publish from main, therefore a new version won’t be published.
 ```
 
 </details>
@@ -191,7 +191,7 @@ On the day of a release, the release team should follow these steps:
         have people review before merging if they haven't been already.
     -   Documentation changes.
     -   Small defect fixes written by a team member.
-1.  Squash and merge the branch with changes into `master`.
+1.  Squash and merge the branch with changes into `main`.
 1.  Wait for the "semantic-release" job (in the .gitlab-ci.yml) to complete.
 1.  Update the release blog post with a "Highlights" section, including new
     rules and anything else that's important.

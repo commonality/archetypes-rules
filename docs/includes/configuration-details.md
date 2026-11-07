@@ -109,7 +109,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 SONAR_BRANCH_NAME=
 
 # The default branch of the repository; it should almost always
-# be "master".
+# be "main".
 
 SONAR_BRANCH_TARGET=
 SONAR_DATA_LOSS_SIGNATURES_TOKEN=
@@ -163,7 +163,7 @@ NPM_PACKAGE_VERSION=
 GITLAB_ENDPOINT=https://github.com/api/v4
 GITLAB_JSON_OUTPUT=true
 GITLAB_PROJECT_ID=10416318
-GITLAB_REF=master
+GITLAB_REF=main
 GITLAB_RESOLVE_BODY_ONLY=true
 GITLAB_RESOURCE=signatures.json
 GITLAB_TOKEN=
@@ -215,7 +215,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 #
 
 # SonarCloud static code analysis
-SONAR_BRANCH_TARGET=master
+SONAR_BRANCH_TARGET=main
 SONAR_HOST_URL=https://sonarcloud.io
 SONAR_ORGANIZATION=archetypes-rules
 SONAR_PROJECT_KEY=signatures

@@ -1,0 +1,58 @@
+name: "Codacy Coverage Reporter"
+run-name: Code coverage reporter・Codacy
+on: ["push"]
+
+permissions:
+  checks: write
+  pull-requests: write
+
+jobs:
+  codacy-coverage-reporter:
+    runs-on: ubuntu-latest
+    name: codacy-coverage-reporter
+    environment: codacy-variables
+    env:
+      CODACY_ORGANIZATION_PROVIDER: ${CODACY_ORGANIZATION_PROVIDER}
+      CODACY_PROJECT_NAME: ${CODACY_PROJECT_NAME}
+      CODACY_PROJECT_TOKEN: ${CODACY_PROJECT_TOKEN}
+      CODACY_USERNAME: ${CODACY_USERNAME}
+      COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
+      COVERAGE_REPORT_PATH: ./coverage/lcov.info
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24.22.1
+      - name: 'Install dependencies & test'
+        run: |
+          npm install -g npm@latest
+          npm ci
+          npm test
+          if [ -f "${{ vars.COVERAGE_REPORT_PATH }}" ]; then
+            echo "ⓘ File \"${{ vars.COVERAGE_REPORT_PATH }}\" exists"
+          else
+            echo "⚠︎ Could not find file \"${{ vars.COVERAGE_REPORT_PATH }}\""
+          fi
+      - name: Publish unit test results・GitHub
+        uses: mikepenz/action-junit-report@v6
+        if: always() # always run even if the previous step fails
+        with:
+          fail_on_failure: true
+          include_passed: true
+          include_time_in_summary: true
+          name: junit-test-results
+          pr_id: ${{ github.event.pull_request.number }}
+          report_paths: './junit.xml'
+          require_passed_tests: true
+          verbose_summary: true
+      - name: Evaluate coverage reports・Codacy
+        uses: codacy/codacy-coverage-reporter-action@v1.3.0
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ${{ vars.COVERAGE_REPORT_PATH }}
+          language: JavaScript
+      - name: Publish coverage results・Codacy
+        run: |
+          curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${GITHUB_SHA}/coverage/JavaScript \
+            -H 'Content-Type: application/json' \
+            -H 'Accept: application/json'

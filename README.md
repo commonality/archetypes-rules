@@ -8,9 +8,9 @@
 [![The MIT License][license-image]][license-url] [![NPM
 version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Coveralls test
-coverage][coveralls-image]][coveralls-url] [![Codacy code
-quality][codacy-image]][codacy-url]
+[![MacOS and Ubuntu build statuses][travis-image]][travis-url] [![Codacy
+Badge](https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a)](https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
+[![Codacy code quality][codacy-image]][codacy-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
@@ -120,7 +120,7 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-const { Rule, RuleContext } = require('archetypes-rules')
+import { Rule, RuleContext } from 'archetypes-rules'
 
 // Create the rule
 const rule = new Rule('eligibleForDiscount')
@@ -197,7 +197,7 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-const { Rule, RuleContext, RuleElement } = require('archetypes-rules')
+import { Rule, RuleContext, RuleElement } from 'archetypes-rules'
 
 // Create the rule
 const rule = Rule('eligible-for-upgrade')
@@ -298,9 +298,6 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
   https://app.codacy.com/project/badge/Grade/28d1bcd9d85a4c27acb6b9ba5fc8481a
 [codacy-url]:
   https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[coveralls-image]:
-  https://coveralls.io/repos/github/commonality/archetypes-rules/badge.svg
-[coveralls-url]: https://coveralls.io/github/commonality/archetypes-rules
 [fossa-image]:
   https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield
 [fossa-legal-notice-url]:
@@ -312,7 +309,7 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
 [npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg
 [npm-url]: https://npmjs.org/package/archetypes-rules
 [travis-image]:
-  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=master&label=macOS%20%7C%20ubuntu%20builds&logo=travis
+  https://img.shields.io/travis/com/commonality/archetypes-rules.svg?branch=main&label=macOS%20%7C%20ubuntu%20builds&logo=travis
 [travis-url]: https://travis-ci.com/commonality/archetypes-rules
 [vulnerabilities-image]:
   https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?&targetFile=package.json

@@ -74,22 +74,22 @@ We use Git to change, review, and version our source code.
 
 ### 3.1. Default branch
 
-Our default branch is `master`.
+Our default branch is `main`.
 
-**Never** push changes directly to `master`. The `master` branch MUST be updated
+**Never** push changes directly to `main`. The `main` branch MUST be updated
 with Pull Requests.
 
 ### 3.2. Workflow Model
 
 We use the branch-based [GitHub flow][github-flow] to manage changes. That means
-that _anything merged into `master`_ SHOULD be immediately available as an
+that _anything merged into `main`_ SHOULD be immediately available as an
 automated production release.
 
 ![GitHub flow example][28]
 
-- The `master` branch is always stable and deployable.
+- The `main` branch is always stable and deployable.
 
-- To work on something new, branch off `master` and give the new branch a
+- To work on something new, branch off `main` and give the new branch a
     descriptive name:
 
     > `777-feat-unicorn-husbandry` where:
@@ -101,13 +101,13 @@ automated production release.
     > - `unicorn-husbandry` describes the change (or gives the changes a
     >     meaningful label)
 
-- Regularly **rebase** that branch against `master` and push your work to a
+- Regularly **rebase** that branch against `main` and push your work to a
     branch with the same name on the server.
 
 - When you need feedback, help or think you are ready, [submit a pull
     request][29].
 
-- Once the branch has been merged (or rebased) into `master`, delete it from
+- Once the branch has been merged (or rebased) into `main`, delete it from
     both your local and remote repository.
 
 ## 4. Commits
@@ -383,7 +383,7 @@ Fowler, M. (2019) _Refactoring_. Retrieved February 13, 2019, from
     https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines
 
 [debug-tests-vscode-url]:
-    https://github.com/Microsoft/vscode-recipes/tree/master/debugging-jest-tests#debugging-tests-in-vs-code
+    https://github.com/Microsoft/vscode-recipes/tree/main/debugging-jest-tests#debugging-tests-in-vs-code
 
 [8]: #42-commit-message-format
 
