@@ -33,6 +33,7 @@
     }
   ],
   "dependencies": {
+    "@js-temporal/polyfill": "0.5.1",
     "@sindresorhus/is": "8.1.0",
     "camelcase": "10.0.0",
     "debug": "4.4.3",
@@ -106,6 +107,7 @@
       "<rootDir>/node_modules",
       "<rootDir>/lib/rule.js"
     ],
+    "coverageProvider": "v8",
     "coverageThreshold": {
       "global": {
         "branches": 100,
