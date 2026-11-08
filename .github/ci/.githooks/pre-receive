@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# pre-receive hook: validate commit messages follow Conventional Commits Format:
+# <type>(<optional scope>): <description>
+
+commit_msg_type_regex='feat|fix|refactor|style|test|docs|build|chore|ci|perf|revert'
+commit_msg_scope_regex='[a-zA-Z0-9_\-]+'
+commit_msg_description_regex='.{1,100}'
+
+# The (\(...\))? makes the scope group optional
+commit_msg_regex="^(${commit_msg_type_regex})(\(${commit_msg_scope_regex}\))?: (${commit_msg_description_regex})\$"
+merge_msg_regex="^Merge (branch|tag) '.+'\$"
+
+zero_commit="0000000000000000000000000000000000000000"
+excludeExisting="--not --all"
+error=""
+
+while read oldrev newrev refname; do
+  # Skip branch/tag deletions
+  [ "$newrev" = "$zero_commit" ] && continue
+
+  # Determine which commits to check
+  if [ "$oldrev" = "$zero_commit" ]; then
+    rev_span=$(git rev-list "$newrev" $excludeExisting)
+  else
+    rev_span=$(git rev-list "$oldrev..$newrev" $excludeExisting)
+  fi
+
+  for commit in $rev_span; do
+    commit_msg_header=$(git show -s --format=%s "$commit")
+    if ! [[ "$commit_msg_header" =~ (${commit_msg_regex})|(${merge_msg_regex}) ]]; then
+      echo "ERROR: Invalid commit message format" >&2
+      echo "  Commit: $commit" >&2
+      echo "  Message: $commit_msg_header" >&2
+      error="true"
+    fi
+  done
+done
+
+if [ -n "$error" ]; then
+  exit 1
+fi
