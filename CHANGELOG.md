@@ -1,20 +1,36 @@
-# Changelog
+<h1>Change log</h1>
 
-# [1.3.0](https://github.com/commonality/archetypes-rules/compare/v1.2.2...v1.3.0) (2026-11-09)
+<a name="toc"></a>
+
+<h2>Table of contents</h2>
+
+[TOC]
+
+## [1.3.0](https://github.com/commonality/archetypes-rules/compare/v1.2.2...v1.3.0) (2026-11-09)
 
 
 ### Bug Fixes
 
-* **build:** fix errors during verify-and-release workflow ([8165e0c](https://github.com/commonality/archetypes-rules/commit/8165e0ca179d4c167bfbb2f67f3d4a0e670fb9ec)), closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
-* **ci:** update outdated CI configurations ([#200](https://github.com/commonality/archetypes-rules/issues/200)) ([a44c85f](https://github.com/commonality/archetypes-rules/commit/a44c85f205d27b7d409036c2f5a9dbbc10bfc344))
-* **release:** use defined git hooks ([57260a9](https://github.com/commonality/archetypes-rules/commit/57260a95385a9c16d98450d010187644cad38ca6))
-* **release:** verify NPM_TOKEN ([2a47625](https://github.com/commonality/archetypes-rules/commit/2a47625e3bb53db0127a646a4d049e27c89f2e92)), closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
+* **build:** fix errors during verify-and-release workflow
+  ([8165e0c](https://github.com/commonality/archetypes-rules/commit/8165e0ca179d4c167bfbb2f67f3d4a0e670fb9ec)),
+  closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
+* **ci:** update outdated CI configurations
+  ([#200](https://github.com/commonality/archetypes-rules/issues/200))
+  ([a44c85f](https://github.com/commonality/archetypes-rules/commit/a44c85f205d27b7d409036c2f5a9dbbc10bfc344))
+* **release:** use defined git hooks
+  ([57260a9](https://github.com/commonality/archetypes-rules/commit/57260a95385a9c16d98450d010187644cad38ca6))
+* **release:** verify NPM_TOKEN
+  ([2a47625](https://github.com/commonality/archetypes-rules/commit/2a47625e3bb53db0127a646a4d049e27c89f2e92)),
+  closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
 
 
 ### Features
 
-* **dist:** build source with tree shaking ([5613d6c](https://github.com/commonality/archetypes-rules/commit/5613d6ca4ff861a875d2ba6c2a57746ff5f74ba6)), closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
-* **license:** Update © years ([aa239c3](https://github.com/commonality/archetypes-rules/commit/aa239c312b074eb51ff033b7e35b54e80fb13e53))
+* **dist:** build source with tree shaking
+  ([5613d6c](https://github.com/commonality/archetypes-rules/commit/5613d6ca4ff861a875d2ba6c2a57746ff5f74ba6)),
+  closes [#205](https://github.com/commonality/archetypes-rules/issues/205)
+* **license:** Update © years
+  ([aa239c3](https://github.com/commonality/archetypes-rules/commit/aa239c312b074eb51ff033b7e35b54e80fb13e53))
 
 ## [1.2.2](https://github.com/commonality/archetypes-rules/compare/v1.2.1...v1.2.2) (2020-02-07)
 

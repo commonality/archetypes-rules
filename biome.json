@@ -57,6 +57,14 @@
       "trailingCommas": "none"
     }
   },
+  "markdown": {
+    "formatter": {
+      "enabled": true
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
   "assist": {
     "enabled": true,
     "actions": {
