@@ -58,7 +58,7 @@ _Why:_
 </details>
 
 ---
-
+<!--
 ## Code quality summary
 
 | Measure             | Scores                                                                                                                                                                                                                                                                                                                |
@@ -69,6 +69,7 @@ _Why:_
 | **Reliability**     | [![Sonar Reliability Rating Metrics][sonar-reliability-rating-badge]][sonar-reliability-rating-url]<br>[![Sonar Bugs Metrics][sonar-bugs-badge]][sonar-bugs-url]                                                                                                                                                      |
 | **Security**        | [![Sonar Security Rating Metrics][sonar-security-rating-badge]][sonar-security-rating-url]<br>[![Sonar Vulnerabilities Metrics][sonar-vulnerabilities-badge]][sonar-vulnerabilities-url]                                                                                                                              |
 | **Test coverage**   | [![Sonar Coverage Metrics][sonar-coverage-badge]][sonar-coverage-url]                                                                                                                                                                                                                                                 |
+-->
 
 <!-- ⛔️ Please! DO NOT delete anything below this line. ⛔️  -->
 
@@ -95,7 +96,10 @@ $ npm test
 
 ### How to test a release
 
-The [Pre-release test instructions](https://github.com/commonality/archetypes-rules/wiki/Pre-release-test-instructions) include step-by-step guidelines for bundling, packing, and testing this module as it would be released on NPM.
+The [Pre-release test
+instructions](https://github.com/commonality/archetypes-rules/wiki/Pre-release-test-instructions)
+include step-by-step guidelines for bundling, packing, and testing this module
+as it would be released on NPM.
 
 
 ---
@@ -160,11 +164,14 @@ The [Pre-release test instructions](https://github.com/commonality/archetypes-ru
 
 <!-- ⛔️ Logo img references ⛔️  -->
 
-[standardjs-logo]: https://cdn.rawgit.com/feross/standard/main/badge.svg
+[standardjs-logo]: https://cdn.rawgit.com/standard/standard/master/sticker.svg
+    'JavaScript Standard Style'
 [standardjs-url]: https://github.com/feross/standard
-[eslint-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-eslint.png
+[eslint-logo]:
+    https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-eslint.png
 [eslint-url]: https://eslint.org/docs/user-guide/getting-started
-[jest-logo]: https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-jest.png
+[jest-logo]:
+    https://raw.githubusercontent.com/commonality/archetypes-rules/main/docs/img/logos/logo-jest.png
 [jest-url]: https://facebook.github.io/jest/docs/en/getting-started.html
 
 <!-- ⛔️ Octicon img references ⛔️  -->

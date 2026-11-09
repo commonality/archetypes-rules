@@ -4,20 +4,27 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
 
 export default {
-	input: 'lib/index.js',
-	output: [{
-		file: 'dist/archetypes-rules.mjs',
-		format: 'esm'
-	}, {
-    file: 'dist/archetypes-rules.min.mjs',
-    format: 'esm',
-    plugins: [
-      terser()
-    ]
-  }, {
-    file: 'dist/archetypes-rules.js',
-    format: 'cjs'
-  }],
+  input: 'lib/index.js',
+  output: [
+    {
+      file: 'dist/archetypes-rules.cjs',
+      format: 'cjs'
+    },
+    {
+      file: 'dist/archetypes-rules.min.cjs',
+      format: 'cjs',
+      plugins: [terser()]
+    },
+    {
+      file: 'dist/archetypes-rules.mjs',
+      format: 'esm'
+    },
+    {
+      file: 'dist/archetypes-rules.min.mjs',
+      format: 'esm',
+      plugins: [terser()]
+    }
+  ],
   plugins: [
     commonjs({
       include: /node_modules/,
@@ -27,7 +34,7 @@ export default {
     nodeResolve()
   ],
   treeshake: {
-    moduleSideEffects: false,
-    preset: 'smallest'
+    preset: 'recommended',
+    moduleSideEffects: false
   }
 }
