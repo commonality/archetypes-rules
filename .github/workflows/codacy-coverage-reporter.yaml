@@ -40,7 +40,6 @@ jobs:
           fail_on_failure: true
           include_passed: true
           include_time_in_summary: true
-          name: junit-test-results
           pr_id: ${{ github.event.pull_request.number }}
           report_paths: './junit.xml'
           require_passed_tests: true

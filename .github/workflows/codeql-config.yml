@@ -12,14 +12,15 @@ name: "CodeQL Advanced"
 
 on:
   push:
-    paths:
-      - 'lib/**/*.js'
     paths-ignore:
+      - '.codacy/**'
       - '.github/**'
+      - '.vscode/**'
       - '**.test.js'
       - 'coverage/**'
       - 'dist/**'
       - 'docs/**'
+      - 'node_modules/**'
   schedule:
     - cron: '19 4 * * 3'
       timezone: "America/Detroit"

@@ -169,7 +169,7 @@
       "git add"
     ]
   },
-  "main": "dist/archetypes-rules.js",
+  "main": "dist/archetypes-rules.mjs",
   "readme": "https://github.com/commonality/archtypes-rules/README.md",
   "release": {
     "verifyConditions": [

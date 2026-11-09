@@ -96,11 +96,8 @@ $ npm test
 
 ### How to test a release
 
-The [Pre-release test
-instructions](https://github.com/commonality/archetypes-rules/wiki/Pre-release-test-instructions)
-include step-by-step guidelines for bundling, packing, and testing this module
-as it would be released on NPM.
-
+The [Pre-release test instructions](https://github.com/commonality/archetypes-rules/wiki/Pre-release-test-instructions)
+include step-by-step guidelines for bundling, packing, and testing this module as it would be released on NPM.
 
 ---
 
