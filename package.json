@@ -77,7 +77,7 @@
     "jsdoc-mermaid": "1.0.0",
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
-    "rollup": "4.68.1",
+    "rollup": "4.68.2",
     "semantic-release": "25.0.9"
   },
   "engines": {
@@ -169,7 +169,7 @@
       "git add"
     ]
   },
-  "main": "dist/archetypes-rules.js",
+  "main": "dist/archetypes-rules.mjs",
   "readme": "https://github.com/commonality/archtypes-rules/README.md",
   "release": {
     "verifyConditions": [
