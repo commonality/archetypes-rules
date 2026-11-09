@@ -13,7 +13,9 @@ name: "CodeQL Advanced"
 on:
   push:
     paths-ignore:
+      - '.codacy/**'
       - '.github/**'
+      - '.vscode/**'
       - '**.test.js'
       - '.vscode/**'
       - 'coverage/**'
