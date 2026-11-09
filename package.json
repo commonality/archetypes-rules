@@ -301,7 +301,7 @@
     "postversion": "npm run bundle",
     "qa:review:sonar": "node -r ./.github/ci/qa/sonar-scan.js",
     "security:audit:dependencies": "npm audit --dry-run",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release -ci=false",
     "start": "node -r dotenv-extended ./lib/env-config.js",
     "pretest": "npm run lint:js:fix",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --verbose"

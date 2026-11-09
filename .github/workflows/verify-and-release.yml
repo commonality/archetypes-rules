@@ -60,4 +60,5 @@ jobs:
         run: |
           chmod +x ./.github/ci/.githooks/* # ⬅︎ ① Ensure our git hooks are executable
           git config core.hooksPath ./.github/ci/.githooks # ⬅︎ ② Make git use our hooks
-          npm run semantic-release # ⬅︎ ③ Create a GitHub release
+          git config --global init.defaultBranch main # ⬅︎ ③ Default branch is main
+          npm run semantic-release # ⬅︎ ④ Create a GitHub release
