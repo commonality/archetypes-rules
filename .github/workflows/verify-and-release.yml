@@ -17,7 +17,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
       - name: Install dependencies
         run: |
           npm i -g npm@latest
@@ -46,9 +46,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: "lts/*"
+          registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
         run: |
           npm i -g npm@latest
@@ -56,6 +57,7 @@ jobs:
       - name: Release with semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           chmod +x ./.github/ci/.githooks/* # ⬅︎ ① Ensure our git hooks are executable

@@ -250,7 +250,7 @@
               "label": "Installation and usage instructions for distribution"
             },
             {
-              "path": "dist/*.js",
+              "path": "dist/**",
               "label": "Public API module and its private dependencies"
             }
           ]
