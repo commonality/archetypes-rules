@@ -241,10 +241,7 @@ fact
 
 > [!NOTE]
 >
-> ![Information for Maintainers][octicon-book] The [Maintainer
-> Guide](./docs/maintainer-guide/README.md) describes how we develop and release
-> **archetype-rules** (and has useful information for Maintainers and Trusted
-> Committers).
+> ![Information for Maintainers][octicon-book] The [Maintainer Guide](./docs/maintainer-guide/README.md) describes how we develop and release **archetype-rules** (and has useful information for Maintainers and Trusted Committers).
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
@@ -254,8 +251,6 @@ fact
 Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
 [![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
 [![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
-[![Greenkeeper
-badge](https://badges.greenkeeper.io/commonality/archetypes-rules.svg)](https://greenkeeper.io/)
 
 ![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you
 need to know to get started.
@@ -276,16 +271,15 @@ Before submitting a Pull Request, please read our:
 
 > [!NOTE]
 >
-> [![Open Source Licenses][octicon-law] View the latest **detailed legal
-> NOTICE** report ![This link will take you to another Web
-> site][octicon-link-external]][fossa-legal-notice-url].
+> [![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE** report ![This link will take you to another Web site][octicon-link-external]][fossa-legal-notice-url].
 >
-> [![FOSSA
-Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large)](https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large)
+> [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
 <!-- ⛔️ Do not remove this line or anything under it. ⛔️  -->
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license)
 
 <!-- Link and image refs -->
 
@@ -297,11 +291,11 @@ Status](https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonali
 [codacy-url]:
   https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
 [fossa-image]:
-  https://app.fossa.com/api/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield
+  https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license
 [fossa-legal-notice-url]:
   https://app.fossa.com/attribution/5895d784-6a99-4c46-961c-6aecd9414623
 [fossa-url]:
-  https://app.fossa.com/projects/custom%2B804%2Fgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield
+  https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: http://opensource.org/licenses/MIT
 [npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg
