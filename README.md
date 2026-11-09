@@ -293,7 +293,7 @@ Before submitting a Pull Request, please read our:
 [fossa-image]:
   https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license
 [fossa-legal-notice-url]:
-  https://app.fossa.com/attribution/5895d784-6a99-4c46-961c-6aecd9414623
+  https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?utm_source=share_link
 [fossa-url]:
   https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
