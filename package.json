@@ -63,6 +63,7 @@
     "@semantic-release/github": "12.0.10",
     "@semantic-release/npm": "13.2.0",
     "@semantic-release/release-notes-generator": "14.1.1",
+    "@sonar/scan": "5.1.0",
     "all-contributors-cli": "7.0.1",
     "better-docs": "2.7.3",
     "commitizen": "4.3.2",
@@ -77,8 +78,7 @@
     "lint-staged": "17.6.0",
     "prettier": "3.9.10",
     "rollup": "4.68.1",
-    "semantic-release": "25.0.9",
-    "sonarqube-scanner": "5.0.2"
+    "semantic-release": "25.0.9"
   },
   "engines": {
     "node": ">=24 <27",
