@@ -1,3 +1,12 @@
+# Changelog
+
+## [1.3.1](https://github.com/commonality/archetypes-rules/compare/v1.3.0...v1.3.1) (2026-11-09)
+
+
+### Bug Fixes
+
+* **publish:** ensure we can publish to NPM registry ([ab0dc6c](https://github.com/commonality/archetypes-rules/commit/ab0dc6c9e0eef98e023aa321e570803c6628d78c))
+
 <h1>Change log</h1>
 
 <a name="toc"></a>
