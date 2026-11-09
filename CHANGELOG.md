@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.2](https://github.com/commonality/archetypes-rules/compare/v1.3.1...v1.3.2) (2026-11-09)
+
+
+### Bug Fixes
+
+* **dev-deps:** update rollup ([ce79452](https://github.com/commonality/archetypes-rules/commit/ce7945269ed8cc7297d83e5dccae930dff3aeb5e))
+* **release:** disable ci checks ([318f877](https://github.com/commonality/archetypes-rules/commit/318f877291626585222a2a4139c1e76bc9a130c3))
+
 ## [1.3.1](https://github.com/commonality/archetypes-rules/compare/v1.3.0...v1.3.1) (2026-11-09)
 
 
