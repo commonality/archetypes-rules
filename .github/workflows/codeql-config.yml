@@ -17,6 +17,7 @@ on:
       - '.github/**'
       - '.vscode/**'
       - '**.test.js'
+      - '.vscode/**'
       - 'coverage/**'
       - 'dist/**'
       - 'docs/**'
