@@ -2,7 +2,7 @@
   "name": "archetypes-rules",
   "description": "Move conditional logic out of source code and database triggers and into a reusable package, where explicit rules can be independently defined and managed.",
   "type": "module",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "author": {
     "name": "Greg Swindle",
     "url": "https://github.com/commonality"

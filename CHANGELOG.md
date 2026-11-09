@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/commonality/archetypes-rules/compare/v1.3.3...v1.3.4) (2026-11-09)
+
+
+### Bug Fixes
+
+* **semantic release:** publish to GitHub's NPM registry ([72a4ccd](https://github.com/commonality/archetypes-rules/commit/72a4ccd556f7decb3ae826be87c5fba2f7a1db0d)), closes [#1](https://github.com/commonality/archetypes-rules/issues/1) [#2](https://github.com/commonality/archetypes-rules/issues/2) [#3](https://github.com/commonality/archetypes-rules/issues/3) [#4](https://github.com/commonality/archetypes-rules/issues/4) [#5](https://github.com/commonality/archetypes-rules/issues/5) [#6](https://github.com/commonality/archetypes-rules/issues/6) [#7](https://github.com/commonality/archetypes-rules/issues/7) [#8](https://github.com/commonality/archetypes-rules/issues/8) [#9](https://github.com/commonality/archetypes-rules/issues/9) [#10](https://github.com/commonality/archetypes-rules/issues/10) [#11](https://github.com/commonality/archetypes-rules/issues/11) [#12](https://github.com/commonality/archetypes-rules/issues/12) [#13](https://github.com/commonality/archetypes-rules/issues/13) [#14](https://github.com/commonality/archetypes-rules/issues/14) [#15](https://github.com/commonality/archetypes-rules/issues/15) [#16](https://github.com/commonality/archetypes-rules/issues/16) [#17](https://github.com/commonality/archetypes-rules/issues/17)
+
 ## [1.3.3](https://github.com/commonality/archetypes-rules/compare/v1.3.2...v1.3.3) (2026-11-09)
 
 ## [1.3.2](https://github.com/commonality/archetypes-rules/compare/v1.3.1...v1.3.2) (2026-11-09)
