@@ -1,3 +1,12 @@
+# Changelog
+
+## [1.3.5](https://github.com/commonality/archetypes-rules/compare/v1.3.4...v1.3.5) (2026-11-10)
+
+
+### Bug Fixes
+
+* **licenses:** address documentation flags ([2f9e324](https://github.com/commonality/archetypes-rules/commit/2f9e3249d598a1299a256760ff25b5cb3f079877))
+
 <h1>Change log</h1>
 
 <h2>Table of contents</h2>
