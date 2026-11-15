@@ -1,0 +1,8 @@
+allowBuilds:
+  '@parcel/watcher': true
+packages:
+  # include packages in subfolders (change as required)
+  - 'lib/**'
+  # if required, exclude directories
+  - '!**/__tests__/**'
+  - '!**/*.test.js'
