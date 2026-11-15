@@ -293,7 +293,7 @@
     "ci:outdated": "npm outdated --long",
     "ci:sbom": "npx --yes @cyclonedx/cyclonedx-npm --omit=dev --omit=optional --omit=peer --output-format=JSON --output-file=nodejs-package.sbom.json --validate --verbose",
     "ci:test": "npm run start && npm run ci:check:js && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter --verbose",
-    "docs:api": "jsdoc -c ./.github/ci/docs/jsdoc.json ./lib/ -r -R ./README.md -P package.json -d ./docs/api/",
+    "docs:api": "npx jsdoc -c ./.github/ci/docs/jsdoc.json ./lib/ -r -R ./README.md -P package.json -d ./api/",
     "lint:js": "npx @biomejs/biome check lib/",
     "lint:js:fix": "npx @biomejs/biome check --write lib/",
     "lint:json:fix": "prettier --write **/*.json",
