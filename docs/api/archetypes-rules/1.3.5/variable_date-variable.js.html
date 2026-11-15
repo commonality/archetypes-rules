@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: variable/date-variable.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: variable/date-variable.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import ow from 'ow'
+import Variable from './variable'
+
+/**
+ * A DateVariable is a symbol that represents a single moment in time in a
+ * platform-independent format.
+ *
+ * &lt;p>&lt;img
+ * src="https://gitlab.com/zaira-ardor-llc/docs/-/raw/main/media/icons/gitlab/status_warning.svg?ref_type=heads"
+ * width="24" height="24" alt="Warning" /> With the introduction of the {@linkcode https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal Temporal}
+ * API, the {@linkcode https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date Date} object is considered a legacy feature. Consider using Temporal
+ * for new code and migrate existing code over to it if possible.
+ *
+ * @extends {archetypes.rules.Variable}
+ * @memberof archetypes.rules
+ * @property {String} name - The DateVariable's identifier.
+ * @property {Date} value - A
+ * {@linkcode https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date Date}.
+ * @property {String} type - "archetypes.rules.DateVariable" @readonly
+ */
+
+class DateVariable extends Variable {
+  /**
+   * @param {String} name - A unique string that expresses intent.
+   * @param {Date} [value = new Date()] - A JavaScript primitive or Object type.
+   */
+  constructor(name, value = new Date()) {
+    super(name, value, ow.any(ow.date, ow.string))
+  }
+
+  /**
+   * Evaluate whether the current variable's Date value occurs after another
+   * DateVariable's value.
+   *
+   * @param {archetypes.rules.DateVariable} dateVariable - Another variable to
+   * be compared.
+   * @returns {archetypes.rules.Proposition} A unique evaluation with a
+   * truth-value.
+   */
+
+  after(dateVariable) {
+    return this.gt(dateVariable)
+  }
+
+  /**
+   * Evaluate whether the current variable's Date value occurs before another
+   * DateVariable's value.
+   *
+   * @param {archetypes.rules.DateVariable} dateVariable - Another variable to
+   * be compared.
+   * @returns {archetypes.rules.Proposition} A unique evaluation with a
+   * truth-value.
+   */
+
+  before(dateVariable) {
+    return this.lt(dateVariable)
+  }
+
+  static createNullObject(name) {
+    const variable = new DateVariable(name)
+    variable.value = null
+    return variable
+  }
+
+  /**
+   * Return a Date instance.
+   * @instance
+   * @return {date} value - A Date instance.
+   */
+  valueOf() {
+    return this.value
+  }
+}
+
+export default DateVariable
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="archetypes.html">archetypes</a></li><li><a href="archetypes.rules.html">rules</a></li></ul><h3>Classes</h3><ul><li><a href="archetypes.rules.ActivityRule.html">ActivityRule</a></li><li><a href="archetypes.rules.ArrayVariable.html">ArrayVariable</a></li><li><a href="archetypes.rules.BigIntVariable.html">BigIntVariable</a></li><li><a href="archetypes.rules.DateVariable.html">DateVariable</a></li><li><a href="archetypes.rules.ErrorVariable.html">ErrorVariable</a></li><li><a href="archetypes.rules.InvalidRuleElementError.html">InvalidRuleElementError</a></li><li><a href="archetypes.rules.MapVariable.html">MapVariable</a></li><li><a href="archetypes.rules.NumberVariable.html">NumberVariable</a></li><li><a href="archetypes.rules.ObjectVariable.html">ObjectVariable</a></li><li><a href="archetypes.rules.Operator.html">Operator</a></li><li><a href="archetypes.rules.PromiseVariable.html">PromiseVariable</a></li><li><a href="archetypes.rules.Proposition.html">Proposition</a></li><li><a href="archetypes.rules.RegExpVariable.html">RegExpVariable</a></li><li><a href="archetypes.rules.Rule.html">Rule</a></li><li><a href="archetypes.rules.RuleContext.html">RuleContext</a></li><li><a href="archetypes.rules.RuleElement.html">RuleElement</a></li><li><a href="archetypes.rules.RuleOverride.html">RuleOverride</a></li><li><a href="archetypes.rules.RuleSet.html">RuleSet</a></li><li><a href="archetypes.rules.SetVariable.html">SetVariable</a></li><li><a href="archetypes.rules.StringVariable.html">StringVariable</a></li><li><a href="archetypes.rules.SymbolVariable.html">SymbolVariable</a></li><li><a href="archetypes.rules.TemporalDurationVariable.html">TemporalDurationVariable</a></li><li><a href="archetypes.rules.Variable.html">Variable</a></li><li><a href="archetypes.rules.WeakMapVariable.html">WeakMapVariable</a></li><li><a href="archetypes.rules.WeakSetVariable.html">WeakSetVariable</a></li></ul><h3>Interfaces</h3><ul><li><a href="defaultOptions.html">defaultOptions</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Sat Nov 14 2026 23:43:47 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
