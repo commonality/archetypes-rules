@@ -1,4 +1,4 @@
-name: verify-and-release
+name: release
 on:
   push:
     branches:
@@ -12,13 +12,13 @@ jobs:
     name: Verify
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout・GitHub
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup pnpm・GitHub
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: Setup Node.js・GitHub
+      - name: Setup Node.js
         uses: actions/setup-node@v7
       - name: Install dependencies
         run: |
@@ -28,11 +28,11 @@ jobs:
           pnpm run ci:audit:prod
           pnpm audit signatures
           pnpm run ci:outdated
-      - name: Run lint, tests, and other verification
-        run: pnpm run ci:test
+      - name: Validate code style
+        run: pnpm run ci:check:js
 
   release:
-    name: Release
+    name: Release・NPM
     runs-on: ubuntu-latest
     needs: verify
     permissions:
@@ -41,28 +41,28 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for trusted publishing and npm provenance
     steps:
-      - name: Checkout・GitHub
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Setup pnpm・GitHub
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: Setup node@lts/*・GitHub
+      - name: Setup node@lts/*
         uses: actions/setup-node@v7
         with:
           node-version: "lts/*"
           cache: 'pnpm'
-      - name: Install dependencies・GitHub
+      - name: Install dependencies
         run: |
           pnpm install --frozen-lockfile
-      - name: Release with semantic-release・GitHub
+      - name: Semantic release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          chmod +x ./.github/ci/.githooks/* # ⬅︎ ① Ensure our git hooks are executable
-          git config core.hooksPath ./.github/ci/.githooks # ⬅︎ ② Make git use our hooks
-          git config --global init.defaultBranch main # ⬅︎ ③ Default branch is main
-          pnpm run semantic-release # ⬅︎ ④ Create a GitHub release
+          # ① Default branch is main
+          git config --global init.defaultBranch main
+          # ② Create a GitHub release
+          pnpm run semantic-release

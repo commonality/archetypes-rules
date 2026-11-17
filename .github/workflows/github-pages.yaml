@@ -1,4 +1,4 @@
-name: library-api-documentation
+name: github-pages
 on:
   push:
     branches: [main]
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: "lts/*"
+          node-version: 'lts/*'
           cache: 'pnpm'
       - name: 'Install dependencies'
         run: pnpm install --frozen-lockfile
@@ -28,7 +28,7 @@ jobs:
       - name: Upload docs artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/api/archetypes-rules/
+          path: docs/api/
 
   deploy-docs:
     needs: build-docs
