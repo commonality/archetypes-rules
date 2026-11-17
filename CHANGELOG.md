@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.6](https://github.com/commonality/archetypes-rules/compare/v1.3.5...v1.3.6) (2026-11-17)
+
+### Bug Fixes
+
+* **ci:** stop using custom githooks ([1c14de4](https://github.com/commonality/archetypes-rules/commit/1c14de4df3a2e195b53864d0f23ab69a6c5ede66))
+
 ## [1.3.5](https://github.com/commonality/archetypes-rules/compare/v1.3.4...v1.3.5) (2026-11-10)
 
 
