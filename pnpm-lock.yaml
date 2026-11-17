@@ -208,9 +208,6 @@ importers:
       lodash.kebabcase:
         specifier: 4.1.1
         version: 4.1.1
-      lodash.topairs:
-        specifier: 4.3.0
-        version: 4.3.0
       ow:
         specifier: 3.1.1
         version: 3.1.1
@@ -2279,9 +2276,6 @@ packages:
 
   lodash.kebabcase@4.1.1:
     resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
-
-  lodash.topairs@4.3.0:
-    resolution: {integrity: sha512-qrRMbykBSEGdOgQLJJqVSdPWMD7Q+GJJ5jMRfQYb+LTLsw3tYVIabnCzRqTJb2WTo17PG5gNzXuFaZgYH/9SAQ==}
 
   lodash.uniqby@4.7.0:
     resolution: {integrity: sha512-e/zcLx6CSbmaEgFHCA7BnoQKyCtKMxnuWrJygbwPs/AIn+IMKl66L8/s+wBUn5LRw2pZx3bUHibiV1b6aTWIww==}
@@ -5380,8 +5374,6 @@ snapshots:
   lodash.isstring@4.0.1: {}
 
   lodash.kebabcase@4.1.1: {}
-
-  lodash.topairs@4.3.0: {}
 
   lodash.uniqby@4.7.0: {}
 

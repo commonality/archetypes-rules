@@ -44,7 +44,6 @@
     "lodash.intersection": "4.4.0",
     "lodash.invoke": "4.5.2",
     "lodash.kebabcase": "4.1.1",
-    "lodash.topairs": "4.3.0",
     "ow": "3.1.1"
   },
   "devDependencies": {
@@ -85,13 +84,11 @@
     "collectCoverage": true,
     "coveragePathIgnorePatterns": [
       "<rootDir>/.github/",
-      "<rootDir>/.github/",
+      "<rootDir>/.gitlab/",
       "<rootDir>/docs/",
       "<rootDir>/lib/*/__tests__/__fixtures__/",
-      "<rootDir>/lib/cli/signature-ctrl/__tests__/__fixtures__/",
       "<rootDir>/lib/*/__tests__/__mocks__/",
-      "<rootDir>/node_modules",
-      "<rootDir>/lib/rule.js"
+      "<rootDir>/node_modules"
     ],
     "coverageProvider": "v8",
     "coverageThreshold": {
