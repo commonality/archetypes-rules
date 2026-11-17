@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true
+  }
+}

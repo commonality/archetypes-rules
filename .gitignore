@@ -504,3 +504,5 @@ sonar-test-report.xml
 
 #Ignore vscode AI rules
 .codacy/
+# Ignore JSDoc API document artifacts
+docs/api/

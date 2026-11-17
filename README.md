@@ -49,10 +49,15 @@ evaluate Facts (aka, RuleContexts).
 
 ## 1. Overview
 
-_Figure 1: Class diagram for the `archetypes.rules` namespace._
+<figure><figcaption>
 
-![Figure 1: Class diagram for the archetypes.rules
-namespace][archetypes-rules-overview]
+Figure 1: **Class diagram for the `archetypes.rules` namespace.**
+
+</figcaption>
+
+![archetype.rules namespace class diagram][archetypes-rules-overview]
+
+</figure>
 
 ### 1.1. `Rules`
 
@@ -116,28 +121,45 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-import { Rule, RuleContext } from 'archetypes-rules'
+import {
+  Proposition,
+  Rule,
+  RuleContext
+} from 'archetypes-rules'
 
 // Create the rule
-const rule = new Rule('eligibleForDiscount')
+const rule = new Rule(
+  'eligibleForDiscount'
+)
 
-// Add a Proposition, i.e., a statement that has a value of true or false
-rule.addProposition('customerIsGoldCardHolder', true)
+// Add a `Proposition`, i.e., a
+// statement that has a value of
+// `true` or `false`
+rule.addProposition(
+  'customerIsGoldCardHolder', true
+)
 
-// Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext('eligibleForDiscountContext')
+// Create a `RuleContext`, i.e., a "Fact"
+const ruleContext = RuleContext(
+  'customer-uuid'
+)
 
-// Provide the truth statement as to whether the actual customer
-// has a Gold Card
-ruleContext.addProposition('customerIsGoldCardHolder', true)
+// Provide the truth statement as to
+// whether the actual customer has a
+// Gold Card
+ruleContext.addProposition(
+  'customerIsGoldCardHolder', true
+)
 
 // Evaluate
-const result = rule.evaluate(ruleContext)
+const result: Proposition = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
-
-// Outputs
-// Proposition statement = customerIsGoldCardHolder, value = true
+console.log(result)
+// =>
+// Proposition (
+//    statement = customerIsGoldCardHolder
+// ), value     = true
 ```
 
 ### 3.2. Example 2: Group discount for six or more people
@@ -146,28 +168,42 @@ Say you provide a discount to a group of six or more people:
 
 ```javascript
 // Create the rule
-const rule = Rule('eligible-for-group-discount')
+const rule = Rule(
+  'eligible-for-group-discount'
+)
 
 // Declare a "placeholder" variable for the actual number of people
 // (This value will be retrieved from the RuleContext)
-rule.addVariable('actual-num-people', null)
+rule.addVariable(
+  'actual-num-people', null
+)
 
 // Declare the minimum number of people required for discount
-rule.addVariable('min-num-people', 6)
+rule.addVariable(
+  'min-num-people', 6
+)
 
 // Compare the two, i.e.,
 // actual-num-people >= min-num-people
-rule.addOperator(Operator.GREATER_THAN_OR_EQUAL_TO)
+rule.addOperator(
+  Operator.GREATER_THAN_OR_EQUAL_TO
+)
 
 // Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext('eligible-for-group-discount-fact')
+const ruleContext = RuleContext(
+  'eligible-for-group-discount-fact'
+)
 
 // How many people are there?
-ruleContext.addVariable('actual-num-people', 5)
+ruleContext.addVariable(
+  'actual-num-people', 5
+)
 
 // Declare the "placeholder" minimun number of people required for discount
 // (This value will be retrieved from the Rule)
-ruleContext.addVariable('min-num-people', 'NULL_NUMBER_VARIABLE')
+ruleContext.addVariable(
+  'min-num-people', 'NULL_NUMBER_VARIABLE'
+)
 
 // Evaluate
 const result = rule.evaluate(ruleContext)
@@ -193,7 +229,11 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-import { Rule, RuleContext, RuleElement } from 'archetypes-rules'
+import {
+  Rule,
+  RuleContext,
+  RuleElement
+} from 'archetypes-rules'
 
 // Create the rule
 const rule = Rule('eligible-for-upgrade')
@@ -241,7 +281,10 @@ fact
 
 > [!NOTE]
 >
-> ![Information for Maintainers][octicon-book] The [Maintainer Guide](./docs/maintainer-guide/README.md) describes how we develop and release **archetype-rules** (and has useful information for Maintainers and Trusted Committers).
+> ![Information for Maintainers][octicon-book] The [Maintainer
+> Guide](./docs/maintainer-guide/README.md) describes how we develop and release
+> **archetype-rules** (and has useful information for Maintainers and Trusted
+> Committers).
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
@@ -271,20 +314,26 @@ Before submitting a Pull Request, please read our:
 
 > [!NOTE]
 >
-> [![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE** report ![This link will take you to another Web site][octicon-link-external]][fossa-legal-notice-url].
+> [![Open Source Licenses][octicon-law] View the latest **detailed legal
+> NOTICE** report ![This link will take you to another Web
+> site][octicon-link-external]][fossa-legal-notice-url].
 >
-> [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
+> [![FOSSA
+> Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
 <!-- ⛔️ Do not remove this line or anything under it. ⛔️  -->
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license)
+[![FOSSA
+Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license)
 
 <!-- Link and image refs -->
 
+
+
 [archetypes-rules-overview]:
-    https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.png
+    https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.svg
     'Class diagram for archetypes.rules'
 [codacy-image]:
   https://app.codacy.com/project/badge/Grade/28d1bcd9d85a4c27acb6b9ba5fc8481a
