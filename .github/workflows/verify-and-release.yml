@@ -1,4 +1,4 @@
-name: Verify and Release
+name: verify-and-release
 on:
   push:
     branches:
@@ -12,23 +12,24 @@ jobs:
     name: Verify
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout・GitHub
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node.js
+      - name: Setup pnpm・GitHub
+        uses: pnpm/action-setup@v4
+      - name: Setup Node.js・GitHub
         uses: actions/setup-node@v7
       - name: Install dependencies
         run: |
-          npm i -g npm@latest
-          npm clean-install
-      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+          pnpm install --frozen-lockfile
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies・GitHub
         run: |
-          npm run ci:audit:prod
-          npm audit signatures
-          npm run ci:outdated
+          pnpm run ci:audit:prod
+          pnpm audit signatures
+          pnpm run ci:outdated
       - name: Run lint, tests, and other verification
-        run: npm run ci:test
+        run: pnpm run ci:test
 
   release:
     name: Release
@@ -40,21 +41,22 @@ jobs:
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for trusted publishing and npm provenance
     steps:
-      - name: Checkout
+      - name: Checkout・GitHub
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Setup Node.js
+      - name: Setup pnpm・GitHub
+        uses: pnpm/action-setup@v4
+      - name: Setup node@lts/*・GitHub
         uses: actions/setup-node@v7
         with:
           node-version: "lts/*"
-          registry-url: "https://npm.pkg.github.com"
-      - name: Install dependencies
+          cache: 'pnpm'
+      - name: Install dependencies・GitHub
         run: |
-          npm i -g npm@latest
-          npm clean-install
-      - name: Release with semantic-release
+          pnpm install --frozen-lockfile
+      - name: Release with semantic-release・GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -63,4 +65,4 @@ jobs:
           chmod +x ./.github/ci/.githooks/* # ⬅︎ ① Ensure our git hooks are executable
           git config core.hooksPath ./.github/ci/.githooks # ⬅︎ ② Make git use our hooks
           git config --global init.defaultBranch main # ⬅︎ ③ Default branch is main
-          npm run semantic-release # ⬅︎ ④ Create a GitHub release
+          pnpm run semantic-release # ⬅︎ ④ Create a GitHub release

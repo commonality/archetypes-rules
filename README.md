@@ -33,16 +33,12 @@ evaluate Facts (aka, RuleContexts).
     - [1.2.2. `Variables`](#122-variables)
     - [1.2.3. `Operators`](#123-operators)
   - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
-  - [1.4. `Rules` evaluate
-    `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
+  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a
-    discount](#31-example-1-is-this-customer-eligible-for-a-discount)
-  - [3.2. Example 2: Group discount for six or more
-    people](#32-example-2-group-discount-for-six-or-more-people)
-  - [3.3. Example 3: Is an airline passenger eligible for an
-    upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
+  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
+  - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
 - [5. Contributions](#5-contributions)
 - [6. License](#6-license)
@@ -125,28 +121,45 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-import { Rule, RuleContext } from 'archetypes-rules'
+import {
+  Proposition,
+  Rule,
+  RuleContext
+} from 'archetypes-rules'
 
 // Create the rule
-const rule = new Rule('eligibleForDiscount')
+const rule = new Rule(
+  'eligibleForDiscount'
+)
 
-// Add a Proposition, i.e., a statement that has a value of true or false
-rule.addProposition('customerIsGoldCardHolder', true)
+// Add a `Proposition`, i.e., a
+// statement that has a value of
+// `true` or `false`
+rule.addProposition(
+  'customerIsGoldCardHolder', true
+)
 
-// Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext('eligibleForDiscountContext')
+// Create a `RuleContext`, i.e., a "Fact"
+const ruleContext = RuleContext(
+  'customer-uuid'
+)
 
-// Provide the truth statement as to whether the actual customer
-// has a Gold Card
-ruleContext.addProposition('customerIsGoldCardHolder', true)
+// Provide the truth statement as to
+// whether the actual customer has a
+// Gold Card
+ruleContext.addProposition(
+  'customerIsGoldCardHolder', true
+)
 
 // Evaluate
-const result = rule.evaluate(ruleContext)
+const result: Proposition = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
-
-// Outputs
-// Proposition statement = customerIsGoldCardHolder, value = true
+console.log(result)
+// =>
+// Proposition (
+//    statement = customerIsGoldCardHolder
+// ), value     = true
 ```
 
 ### 3.2. Example 2: Group discount for six or more people
@@ -155,28 +168,42 @@ Say you provide a discount to a group of six or more people:
 
 ```javascript
 // Create the rule
-const rule = Rule('eligible-for-group-discount')
+const rule = Rule(
+  'eligible-for-group-discount'
+)
 
 // Declare a "placeholder" variable for the actual number of people
 // (This value will be retrieved from the RuleContext)
-rule.addVariable('actual-num-people', null)
+rule.addVariable(
+  'actual-num-people', null
+)
 
 // Declare the minimum number of people required for discount
-rule.addVariable('min-num-people', 6)
+rule.addVariable(
+  'min-num-people', 6
+)
 
 // Compare the two, i.e.,
 // actual-num-people >= min-num-people
-rule.addOperator(Operator.GREATER_THAN_OR_EQUAL_TO)
+rule.addOperator(
+  Operator.GREATER_THAN_OR_EQUAL_TO
+)
 
 // Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext('eligible-for-group-discount-fact')
+const ruleContext = RuleContext(
+  'eligible-for-group-discount-fact'
+)
 
 // How many people are there?
-ruleContext.addVariable('actual-num-people', 5)
+ruleContext.addVariable(
+  'actual-num-people', 5
+)
 
 // Declare the "placeholder" minimun number of people required for discount
 // (This value will be retrieved from the Rule)
-ruleContext.addVariable('min-num-people', 'NULL_NUMBER_VARIABLE')
+ruleContext.addVariable(
+  'min-num-people', 'NULL_NUMBER_VARIABLE'
+)
 
 // Evaluate
 const result = rule.evaluate(ruleContext)
@@ -202,7 +229,11 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-import { Rule, RuleContext, RuleElement } from 'archetypes-rules'
+import {
+  Rule,
+  RuleContext,
+  RuleElement
+} from 'archetypes-rules'
 
 // Create the rule
 const rule = Rule('eligible-for-upgrade')

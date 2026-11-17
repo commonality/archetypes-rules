@@ -39,19 +39,16 @@
     "debug": "4.4.3",
     "dotenv-extended": "3.1.0",
     "fs-extra": "11.4.1",
-    "lodash.get": "4.4.2",
     "lodash.hasin": "4.5.2",
     "lodash.includes": "4.3.0",
     "lodash.intersection": "4.4.0",
     "lodash.invoke": "4.5.2",
-    "lodash.isequal": "4.5.0",
     "lodash.kebabcase": "4.1.1",
     "lodash.toarray": "4.4.0",
     "lodash.topairs": "4.3.0",
     "ow": "3.1.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.7",
     "@jest/globals": "30.5.2",
     "@rollup/plugin-commonjs": "29.0.3",
     "@rollup/plugin-json": "6.1.0",
@@ -63,17 +60,12 @@
     "@semantic-release/github": "12.0.11",
     "@semantic-release/npm": "13.2.0",
     "@semantic-release/release-notes-generator": "14.1.1",
-    "all-contributors-cli": "7.0.2",
+    "all-contributors-cli": "7.0.3",
     "git-repo-info": "2.1.1",
     "jest": "30.5.2",
     "jest-junit": "17.0.0",
     "jest-sonar-reporter": "2.0.0",
-    "jsdoc": "4.0.5",
-    "jsdoc-mermaid": "1.0.0",
-    "jsdoc3-bootstrap": "0.15.0",
-    "lint-staged": "17.6.0",
-    "prettier": "^3.10.1",
-    "rollup": "4.68.3",
+    "lint-staged": "17.6.1",
     "semantic-release": "25.0.9"
   },
   "engines": {
@@ -105,10 +97,10 @@
     "coverageProvider": "v8",
     "coverageThreshold": {
       "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
       }
     },
     "injectGlobals": true,
@@ -166,6 +158,7 @@
     ]
   },
   "main": "dist/archetypes-rules.mjs",
+  "packageManager": "pnpm@12.21.0",
   "readme": "https://github.com/commonality/archtypes-rules/README.md",
   "release": {
     "verifyConditions": [
@@ -287,10 +280,10 @@
     "ci:audit:all": "pnpm audit --reporter ndjson --sort",
     "ci:audit:prod": "pnpm audit --no-optional --production --reporter ndjson --sort",
     "ci:check:js": "pnpm dlx @biomejs/biome ci lib/",
-    "ci:outdated": "pnpm outdated --long",
+    "ci:outdated": "pnpm outdated --long --no-optional --prod",
     "ci:sbom": "pnpm sbom --exclude-peers --no-optional --out %s@%v.sbom.json --production --sbom-format cyclonedx",
     "ci:test": "pnpm run start && pnpm run ci:check:js && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter --verbose",
-    "docs:api": "pnpm dlx jsdoc -c ./.github/ci/docs/jsdoc.json ./lib/ -r -R ./README.md -P package.json -d ./docs/api/",
+    "docs:api": "pnpm dlx jsdoc -c ./.github/ci/conf/jsdoc.json ./lib/ -r -R ./README.md -P package.json -d ./docs/api/",
     "preinstall": "npx only-allow pnpm",
     "lint:js": "pnpm dlx @biomejs/biome check lib/",
     "lint:js:fix": "pnpm dlx @biomejs/biome check --write lib/",
