@@ -1,4 +1,4 @@
-name: "codacy-coverage-reporter"
+name: "test-reporter"
 on: ["push"]
 
 permissions:
@@ -8,7 +8,7 @@ permissions:
 jobs:
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
-    name: Report code coverage・Codacy
+    name: Test and code coverage report
     environment: codacy-variables
     env:
       CODACY_ORGANIZATION_PROVIDER: ${CODACY_ORGANIZATION_PROVIDER}
@@ -18,18 +18,18 @@ jobs:
       COVERAGE_ARTIFACT_PATH: /tmp/codacy-coverage-*.json
       COVERAGE_REPORT_PATH: ./coverage/lcov.info
     steps:
-      - name: Checkout・GitHub
+      - name: Checkout
         uses: actions/checkout@v7
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: Setup node@lts/*・GitHub
+      - name: Setup node@lts/*
         uses: actions/setup-node@v7
         with:
           node-version: "lts/*"
           cache: 'pnpm'
-      - name: 'Install dependencies・GitHub'
+      - name: 'Install dependencies'
         run: pnpm install --frozen-lockfile
-      - name: Run unit tests・GitHub
+      - name: Run unit tests
         run: |
           pnpm run ci:test
           if [ -f "${{ vars.COVERAGE_REPORT_PATH }}" ]; then
@@ -37,7 +37,7 @@ jobs:
           else
             echo "⚠︎ Could not find file \"${{ vars.COVERAGE_REPORT_PATH }}\""
           fi
-      - name: Publish unit test results・GitHub
+      - name: Publish unit test results
         uses: mikepenz/action-junit-report@v6
         if: always() # always run even if the previous step fails
         with:
@@ -54,7 +54,7 @@ jobs:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${{ vars.COVERAGE_REPORT_PATH }}
           language: JavaScript
-      - name: Publish coverage results・Codacy
+      - name: Publish coverage results to Codacy
         run: |
           curl -X POST https://api.codacy.com/2.0/gh/commonality/archetypes-rules/commit/${GITHUB_SHA}/coverage/JavaScript \
             -H 'Content-Type: application/json' \
