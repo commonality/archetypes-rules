@@ -1,8 +1,7 @@
 name: library-api-documentation
-
 on:
   push:
-    branches: [main, 9-docs-api-public]
+    branches: [main]
 
 permissions:
   contents: read
@@ -22,7 +21,7 @@ jobs:
         with:
           node-version: "lts/*"
           cache: 'pnpm'
-      - name: 'Install dependencies・GitHub'
+      - name: 'Install dependencies'
         run: pnpm install --frozen-lockfile
       - name: Generate Documentation
         run: pnpm run docs:api
