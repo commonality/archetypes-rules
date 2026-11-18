@@ -106,8 +106,13 @@ below for details.
 
 ## 2. Installation
 
+> [!IMPORTANT]
+>
+> **archetype-rules** uses [**pnpm** ![External
+> link][octicon-link-external]](https://pnpm.io) as its package manager.
+
 ```sh
-npm install archetypes-rules
+pnpm add archetypes-rules
 ```
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
@@ -121,45 +126,41 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-import {
-  Proposition,
-  Rule,
-  RuleContext
-} from 'archetypes-rules'
+import { archetypes } from 'archetypes-rules'
+const { Proposition, Rule, RuleContext } = archetypes.rules
 
 // Create the rule
 const rule = new Rule(
   'eligibleForDiscount'
 )
 
-// Add a `Proposition`, i.e., a
-// statement that has a value of
-// `true` or `false`
+// Add a `Proposition`, i.e., a statement
+// that has a value of `true` or `false`
 rule.addProposition(
   'customerIsGoldCardHolder', true
 )
 
 // Create a `RuleContext`, i.e., a "Fact"
-const ruleContext = RuleContext(
+const ruleContext = new RuleContext(
   'customer-uuid'
 )
 
-// Provide the truth statement as to
-// whether the actual customer has a
-// Gold Card
+// Provide the truth statement as to whether
+// the actual customer has a Gold Card
 ruleContext.addProposition(
   'customerIsGoldCardHolder', true
 )
 
 // Evaluate
-const result: Proposition = rule.evaluate(ruleContext)
+const result = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
 console.log(result)
-// =>
-// Proposition (
-//    statement = customerIsGoldCardHolder
-// ), value     = true
+// => Proposition {
+//   name: 'customerIsGoldCardHolder',
+//   value: true,
+//   type: 'archetypes.rules.Proposition'
+// }
 ```
 
 ### 3.2. Example 2: Group discount for six or more people

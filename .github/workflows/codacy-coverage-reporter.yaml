@@ -31,7 +31,7 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Run unit tests
         run: |
-          pnpm run ci:test
+          pnpm ci:test
           if [ -f "${{ vars.COVERAGE_REPORT_PATH }}" ]; then
             echo "ⓘ File \"${{ vars.COVERAGE_REPORT_PATH }}\" exists"
           else

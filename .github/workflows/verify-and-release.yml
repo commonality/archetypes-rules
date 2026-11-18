@@ -25,11 +25,11 @@ jobs:
           pnpm install --frozen-lockfile
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies・GitHub
         run: |
-          pnpm run ci:audit:prod
+          pnpm ci:audit:prod
           pnpm audit signatures
-          pnpm run ci:outdated
+          pnpm ci:outdated
       - name: Validate code style
-        run: pnpm run ci:check:js
+        run: pnpm ci:check:js
 
   release:
     name: Release・NPM
@@ -65,4 +65,4 @@ jobs:
           # ① Default branch is main
           git config --global init.defaultBranch main
           # ② Create a GitHub release
-          pnpm run semantic-release
+          pnpm semantic-release

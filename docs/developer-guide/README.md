@@ -33,7 +33,7 @@ comfortable with:
 | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | ![code][octicon-code] JavaScript                     | **archetypes-rules** is written in JavaScript (CommonJS)                                                   |
 | ![markdown][octicon-markdown] Documentation          | Docs build community and enable asyncronous collaboration                                                  |
-| ![package][octicon-package] NPM                      | We use the npm dependency manager and publish to the npm public registry                                   |
+| ![package][octicon-package] pnpm                      | We use the pnpm dependency manager and publish to the pnpm public registry                                   |
 | ![platform][octicon-server] Node.js                  | **archetypes-rules** runs on Node.js                                                                       |
 | ![terminal][octicon-terminal] Command-line-interface | We use the CLI to build, test, and publish **archetypes-rules**                                            |
 | ![tests][octicon-beaker] Unit testing                | Unit tests are a form of executable documentation that make collaboration, fixes, and refactoring possible |
@@ -68,7 +68,7 @@ configure the following products on your development machine:
 
     _Why:_
 
-    > NPM and Yarn install and update `archetypes-rules's` third-party
+    > pnpm and Yarn install and update `archetypes-rules's` third-party
     > dependencies.
 
 ## 3. Getting the source code
@@ -246,7 +246,7 @@ Next, install the JavaScript modules needed to build and test
 
 ```shell
 # Install all project dependencies (package.json)
-npm install
+pnpm install
 ```
 
 * * *
@@ -270,7 +270,7 @@ npm install
 | [@semantic-release/commit-analyzer@^6.1.0](https://github.com/semantic-release/commit-analyzer#readme)                                                 | semantic-release plugin to analyze commits with conventional-changelog                                                        | 6.1.0       | MIT          | dev        |
 | [@semantic-release/git@^7.0.8](https://github.com/semantic-release/git#readme)                                                                         | semantic-release plugin to commit release assets to the project's git repository                                              | 7.0.8       | MIT          | dev        |
 | [@semantic-release/gitlab@^3.1.2](https://github.com/semantic-release/gitlab#readme)                                                                   | semantic-release plugin to publish a GitLab release                                                                           | 3.1.2       | MIT          | dev        |
-| [@semantic-release/npm@^5.1.4](https://github.com/semantic-release/npm#readme)                                                                         | semantic-release plugin to publish a npm package                                                                              | 5.1.4       | MIT          | dev        |
+| [@semantic-release/npm@^5.1.4](https://github.com/semantic-release/npm#readme)                                                                         | semantic-release plugin to publish a pnpm package                                                                              | 5.1.4       | MIT          | dev        |
 | [@semantic-release/release-notes-generator@^7.1.4](https://github.com/semantic-release/release-notes-generator#readme)                                 | semantic-release plugin to generate changelog content with conventional-changelog                                             | 7.1.4       | MIT          | dev        |
 | [all-contributors-cli@6.1.2](https://github.com/all-contributors/all-contributors-cli#readme)                                                          | Tool to easily add recognition for new contributors                                                                           | 6.1.2       | MIT          | dev        |
 | [commitplease@^3.2.0](https://github.com/jzaefferer/commitplease#readme)                                                                               | Validates strings as commit messages                                                                                          | 3.2.0       | MIT          | dev        |
@@ -437,7 +437,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 # This is a short-lived branch
 # corresponding to Pull/Pull Requests, feature, and fix branches.
 # To get the current working branch name, run:
-# npm --loglevel silent run vars:git:branch:name
+# pnpm --loglevel silent run vars:git:branch:name
 # @see https://sonarcloud.io/documentation/branches/overview/
 
 SONAR_BRANCH_NAME=
@@ -592,7 +592,7 @@ SONAR_DATA_LOSS_SIGNATURES_TOKEN=<private-access-token>
 To run tests:
 
 ```shell
-$ npm test
+$ pnpm test
 # => Run all archetypes-rules tests on node
 ```
 
@@ -607,7 +607,7 @@ You can troubleshoot issues in two ways:
     > ![info][octicon-info] Prefix REPL runs with DEBUG=dls. E.g.:
     >
     > ```bash
-    > DEBUG=dls npm test
+    > DEBUG=dls pnpm test
     > ```
 
 1.  The best way to troubleshoot your tests is with a debugger.
@@ -635,7 +635,7 @@ You can troubleshoot issues in two ways:
 You can both evaluate and format your all sources by running:
 
 ```shell
-$ npm run lint
+$ pnpm run lint
 # => Formats and lints all JavaScript, JSON, Markdown, and
 #    package.json.
 ```
@@ -644,13 +644,13 @@ You can also format sources by type:
 
 ```shell
 # Evaluate and format JavaScript:
-npm run lint:js
+pnpm run lint:js
 
 # Format JSON:
-npm run lint:json
+pnpm run lint:json
 
 # Format all markdown files:
-npm run lint:md
+pnpm run lint:md
 ```
 
 * * *
@@ -1198,17 +1198,17 @@ services.
 _To execute any of the following scripts, open a Terminal and run:_
 
 ```bash
-npm run <Script>
+pnpm run <Script>
 ```
 
 _Examples:_
 
 ```bash
 # Auto-generate TOCs, dependency tables, etc.
-npm run docs:md
+pnpm run docs:md
 
 # Lint all *.js source code files
-npm run lint:js
+pnpm run lint:js
 ```
 
 <!-- AUTO-GENERATED-CONTENT:START (SCRIPTS) -->
@@ -1218,31 +1218,31 @@ npm run lint:js
 | `bundle`                     | `rollup -c ./rollup.config.js --environment INCLUDE_DEPS,BUILD:production`                                                                                                                                     |
 | `ci:check:js`                 | `eslint . --fix -f json -o eslint-report.json`                                                                                                                                                                 |
 | `ci:test`                    | `dotenv-extended --path=.env --defaults=.env.defaults --errorOnMissing=false jest --coverage --verbose true`                                                                                                   |
-| `postci:test`                | `npm run posttest && source ./.gitlab/rc/bash/.envvarsrc && npm run qa:review:sonar`                                                                                                                           |
+| `postci:test`                | `pnpm run posttest && source ./.gitlab/rc/bash/.envvarsrc && pnpm run qa:review:sonar`                                                                                                                           |
 | `contributors:add`           | `all-contributors add`                                                                                                                                                                                         |
 | `contributors:gen`           | `all-contributors generate`                                                                                                                                                                                    |
 | `docs:api`                   | `rm -rf ./docs/api/ && ./node_modules/.bin/jsdoc ./src/**/*.js -d ./docs/api/ -c ./.gitlab/rc/jsdoc/conf.json -d ./docs/api/`                                                                                  |
 | `docs:lint:js:rules`         | `eslint-find-rules`                                                                                                                                                                                            |
 | `docs:lint:js:rules:current` | `eslint-find-rules --current --no-error .eslintrc.yml --verbose > ./docs/.ci/eslint-rules.txt`                                                                                                                 |
 | `docs:lint:js:rules:unused`  | `eslint-find-rules --unused --no-error .eslintrc.yml --verbose >> ./docs/.ci/eslint-rules.txt`                                                                                                                 |
-| `predocs:md`                 | `npm run docs:lint:js:rules`                                                                                                                                                                                   |
+| `predocs:md`                 | `pnpm run docs:lint:js:rules`                                                                                                                                                                                   |
 | `docs:md`                    | `node .gitlab/rc/md/markdown.config.js`                                                                                                                                                                        |
-| `lint`                       | `npm run lint:js && npm run lint:json && npm run lint:md`                                                                                                                                                      |
+| `lint`                       | `pnpm run lint:js && pnpm run lint:json && pnpm run lint:md`                                                                                                                                                      |
 | `lint:js`                    | `eslint . --fix -f json -o eslint-report.json`                                                                                                                                                                 |
 | `lint:js:check`              | \`eslint --print-config .                                                                                                                                                                                      |
 | `lint:json`                  | `prettier --write **/*.json`                                                                                                                                                                                   |
-| `lint:manifest`              | `npm prune && npm dedupe && npm shrinkwrap`                                                                                                                                                                    |
+| `lint:manifest`              | `pnpm prune && pnpm dedupe && pnpm shrinkwrap`                                                                                                                                                                    |
 | `lint:md`                    | `remark --rc-path "./.gitlab/rc/md/.remarkrc.yml" --ignore-path "./.gitlab/rc/md/.remarkignore" .`                                                                                                             |
-| `postversion`                | `npm run bundle`                                                                                                                                                                                               |
-| `preqa:review:sonar`         | `npm start`                                                                                                                                                                                                    |
+| `postversion`                | `pnpm run bundle`                                                                                                                                                                                               |
+| `preqa:review:sonar`         | `pnpm start`                                                                                                                                                                                                    |
 | `qa:review:sonar`            | `sonar-scanner -Dproject.settings=./sonar-project.properties -Dsonar.projectKey=$SONAR_PROJECT_KEY -Dsonar.organization=$SONAR_ORGANIZATION -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN` |
-| `security:audit`             | `npm audit --json`                                                                                                                                                                                             |
-| `security:fix`               | `npm audit fix --depth=100 --json`                                                                                                                                                                             |
+| `security:audit`             | `pnpm audit --json`                                                                                                                                                                                             |
+| `security:fix`               | `pnpm audit fix --depth=100 --json`                                                                                                                                                                             |
 | `semantic-release`           | `semantic-release`                                                                                                                                                                                             |
 | `start`                      | `node -r dotenv-extended ./src/env-config.js`                                                                                                                                                                  |
-| `pretest`                    | `npm run lint:js`                                                                                                                                                                                              |
+| `pretest`                    | `pnpm run lint:js`                                                                                                                                                                                              |
 | `test`                       | `jest --coverage --verbose true`                                                                                                                                                                               |
-| `posttest`                   | `npm run security:audit`                                                                                                                                                                                       |
+| `posttest`                   | `pnpm run security:audit`                                                                                                                                                                                       |
 | `test:create`                | `yo jest:test --`                                                                                                                                                                                              |
 | `test:dist`                  | `jest ./dist/index.js --coverage --verbose`                                                                                                                                                                    |
 | `vars:git:branch:name`       | \`git branch                                                                                                                                                                                                   |

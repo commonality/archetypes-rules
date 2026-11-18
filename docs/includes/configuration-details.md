@@ -103,7 +103,7 @@ JEST_USE_PATH_FOR_SUITE_NAME=
 # This is a short-lived branch
 # corresponding to Merge/Pull Requests, feature, and fix branches.
 # To get the current working branch name, run:
-# npm --loglevel silent run vars:git:branch:name
+# pnpm --loglevel silent run vars:git:branch:name
 # @see https://sonarcloud.io/documentation/branches/overview/
 
 SONAR_BRANCH_NAME=

@@ -231,8 +231,8 @@ unreliable test.
 >    documentation.
 >
 > - [`citgm-smoker`](https://ci.nodejs.org/job/citgm-smoker/) uses
->    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `npm install
->    && npm test` on a large selection of common modules. This is useful to
+>    [`CitGM`](https://github.com/nodejs/citgm) to allow you to run `pnpm install
+>    && pnpm test` on a large selection of common modules. This is useful to
 >    check whether a change will cause breakage in the ecosystem. To test
 >    Node.js ABI changes you can run
 >    [`citgm-abi-smoker`](https://ci.nodejs.org/job/citgm-abi-smoker/).
@@ -542,7 +542,7 @@ tracker][node-core-utils-issues].
 Quick example:
 
 ```bash
-npm install -g node-core-utils
+pnpm install -g node-core-utils
 git node land $PRID
 ```
 
@@ -765,7 +765,7 @@ plan](https://github.com/nodejs/Release#release-plan).
 #### 3.5.2. How does LTS work?
 
 Once a Current branch enters LTS, changes in that branch are limited to bug
-fixes, security updates, possible npm updates, documentation updates, and
+fixes, security updates, possible pnpm updates, documentation updates, and
 certain performance improvements that can be demonstrated to not break existing
 applications. Semver-minor changes are only permitted if required for bug fixes
 and then only on a case-by-case basis with LTS WG and possibly Technical
@@ -876,7 +876,7 @@ LTS working group and the Release team.
 | upgrading c-ares                                                           | @rvagg                                                               |
 | upgrading http-parser                                                      | @nodejs/http, @nodejs/http2                                          |
 | upgrading libuv                                                            | @nodejs/libuv                                                        |
-| upgrading npm                                                              | @fishrock123, @MylesBorins                                           |
+| upgrading pnpm                                                              | @fishrock123, @MylesBorins                                           |
 | upgrading V8                                                               | @nodejs/V8, @nodejs/post-mortem                                      |
 | Embedded use or delivery of Node.js                                        | @nodejs/delivery-channels                                            |
 
