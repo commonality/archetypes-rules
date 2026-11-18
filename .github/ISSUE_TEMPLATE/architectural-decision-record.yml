@@ -35,7 +35,7 @@ body:
         - Accepted
         - Rejected
         - Deprecated/Superseded by
-      default: 1
+      default: 0
     validations:
       required: true
   - type: input
