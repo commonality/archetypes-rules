@@ -1,5 +1,8 @@
 name: "Architectural Decision Record (ADR)"
-description: An Architectural Decision (AD) is a justified software design choice that addresses a functional or non-functional requirement of architectural significance. This decision is documented in an Architectural Decision Record (ADR), which details a single AD and its underlying rationale.
+description: |
+  An Architectural Decision Record (ADR) is a justified software design
+  document that addresses a functional or non-functional requirement of
+  architectural significance with underlying rationale.
 title: "adr({scope}): {short title, representative of solved problem and found solution}"
 type: Task
 labels: ["needs triage"]
