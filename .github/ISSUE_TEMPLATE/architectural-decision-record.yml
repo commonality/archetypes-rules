@@ -6,8 +6,7 @@ description: |
 title: "adr({scope}): {short title, representative of solved problem and found solution}"
 type: Task
 labels: ["needs triage"]
-assignees:
-  - gregswindle
+assignees: ["gregswindle"]
 
 body:
   - type: markdown
@@ -24,19 +23,29 @@ body:
     attributes:
       label: Status
       description: |
-        Select from the following:
-
-          1. Proposed: An architecture decision nominated for acceptance or rejection.
-          1. Accepted: An architecture decision that has been approved, with provision.
-          1. Rejected: An unwanted or infeasible architecture decision.
-          1. Deprecated/Superseded by: This architecture decision has been withdrawn in favor of a newer alternative / A newer decision that replaces a deprecated ADR.
+        ⑴ **Proposed**: An architecture decision nominated for acceptance or
+        rejection. ⑵ **Accepted**: An architecture decision that has been approved,
+        with provision. ⑶ **Rejected**: An unwanted or infeasible architecture
+        decision. ⑷ **Deprecated/Superseded by**: This architecture decision has been
+        withdrawn in favor of a newer alternative / A newer decision that
+        replaces a deprecated ADR.
       multiple: false
       options:
         - Proposed
         - Accepted
         - Rejected
         - Deprecated/Superseded by
-      default: 0
+      default: 1
+    validations:
+      required: true
+  - type: input
+    id: adr-superceded-adr-url
+    attributes:
+      label: "Supercedes ADR"
+      description: |
+        If you selected "Deprecated/Superseded by", enter the URL of ADR that
+        this decision supercedes; otherwise, ignore this section.
+      placeholder: https://github.com/commonality/archetypes-rules/blob/main/docs/adr/adr-0002-architecture-decision-record-modular-design.md
   - type: input
     id: adr-decision-date
     attributes:
@@ -64,9 +73,9 @@ body:
       description: |
         A list motivations for this architectural decision.
 
-        > [!TIP]
+        > [!NOTE]
         >
-        > This is an optional element.
+        > "Decision drivers" is an optional section.
 
       placeholder: |
         1. {decision driver 1, e.g., a force, facing concern, …}
@@ -110,7 +119,7 @@ body:
 
         > [!NOTE]
         >
-        > This section is optional.
+        > The "Consequences" section is optional.
 
         Describe the effects that this decision has current technology, quality,
         organization(s), and business.
@@ -143,7 +152,11 @@ body:
     attributes:
       label: Pros & cons of the options
       description: |
-        List the pros and cons of
+        List the pros and cons of this decision.
+
+        > [!NOTE]
+        >
+        > The "Pros & cons of the options" section is optional.
       placeholder: |
         ### {title of option 1}
 
@@ -166,11 +179,18 @@ body:
         * Neutral, because {argument c}
         * Bad, because {argument d}
         * …
+    validations:
+      required: false
   - type: textarea
     id: adr-more-info
     attributes:
-      label: More Information
-      description: You might want to provide additional evidence/confidence for the decision outcome here and/or document the team agreement on the decision and/or define when/how this decision the decision should be realized and if/when it should be re-visited. Links to other decisions and resources might appear here as well.
+      label: More information
+      description: |
+        You might want to provide additional evidence/confidence for the decision outcome here and/or document the team agreement on the decision and/or define when/how this decision the decision should be realized and if/when it should be re-visited. Links to other decisions and resources might appear here as well.
+
+        > [!NOTE]
+        >
+        > The "More information" section is optional.
     validations:
       required: false
   - type: textarea
