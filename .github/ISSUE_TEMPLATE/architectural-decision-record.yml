@@ -6,6 +6,8 @@ description: |
 title: "adr({scope}): {short title, representative of solved problem and found solution}"
 type: Task
 labels: ["needs triage"]
+assignees:
+  - gregswindle
 
 body:
   - type: markdown
@@ -22,6 +24,8 @@ body:
     attributes:
       label: Status
       description: |
+        Select from the following:
+
         - Proposed: An architecture decision nominated for acceptance or
         rejection.
         - Accepted: An architecture decision that has been approved, with provision.
