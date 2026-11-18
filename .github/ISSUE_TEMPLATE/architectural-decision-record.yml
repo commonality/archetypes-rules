@@ -26,12 +26,12 @@ body:
       description: |
         Select from the following:
 
-        - Proposed: An architecture decision nominated for acceptance or
-        rejection.
-        - Accepted: An architecture decision that has been approved, with provision.
-        - Rejected: An unwanted or infeasible architecture decision.
-        - Deprecated/Superseded by: This architecture decision has been
-          withdrawn in favor of a newer alternative / A newer decision that replaces a deprecated ADR.
+          - Proposed: An architecture decision nominated for acceptance or
+          rejection.
+          - Accepted: An architecture decision that has been approved, with provision.
+          - Rejected: An unwanted or infeasible architecture decision.
+          - Deprecated/Superseded by: This architecture decision has been
+            withdrawn in favor of a newer alternative / A newer decision that replaces a deprecated ADR.
       multiple: false
       options:
         - Proposed
