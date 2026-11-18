@@ -85,7 +85,7 @@ _Why:_
 Open a Terminal, go to the root directory for **archetypes-rules**, and run:
 
 ```bash
-$ npm test
+$ pnpm test
 ```
 
 > ![info][octicon-info] Completed tasks are _not_ required to open a PR, and may

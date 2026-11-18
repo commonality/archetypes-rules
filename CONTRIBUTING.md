@@ -281,7 +281,7 @@ Before pushing your code changes make sure there are no linting errors.
 > Many linting errors can be automatically fixed from the Terminal by running:
 >
 > ```shell
-> npm run lint:js --fix
+> pnpm run lint:js --fix
 > ```
 
 ### 5.2. JavaScript Standard Style
@@ -291,7 +291,7 @@ Before pushing your code changes make sure there are no linting errors.
 1. All JavaScript syntax should adhere to [JavaScript Standard Style
     ![external][octicon-link-external]][standardjs-url].
 
-1. Run `npm run lint:js` to evaluate with [`ESLint`][38].
+1. Run `pnpm run lint:js` to evaluate with [`ESLint`][38].
 
 ## 6. Configuration
 
@@ -316,7 +316,7 @@ details in environment variables.
 
 1. Treat `it` as a statement about state or how an operation changes state.
 
-> ![Tip!][octicon-light-bulb] **Use `npm run test:create <path/to/file.js>`**
+> ![Tip!][octicon-light-bulb] **Use `pnpm run test:create <path/to/file.js>`**
 >
 > This will generate a Jest spec stub for your JavaScript.
 
