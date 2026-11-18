@@ -144,12 +144,12 @@
   "license": "MIT",
   "lint-staged": {
     "*.js": [
-      "pnpm run lint:js:fix",
-      "pnpm run docs:api",
+      "pnpm lint:js:fix",
+      "pnpm docs:api",
       "git add"
     ],
     "*.json": [
-      "pnpm run lint:json:fix",
+      "pnpm lint:json:fix",
       "git add"
     ]
   },
@@ -268,8 +268,8 @@
     "url": "git+ssh://git@github.com/commonality/archetypes-rules.git"
   },
   "scripts": {
-    "build": "pnpm run bundle",
-    "prebundle": "pnpm run bundle:clean",
+    "build": "pnpm bundle",
+    "prebundle": "pnpm bundle:clean",
     "bundle": "pnpm dlx rollup --config",
     "postbundle": "pnpm pack",
     "bundle:clean": "rm -rf ./dist/ && rm -f *.tgz",
@@ -278,17 +278,17 @@
     "ci:check:js": "pnpm dlx @biomejs/biome ci lib/",
     "ci:outdated": "pnpm outdated --long --no-optional --prod",
     "ci:sbom": "pnpm sbom --exclude-peers --no-optional --out %s@%v.sbom.json --production --sbom-format cyclonedx",
-    "ci:test": "pnpm run start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter --verbose",
+    "ci:test": "pnpm start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter --verbose",
     "docs:api": "pnpm dlx jsdoc -c ./.github/ci/conf/jsdoc.json ./lib/ -r -R ./README.md -P package.json",
     "preinstall": "npx only-allow pnpm",
     "lint:js": "pnpm dlx @biomejs/biome check lib/",
     "lint:js:fix": "pnpm dlx @biomejs/biome check --write lib/",
     "lint:json:fix": "pnpm dlx prettier --write **/*.json",
-    "postversion": "pnpm run bundle",
+    "postversion": "pnpm bundle",
     "security:audit:dependencies": "pnpm audit --dry-run",
     "semantic-release": "pnpm dlx semantic-release --no-ci",
     "start": "node -r dotenv-extended ./lib/env-config.js",
-    "pretest": "pnpm run lint:js:fix",
+    "pretest": "pnpm lint:js:fix",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --verbose"
   },
   "allowScripts": {
