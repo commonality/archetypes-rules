@@ -184,9 +184,6 @@ importers:
       camelcase:
         specifier: 10.0.0
         version: 10.0.0
-      debug:
-        specifier: 4.4.3
-        version: 4.4.3(supports-color@8.1.1)
       dotenv-extended:
         specifier: 3.1.0
         version: 3.1.0
@@ -208,6 +205,9 @@ importers:
       lodash.kebabcase:
         specifier: 4.1.1
         version: 4.1.1
+      obug:
+        specifier: ^3.0.0
+        version: 3.0.0
       ow:
         specifier: 3.1.1
         version: 3.1.1
@@ -2496,6 +2496,10 @@ packages:
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
+
+  obug@3.0.0:
+    resolution: {integrity: sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==}
+    engines: {node: '>=12.20.0'}
 
   onetime@5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
@@ -5504,6 +5508,8 @@ snapshots:
   npm@11.21.2: {}
 
   object-assign@4.1.1: {}
+
+  obug@3.0.0: {}
 
   onetime@5.1.2:
     dependencies:

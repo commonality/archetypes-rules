@@ -1,12 +1,11 @@
-<h1>archetypes-rules</h1>
+<h1>@commonalities/archetypes-rules</h1>
 <div align="center">
 
 ![banner](https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/img/logos/logo.png)
 
 </div>
 
-[![The MIT License][license-image]][license-url] [![NPM
-version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
+[![The MIT License][license-image]][license-url] [![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
 [![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code quality][codacy-image]][codacy-url]
 
@@ -350,8 +349,8 @@ Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farch
   https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: http://opensource.org/licenses/MIT
-[npm-image]: https://img.shields.io/npm/v/archetypes-rules.svg
-[npm-url]: https://npmjs.org/package/archetypes-rules
+[npm-image]: https://img.shields.io/npm/v/@commonalities/archetypes-rules.svg
+[npm-url]: https://npmjs.org/package/@commonalities/archetypes-rules
 [vulnerabilities-image]:
   https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?&targetFile=package.json
 [vulnerabilities-url]:
