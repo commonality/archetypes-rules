@@ -8,9 +8,7 @@
 [![The MIT License][license-image]][license-url] [![NPM
 version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![Code coverage
-badge](https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a)](https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
-[![Codacy code quality][codacy-image]][codacy-url]
+[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code quality][codacy-image]][codacy-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
@@ -112,7 +110,7 @@ below for details.
 > link][octicon-link-external]](https://pnpm.io) as its package manager.
 
 ```sh
-pnpm add archetypes-rules
+pnpm add @commonalities/archetypes-rules
 ```
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
@@ -126,7 +124,7 @@ for a discount. In order to be eligible, the customer simply needs to be a Gold
 Card holder.
 
 ```javascript
-import { archetypes } from 'archetypes-rules'
+import { archetypes } from '@commonalities/archetypes-rules'
 const { Proposition, Rule, RuleContext } = archetypes.rules
 
 // Create the rule
@@ -168,8 +166,11 @@ console.log(result)
 Say you provide a discount to a group of six or more people:
 
 ```javascript
+import { archetypes } from '@commonalities/archetypes-rules'
+const { Rule, RuleContext } = archetypes.rules
+
 // Create the rule
-const rule = Rule(
+const rule = new Rule(
   'eligible-for-group-discount'
 )
 
@@ -191,7 +192,7 @@ rule.addOperator(
 )
 
 // Create a RuleContext, i.e., a "Fact"
-const ruleContext = RuleContext(
+const ruleContext = new RuleContext(
   'eligible-for-group-discount-fact'
 )
 
@@ -234,7 +235,7 @@ import {
   Rule,
   RuleContext,
   RuleElement
-} from 'archetypes-rules'
+} from '@commonalities/archetypes-rules'
 
 // Create the rule
 const rule = Rule('eligible-for-upgrade')
@@ -331,8 +332,9 @@ Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farch
 
 <!-- Link and image refs -->
 
-
-
+[src-coverage-badge]:
+    https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a
+[href-coverage]: https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
 [archetypes-rules-overview]:
     https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.svg
     'Class diagram for archetypes.rules'
