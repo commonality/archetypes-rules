@@ -190,9 +190,6 @@ importers:
       es-toolkit:
         specifier: ^1.53.2
         version: 1.53.2
-      fs-extra:
-        specifier: 11.4.1
-        version: 11.4.1
       obug:
         specifier: ^3.0.0
         version: 3.0.0
