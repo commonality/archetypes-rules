@@ -155,6 +155,10 @@
   },
   "main": "dist/archetypes-rules.mjs",
   "packageManager": "pnpm@12.21.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "readme": "https://github.com/commonality/archtypes-rules/README.md",
   "release": {
     "verifyConditions": [
