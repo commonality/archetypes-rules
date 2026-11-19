@@ -187,24 +187,12 @@ importers:
       dotenv-extended:
         specifier: 3.1.0
         version: 3.1.0
+      es-toolkit:
+        specifier: ^1.53.2
+        version: 1.53.2
       fs-extra:
         specifier: 11.4.1
         version: 11.4.1
-      lodash.hasin:
-        specifier: 4.5.2
-        version: 4.5.2
-      lodash.includes:
-        specifier: 4.3.0
-        version: 4.3.0
-      lodash.intersection:
-        specifier: 4.4.0
-        version: 4.4.0
-      lodash.invoke:
-        specifier: 4.5.2
-        version: 4.5.2
-      lodash.kebabcase:
-        specifier: 4.1.1
-        version: 4.1.1
       obug:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1674,6 +1662,9 @@ packages:
   es-module-lexer@2.3.2:
     resolution: {integrity: sha512-poHGpORABojJJucnV9KbOavETW8lBVnphkW77ER5/BQ5Fz7oXSoCNek7IH3vR5nRjdsEz926ibFYX8KtLQmdyw==}
 
+  es-toolkit@1.53.2:
+    resolution: {integrity: sha512-iUqZ+NlwH4jUgRmXZUxFBsV/9762TQEa1O4IXLFBmDEjVHScBytKuseX23I0+v9ShZ5MYxEx6WKNzm6IPnex8g==}
+
   escalade@3.2.0:
     resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
     engines: {node: '>=6'}
@@ -2256,26 +2247,11 @@ packages:
   lodash.escaperegexp@4.1.2:
     resolution: {integrity: sha512-TM9YBvyC84ZxE3rgfefxUWiQKLilstD6k7PTGt6wfbtXF8ixIJLOL3VYyV/z+ZiPLsVxAsKAFVwWlWeb2Y8Yyw==}
 
-  lodash.hasin@4.5.2:
-    resolution: {integrity: sha512-AFAitwTSq1Ka/1J9uBaVxpLBP5OI3INQvkl4wKcgIYxoA0S3aqO1QWXHR9aCcOrWtPFqP7GzlFncZfe0Jz0kNw==}
-
-  lodash.includes@4.3.0:
-    resolution: {integrity: sha512-W3Bx6mdkRTGtlJISOvVD/lbqjTlPPUDTMnlXZFnVwi9NKJ6tiAk6LVdlhZMm17VZisqhKcgzpO5Wz91PCt5b0w==}
-
-  lodash.intersection@4.4.0:
-    resolution: {integrity: sha512-N+L0cCfnqMv6mxXtSPeKt+IavbOBBSiAEkKyLasZ8BVcP9YXQgxLO12oPR8OyURwKV8l5vJKiE1M8aS70heuMg==}
-
-  lodash.invoke@4.5.2:
-    resolution: {integrity: sha512-SC4Usc0XbIKuz3eH7oNwPqibKHfTJSGVZwO/6eGhdoPzqexOY7z43pKo8xz0M5zzXSRteADV6fW7cRf6Ru0+VA==}
-
   lodash.isplainobject@4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
 
   lodash.isstring@4.0.1:
     resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
-
-  lodash.kebabcase@4.1.1:
-    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
 
   lodash.uniqby@4.7.0:
     resolution: {integrity: sha512-e/zcLx6CSbmaEgFHCA7BnoQKyCtKMxnuWrJygbwPs/AIn+IMKl66L8/s+wBUn5LRw2pZx3bUHibiV1b6aTWIww==}
@@ -4588,6 +4564,8 @@ snapshots:
 
   es-module-lexer@2.3.2: {}
 
+  es-toolkit@1.53.2: {}
+
   escalade@3.2.0: {}
 
   escape-string-regexp@1.0.5: {}
@@ -5365,19 +5343,9 @@ snapshots:
 
   lodash.escaperegexp@4.1.2: {}
 
-  lodash.hasin@4.5.2: {}
-
-  lodash.includes@4.3.0: {}
-
-  lodash.intersection@4.4.0: {}
-
-  lodash.invoke@4.5.2: {}
-
   lodash.isplainobject@4.0.6: {}
 
   lodash.isstring@4.0.1: {}
-
-  lodash.kebabcase@4.1.1: {}
 
   lodash.uniqby@4.7.0: {}
 
