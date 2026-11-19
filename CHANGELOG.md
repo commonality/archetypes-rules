@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.9](https://github.com/commonality/archetypes-rules/compare/v1.3.8...v1.3.9) (2026-11-19)
+
+### Bug Fixes
+
+* **publish:** release to NPM ([d2dc005](https://github.com/commonality/archetypes-rules/commit/d2dc00551630916cda01e1250a3f6e29e2045f29))
+
 ## [1.3.8](https://github.com/commonality/archetypes-rules/compare/v1.3.7...v1.3.8) (2026-11-19)
 
 ## [1.3.7](https://github.com/commonality/archetypes-rules/compare/v1.3.6...v1.3.7) (2026-11-18)
