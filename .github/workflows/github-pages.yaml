@@ -1,7 +1,12 @@
 name: github-pages
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ['release']
+    types:
+      - completed
+    branches:
+      - main
+      - fix-github-pages
 
 permissions:
   contents: read
@@ -10,6 +15,7 @@ permissions:
 
 jobs:
   build-docs:
+    if: github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -23,12 +29,15 @@ jobs:
           cache: 'pnpm'
       - name: 'Install dependencies'
         run: pnpm install --frozen-lockfile
+      - name: Get package version
+        id: package-version
+        uses: saionaro/extract-package-version@v1.3.0
       - name: Generate Documentation
         run: pnpm docs:api
       - name: Upload docs artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/api/
+          path: "./docs/api/@commonalities/archetypes-rules/${{ steps.package-version.outputs.version }}/"
 
   deploy-docs:
     needs: build-docs
@@ -40,3 +49,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}
