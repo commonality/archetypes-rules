@@ -59,7 +59,7 @@
     "jest-junit": "17.0.0",
     "jest-sonar-reporter": "2.0.0",
     "lint-staged": "17.6.1",
-    "semantic-release": "25.0.9"
+    "semantic-release": "26.0.1"
   },
   "engines": {
     "node": ">=24 <27",
