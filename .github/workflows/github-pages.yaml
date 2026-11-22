@@ -6,7 +6,6 @@ on:
       - completed
     branches:
       - main
-      - fix-github-pages
 
 permissions:
   contents: read
