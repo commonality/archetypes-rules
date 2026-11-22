@@ -36,14 +36,9 @@
     "@js-temporal/polyfill": "0.5.1",
     "@sindresorhus/is": "8.1.0",
     "camelcase": "10.0.0",
-    "debug": "4.4.3",
     "dotenv-extended": "3.1.0",
-    "fs-extra": "11.4.1",
-    "lodash.hasin": "4.5.2",
-    "lodash.includes": "4.3.0",
-    "lodash.intersection": "4.4.0",
-    "lodash.invoke": "4.5.2",
-    "lodash.kebabcase": "4.1.1",
+    "es-toolkit": "1.53.2",
+    "obug": "3.0.0",
     "ow": "3.1.1"
   },
   "devDependencies": {
@@ -64,7 +59,7 @@
     "jest-junit": "17.0.0",
     "jest-sonar-reporter": "2.0.0",
     "lint-staged": "17.6.1",
-    "semantic-release": "25.0.9"
+    "semantic-release": "26.0.1"
   },
   "engines": {
     "node": ">=24 <27",
