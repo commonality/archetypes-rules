@@ -28,12 +28,16 @@ quality][codacy-image]][codacy-url]
     - [1.2.2. `Variables`](#122-variables)
     - [1.2.3. `Operators`](#123-operators)
   - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
-  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
+  - [1.4. `Rules` evaluate
+    `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
-  - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
-  - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
+  - [3.1. Example 1: Is this customer eligible for a
+    discount](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.2. Example 2: Group discount for six or more
+    people](#32-example-2-group-discount-for-six-or-more-people)
+  - [3.3. Example 3: Is an airline passenger eligible for an
+    upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
 - [5. Contributions](#5-contributions)
 - [6. License](#6-license)
@@ -105,7 +109,8 @@ below for details.
 
 ## 2. Installation
 
-**archetype-rules** uses [**pnpm** ![External link][octicon-link-external]](https://pnpm.io) as its package manager.
+**archetype-rules** uses [**pnpm** ![External
+link][octicon-link-external]](https://pnpm.io) as its package manager.
 
 ```sh
 pnpm add @commonalities/archetypes-rules
@@ -278,7 +283,8 @@ console.log(rule.evaluate(fact))
 
 ## 5. Contributions
 
-[![GitHub Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
+[![GitHub
+Contributors](https://img.shields.io/github/contributors/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/graphs/contributors)
 [![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
 [![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
 
@@ -299,9 +305,11 @@ Before submitting a Pull Request, please read our:
 
 [MIT](LICENSE) © 2019–2026 Greg Swindle
 
-[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE** report ![External link][octicon-link-external]][fossa-legal-notice-url].
+[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE**
+report ![External link][octicon-link-external]][fossa-legal-notice-url].
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
+[![FOSSA
+Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
@@ -311,8 +319,7 @@ Before submitting a Pull Request, please read our:
 
 [src-coverage-badge]:
     https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a
-[href-coverage]:
-    https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+[href-coverage]: https://app.codacy.com/gh/commonality/archetypes-rules/coverage
 [archetypes-rules-overview]:
     https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.svg
     'Class diagram for archetypes.rules'
