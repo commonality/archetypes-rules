@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.13](https://github.com/commonality/archetypes-rules/compare/v1.3.12...v1.3.13) (2026-11-24)
+
+### Bug Fixes
+
+* **variable:** stabilize `Operator.isOperator` method ([6cd5267](https://github.com/commonality/archetypes-rules/commit/6cd52678799e6371b0eced50c4817b4bf587b1c1))
+
 ## [1.3.12](https://github.com/commonality/archetypes-rules/compare/v1.3.11...v1.3.12) (2026-11-22)
 
 ## [1.3.11](https://github.com/commonality/archetypes-rules/compare/v1.3.10...v1.3.11) (2026-11-22)
