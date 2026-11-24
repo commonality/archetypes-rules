@@ -5,17 +5,15 @@
 
 </div>
 
-[![The MIT License][license-image]][license-url] [![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
+[![The MIT License][license-image]][license-url] [![NPM
+version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
 Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code quality][codacy-image]][codacy-url]
+[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code
+quality][codacy-image]][codacy-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
 > managed.
-
-`archetypes-rules` models Boolean logic. Instead of writing conditionals like
-<samp>if / else if / else</samp>, you can instead create Rules that describe and
-evaluate Facts (aka, RuleContexts).
 
 <a name="toc"></a>
 
@@ -30,12 +28,16 @@ evaluate Facts (aka, RuleContexts).
     - [1.2.2. `Variables`](#122-variables)
     - [1.2.3. `Operators`](#123-operators)
   - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
-  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
+  - [1.4. `Rules` evaluate
+    `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
-  - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
-  - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
+  - [3.1. Example 1: Is this customer eligible for a
+    discount](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.2. Example 2: Group discount for six or more
+    people](#32-example-2-group-discount-for-six-or-more-people)
+  - [3.3. Example 3: Is an airline passenger eligible for an
+    upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
 - [5. Contributions](#5-contributions)
 - [6. License](#6-license)
@@ -57,6 +59,10 @@ Figure 1: **Class diagram for the `archetypes.rules` namespace.**
 </figure>
 
 ### 1.1. `Rules`
+
+`archetypes-rules` models Boolean logic. Instead of writing conditionals like
+<samp>if / else if / else</samp>, you can instead create Rules that describe and
+evaluate Facts (aka, RuleContexts).
 
 Rules are explicit constraints that govern actions. Rules evaluate Facts, or
 RuleContexts.
@@ -103,10 +109,8 @@ below for details.
 
 ## 2. Installation
 
-> [!IMPORTANT]
->
-> **archetype-rules** uses [**pnpm** ![External
-> link][octicon-link-external]](https://pnpm.io) as its package manager.
+**archetype-rules** uses [**pnpm** ![External
+link][octicon-link-external]](https://pnpm.io) as its package manager.
 
 ```sh
 pnpm add @commonalities/archetypes-rules
@@ -131,8 +135,8 @@ const rule = new Rule(
   'eligibleForDiscount'
 )
 
-// Add a `Proposition`, i.e., a statement
-// that has a value of `true` or `false`
+// Add a `Proposition`, i.e., a statement that
+// has a value of `true` or `false`
 rule.addProposition(
   'customerIsGoldCardHolder', true
 )
@@ -142,8 +146,8 @@ const ruleContext = new RuleContext(
   'customer-uuid'
 )
 
-// Provide the truth statement as to whether
-// the actual customer has a Gold Card
+// Provide the truth statement as to whether the
+// actual customer has a Gold Card
 ruleContext.addProposition(
   'customerIsGoldCardHolder', true
 )
@@ -153,11 +157,8 @@ const result = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
 console.log(result)
-// => Proposition {
-//   name: 'customerIsGoldCardHolder',
-//   value: true,
-//   type: 'archetypes.rules.Proposition'
-// }
+// => Proposition { name: 'customerIsGoldCardHolder', value: true, type:
+//   'archetypes.rules.Proposition' }
 ```
 
 ### 3.2. Example 2: Group discount for six or more people
@@ -176,7 +177,7 @@ const rule = new Rule(
 // Declare a "placeholder" variable for the actual number of people
 // (This value will be retrieved from the RuleContext)
 rule.addVariable(
-  'actual-num-people', null
+  'actual-num-people', 'NULL_NUMBER_VARIABLE'
 )
 
 // Declare the minimum number of people required for discount
@@ -186,9 +187,7 @@ rule.addVariable(
 
 // Compare the two, i.e.,
 // actual-num-people >= min-num-people
-rule.addOperator(
-  Operator.GREATER_THAN_OR_EQUAL_TO
-)
+rule.addOperator('GREATER_THAN_OR_EQUAL_TO')
 
 // Create a RuleContext, i.e., a "Fact"
 const ruleContext = new RuleContext(
@@ -210,7 +209,7 @@ ruleContext.addVariable(
 const result = rule.evaluate(ruleContext)
 
 // Log the resulting Proposition
-
+console.log(result)
 // OUTPUT:
 // Proposition statement =
 // (actualNumPeople >= minNumPeople), value = false
@@ -230,14 +229,11 @@ eligible, a passenger must:
 In order to determine this, we must compare a passenger’s facts with our rule.
 
 ```javascript
-import {
-  Rule,
-  RuleContext,
-  RuleElement
-} from '@commonalities/archetypes-rules'
+import { archetypes } from '@commonalities/archetypes-rules'
+const { Rule, RuleContext } = archetypes.rules
 
 // Create the rule
-const rule = Rule('eligible-for-upgrade')
+const rule = new Rule('eligible-for-upgrade')
 
 // Populate the rule using method chaining
 rule
@@ -252,7 +248,7 @@ rule
   .addOperator('AND')
 
 // Create the RuleContext
-const fact = RuleContext('eligibleForUpgradeFact')
+const fact = new RuleContext('eligibleForUpgradeFact')
 
 // Load it with the facts about the passenger
 fact
@@ -263,14 +259,10 @@ fact
   .addVariable('passenger-carry-on-baggage-allowance', 'NULL_NUMBER_VARIABLE')
 
 // Log the resulting Proposition
-
-// =>
-// Proposition statement = (
-//  (passengerIsEconomy AND
-//    (passengerIsGoldCardHolder OR passengerIsSilverCardHolder)
-//  ) AND (
-//    passenger-carry-on-baggage-weight <= passenger-carry-on-baggage-allowance
-//  )
+console.log(rule.evaluate(fact))
+// => Proposition statement = ( (passengerIsEconomy AND
+// (passengerIsGoldCardHolder OR passengerIsSilverCardHolder) ) AND (
+//  passenger-carry-on-baggage-weight <= passenger-carry-on-baggage-allowance )
 // ), value = true
 ```
 
@@ -313,27 +305,21 @@ Before submitting a Pull Request, please read our:
 
 [MIT](LICENSE) © 2019–2026 Greg Swindle
 
-> [!NOTE]
->
-> [![Open Source Licenses][octicon-law] View the latest **detailed legal
-> NOTICE** report ![This link will take you to another Web
-> site][octicon-link-external]][fossa-legal-notice-url].
->
-> [![FOSSA
-> Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
+[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE**
+report ![External link][octicon-link-external]][fossa-legal-notice-url].
+
+[![FOSSA
+Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
 <!-- ⛔️ Do not remove this line or anything under it. ⛔️  -->
 
-[![FOSSA
-Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_shield&issueType=license)
-
 <!-- Link and image refs -->
 
 [src-coverage-badge]:
     https://app.codacy.com/project/badge/Coverage/28d1bcd9d85a4c27acb6b9ba5fc8481a
-[href-coverage]: https://app.codacy.com/gh/commonality/archetypes-rules/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage
+[href-coverage]: https://app.codacy.com/gh/commonality/archetypes-rules/coverage
 [archetypes-rules-overview]:
     https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/assets/archetypes.rules-overview.svg
     'Class diagram for archetypes.rules'
