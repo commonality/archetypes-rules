@@ -35,7 +35,4 @@ jobs:
             -Dsonar.organization=commonality
             -Dsonar.projectKey=commonality_archetypes-rules
             -Dsonar.sourceEncoding=UTF-8
-            -Dsonar.sources=lib
-            -Dsonar.test.inclusions=lib/**/*.test.js
             -Dsonar.testExecutionReportPaths=sonar-test-report.xml
-            -Dsonar.tests=lib
