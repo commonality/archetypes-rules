@@ -32,10 +32,10 @@ jobs:
       - name: Run unit tests
         run: |
           pnpm ci:test
-          if [ -f "${{ vars.COVERAGE_REPORT_PATH }}" ]; then
-            echo "ⓘ File \"${{ vars.COVERAGE_REPORT_PATH }}\" exists"
+          if [ -f "${{ env.COVERAGE_REPORT_PATH }}" ]; then
+            echo "ⓘ File \"${{ env.COVERAGE_REPORT_PATH }}\" exists"
           else
-            echo "⚠︎ Could not find file \"${{ vars.COVERAGE_REPORT_PATH }}\""
+            echo "⚠︎ Could not find file \"${{ env.COVERAGE_REPORT_PATH }}\""
           fi
       - name: Publish unit test results
         uses: mikepenz/action-junit-report@v6
@@ -44,9 +44,7 @@ jobs:
           annotate_notice: true
           comment: true
           fail_on_failure: true
-          include_empty_in_summary: true
           include_passed: true
-          include_skipped: true
           include_time_in_summary: true
           pr_id: ${{ github.event.pull_request.number }}
           report_paths: './junit.xml'
@@ -57,7 +55,7 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: ${{ vars.COVERAGE_REPORT_PATH }}
+          coverage-reports: ${{ env.COVERAGE_REPORT_PATH }}
           language: JavaScript
       - name: Publish coverage results to Codacy
         run: |
