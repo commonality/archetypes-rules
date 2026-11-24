@@ -9,7 +9,7 @@ permissions:
 jobs:
   codacy-coverage-reporter:
     runs-on: ubuntu-latest
-    name: Test and code coverage report
+    name: Test Coverage Report
     environment: codacy-variables
     env:
       CODACY_ORGANIZATION_PROVIDER: ${CODACY_ORGANIZATION_PROVIDER}
@@ -84,9 +84,6 @@ jobs:
           # archive: # optional, default is true
       - name: Publish unit test results
         uses: mikepenz/action-junit-report@v6.7.1
-        # uses:
-        # mikepenz/action-junit-report@a16be3a69023e9bd7e748ede768b3282ea7b30ce
-        # # v6.7.1
         if: success() || failure() # always run even if the previous step fails
         with:
           comment: true
@@ -100,9 +97,6 @@ jobs:
           require_passed_tests: true
       - name: Evaluate coverage reports・Codacy
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
-        # uses:
-        # codacy/codacy-coverage-reporter-action@89d6c85cfafaec52c72b6c5e8b2878d33104c699
-        # # v1.3.0
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: ${{ env.COVERAGE_REPORT_PATH }}
