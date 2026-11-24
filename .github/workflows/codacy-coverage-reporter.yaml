@@ -39,14 +39,19 @@ jobs:
           fi
       - name: Publish unit test results
         uses: mikepenz/action-junit-report@v6
-        if: always() # always run even if the previous step fails
+        if: success() || failure() # always run even if the previous step fails
         with:
+          annotate_notice: true
+          comment: true
           fail_on_failure: true
+          include_empty_in_summary: true
           include_passed: true
+          include_skipped: true
           include_time_in_summary: true
           pr_id: ${{ github.event.pull_request.number }}
           report_paths: './junit.xml'
           require_passed_tests: true
+          updateComment: true
           verbose_summary: true
       - name: Evaluate coverage reports・Codacy
         uses: codacy/codacy-coverage-reporter-action@v1.3.0
