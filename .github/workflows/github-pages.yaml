@@ -1,4 +1,4 @@
-name: github-pages
+name: "GitHub Pages (API docs)"
 on:
   workflow_run:
     workflows: ['release']
@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v4.3.0
       - name: Set up Node.js
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@v7.1.0
         with:
           node-version: 'lts/*'
           cache: 'pnpm'
@@ -34,7 +34,7 @@ jobs:
       - name: Generate Documentation
         run: pnpm docs:api
       - name: Upload docs artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: "./docs/api/@commonalities/archetypes-rules/${{ steps.package-version.outputs.version }}/"
 
@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}

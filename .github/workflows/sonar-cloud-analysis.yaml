@@ -1,4 +1,4 @@
-name: SonarQube
+name: "SonarQube Analysis"
 on:
   push:
     branches:
@@ -10,28 +10,33 @@ jobs:
     name: Set up and analyze
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/checkout@v4.3.1
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       # This step should build, test and generate coverage reports
       # - name: Build and test run: <build + test + generate coverage reports>
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4.3.0
+      - name: Setup node@lts/*
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "lts/*"
+          cache: 'pnpm'
+      - name: 'Install dependencies'
+        run: pnpm install --frozen-lockfile
+      - name: Run unit tests
+        run: pnpm ci:test
       - name: Cache SonarQube packages
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        uses: actions/cache@v4.3.0
         with:
           path: ~/.sonar/cache
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@59202af334b4ba7b5db01b701b8e79f8b3bef0f4 # v8.5.0
+        uses: SonarSource/sonarqube-scan-action@v8.5.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.javascript.exclusions=coverage/**,**/__tests__/**/*,lib/env-config.js
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.links.homepage=https://github.com/commonality/archetypes-rules#readme
-            -Dsonar.links.issue=https://github.com/commonality/archetypes-rules/issues
-            -Dsonar.links.scm=https://github.com/commonality/archetypes-rules
             -Dsonar.organization=commonality
             -Dsonar.projectKey=commonality_archetypes-rules
-            -Dsonar.sourceEncoding=UTF-8
