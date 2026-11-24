@@ -506,3 +506,4 @@ sonar-test-report.xml
 .codacy/
 # Ignore JSDoc API document artifacts
 docs/api/
+docs/includes/SpeedUp.grl
