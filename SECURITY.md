@@ -58,9 +58,6 @@ src="https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/project.svg" heig
 [href-semver-check-gte]:
     https://jubianchi.github.io/semver-check/#/constraint/%3E%3D1.3.x 'Semver
     validation of the range constraint ">=1.3.x"'
-[oct-calendar]:
-    https://cdnjs.cloudflare.com/ajax/libs/octicons/8.5.0/svg/calendar.svg 'Last
-    updated on date'
 [oct-check-circle]: ./docs/img/check-circle.svg 'Supported'
 [oct-x-circle]: ./docs/img/x-circle.svg 'Not supported'
 [src-gh-project-screenshot]: ./docs/img/gh-privacy-security-project.png 'The
