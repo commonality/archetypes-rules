@@ -56,7 +56,6 @@
     "all-contributors-cli": "7.0.3",
     "jest": "30.5.2",
     "jest-junit": "17.0.0",
-    "lint-staged": "17.6.2",
     "semantic-release": "26.0.1"
   },
   "engines": {
@@ -67,11 +66,6 @@
     "dist"
   ],
   "homepage": "https://github.com/commonality/archetypes-rules#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "jest": {
     "automock": false,
     "collectCoverage": true,
@@ -132,17 +126,6 @@
     "rules-engine"
   ],
   "license": "MIT",
-  "lint-staged": {
-    "*.js": [
-      "pnpm lint:js:fix",
-      "pnpm docs:api",
-      "git add"
-    ],
-    "*.json": [
-      "pnpm lint:json:fix",
-      "git add"
-    ]
-  },
   "main": "dist/archetypes-rules.mjs",
   "packageManager": "pnpm@12.23.0",
   "overrides": {
@@ -287,6 +270,8 @@
     "ci:test": "pnpm start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --verbose",
     "docs:api": "pnpm dlx jsdoc -c ./.github/ci/conf/jsdoc.json ./lib/ -r -R ./README.md -P package.json",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "gh actions-lock",
+    "postuninstall": "gh actions-lock",
     "lint:js": "pnpm dlx @biomejs/biome check lib/",
     "lint:js:fix": "pnpm dlx @biomejs/biome check --write lib/",
     "lint:json:fix": "pnpm dlx prettier --write **/*.json",
