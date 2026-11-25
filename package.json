@@ -54,10 +54,8 @@
     "@semantic-release/npm": "13.2.0",
     "@semantic-release/release-notes-generator": "14.1.1",
     "all-contributors-cli": "7.0.3",
-    "git-repo-info": "2.1.1",
     "jest": "30.5.2",
     "jest-junit": "17.0.0",
-    "jest-sonar-reporter": "2.0.0",
     "lint-staged": "17.6.2",
     "semantic-release": "26.0.1"
   },
@@ -113,9 +111,6 @@
       "jest-junit"
     ],
     "watchman": false
-  },
-  "jestSonar": {
-    "reportFile": "sonar-test-report.xml"
   },
   "keywords": [
     "archetype-pattern",
@@ -281,7 +276,7 @@
     "ci:check:js": "pnpm dlx @biomejs/biome ci lib/",
     "ci:outdated": "pnpm outdated --long --no-optional --prod",
     "ci:sbom": "pnpm sbom --exclude-peers --no-optional --out %s@%v.sbom.json --production --sbom-format cyclonedx",
-    "ci:test": "pnpm start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --testResultsProcessor=jest-sonar-reporter --verbose",
+    "ci:test": "pnpm start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --verbose",
     "docs:api": "pnpm dlx jsdoc -c ./.github/ci/conf/jsdoc.json ./lib/ -r -R ./README.md -P package.json",
     "preinstall": "npx only-allow pnpm",
     "lint:js": "pnpm dlx @biomejs/biome check lib/",
