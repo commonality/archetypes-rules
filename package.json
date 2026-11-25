@@ -229,8 +229,16 @@
               "label": "License for distribution"
             },
             {
+              "path": "NOTICE.md",
+              "label": "Software licenses and their obligations"
+            },
+            {
               "path": "README.md",
               "label": "Installation and usage instructions for distribution"
+            },
+            {
+              "path": "SECURITY.md",
+              "label": "Security policy"
             },
             {
               "path": "dist/**",
