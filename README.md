@@ -1,15 +1,20 @@
 <h1>@commonalities/archetypes-rules</h1>
-<div align="center">
+<div align="center"><figure><figcaption>
 
-![banner](https://raw.githubusercontent.com/commonality/archetypes-rules/refs/heads/main/docs/img/logos/logo.png)
+Move conditional logic out of source code and database triggers and into a
+reusable package, where you can be independently store, manage, and
+share explicit rules, saved as JSON (with Grules Rule Language support
+coming soon).
+
+</figcaption>
+
+![banner](./docs/img/archetype-rules-logo.svg)
+
+</figure>
 
 </div>
 
 [![The MIT License][license-image]][license-url] [![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code quality][codacy-image]][codacy-url] <!--[![Quality gate status][sonar-status-quality-gate-src]][sonar-status-quality-gate-url]--> [![Security Rating][sonar-status-security-src]][sonar-status-security-url] [![Reliability Rating][sonar-status-reliability-src]][sonar-status-reliability-url] [![Maintainability Rating][sonar-status-maintainability-src]][sonar-status-maintainability-url] [![Technical Debt Rating][sonar-status-tech-debt-src]][sonar-status-tech-debt-url]
-
-> Move conditional logic out of source code and database triggers and into a
-> reusable package, where explicit rules can be independently defined and
-> managed.
 
 <a name="toc"></a>
 
@@ -120,7 +125,7 @@ Card holder.
 
 ```javascript
 import { archetypes } from '@commonalities/archetypes-rules'
-const { Proposition, Rule, RuleContext } = archetypes.rules
+const { Rule, RuleContext } = archetypes.rules
 
 // Create the rule
 const rule = new Rule(
@@ -277,9 +282,9 @@ Contributors](https://img.shields.io/github/contributors/commonality/archetypes-
 [![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
 [![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
 
-![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you need to know to get started.
+💛 We gratefully accept Pull Requests. Here's what you need to know to get started.
 
-Before submitting a Pull Request, please read our:
+Before submitting a Pull Request, please review our:
 
 - [Code of Conduct](code-of-conduct.md)
 - [Contributing Aggreement](CONTRIBUTING.md)
@@ -293,11 +298,9 @@ Before submitting a Pull Request, please read our:
 
 [MIT](LICENSE) © 2019–2026 Greg Swindle
 
-[![Open Source Licenses][octicon-law] View the latest **detailed legal NOTICE**
-report ![External link][octicon-link-external]][fossa-legal-notice-url].
+View the latest **detailed legal NOTICE** report ![External link][octicon-link-external]][fossa-legal-notice-url].
 
-[![FOSSA
-Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fcommonality%2Farchetypes-rules?ref=badge_large&issueType=license)
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
@@ -355,9 +358,6 @@ Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farch
 
 <!-- Octicon img references  -->
 
-[octicon-heart]:
-    https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/heart.svg
-[octicon-law]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/law.svg
 [octicon-link-external]:
     https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/link-external.svg
 [octicon-triangle-up]:
