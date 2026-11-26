@@ -35,7 +35,6 @@
   "dependencies": {
     "@js-temporal/polyfill": "0.5.1",
     "@sindresorhus/is": "8.1.0",
-    "camelcase": "10.0.0",
     "dotenv-extended": "3.1.0",
     "es-toolkit": "1.53.2",
     "obug": "3.0.0",
