@@ -5,11 +5,7 @@
 
 </div>
 
-[![The MIT License][license-image]][license-url] [![NPM
-version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known
-Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>
-[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code
-quality][codacy-image]][codacy-url]
+[![The MIT License][license-image]][license-url] [![NPM version][npm-image]][npm-url] [![FOSSA Status][fossa-image]][fossa-url] [![Known Vulnerabilities][vulnerabilities-image]][vulnerabilities-url]<br>[![Code coverage badge][src-coverage-badge]][href-coverage] [![Codacy code quality][codacy-image]][codacy-url] <!--[![Quality gate status][sonar-status-quality-gate-src]][sonar-status-quality-gate-url]--> [![Security Rating][sonar-status-security-src]][sonar-status-security-url] [![Reliability Rating][sonar-status-reliability-src]][sonar-status-reliability-url] [![Maintainability Rating][sonar-status-maintainability-src]][sonar-status-maintainability-url] [![Technical Debt Rating][sonar-status-tech-debt-src]][sonar-status-tech-debt-url]
 
 > Move conditional logic out of source code and database triggers and into a
 > reusable package, where explicit rules can be independently defined and
@@ -28,16 +24,12 @@ quality][codacy-image]][codacy-url]
     - [1.2.2. `Variables`](#122-variables)
     - [1.2.3. `Operators`](#123-operators)
   - [1.3. `RuleContexts` (aka "facts")](#13-rulecontexts-aka-facts)
-  - [1.4. `Rules` evaluate
-    `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
+  - [1.4. `Rules` evaluate `RuleContexts`/`Facts`](#14-rules-evaluate-rulecontextsfacts)
 - [2. Installation](#2-installation)
 - [3. Usage](#3-usage)
-  - [3.1. Example 1: Is this customer eligible for a
-    discount](#31-example-1-is-this-customer-eligible-for-a-discount)
-  - [3.2. Example 2: Group discount for six or more
-    people](#32-example-2-group-discount-for-six-or-more-people)
-  - [3.3. Example 3: Is an airline passenger eligible for an
-    upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
+  - [3.1. Example 1: Is this customer eligible for a discount](#31-example-1-is-this-customer-eligible-for-a-discount)
+  - [3.2. Example 2: Group discount for six or more people](#32-example-2-group-discount-for-six-or-more-people)
+  - [3.3. Example 3: Is an airline passenger eligible for an upgrade?](#33-example-3-is-an-airline-passenger-eligible-for-an-upgrade)
 - [4. Maintainers](#4-maintainers)
 - [5. Contributions](#5-contributions)
 - [6. License](#6-license)
@@ -274,10 +266,7 @@ console.log(rule.evaluate(fact))
 
 > [!NOTE]
 >
-> ![Information for Maintainers][octicon-book] The [Maintainer
-> Guide](./docs/maintainer-guide/README.md) describes how we develop and release
-> **archetype-rules** (and has useful information for Maintainers and Trusted
-> Committers).
+> The [Maintainer Guide](./docs/maintainer-guide/README.md) describes how we develop and release **archetype-rules** (and has useful information for Maintainers and Trusted Committers).
 
 <small>[![Back to Table of contents][octicon-triangle-up] [toc]](#toc)</small>
 
@@ -288,8 +277,7 @@ Contributors](https://img.shields.io/github/contributors/commonality/archetypes-
 [![GitHub](https://img.shields.io/github/stars/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules)
 [![GitHub](https://img.shields.io/github/forks/commonality/archetypes-rules.svg?style=social)](https://github.com/commonality/archetypes-rules/network)
 
-![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you
-need to know to get started.
+![Gratitude][octicon-heart] We gratefully accept Pull Requests. Here's what you need to know to get started.
 
 Before submitting a Pull Request, please read our:
 
@@ -337,6 +325,29 @@ Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farch
 [license-url]: http://opensource.org/licenses/MIT
 [npm-image]: https://img.shields.io/npm/v/@commonalities/archetypes-rules.svg
 [npm-url]: https://npmjs.org/package/@commonalities/archetypes-rules
+[sonar-status-maintainability-src]:
+    https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_rating
+    'Maintainability metrics'
+[sonar-status-maintainability-url]:
+    https://sonarcloud.io/component_measures?metric=sqale_rating&id=commonality_archetypes-rules
+<!-- [sonar-status-quality-gate-src]:
+    https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=alert_status
+    'Quality gate metrics'
+[sonar-status-quality-gate-url]:
+    https://sonarcloud.io/summary/new_code?id=commonality_archetypes-rules -->
+[sonar-status-reliability-src]:
+    https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=reliability_rating
+[sonar-status-reliability-url]:
+    https://sonarcloud.io/component_measures?metric=reliability_rating&id=commonality_archetypes-rules
+[sonar-status-security-src]:
+    https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=security_rating
+[sonar-status-security-url]:
+    https://sonarcloud.io/component_measures?metric=security_rating&id=commonality_archetypes-rules
+[sonar-status-tech-debt-src]:
+    https://sonarcloud.io/api/project_badges/measure?project=commonality_archetypes-rules&metric=sqale_index
+[sonar-status-tech-debt-url]:
+    https://sonarcloud.io/component_measures?metric=sqale_index&id=commonality_archetypes-rules
+
 [vulnerabilities-image]:
   https://snyk.io/test/github/commonality/archetypes-rules/badge.svg?&targetFile=package.json
 [vulnerabilities-url]:
@@ -344,8 +355,6 @@ Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fcommonality%2Farch
 
 <!-- Octicon img references  -->
 
-[octicon-book]:
-    https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/book.svg
 [octicon-heart]:
     https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/heart.svg
 [octicon-law]: https://cdnjs.cloudflare.com/ajax/libs/octicons/8.3.0/svg/law.svg

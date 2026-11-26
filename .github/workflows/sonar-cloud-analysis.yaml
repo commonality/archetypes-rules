@@ -1,0 +1,45 @@
+name: "Sonar"
+description: "The SonarQube platform continuously reviews source code to uncover defects, security vulnerabilities, maintainability issues, and architecture issues before code is merged or released."
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  build:
+    name: Set up and Scan
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4.3.1
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      # This step should build, test and generate coverage reports
+      # - name: Build and test run: <build + test + generate coverage reports>
+      - name: Setup package manager・PNPM
+        uses: pnpm/action-setup@v4.3.0
+      - name: Setup node@lts/*
+        uses: actions/setup-node@v7.1.0
+        with:
+          node-version: "lts/*"
+          cache: 'pnpm'
+      - name: 'Install dependencies'
+        run: pnpm install --frozen-lockfile
+      - name: Run unit tests
+        run: pnpm ci:test
+      - name: Validate code style
+        run: pnpm ci:check:js
+      - name: Cache SonarQube packages
+        uses: actions/cache@v4.3.0
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v8.5.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=commonality
+            -Dsonar.projectKey=commonality_archetypes-rules

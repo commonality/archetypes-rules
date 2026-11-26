@@ -8,7 +8,7 @@
 # repository. Please check the `language` matrix defined below to confirm you
 # have the correct set of supported CodeQL languages.
 #
-name: "code-ql-advanced"
+name: "CodeQL"
 
 on:
   push:
@@ -68,8 +68,7 @@ jobs:
         # https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v7
-
+      uses: actions/checkout@v7.0.1
     # Add any setup steps before running the `github/codeql-action/init` action.
     # This includes steps like installing compilers or runtimes
     # (`actions/setup-node` or others). This is typically only required for
@@ -78,7 +77,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: github/codeql-action/init@v4
+      uses: github/codeql-action/init@v4.39.5
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
@@ -109,6 +108,6 @@ jobs:
         exit 1
 
     - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v4
+      uses: github/codeql-action/analyze@v4.39.5
       with:
         category: "/language:${{matrix.language}}"
