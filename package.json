@@ -268,7 +268,7 @@
     "ci:test": "pnpm start && node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage --reporters=default --reporters=jest-junit --verbose",
     "docs:api": "pnpm dlx jsdoc -c ./.github/ci/conf/jsdoc.json ./lib/ -r -R ./README.md -P package.json",
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "gh actions-lock",
+    "no-postinstall": "gh actions-lock",
     "postuninstall": "gh actions-lock",
     "lint:js": "pnpm dlx @biomejs/biome check lib/",
     "lint:js:fix": "pnpm dlx @biomejs/biome check --write lib/",
